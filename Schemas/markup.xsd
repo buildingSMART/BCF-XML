@@ -79,7 +79,7 @@
 					<xs:attributeGroup ref="DocumentReference"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="AssignedTo" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="AssignedTo" minOccurs="0" maxOccurs="1">
 				<xs:complexType>
 					<xs:sequence>
 						<!-- Name of the file in the topic folder or url -->
