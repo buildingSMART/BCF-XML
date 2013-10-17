@@ -95,7 +95,6 @@
 			<xs:element name="AuthoringToolId" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute ref="IfcGuid"/>
-		<xs:attribute name="FileIndex" type="xs:integer"/>
 		<xs:attribute name="Selected" type="xs:boolean"/>
 		<xs:attribute name="Visible" type="xs:boolean" default="true"/>
 		<xs:attribute name="Color" type="xs:hexBinary"/>

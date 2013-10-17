@@ -54,10 +54,9 @@
          -->
 			<!-- Reference (name) to the snippet file -->
 			<xs:element name="Reference" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- OriginTopic are Guid of that Topic(s) which causes the Topic //  p.e. Issues(es) -> Request  -->
-			<xs:element name="OriginTopic" type="Guid" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ReferenceSchema" type="xs:string" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
-		<xs:attribute name="SnippetType" type="SnippetType" use="required"/>
+		<xs:attribute name="SnippetType" type="xs:string" use="required"/>
 		<xs:attribute name="isExternal" type="xs:boolean" default="false"/>
 		<!-- This flag is true when the reference is a URL pointing outside of the BCF file-->
 	</xs:complexType>
@@ -80,9 +79,15 @@
 					<xs:attributeGroup ref="DocumentReference"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="RelatedTopics" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Guid" type="Guid" use="required"/>
+					<xs:attribute name="TopicType" type="xs:string"/>
+				</xs:complexType>
+			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid"/>
-		<xs:attribute name="TopicType" type="TopicType"/>
+		<xs:attribute name="TopicType" type="xs:string"/>
 		<!-- Category for a topic p.e. Issue, Request -->
 	</xs:complexType>
 	<!-- Reference to a document inside of the topic folder or a url pointing to the web -->
@@ -92,30 +97,6 @@
 		<!-- A flag that is true when the ReferencedDocument points outside of the BCF file (a URL) -->
 		<xs:attribute name="isExternal" type="xs:boolean" default="false"/>
 	</xs:attributeGroup>
-	<!-- Category for a topic p.e. Issue, Request -->
-	<xs:simpleType name="TopicType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Comment"/>
-			<xs:enumeration value="Issue"/>
-			<xs:enumeration value="Request"/>
-			<xs:enumeration value="Solution"/>
-			<xs:enumeration value="UserDefined"/>
-		</xs:restriction>
-	</xs:simpleType>
-	<!-- Category for a BimSnippet -->
-	<xs:simpleType name="SnippetType">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="ifc2x3"/>
-			<xs:enumeration value="ifc2x4"/>
-			<xs:enumeration value="simpleIfcXML"/>
-			<xs:enumeration value="GML"/>
-			<xs:enumeration value="KML"/>
-			<xs:enumeration value="URL"/>
-			<xs:enumeration value="UserDefined"/>
-			<!-- ogc.org -->
-			<!-- Keyhole markup language http://en.wikipedia.org/wiki/Keyhole_Markup_Language -->
-		</xs:restriction>
-	</xs:simpleType>
 	<!-- ISG Jira issue BCF-15. Add author email for unique identification of author -->
 	<xs:simpleType name="AuthorEmail">
 		<xs:restriction base="xs:string">
@@ -136,6 +117,7 @@
 			</xs:element>
 			<!-- ISG Jira issue BCF-15. Add author email for unique identification of author -->
 			<xs:element name="AuthorEmail" type="AuthorEmail"/>
+			<xs:element name="Priority" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 	</xs:complexType>
