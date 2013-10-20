@@ -24,10 +24,10 @@ Globally Unique ID in the IFC format. This format is used only when referring to
 | Topic | One topic, such as a problem in the design, described in BCF file    |
 | GUID |Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
 
-## Background
+### Background
 * This document describes the BFC format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
 
-## BCF file structure
+### BCF file structure
 In the root of the BCF file is an XML file defining project related information. The name of this file is project.xml. This file follows the project.xsd schema.
 
 A BCF file is a zip containing one folder for each topic. The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
@@ -170,7 +170,7 @@ Snapshot | Yes | Filename of the snapshot(.png)
 Comment | Yes | Back reference to the comment GUID.
 
 
-### Visualization information (.bcfv) file
+## Visualization information (.bcfv) file
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
 
 ### Components
