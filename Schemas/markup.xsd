@@ -64,6 +64,9 @@
 		<xs:sequence>
 			<xs:element name="ReferenceLink" type="xs:string" minOccurs="0"/>
 			<xs:element name="Title" type="xs:string"/>
+			<!-- Category for a topic p.e. Issue, Request -->
+			<xs:element name="TopicType" type="TopicType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="TopicStatus" type="TopicStatus" minOccurs="0" maxOccurs="1"/>
 			<!-- ISG Jira issue BCF-8 Add a way save order the topics -->
 			<xs:element name="Index" type="xs:integer" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0" maxOccurs="1"/>
@@ -97,8 +100,6 @@
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid"/>
-		<xs:attribute name="TopicType" type="xs:string"/>
-		<!-- Category for a topic p.e. Issue, Request -->
 	</xs:complexType>
 	<!-- Reference to a document inside of the topic folder or a url pointing to the web -->
 	<xs:attributeGroup name="DocumentReference">
@@ -127,16 +128,19 @@
 			</xs:element>
 			<!-- ISG Jira issue BCF-15. Add author email for unique identification of author -->
 			<xs:element name="AuthorEmail" type="Email"/>
-			<xs:element name="Priority" type="xs:string" minOccurs="0"/>
+			<xs:element name="Priority" type="Priority" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 	</xs:complexType>
 	<!-- BCF-16 Add topic status to comments to know when a topic is resolved or still open -->
 	<xs:simpleType name="TopicStatus">
-		<xs:restriction base="xs:string">
-			<xs:enumeration value="Open"/>
-			<xs:enumeration value="Closed"/>
-		</xs:restriction>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="TopicType">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="Priority">
+		<xs:restriction base="xs:string"/>
 	</xs:simpleType>
 	<xs:simpleType name="Guid">
 		<xs:restriction base="xs:string">
