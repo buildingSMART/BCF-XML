@@ -21,14 +21,25 @@
 				<xs:enumeration value="ReOpened"/>
 			</xs:restriction>
 		</xs:simpleType>
-        <!--Sample of a redefinition for the snippet type-->
+		<!--Sample of a redefinition for the topic label-->
+		<xs:simpleType name="TopicLabel">
+			<xs:restriction base="TopicLabel">
+				<xs:enumeration value="Architecture"/>
+				<xs:enumeration value="Structure"/>
+				<xs:enumeration value="Mechanical"/>
+				<xs:enumeration value="Electrical"/>
+				<xs:enumeration value="Specfications"/>
+				<xs:enumeration value="Technology"/>
+			</xs:restriction>
+		</xs:simpleType>
+		<!--Sample of a redefinition for the snippet type-->
 		<xs:simpleType name="SnippetType">
 			<xs:restriction base="SnippetType">
 				<xs:enumeration value=".ifc"/>
 				<xs:enumeration value=".ifcXML"/>
 				<xs:enumeration value=".xlsx"/>
 			</xs:restriction>
-		</xs:simpleType>		
+		</xs:simpleType>
 		<!--Sample of a redefinition for the topic priority-->
 		<xs:simpleType name="Priority">
 			<xs:restriction base="Priority">
@@ -41,6 +52,7 @@
 	</xs:redefine>
 	<xs:element name="ExtendedTopicType" type="TopicType"/>
 	<xs:element name="ExtendedTopicStatus" type="TopicStatus"/>
+	<xs:element name="ExtendedTopicLabel" type="TopicLabel"/>
 	<xs:element name="ExtendedSnippetType" type="SnippetType"/>
 	<xs:element name="ExtendedPriority" type="Priority"/>
 </xs:schema>
