@@ -80,23 +80,14 @@
 					<xs:attributeGroup ref="DocumentReference"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="AssignedTo" minOccurs="0" maxOccurs="1">
-				<xs:complexType>
-					<xs:sequence>
-						<!-- Name of the file in the topic folder or url -->
-						<xs:element name="AssignedToEmail" type="Email" minOccurs="0"/>
-						<!-- Human readable name of the document -->
-						<xs:element name="AssignedToName" type="xs:string" minOccurs="0"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
+			<xs:element name="AssignedTo" type="UserIdType" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="RelatedTopics" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
-		<xs:attribute name="Guid" type="Guid"/>
+		<xs:attribute name="Guid" type="Guid" use="required"/>
 		<xs:attribute name="TopicType" type="TopicType"/>
 		<xs:attribute name="TopicStatus" type="TopicStatus"/>
 	</xs:complexType>
@@ -107,26 +98,18 @@
 		<!-- A flag that is true when the ReferencedDocument points outside of the BCF file (a URL) -->
 		<xs:attribute name="isExternal" type="xs:boolean" default="false"/>
 	</xs:attributeGroup>
-	<!-- ISG Jira issue BCF-15. Add author email for unique identification of author -->
-	<xs:simpleType name="Email">
-		<xs:restriction base="xs:string">
-			<xs:pattern value="[^@]+@[^\.]+\..+"/>
-		</xs:restriction>
-	</xs:simpleType>
 	<xs:complexType name="Comment">
 		<xs:sequence>
-			<xs:element name="VerbalStatus" type="xs:string" minOccurs="0"/>
+			<xs:element name="VerbalStatus" type="TopicStatus" minOccurs="0"/>
 			<xs:element name="Status" type="CommentStatus" default="Unknown"/>
 			<xs:element name="Date" type="xs:dateTime"/>
-			<xs:element name="Author" type="xs:string"/>
+			<xs:element name="Author" type="UserIdType"/>
 			<xs:element name="Comment" type="xs:string"/>
 			<xs:element name="Topic">
 				<xs:complexType>
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
 			</xs:element>
-			<!-- ISG Jira issue BCF-15. Add author email for unique identification of author -->
-			<xs:element name="AuthorEmail" type="Email"/>
 			<xs:element name="Priority" type="Priority" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
@@ -142,6 +125,9 @@
 		<xs:restriction base="xs:string"/>
 	</xs:simpleType>
 	<xs:simpleType name="Priority">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="UserIdType">
 		<xs:restriction base="xs:string"/>
 	</xs:simpleType>
 	<xs:simpleType name="Guid">
