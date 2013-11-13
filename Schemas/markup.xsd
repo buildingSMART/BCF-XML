@@ -75,17 +75,17 @@
 			<xs:element name="DocumentReference" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:sequence>
-						<xs:element name="RelatedTopics" minOccurs="0" maxOccurs="unbounded">
-							<xs:complexType>
-								<xs:attribute name="Guid" type="Guid" use="required"/>
-							</xs:complexType>
-						</xs:element>
 						<!-- Name of the file in the topic folder or url -->
 						<xs:element name="ReferencedDocument" type="xs:string" minOccurs="0"/>
 						<!-- Human readable name of the document -->
 						<xs:element name="Description" type="xs:string" minOccurs="0"/>
 					</xs:sequence>
 					<xs:attributeGroup ref="DocumentReference"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="RelatedTopics" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
