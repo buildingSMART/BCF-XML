@@ -25,7 +25,7 @@ Globally Unique ID in the IFC format. This format is used only when referring to
 | GUID |Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
 
 ### Background
-* This document describes the BFC format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
+* This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
 
 ### BCF file structure
 In the root of the BCF file is an XML file defining project related information. The name of this file is project.xml. This file follows the project.xsd schema.
