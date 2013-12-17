@@ -1,4 +1,4 @@
-BCF: Building Collaboration Format
+BCF: BIM Collaboration Format
 ===
 
 ![BCF](https://f.cloud.github.com/assets/2679513/1755982/5514cdba-666d-11e3-97ca-9800a33bfaca.png "The BCF logo")
