@@ -1,4 +1,5 @@
 # BIM Collaboration Format v2.0 Technical Documentation
+![BCF](https://f.cloud.github.com/assets/2679513/1755982/5514cdba-666d-11e3-97ca-9800a33bfaca.png "The BCF logo")
 
 Authors:
 
@@ -6,10 +7,10 @@ Authors:
 * Juha Laukala, Tekla (BCF 1.0)
 * Lassi Lifländer, Tekla (BCF 1.0)
 * Klaus Linhard, IABI (BCF 2.0)
+* Erik Pijnenburg, Kubus (BCF 2.0)
+* Léon van Berlo, TNO (BCF 2.0)
 
 ### Terms and Abbreviations
-
-
 
 GUID
 Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
