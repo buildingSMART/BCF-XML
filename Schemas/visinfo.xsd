@@ -43,6 +43,8 @@
 							<xs:element name="Normal" type="Direction"/>
 							<!-- Upvector of the bitmap -->
 							<xs:element name="Up" type="Direction"/>
+							<!-- Height of the bitmap -->
+							<xs:element name="Height" type="xs:double"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
