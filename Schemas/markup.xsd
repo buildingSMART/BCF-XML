@@ -112,6 +112,16 @@
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
 			</xs:element>
+			<xs:element name="Viewpoint" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="Guid" type="Guid" use="required"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ReplyTo" minOccurs="0" maxOccurs="1">
+				<xs:complexType>
+					<xs:attribute name="Guid" type="Guid" use="required"/>
+				</xs:complexType>
+			</xs:element>
 			<xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0"/>
 			<xs:element name="Priority" type="Priority" minOccurs="0"/>
 		</xs:sequence>
