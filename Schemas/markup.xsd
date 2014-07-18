@@ -64,14 +64,16 @@
 		<xs:sequence>
 			<xs:element name="ReferenceLink" type="xs:string" minOccurs="0"/>
 			<xs:element name="Title" type="xs:string"/>
+			<xs:element name="Priority" type="Priority" minOccurs="0"/>
 			<!-- ISG Jira issue BCF-8 Add a way save order the topics -->
 			<xs:element name="Index" type="xs:integer" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="Label" type="TopicLabel" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="CreationDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="CreationAuthor" type="UserIdType" minOccurs="0"/>
 			<xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="ModifiedAuthor" type="UserIdType" minOccurs="0"/>
 			<xs:element name="AssignedTo" type="UserIdType" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="Priority" type="Priority" minOccurs="0"/>
 			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0" maxOccurs="1"/>
 			<!-- Name of the file in the topic folder or url -->
 			<xs:element name="DocumentReference" minOccurs="0" maxOccurs="unbounded">
