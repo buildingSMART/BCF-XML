@@ -118,7 +118,7 @@
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ReplyTo" minOccurs="0" maxOccurs="1">
+			<xs:element name="ReplyToComment" minOccurs="0" maxOccurs="1">
 				<xs:complexType>
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
