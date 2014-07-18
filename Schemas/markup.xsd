@@ -126,6 +126,7 @@
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0"/>
+			<xs:element name="ModifiedAuthor" type="UserIdType" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 	</xs:complexType>
