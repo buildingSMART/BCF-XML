@@ -256,22 +256,24 @@ When writing BCF 2.0 files:
 - write Status and VerbalStatus at Comment level for backward compatibility.
 
 ### Optimizing Viewpoint Size
-There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. In BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility. 
+There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. In BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility and reduce viewpoint sizes at the same time. The creating software should for example not list all components in a viewpoint and use clipping planes at the same time to reduce the visibility.
 
 The optimization is done with the following agreements:
 
 - If most of the components are visible, export the invisible components with the visible flag as false.
 - If most of the components are invisible, export the visible components with the visible flag as true.
+- Do NOT combine in one viewpoint components listed as visible and listed as invisible. This can lead to inconsistent visibility in (changed) IFC files
+- If NO components are listed in the viewpoint it means: all components are visible
 
 The visualization is done then with the following logic:
-- If the viewpoint contains hidden components (visible is false), hide them and show the rest.
+- If the viewpoint contains hidden components (visible is false), hide them and show all the rest.
 - If the viewpoint does not contain any hidden components, show only the visible components. 
 
 ### Usage of Selected Flag in Visualization
-The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the Visible flag must also be true and Color must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
+The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the component is considered visible and the Visible flag does not need to be exported. The Color flag must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
 
 ### Usage of Color in Visualization
-The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the Visible flag must also be true and Selected flag must be false. 
+The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the component is considered visible, the values of Visible and Selected flags can be ignored and they don't need to be exported. 
 
  
 
