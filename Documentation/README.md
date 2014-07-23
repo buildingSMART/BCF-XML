@@ -35,6 +35,8 @@ A BCF file is a zip containing one folder for each topic. The folder name is the
 
 * project.bcfp (optional)
     - An XML file referencing the extension.xsd to a project.
+* bcf.version
+	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
