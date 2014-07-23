@@ -232,13 +232,13 @@ Location | No | Location of the center of the bitmap in world coordinates
 Normal | No | Normal vector of the bitmap
 Up | No | Up vector of the bitmap
 
-# Implementation Agreements #
+## Implementation Agreements 
 Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
 
-## One to Many Mapping between Viewpoints and Comments ##
+### One to Many Mapping between Viewpoints and Comments
 The schema would allow to have many to many mapping between viewpoints and comments. This is not allowed. A viewpoint can have multiple comments, but a comment can only refer to one viewpoint.
 
-## Status and VerbalStatus to be Phased out ##
+### Status and VerbalStatus to be Phased out
 Status and Verbal Status of Comment will be phased out and replaced by TopicStatus and TopicType in Topic. 
 
 When interpreting BCF 1.0 files use the following logic:
@@ -253,7 +253,7 @@ When writing BCF 2.0 files:
 - write the current type and status to Topic's TopicType and TopicStatus
 - write Status and VerbalStatus at Comment level for backward compatibility.
 
-## Optimizing Viewpoint Size ##
+### Optimizing Viewpoint Size
 There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. In BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility. 
 
 The optimization is done with the following agreements:
@@ -265,10 +265,10 @@ The visualization is done then with the following logic:
 - If the viewpoint contains hidden components (visible is false), hide them and show the rest.
 - If the viewpoint does not contain any hidden components, show only the visible components. 
 
-## Usage of Selected Flag in Visualization ##
+### Usage of Selected Flag in Visualization
 The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the Visible flag must also be true and Color must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
 
-## Usage of Color in Visualization ##
+### Usage of Color in Visualization
 The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the Visible flag must also be true and Selected flag must be false. 
 
  
