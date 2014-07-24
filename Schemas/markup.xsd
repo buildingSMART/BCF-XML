@@ -131,7 +131,6 @@
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 	</xs:complexType>
-	<!-- BCF-16 Add topic status to comments to know when a topic is resolved or still open -->
 	<xs:simpleType name="TopicStatus">
 		<xs:restriction base="xs:string"/>
 	</xs:simpleType>
