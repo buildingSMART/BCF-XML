@@ -34,7 +34,7 @@
 				<xs:element name="Bitmaps" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="Bitmap" type="Bitmap" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Bitmap" type="Bitmap" minOccurs="0"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>

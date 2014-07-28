@@ -87,7 +87,7 @@
 					<xs:attributeGroup ref="DocumentReference"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="RelatedTopics" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="RelatedTopics" minOccurs="0">
 				<xs:sequence>
 					<xs:element name="RelatedTopic" type="RelatedTopic" minOccurs="0" maxOccurs="unbounded"/>
 				</xs:sequence>
