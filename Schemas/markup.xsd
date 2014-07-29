@@ -87,10 +87,10 @@
 					<xs:attributeGroup ref="DocumentReference"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="RelatedTopics" minOccurs="0">
-				<xs:sequence>
-					<xs:element name="RelatedTopic" type="RelatedTopic" minOccurs="0" maxOccurs="unbounded"/>
-				</xs:sequence>
+			<xs:element name="RelatedTopics" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="Guid" type="Guid" use="required"/>
+				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
@@ -104,9 +104,6 @@
 		<!-- A flag that is true when the ReferencedDocument points outside of the BCF file (a URL) -->
 		<xs:attribute name="isExternal" type="xs:boolean" default="false"/>
 	</xs:attributeGroup>
-	<xs:complexType name="RelatedTopic">
-		<xs:attribute name="Guid" type="Guid" use="required"/>
-	</xs:complexType>
 	<xs:complexType name="Comment">
 		<xs:sequence>
 			<xs:element name="VerbalStatus" type="TopicStatus" minOccurs="0"/>
