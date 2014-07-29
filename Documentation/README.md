@@ -35,6 +35,8 @@ A BCF file is a zip containing one folder for each topic. The folder name is the
 
 * project.bcfp (optional)
     - An XML file referencing the extension.xsd to a project.
+* bcf.version
+	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
@@ -232,9 +234,48 @@ Location | No | Location of the center of the bitmap in world coordinates
 Normal | No | Normal vector of the bitmap
 Up | No | Up vector of the bitmap
 
+## Implementation Agreements 
+Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
 
+### One to Many Mapping between Viewpoints and Comments
+The schema would allow to have many to many mapping between viewpoints and comments. This is not allowed. A viewpoint can have multiple comments, but a comment can only refer to one viewpoint.
 
+### Status and VerbalStatus to be Phased out
+Status and Verbal Status of Comment will be phased out and replaced by TopicStatus and TopicType in Topic. 
 
+When interpreting BCF 1.0 files use the following logic:
+
+- use Status of most recent comment as value of TopicType
+- use Verbalstatus of most recent comment as TopicStatus.
+
+When interpreting BCF 2.0 files: VerbalStatus and Status on comment level should all be neglected if TopicStatus and TopicType are present in Topic.
+
+When writing BCF 2.0 files:
+
+- write the current type and status to Topic's TopicType and TopicStatus
+- write Status and VerbalStatus at Comment level for backward compatibility.
+
+### Optimizing Viewpoint Size
+There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. In BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility and reduce viewpoint sizes at the same time. The creating software should for example not list all components in a viewpoint and use clipping planes at the same time to reduce the visibility.
+
+The optimization is done with the following agreements:
+
+- If most of the components are visible, export the invisible components with the visible flag as false.
+- If most of the components are invisible, export the visible components with the visible flag as true.
+- Do NOT combine in one viewpoint components listed as visible and listed as invisible. This can lead to inconsistent visibility in (changed) IFC files
+- If NO components are listed in the viewpoint it means: all components are visible
+
+The visualization is done then with the following logic:
+- If the viewpoint contains hidden components (visible is false), hide them and show all the rest.
+- If the viewpoint does not contain any hidden components, show only the visible components. 
+
+### Usage of Selected Flag in Visualization
+The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the component is considered visible and the Visible flag does not need to be exported. The Color flag must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
+
+### Usage of Color in Visualization
+The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the component is considered visible, the values of Visible and Selected flags can be ignored and they don't need to be exported. 
+
+ 
 
 
 
