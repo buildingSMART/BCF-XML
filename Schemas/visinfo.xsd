@@ -31,10 +31,20 @@
 					</xs:complexType>
 				</xs:element>
 				<!-- ISG Jira issue BCF-17: Add support for text in the viewpoints -->
-				<xs:element name="Bitmaps" minOccurs="0">
+				<xs:element name="Bitmaps" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="Bitmap" type="Bitmap" minOccurs="0" maxOccurs="unbounded"/>
+							<xs:element name="Bitmap" type="BitmapFormat" minOccurs="1" maxOccurs="1"/>
+							<!-- Name of the bitmap file in the topic folder -->
+							<xs:element name="Reference" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<!-- Location of the center of the bitmap -->
+							<xs:element name="Location" type="Point"/>
+							<!-- Normal of the bitmap -->
+							<xs:element name="Normal" type="Direction"/>
+							<!-- Upvector of the bitmap -->
+							<xs:element name="Up" type="Direction"/>
+							<!-- Height of the bitmap -->
+							<xs:element name="Height" type="xs:double"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
@@ -120,19 +130,4 @@
 			<xs:enumeration value="JPG"/>
 		</xs:restriction>
 	</xs:simpleType>
-	<xs:complexType name="Bitmap">
-		<xs:sequence>
-			<xs:element name="Bitmap" type="BitmapFormat" minOccurs="1" maxOccurs="1"/>
-			<!-- Name of the bitmap file in the topic folder -->
-			<xs:element name="Reference" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Location of the center of the bitmap -->
-			<xs:element name="Location" type="Point"/>
-			<!-- Normal of the bitmap -->
-			<xs:element name="Normal" type="Direction"/>
-			<!-- Upvector of the bitmap -->
-			<xs:element name="Up" type="Direction"/>
-			<!-- Height of the bitmap -->
-			<xs:element name="Height" type="xs:double"/>
-		</xs:sequence>
-	</xs:complexType>
 </xs:schema>
