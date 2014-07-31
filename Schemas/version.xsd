@@ -4,14 +4,9 @@
 	<xs:element name="Version">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Version" type="Version"/>
+				<xs:element name="DetailedVersion" type="xs:string" minOccurs="0"/>
 			</xs:sequence>
+			<xs:attribute name="VersionId" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
-	<xs:complexType name="Version">
-		<xs:sequence>
-			<xs:element name="DetailedVersion" type="xs:string" minOccurs="0"/>
-		</xs:sequence>
-		<xs:attribute name="VersionId" type="xs:string"/>
-	</xs:complexType>
 </xs:schema>
