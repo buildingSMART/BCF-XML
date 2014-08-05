@@ -29,14 +29,15 @@ Globally Unique ID in the IFC format. This format is used only when referring to
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
 
 ### BCF file structure
-In the root of the BCF file is an XML file defining project related information. The name of this file is project.xml. This file follows the project.xsd schema.
-
-A BCF file is a zip containing one folder for each topic. The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
+A BCF file is a zip containing one folder for each topic. The root of the BCF zip contains the following files.
 
 * project.bcfp (optional)
-    - An XML file referencing the extension.xsd to a project.
+    - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
 * bcf.version
 	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
+
+The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
+
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
@@ -103,9 +104,22 @@ In addition it has the following nodes:
 
  Element | Optional | Description |  
 :-----------|:------------|:------------
-ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
 Title | No | Title of the topic.
+Guid | No | The topic identifier
+ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
+Description | Yes | Description of the topic
+Priority | Yes | Topic priority. The list of possible values are defined in the extension schema
 Index | Yes | Number to maintain the order of the topics.
+CreationDate | Yes | Date when the topic was created
+CreationAuthor | Yes | User who created the topic
+ModifiedDate | Yes | Date when the topic was last modified
+ModifiedAuthor | Yes | User who modified the topic
+AssignedTo | Yes | The user to whom this topic is assigned to
+BimSnippet | Yes | BimSnippet related to the project
+DocumentReference | Yes | List of references related to the topic
+TopicType | Yes | The type of the topic (the options can be specified in the extension schema)
+TopicStatus | Yes | The status of the topic (the options can be specified in the extension schema)
+
 
 ### BimSnippet (optional)
 BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids.
@@ -276,6 +290,5 @@ The Selected flag in Component node in visualization is used as a hint to the vi
 The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the component is considered visible, the values of Visible and Selected flags can be ignored and they don't need to be exported. 
 
  
-
 
 
