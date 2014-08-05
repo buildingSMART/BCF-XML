@@ -115,8 +115,6 @@ CreationAuthor | Yes | User who created the topic
 ModifiedDate | Yes | Date when the topic was last modified
 ModifiedAuthor | Yes | User who modified the topic
 AssignedTo | Yes | The user to whom this topic is assigned to
-BimSnippet | Yes | BimSnippet related to the project
-DocumentReference | Yes | List of references related to the topic
 TopicType | Yes | The type of the topic (the options can be specified in the extension schema)
 TopicStatus | Yes | The status of the topic (the options can be specified in the extension schema)
 
@@ -173,9 +171,9 @@ Date | No | Date of the comment
 Author |No | Comment author
 Comment | No | The comment text
 Topic | No | Back reference to the topic GUID.
-AuthorEmail | No | Email address of the comment author.
-Priority | Yes | Priority of the comment (Predefined list in “extension.xsd”)
-
+ReplyToComment | Yes | Guid of the comment to which this comment is a reply
+ModifiedDate | Yes | The date when comment was modified
+ModifiedAuthor | Yes | The author who modified the comment
 
 ### Viewpoints
 The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
