@@ -198,7 +198,7 @@ Attribute | Optional | Description |
 IfcGuid | Yes | Select the component in a BIM tool
 Selected | Yes | This flag is true if the component is actually involved in the topic. If the flag is false, the component is involved as reference.
 Visible | Yes | This flag is true when the component is visible in the visualization. By setting this false, you can hide components that would prevent seeing the topic from the camera position and angle of the viewpoint.
-Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint.
+Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint. The color is given in ARGB format.
 
 
 In addition, it has the following information:
