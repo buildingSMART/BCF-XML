@@ -42,10 +42,10 @@ The folder name is the GUID of the topic. This GUID is in the UUID form. The fol
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
     * An XML file following the visinfo.xsd schema that is described below (for compatibility with BCF 1.0).
-    * Multiple viewpoints are possible in BCF 2.0. Names of these files are not predefined.
+    * Multiple viewpoints are possible in BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
 * snapshot.png 
     *  A snapshot related to the topic (for compatibility with BCF 1.0).
-Multiple snapshots are possible in BCF 2.0. Names of these files are not predefined.
+Multiple snapshots are possible in BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
 
 
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
@@ -288,5 +288,4 @@ The Selected flag in Component node in visualization is used as a hint to the vi
 The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the component is considered visible, the values of Visible and Selected flags can be ignored and they don't need to be exported. 
 
  
-
 
