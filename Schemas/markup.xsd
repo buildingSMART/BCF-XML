@@ -34,12 +34,6 @@
 			<xs:element name="Viewpoint" type="xs:string" minOccurs="0" maxOccurs="1"/>
 			<!-- the snapshot png -->
 			<xs:element name="Snapshot" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Guids of comments related to this viewpoint -->
-			<xs:element name="Comments" minOccurs="0" maxOccurs="unbounded">
-				<xs:complexType>
-					<xs:attribute name="Guid" type="Guid" use="required"/>
-				</xs:complexType>
-			</xs:element>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 		<!-- Guid of the viewpoint -->
