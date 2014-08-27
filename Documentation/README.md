@@ -147,17 +147,8 @@ ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\example
 Description | Yes | Description of the document
 
 
-
 ### RelatedTopics (optional)
 Relation between topics (Clash -> PfV -> Opening)
-
-### AssignedTo (optional)
-A topic can be assigned to a person.
-
-Element | Optional | Description |  
-:-----------|:------------|:------------
-AssignedToEmail | Yes | The email-address of the person the topic is assigned to
-AssignedToName | Yes | The name of the person the topic is assigned to
 
 
 ### Comment
@@ -288,4 +279,3 @@ The Selected flag in Component node in visualization is used as a hint to the vi
 The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the component is considered visible, the values of Visible and Selected flags can be ignored and they don't need to be exported. 
 
  
-
