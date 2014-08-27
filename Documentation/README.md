@@ -29,22 +29,23 @@ Globally Unique ID in the IFC format. This format is used only when referring to
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
 
 ### BCF file structure
-In the root of the BCF file is an XML file defining project related information. The name of this file is project.xml. This file follows the project.xsd schema.
-
-A BCF file is a zip containing one folder for each topic. The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
+A BCF file is a zip containing one folder for each topic. The root of the BCF zip contains the following files.
 
 * project.bcfp (optional)
-    - An XML file referencing the extension.xsd to a project.
+    - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
 * bcf.version
 	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
+
+The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
+
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
     * An XML file following the visinfo.xsd schema that is described below (for compatibility with BCF 1.0).
-    * Multiple viewpoints are possible in BCF 2.0. Names of these files are not predefined.
+    * Multiple viewpoints are possible in BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
 * snapshot.png 
     *  A snapshot related to the topic (for compatibility with BCF 1.0).
-Multiple snapshots are possible in BCF 2.0. Names of these files are not predefined.
+Multiple snapshots are possible in BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
 
 
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
@@ -103,9 +104,20 @@ In addition it has the following nodes:
 
  Element | Optional | Description |  
 :-----------|:------------|:------------
-ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
 Title | No | Title of the topic.
+Guid | No | The topic identifier
+ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
+Description | Yes | Description of the topic
+Priority | Yes | Topic priority. The list of possible values are defined in the extension schema
 Index | Yes | Number to maintain the order of the topics.
+CreationDate | Yes | Date when the topic was created
+CreationAuthor | Yes | User who created the topic
+ModifiedDate | Yes | Date when the topic was last modified
+ModifiedAuthor | Yes | User who modified the topic
+AssignedTo | Yes | The user to whom this topic is assigned to
+TopicType | Yes | The type of the topic (the options can be specified in the extension schema)
+TopicStatus | Yes | The status of the topic (the options can be specified in the extension schema)
+
 
 ### BimSnippet (optional)
 BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids.
@@ -135,17 +147,8 @@ ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\example
 Description | Yes | Description of the document
 
 
-
 ### RelatedTopics (optional)
 Relation between topics (Clash -> PfV -> Opening)
-
-### AssignedTo (optional)
-A topic can be assigned to a person.
-
-Element | Optional | Description |  
-:-----------|:------------|:------------
-AssignedToEmail | Yes | The email-address of the person the topic is assigned to
-AssignedToName | Yes | The name of the person the topic is assigned to
 
 
 ### Comment
@@ -159,9 +162,9 @@ Date | No | Date of the comment
 Author |No | Comment author
 Comment | No | The comment text
 Topic | No | Back reference to the topic GUID.
-AuthorEmail | No | Email address of the comment author.
-Priority | Yes | Priority of the comment (Predefined list in “extension.xsd”)
-
+ReplyToComment | Yes | Guid of the comment to which this comment is a reply
+ModifiedDate | Yes | The date when comment was modified
+ModifiedAuthor | Yes | The author who modified the comment
 
 ### Viewpoints
 The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
@@ -186,7 +189,7 @@ Attribute | Optional | Description |
 IfcGuid | Yes | Select the component in a BIM tool
 Selected | Yes | This flag is true if the component is actually involved in the topic. If the flag is false, the component is involved as reference.
 Visible | Yes | This flag is true when the component is visible in the visualization. By setting this false, you can hide components that would prevent seeing the topic from the camera position and angle of the viewpoint.
-Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint.
+Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint. The color is given in ARGB format.
 
 
 In addition, it has the following information:
@@ -276,6 +279,3 @@ The Selected flag in Component node in visualization is used as a hint to the vi
 The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the component is considered visible, the values of Visible and Selected flags can be ignored and they don't need to be exported. 
 
  
-
-
-
