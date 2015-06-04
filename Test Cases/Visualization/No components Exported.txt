@@ -1,0 +1,5 @@
+Model = bcf2_testModel
+bcffile = No components Exported.bcfzip
+
+BCF file has one issue with one viewpoint.
+Whole model is visible and Viewpoint has No components exported.

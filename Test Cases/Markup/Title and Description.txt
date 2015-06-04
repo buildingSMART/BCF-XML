@@ -1,0 +1,7 @@
+Model = bcf2_testModel
+bcffile = Title and Description.bcfzip
+
+BCF file has only one issue.
+The issue has one viewpoint, Title and Description.
+Status = open, TopicType=Error
+(One opening colored green)

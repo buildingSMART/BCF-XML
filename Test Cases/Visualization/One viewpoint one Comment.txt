@@ -1,0 +1,5 @@
+Model = bcf2_testModel
+bcffile = One viewpoint one Comment.bcfzip
+
+BCF file has one issue with one viewpoint.
+Viewpoint has one comment only.

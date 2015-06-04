@@ -1,0 +1,6 @@
+Model = bcf2_testModel
+bcffile = Markups.bcfzip
+
+BCF file has one issue with one viewpoint.
+Viewpoint has One text markup (bitmap), arrow markup (3 lines) and point stamp (7 lines)
+and four walls.
