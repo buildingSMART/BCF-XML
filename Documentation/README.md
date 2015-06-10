@@ -110,10 +110,10 @@ ReferenceLink | Yes | Reference to the topic in, for example, a work request man
 Description | Yes | Description of the topic
 Priority | Yes | Topic priority. The list of possible values are defined in the extension schema
 Index | Yes | Number to maintain the order of the topics.
-CreationDate | Yes | Date when the topic was created
-CreationAuthor | Yes | User who created the topic
-ModifiedDate | Yes | Date when the topic was last modified
-ModifiedAuthor | Yes | User who modified the topic
+CreationDate | No | Date when the topic was created.
+CreationAuthor | No | User who created the topic
+ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation
+ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation
 AssignedTo | Yes | The user to whom this topic is assigned to
 TopicType | Yes | The type of the topic (the options can be specified in the extension schema)
 TopicStatus | Yes | The status of the topic (the options can be specified in the extension schema)
