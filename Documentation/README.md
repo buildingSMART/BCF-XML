@@ -163,6 +163,7 @@ Date | No | Date of the comment
 Author |No | Comment author
 Comment | No | The comment text
 Topic | No | Back reference to the topic GUID.
+Viewpoint | Yes | Back reference to the viewpoint GUID.
 ReplyToComment | Yes | Guid of the comment to which this comment is a reply
 ModifiedDate | Yes | The date when comment was modified
 ModifiedAuthor | Yes | The author who modified the comment
@@ -174,7 +175,6 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 Viewpoint | Yes | Filename of the viewpoint (.bcfv)
 Snapshot | Yes | Filename of the snapshot(.png)
-Comment | Yes | Back reference to the comment GUID.
 
 
 ## Visualization information (.bcfv) file
