@@ -96,7 +96,7 @@ Topic node contains reference information of the topic. It has one attribute, Gu
 
  Attribute | Optional | Description |  
 :-----------|:------------|:------------
-Guid | Yes | Guid of the topic
+Guid | No | Guid of the topic
 TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
 
 In addition it has the following nodes:
@@ -105,7 +105,6 @@ In addition it has the following nodes:
  Element | Optional | Description |  
 :-----------|:------------|:------------
 Title | No | Title of the topic.
-Guid | No | The topic identifier
 ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
 Description | Yes | Description of the topic
 Priority | Yes | Topic priority. The list of possible values are defined in the extension schema
