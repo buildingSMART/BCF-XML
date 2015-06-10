@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mit XMLSpy v2011 rel. 3 (http://www.altova.com) von Klaus Linhard (IABI e.V.) bearbeitet -->
+<!-- Mit XMLSpy v2011 rel. 2 sp1 (http://www.altova.com) von Klaus Linhard (IABI e.V.) bearbeitet -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="Markup">
 		<xs:complexType>
@@ -62,8 +62,8 @@
 			<!-- ISG Jira issue BCF-8 Add a way save order the topics -->
 			<xs:element name="Index" type="xs:integer" minOccurs="0" maxOccurs="1"/>
 			<xs:element name="Labels" type="TopicLabel" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="CreationDate" type="xs:dateTime" minOccurs="0"/>
-			<xs:element name="CreationAuthor" type="UserIdType" minOccurs="0"/>
+			<xs:element name="CreationDate" type="xs:dateTime" minOccurs="1"/>
+			<xs:element name="CreationAuthor" type="UserIdType" minOccurs="1"/>
 			<xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0"/>
 			<xs:element name="ModifiedAuthor" type="UserIdType" minOccurs="0"/>
 			<xs:element name="AssignedTo" type="UserIdType" minOccurs="0" maxOccurs="1"/>
