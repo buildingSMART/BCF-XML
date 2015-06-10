@@ -267,6 +267,7 @@ The optimization is done with the following agreements:
 - If most of the components are invisible, export the visible components with the visible flag as true.
 - Do NOT combine in one viewpoint components listed as visible and listed as invisible. This can lead to inconsistent visibility in (changed) IFC files
 - If NO components are listed in the viewpoint it means: all components are visible
+- Spaces and Openings are always invisible by default; they are only shown when set explicit to visible.
 
 The visualization is done then with the following logic:
 - If the viewpoint contains hidden components (visible is false), hide them and show all the rest.
