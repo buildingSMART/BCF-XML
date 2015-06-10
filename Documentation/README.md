@@ -109,8 +109,9 @@ Guid | No | The topic identifier
 ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
 Description | Yes | Description of the topic
 Priority | Yes | Topic priority. The list of possible values are defined in the extension schema
-Index | Yes | Number to maintain the order of the topics.
-CreationDate | No | Date when the topic was created.
+Index | Yes | Number to maintain the order of the topics 
+Labels | Yes | Tags for grouping Topics
+CreationDate | No | Date when the topic was created
 CreationAuthor | No | User who created the topic
 ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation
 ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation
