@@ -20,7 +20,7 @@
 						<xs:element name="Filename" type="xs:string" minOccurs="0"/>
 						<xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
 						<!-- Reference (URL) of the file -->
-						<xs:element name="Reference" type="xs:string" minOccurs="0" maxOccurs="1"/>
+						<xs:element name="Reference" type="xs:string" minOccurs="0"/>
 					</xs:sequence>
 					<xs:attributeGroup ref="FileAttributes"/>
 				</xs:complexType>
@@ -31,9 +31,9 @@
 	<xs:complexType name="ViewPoint">
 		<xs:sequence>
 			<!-- viewpoint file (xml) -->
-			<xs:element name="Viewpoint" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Viewpoint" type="xs:string" minOccurs="0"/>
 			<!-- the snapshot png -->
-			<xs:element name="Snapshot" type="xs:string" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Snapshot" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 		<!-- Guid of the viewpoint -->
@@ -47,8 +47,8 @@
         // Maybe some header infos ?? // IfcEntites // Geometry 
          -->
 			<!-- Reference (name) to the snippet file -->
-			<xs:element name="Reference" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<xs:element name="ReferenceSchema" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Reference" type="xs:string"/>
+			<xs:element name="ReferenceSchema" type="xs:string"/>
 		</xs:sequence>
 		<xs:attribute name="SnippetType" type="xs:string" use="required"/>
 		<xs:attribute name="isExternal" type="xs:boolean" default="false"/>
@@ -60,15 +60,15 @@
 			<xs:element name="Title" type="xs:string"/>
 			<xs:element name="Priority" type="Priority" minOccurs="0"/>
 			<!-- ISG Jira issue BCF-8 Add a way save order the topics -->
-			<xs:element name="Index" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Index" type="xs:integer" minOccurs="0"/>
 			<xs:element name="Labels" type="TopicLabel" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="CreationDate" type="xs:dateTime" minOccurs="1"/>
 			<xs:element name="CreationAuthor" type="UserIdType" minOccurs="1"/>
 			<xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0"/>
 			<xs:element name="ModifiedAuthor" type="UserIdType" minOccurs="0"/>
-			<xs:element name="AssignedTo" type="UserIdType" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="Description" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="AssignedTo" type="UserIdType" minOccurs="0"/>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
 			<!-- Name of the file in the topic folder or url -->
 			<xs:element name="DocumentReferences" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
@@ -110,12 +110,12 @@
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="Viewpoint" minOccurs="0" maxOccurs="1">
+			<xs:element name="Viewpoint" minOccurs="0">
 				<xs:complexType>
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ReplyToComment" minOccurs="0" maxOccurs="1">
+			<xs:element name="ReplyToComment" minOccurs="0">
 				<xs:complexType>
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
