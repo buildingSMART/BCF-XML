@@ -110,11 +110,6 @@
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="ReplyToComment" minOccurs="0">
-				<xs:complexType>
-					<xs:attribute name="Guid" type="Guid" use="required"/>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0"/>
 			<xs:element name="ModifiedAuthor" type="UserIdType" minOccurs="0"/>
 		</xs:sequence>
