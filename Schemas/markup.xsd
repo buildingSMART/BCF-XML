@@ -105,11 +105,6 @@
 			<xs:element name="Date" type="xs:dateTime"/>
 			<xs:element name="Author" type="UserIdType"/>
 			<xs:element name="Comment" type="xs:string"/>
-			<xs:element name="Topic">
-				<xs:complexType>
-					<xs:attribute name="Guid" type="Guid" use="required"/>
-				</xs:complexType>
-			</xs:element>
 			<xs:element name="Viewpoint" minOccurs="0">
 				<xs:complexType>
 					<xs:attribute name="Guid" type="Guid" use="required"/>
