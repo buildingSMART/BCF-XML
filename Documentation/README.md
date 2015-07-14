@@ -98,6 +98,7 @@ Topic node contains reference information of the topic. It has one attribute, Gu
 :-----------|:------------|:------------
 Guid | No | Guid of the topic
 TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
+TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
 
 In addition it has the following nodes:
 
@@ -115,8 +116,6 @@ CreationAuthor | No | User who created the topic
 ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation
 ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation
 AssignedTo | Yes | The user to whom this topic is assigned to
-TopicType | Yes | The type of the topic (the options can be specified in the extension schema)
-TopicStatus | Yes | The status of the topic (the options can be specified in the extension schema)
 
 
 ### BimSnippet (optional)
@@ -149,6 +148,10 @@ Description | Yes | Description of the document
 
 ### RelatedTopics (optional)
 Relation between topics (Clash -> PfV -> Opening)
+
+Element/Attribute | Optional | Description |  
+:-----------|:------------|:------------
+RelatedTopics/GUID | Yes | List of GUIDs of the referenced topics.
 
 
 ### Comment
