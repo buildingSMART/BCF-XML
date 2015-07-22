@@ -96,8 +96,9 @@ Topic node contains reference information of the topic. It has one attribute, Gu
 
  Attribute | Optional | Description |  
 :-----------|:------------|:------------
-Guid | Yes | Guid of the topic
+Guid | No | Guid of the topic
 TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
+TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
 
 In addition it has the following nodes:
 
@@ -105,18 +106,16 @@ In addition it has the following nodes:
  Element | Optional | Description |  
 :-----------|:------------|:------------
 Title | No | Title of the topic.
-Guid | No | The topic identifier
 ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
 Description | Yes | Description of the topic
 Priority | Yes | Topic priority. The list of possible values are defined in the extension schema
-Index | Yes | Number to maintain the order of the topics.
-CreationDate | Yes | Date when the topic was created
-CreationAuthor | Yes | User who created the topic
-ModifiedDate | Yes | Date when the topic was last modified
-ModifiedAuthor | Yes | User who modified the topic
+Index | Yes | Number to maintain the order of the topics 
+Labels | Yes | Tags for grouping Topics
+CreationDate | No | Date when the topic was created
+CreationAuthor | No | User who created the topic
+ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation
+ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation
 AssignedTo | Yes | The user to whom this topic is assigned to
-TopicType | Yes | The type of the topic (the options can be specified in the extension schema)
-TopicStatus | Yes | The status of the topic (the options can be specified in the extension schema)
 
 
 ### BimSnippet (optional)
@@ -150,6 +149,10 @@ Description | Yes | Description of the document
 ### RelatedTopics (optional)
 Relation between topics (Clash -> PfV -> Opening)
 
+Element/Attribute | Optional | Description |  
+:-----------|:------------|:------------
+RelatedTopics/GUID | Yes | List of GUIDs of the referenced topics.
+
 
 ### Comment
 The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
@@ -162,6 +165,7 @@ Date | No | Date of the comment
 Author |No | Comment author
 Comment | No | The comment text
 Topic | No | Back reference to the topic GUID.
+Viewpoint | Yes | Back reference to the viewpoint GUID.
 ReplyToComment | Yes | Guid of the comment to which this comment is a reply
 ModifiedDate | Yes | The date when comment was modified
 ModifiedAuthor | Yes | The author who modified the comment
@@ -173,7 +177,6 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 Viewpoint | Yes | Filename of the viewpoint (.bcfv)
 Snapshot | Yes | Filename of the snapshot(.png)
-Comment | Yes | Back reference to the comment GUID.
 
 
 ## Visualization information (.bcfv) file
@@ -267,6 +270,7 @@ The optimization is done with the following agreements:
 - If most of the components are invisible, export the visible components with the visible flag as true.
 - Do NOT combine in one viewpoint components listed as visible and listed as invisible. This can lead to inconsistent visibility in (changed) IFC files
 - If NO components are listed in the viewpoint it means: all components are visible
+- Spaces and Openings are always invisible by default; they are only shown when set explicit to visible.
 
 The visualization is done then with the following logic:
 - If the viewpoint contains hidden components (visible is false), hide them and show all the rest.

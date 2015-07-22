@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Mit XMLSpy v2011 rel. 3 (http://www.altova.com) von Klaus Linhard (IABI e.V.) bearbeitet -->
+<!-- Mit XMLSpy v2011 rel. 2 sp1 (http://www.altova.com) von Klaus Linhard (IABI e.V.) bearbeitet -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
 	<xs:element name="VisualizationInfo">
 		<xs:annotation>
-			<xs:documentation>visualiztioninfo documentation</xs:documentation>
+			<xs:documentation>VisualizationInfo documentation</xs:documentation>
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
@@ -34,9 +34,9 @@
 				<xs:element name="Bitmaps" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="Bitmap" type="BitmapFormat" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="Bitmap" type="BitmapFormat"/>
 							<!-- Name of the bitmap file in the topic folder -->
-							<xs:element name="Reference" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="Reference" type="xs:string"/>
 							<!-- Location of the center of the bitmap -->
 							<xs:element name="Location" type="Point"/>
 							<!-- Normal of the bitmap -->
