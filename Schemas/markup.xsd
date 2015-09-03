@@ -81,7 +81,7 @@
 					<xs:attributeGroup ref="DocumentReference"/>
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="RelatedTopics" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>

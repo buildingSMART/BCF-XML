@@ -146,12 +146,12 @@ ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\example
 Description | Yes | Description of the document
 
 
-### RelatedTopics (optional)
+### RelatedTopic (optional)
 Relation between topics (Clash -> PfV -> Opening)
 
-Element/Attribute | Optional | Description |  
+Attribute | Optional | Description |  
 :-----------|:------------|:------------
-RelatedTopics/GUID | Yes | List of GUIDs of the referenced topics.
+Guid | Yes | Guid of the referenced topic.
 
 
 ### Comment
