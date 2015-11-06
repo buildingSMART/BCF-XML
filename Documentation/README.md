@@ -269,8 +269,13 @@ The optimization is done with the following agreements:
 - If NO components are listed in the viewpoint it means: all components are visible
 
 The visualization is done then with the following logic:
-- If the viewpoint contains hidden components (visible is false), hide them and show all the rest.
-- If the viewpoint does not contain any hidden components, show only the visible components. 
+- (Default) If the flag VisibilityBase is not set, or set to Initial:
+   - If the viewpoint contains hidden components (visible is false), hide them and show all the rest.
+   - If the viewpoint does not contain any hidden components, show only the visible components.
+- If the flag VisiblityBase is set to AllVisible
+   - Hide the hidden components (visible is false), and show all the rest.
+- If the flag VisiblityBase is set to AllInvisible
+   - Show the visible components (visible is true), and hide the rest.
 
 ### Usage of Selected Flag in Visualization
 The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the component is considered visible and the Visible flag does not need to be exported. The Color flag must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
