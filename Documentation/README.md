@@ -265,7 +265,7 @@ When writing BCF 2.1 files:
 The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the component is considered visible. The Color flag must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
 
 ### Usage of Color in Visualization
-The Color in Component node in visualization is used specify a custom color for a given component. 
+The Color in Component node in visualization is used specify a custom color for a given component. When color is specified, the selected flag must not have true value.
 
 ### Optimizing Viewpoint Size
 There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. Since BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility and reduce viewpoint sizes at the same time. The creating software should for example not list all components in a viewpoint and use clipping planes at the same time to reduce the visibility.
