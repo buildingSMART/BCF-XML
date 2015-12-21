@@ -1,9 +1,9 @@
-# BIM Collaboration Format v2.0 Technical Documentation
+# BIM Collaboration Format v2.1 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
 Authors:
 
-* Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0)
+* Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0 / BCF 2.1)
 * Juha Laukala, Tekla (BCF 1.0)
 * Lassi Lifländer, Tekla (BCF 1.0)
 * Klaus Linhard, IABI (BCF 2.0)
@@ -42,10 +42,10 @@ The folder name is the GUID of the topic. This GUID is in the UUID form. The fol
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
     * An XML file following the visinfo.xsd schema that is described below (for compatibility with BCF 1.0).
-    * Multiple viewpoints are possible in BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
+    * Multiple viewpoints are possible since BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
 * snapshot.png 
     *  A snapshot related to the topic (for compatibility with BCF 1.0).
-Multiple snapshots are possible in BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
+Multiple snapshots are possible since BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
 
 
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
@@ -241,7 +241,7 @@ Normal | No | Normal vector of the bitmap
 Up | No | Up vector of the bitmap
 
 ## Implementation Agreements 
-Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
+Since BCF 2.1 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
 
 ### One to Many Mapping between Viewpoints and Comments
 The schema would allow to have many to many mapping between viewpoints and comments. This is not allowed. A viewpoint can have multiple comments, but a comment can only refer to one viewpoint.
@@ -254,15 +254,21 @@ When interpreting BCF 1.0 files use the following logic:
 - use Status of most recent comment as value of TopicType
 - use Verbalstatus of most recent comment as TopicStatus.
 
-When interpreting BCF 2.0 files: VerbalStatus and Status on comment level should all be neglected if TopicStatus and TopicType are present in Topic.
+When interpreting BCF 2.0 or later files: VerbalStatus and Status on comment level should all be neglected if TopicStatus and TopicType are present in Topic.
 
-When writing BCF 2.0 files:
+When writing BCF 2.1 files:
 
 - write the current type and status to Topic's TopicType and TopicStatus
 - write Status and VerbalStatus at Comment level for backward compatibility.
 
+### Usage of Selected Flag in Visualization
+The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the component is considered visible. The Color flag must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
+
+### Usage of Color in Visualization
+The Color in Component node in visualization is used specify a custom color for a given component. 
+
 ### Optimizing Viewpoint Size
-There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. In BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility and reduce viewpoint sizes at the same time. The creating software should for example not list all components in a viewpoint and use clipping planes at the same time to reduce the visibility.
+There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. Since BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility and reduce viewpoint sizes at the same time. The creating software should for example not list all components in a viewpoint and use clipping planes at the same time to reduce the visibility.
 
 The optimization is done with the following agreements:
 
@@ -276,10 +282,21 @@ The visualization is done then with the following logic:
 - If the viewpoint contains hidden components (visible is false), hide them and show all the rest.
 - If the viewpoint does not contain any hidden components, show only the visible components. 
 
-### Usage of Selected Flag in Visualization
-The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the component is considered visible and the Visible flag does not need to be exported. The Color flag must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
+#### Specifying Selected and Colored Components when Most Components are Visible
+When most components in the model, except openings and spaces, are visible and some components are selected or colored, export these components with the visible flag set to false value. This is to distinguish from the situation when only the selected/colored components are visible. Rest of the invisible components are also exported with visible is false flag.
 
-### Usage of Color in Visualization
-The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the component is considered visible, the values of Visible and Selected flags can be ignored and they don't need to be exported. 
+The following table illustrates the different cases:
 
- 
+Assume that you have a model consisting of three components, A, B, and C. The following table illustrates how combination of visibility and selected/colored flags would be used:
+
+Case | Exported to BCF
+--------|-------
+All components visible | Export no components 
+Only A is visible | Export only A with visible=true 
+One A is visible and it is colored | Export only A with visible=true and colored 
+All components visible and component A is colored | Export only A with visible=false and with color information 
+C is hidden, A and B visible with default colors | Export C with visible=false 
+C is hidden A is colored, B is visible with default color | Export C with visible=false, export A with visible=false and with color information 
+
+#### Handling of Decomposed Components
+Decomposed components are ones that are build from several sub components. In IFC the relation used is IfcRelAggregates. Typical such components are, for example, curtain walls, stairs, etc. Decomposed components can also be nested, that is, they can contain other decomposed components. The visible, selected, and color information applies to all children recursively when such information is applied to a parent component of decomposed components. For example, when a parent component is colored, the color is applied to all its children. When visible, selected, or color information of a child differs from that of the parent, the child's information needs to be exported separately.
