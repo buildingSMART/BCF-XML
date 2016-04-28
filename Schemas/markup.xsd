@@ -68,7 +68,7 @@
 			<xs:element name="ModifiedAuthor" type="UserIdType" minOccurs="0"/>
 			<xs:element name="AssignedTo" type="UserIdType" minOccurs="0"/>
 			<xs:element name="Description" type="xs:string" minOccurs="0"/>
-			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
+			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0" maxOccurs="unbounded"/>
 			<!-- Name of the file in the topic folder or url -->
 			<xs:element name="DocumentReferences" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
