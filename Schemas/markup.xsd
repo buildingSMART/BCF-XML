@@ -100,8 +100,6 @@
 	</xs:attributeGroup>
 	<xs:complexType name="Comment">
 		<xs:sequence>
-			<xs:element name="VerbalStatus" type="TopicStatus" minOccurs="0"/>
-			<xs:element name="Status" type="xs:string" default="Unknown"/>
 			<xs:element name="Date" type="xs:dateTime"/>
 			<xs:element name="Author" type="UserIdType"/>
 			<xs:element name="Comment" type="xs:string"/>
