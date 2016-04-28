@@ -56,7 +56,7 @@
 	</xs:complexType>
 	<xs:complexType name="Topic">
 		<xs:sequence>
-			<xs:element name="ReferenceLink" type="xs:string" minOccurs="0"/>
+			<xs:element name="ReferenceLink" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="Title" type="xs:string"/>
 			<xs:element name="Priority" type="Priority" minOccurs="0"/>
 			<!-- ISG Jira issue BCF-8 Add a way save order the topics -->
