@@ -183,7 +183,16 @@ Snapshot | Yes | Filename of the snapshot(.png)
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
 
 ### Components
-The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. 
+Component references are divided into 4 sets:
+
+Name | Description |  
+:-----------|:------------
+components | List of physical components. That means components that are not of type IfcSpace, IfcSpaceBoundary or IfcOpening.
+Spaces | List of components with type IfcSpace.
+SpaceBoundaries | List of components with type IfcSpaceBoundary.
+Openings | List of components with type IfcOpening.
+
+Each set contains Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. 
 
 Components has the following attributes:
 
@@ -262,24 +271,26 @@ When writing BCF 2.0 files:
 - write Status and VerbalStatus at Comment level for backward compatibility.
 
 ### Optimizing Viewpoint Size
-There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. In BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility and reduce viewpoint sizes at the same time. The creating software should for example not list all components in a viewpoint and use clipping planes at the same time to reduce the visibility.
+There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minumum. Each component set has a global variable to specify its default visibility.
 
-The optimization is done with the following agreements:
+Element | Default | Applicable Component set |  
+:-----------|:------------|:------------
+AllComponentsVisible | Yes | Components
+AllSpacesVisible | No | Spaces
+AllSpaceBoundariesVisible | No | SpaceBoundaries
+AllOpeningsVisible | No | Openings
 
-- If most of the components are visible, export the invisible components with the visible flag as false.
-- If most of the components are invisible, export the visible components with the visible flag as true.
-- Do NOT combine in one viewpoint components listed as visible and listed as invisible. This can lead to inconsistent visibility in (changed) IFC files
-- If NO components are listed in the viewpoint it means: all components are visible
-- Spaces and Openings are always invisible by default; they are only shown when set explicit to visible.
+The optimization is done with the following agreements. These rules applies to all 4 component sets individually.
 
-The visualization is done then with the following logic:
-- If the viewpoint contains hidden components (visible is false), hide them and show all the rest.
-- If the viewpoint does not contain any hidden components, show only the visible components. 
+- If most of the components in a set are visible, export the invisible components with the visible flag as false and set its default visibility to true.
+- If most of the components in a set are invisible, export the visible components with the visible flag as true and set its default visibility to false.
 
-### Usage of Selected Flag in Visualization
-The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the component is considered visible and the Visible flag does not need to be exported. The Color flag must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
+For selected and colored components
 
-### Usage of Color in Visualization
-The Color in Component node in visualization is used specify a custom color for a given component. When the flag is true, the component is considered visible, the values of Visible and Selected flags can be ignored and they don't need to be exported. 
+- If default visibility for a set is true and you have visible components that are selected or colored, set the visible flag as true.
+- If default visibility for a set is false and you have invisible components that are selected or colored, set the visible flag as true. (Bad practice)
 
- 
+Implementers agreement
+
+- If a set contains Components with the same ifcGuid, ignore the duplicate occurrences.
+- If a set contains Components with wrong IfcType, ignore it.
