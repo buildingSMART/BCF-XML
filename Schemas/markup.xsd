@@ -34,6 +34,8 @@
 			<xs:element name="Viewpoint" type="xs:string" minOccurs="0"/>
 			<!-- the snapshot png -->
 			<xs:element name="Snapshot" type="xs:string" minOccurs="0"/>
+			<!-- the viewpoint index (sort order) -->
+			<xs:element name="Index" type="xs:integer" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 		<!-- Guid of the viewpoint -->
