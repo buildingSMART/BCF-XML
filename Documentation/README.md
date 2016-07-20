@@ -90,6 +90,18 @@ Filename | Yes | The BIM file related to this topic.
 Date | Yes | Date of the BIM file.
 Reference | Yes | URI to IfcFile. <br> IsExternal=false “..\example.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../example.ifc“
 
+#### Custom Identifiers
+Each file can contain custom identifiers to assist BCF software tools with associating the topic with models on a client machine or on a BIM server. Custom Identifiers must be preserved by tools as topics round trip between them so that a reliable user experience can be provided.  
+ 
+A custom identifier has the following nodes:
+
+Attribute | Optional | Description |
+:---------|:---------|:-------------
+ Vendor   |  No      | A trading name that would uniquely identify the tool owning this custom identifier 
+ System   |  No      | A string that would uniquely identify the system to which this identifier applies. For a desktop tool this could be a string that would identify a specific PC. For a BIM server this could be a URL or any other unique string that would identify the server. 
+ Id       |  No      | A unique ID that would allow the BCF tool to match this custom identifier to a model on the users's PC or, in case of a BIM server, to a model on the server
+
+
 ### Topic
 Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID. 
 

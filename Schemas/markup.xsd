@@ -21,6 +21,7 @@
 						<xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
 						<!-- Reference (URL) of the file -->
 						<xs:element name="Reference" type="xs:string" minOccurs="0"/>
+						<xs:element name="CustomIdentifier" type="CustomIdentifier" minOccurs="0" maxOccurs="unbounded"/>
 					</xs:sequence>
 					<xs:attributeGroup ref="FileAttributes"/>
 				</xs:complexType>
@@ -146,4 +147,11 @@
 		<xs:attribute name="IfcSpatialStructureElement" type="IfcGuid"/>
 		<xs:attribute name="isExternal" type="xs:boolean" default="true"/>
 	</xs:attributeGroup>
+	<xs:complexType name="CustomIdentifier">
+		<xs:sequence>
+			<xs:element name="Vendor" type="xs:string" />
+			<xs:element name="System" type="xs:string" />
+			<xs:element name="Id" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
 </xs:schema>
