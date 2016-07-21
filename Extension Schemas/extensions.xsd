@@ -28,7 +28,7 @@
 				<xs:enumeration value="Structure"/>
 				<xs:enumeration value="Mechanical"/>
 				<xs:enumeration value="Electrical"/>
-				<xs:enumeration value="Specifications"/>
+				<xs:enumeration value="Spesifications"/>
 				<xs:enumeration value="Technology"/>
 			</xs:restriction>
 		</xs:simpleType>
