@@ -28,6 +28,9 @@ Globally Unique ID in the IFC format. This format is used only when referring to
 ### Background
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
 
+### Example
+BCFier, an open source BCF client is available at: http://bcfier.com
+
 ### BCF file structure
 A BCF file is a zip containing one folder for each topic with its file extension "bcfzip" for BCFv1.0 and BCFv2.0. The file extension as the version number "bcfv2.1" is introduced since BCFv2.1.
 The root of the BCF zip contains the following files.
