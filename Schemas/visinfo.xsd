@@ -7,13 +7,10 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Components" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
-						</xs:sequence>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="Components" type="ComponentList" minOccurs="0"/>
+				<xs:element name="Spaces" type="ComponentList" minOccurs="0"/>
+				<xs:element name="SpaceBoundaries" type="ComponentList" minOccurs="0"/>
+				<xs:element name="Openings" type="ComponentList" minOccurs="0"/>
 				<xs:element name="OrthogonalCamera" type="OrthogonalCamera" minOccurs="0"/>
 				<xs:element name="PerspectiveCamera" type="PerspectiveCamera" minOccurs="0"/>
 				<xs:element name="Lines" minOccurs="0">
@@ -93,6 +90,12 @@
 			<xs:maxInclusive value="60"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="ComponentList">
+    <xs:sequence>
+      <xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="DefaultVisibility" type="xs:boolean" default="true"/>
+  </xs:complexType>
 	<xs:complexType name="Component">
 		<xs:sequence>
 			<xs:element name="OriginatingSystem" type="xs:string" minOccurs="0"/>
