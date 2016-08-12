@@ -3,7 +3,7 @@
 
 Authors:
 
-* Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0)
+* Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0 / BCF 2.1)
 * Juha Laukala, Tekla (BCF 1.0)
 * Lassi Lifländer, Tekla (BCF 1.0)
 * Klaus Linhard, IABI (BCF 2.0)
