@@ -6,7 +6,7 @@ Authors:
 * Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0 / BCF 2.1)
 * Juha Laukala, Tekla (BCF 1.0)
 * Lassi Lifländer, Tekla (BCF 1.0)
-* Klaus Linhard, IABI (BCF 2.0 / BCF 2.1)
+* Klaus Linhard, IABI (BCF 2.0)
 * Erik Pijnenburg, Kubus (BCF 2.0)
 * Léon van Berlo, TNO (BCF 2.0)
 
@@ -42,11 +42,11 @@ The folder name is the GUID of the topic. This GUID is in the UUID form. The fol
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
-    * An XML file following the visinfo.xsd schema that is described below.
-    * Multiple viewpoints are possible since BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
+    * An XML file following the visinfo.xsd schema that is described below (for compatibility with BCF 1.0).
+    * Multiple viewpoints are possible in BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
 * snapshot.png 
     *  A snapshot related to the topic (for compatibility with BCF 1.0).
-Multiple snapshots are possible since BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
+Multiple snapshots are possible in BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
 
 
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
