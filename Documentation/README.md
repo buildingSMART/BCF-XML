@@ -1,4 +1,4 @@
-# BIM Collaboration Format v2.0 Technical Documentation
+# BIM Collaboration Format v2.1 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
 Authors:
@@ -56,16 +56,19 @@ Multiple snapshots are possible since BCF 2.0. Names of these files are not pred
 The project file contains reference information about the project the topics belong to.
 
 
-### Project
-Project node contains information about the name of the project. 
-
 
  Attribute | Optional | Description |  
 :-----------|:------------|:------------:
  ProjectId  |        Yes |     ProjectId of the project
  
-### ExtensionSchema
-URI to the extension schema. 
+ In addition it has the following nodes:
+
+
+ Element | Optional | Description |  
+:-----------|:------------|:------------
+Name | Yes | Name of the project.
+ExtensionSchema| No | URI to the extension schema.
+ 
 
 
 ## Markup (.bcf) file
@@ -106,17 +109,18 @@ In addition it has the following nodes:
 
  Element | Optional | Description |  
 :-----------|:------------|:------------
+ReferenceLink | Yes | List of references to the topic, for example, a work request management system or an URI to a model.
 Title | No | Title of the topic.
-ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
-Description | Yes | Description of the topic
-Priority | Yes | Topic priority. The list of possible values are defined in the extension schema
-Index | Yes | Number to maintain the order of the topics 
-Labels | Yes | Tags for grouping Topics
-CreationDate | No | Date when the topic was created
-CreationAuthor | No | User who created the topic
-ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation
-ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation
-AssignedTo | Yes | The user to whom this topic is assigned to
+Priority | Yes | Topic priority. The list of possible values are defined in the extension schema.
+Index | Yes | Number to maintain the order of the topics. 
+Labels | Yes | Tags for grouping Topics.
+CreationDate | No | Date when the topic was created.
+CreationAuthor | No | User who created the topic.
+ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation.
+ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation.
+                                                                                DueDate | Yes | Date until when the topics issue needs to be resolved.
+AssignedTo | Yes | The user to whom this topic is assigned to.
+Description | Yes | Description of the topic.
 
 
 ### BimSnippet (optional)
@@ -147,12 +151,12 @@ ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\example
 Description | Yes | Description of the document
 
 
-### RelatedTopics (optional)
+### RelatedTopic (optional)
 Relation between topics (Clash -> PfV -> Opening)
 
 Element/Attribute | Optional | Description |  
 :-----------|:------------|:------------
-RelatedTopics/GUID | Yes | List of GUIDs of the referenced topics.
+RelatedTopic/GUID | Yes | List of GUIDs of the referenced topics.
 
 
 ### Comment
@@ -160,16 +164,12 @@ The markup file can contain comments related to the topic. Their purpose is to r
 
 Element | Optional | Description |  
 :-----------|:------------|:------------
-VerbalStatus | Yes | A free text status. The options for this can be agreed, for example, in a project.
-Status | No | Status of the comment / topic (Predefined list in “extension.xsd”)
 Date | No | Date of the comment
 Author |No | Comment author
 Comment | No | The comment text
-Topic | No | Back reference to the topic GUID.
 Viewpoint | Yes | Back reference to the viewpoint GUID.
-ReplyToComment | Yes | Guid of the comment to which this comment is a reply
 ModifiedDate | Yes | The date when comment was modified
-ModifiedAuthor | Yes | The author who modified the comment
+	ModifiedAuthor | Yes | The author who modified the comment
 
 ### Viewpoints
 The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
@@ -178,15 +178,16 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 Viewpoint | Yes | Filename of the viewpoint (.bcfv)
 Snapshot | Yes | Filename of the snapshot(.png)
+Index | Yes | Parameter for sorting
 
 
 ## Visualization information (.bcfv) file
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
 
 ### Components
-The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. 
+The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint.
 
-Components has the following attributes:
+A component has the following attributes:
 
 Attribute | Optional | Description |  
 :-----------|:------------|:------------
@@ -202,6 +203,12 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 OriginatingSystem | Yes | Name of the system in which the component is originated
 AuthoringToolId | Yes | System specific identifier of the component in the originating BIM tool
+
+### Spaces (optional)
+
+### SpaceBounderies (optional)
+
+### Openings (optional)
 
 ### OrthogonalCamera (optional)
 This element describes a viewpoint using orthogonal camera. It has the following elements:
@@ -230,7 +237,7 @@ Lines can be used to add markup in 3D. Each line is defined by three dimensional
 ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.
 
 ### Bitmap (optional)
-Bitmap can be used to add more information, for example, text in the visualization. It has the following elements:
+A list of bitmaps can be used to add more information, for example, text in the visualization. It has the following elements:
 
 
 Element | Optional | Description |  
