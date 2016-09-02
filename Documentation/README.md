@@ -213,12 +213,6 @@ Element | Optional | Description |
 OriginatingSystem | Yes | Name of the system in which the component is originated
 AuthoringToolId | Yes | System specific identifier of the component in the originating BIM tool
 
-### Spaces (optional)
-
-### SpaceBounderies (optional)
-
-### Openings (optional)
-
 ### OrthogonalCamera (optional)
 This element describes a viewpoint using orthogonal camera. It has the following elements:
 
@@ -271,15 +265,16 @@ When interpreting BCF 1.0 files use the following logic:
 - use Status of most recent comment as value of TopicType
 - use Verbalstatus of most recent comment as TopicStatus.
 
-When interpreting BCF 2.0 files: VerbalStatus and Status on comment level should all be neglected if TopicStatus and TopicType are present in Topic.
+When interpreting BCF 2.0 or higher files: VerbalStatus and Status on comment level should all be neglected if TopicStatus and TopicType are present in Topic.
 
-When writing BCF 2.0 files:
+When writing BCF 2.0 or higher files:
 
 - write the current type and status to Topic's TopicType and TopicStatus
 - write Status and VerbalStatus at Comment level for backward compatibility.
 
-### Optimizing Viewpoint Size
-There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minumum. Each component set has a global variable to specify its default visibility.
+### Exporting Components in Viewpoint
+
+There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minimum. Each component set has a global variable to specify its default visibility.
 
 Element | Default | Applicable Component set |  
 :-----------|:------------|:------------
@@ -288,17 +283,35 @@ AllSpacesVisible | No | Spaces
 AllSpaceBoundariesVisible | No | SpaceBoundaries
 AllOpeningsVisible | No | Openings
 
-The optimization is done with the following agreements. These rules applies to all 4 component sets individually.
+The components in viewpoints are exported according to  the following rules:
+Divide all components to the following sets: **Openings**, **Spaces**, **SpaceBoundaries**, and **Components**.
 
-- If most of the components in a set are visible, export the invisible components with the visible flag as false and set its default visibility to true.
-- If most of the components in a set are invisible, export the visible components with the visible flag as true and set its default visibility to false.
+- **Components** are physical building components, such as walls and doors.
 
-For selected and colored components
+- **Spaces** are the rooms in the building.
 
-- If default visibility for a set is true and you have visible components that are selected or colored, set the visible flag as true.
-- If default visibility for a set is false and you have invisible components that are selected or colored, set the visible flag as true. (Bad practice)
+- **Openings** are the virtual elements modeling voids in components.
 
-Implementers agreement
+- **SpaceBoundaries** are the virtual elements between spaces and building components, such as, walls and doors.
 
-- If a set contains Components with the same ifcGuid, ignore the duplicate occurrences.
-- If a set contains Components with wrong IfcType, ignore it.
+For each set of sets above, divide them further to the following subsets:
+
+**V**: Visible components
+**I**: Invisible components
+**S**: Selected or colored components, subset of V
+
+Apply the following rules for **Components**, **Spaces**, **Openings**, **SpaceBoundaries**
+
+For components
+1. If **I** is empty and **S** equals **V**
+a) Export **S** with DefaultVisibility=true
+b) Set visible=true for all components in **S**
+
+2. If **V** is smaller than **I**
+a) Export **V** with DefaultVisibility=false
+b) Set visible=true for all components in **V**
+
+3. Else
+a) Export **I** and **S** with DefaultVisibility=true
+b) Set visible=true for all components in **S**
+c) Set visible=false for all components in **I**
