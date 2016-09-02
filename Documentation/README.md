@@ -303,15 +303,23 @@ For each set of sets above, divide them further to the following subsets:
 Apply the following rules for **Components**, **Spaces**, **Openings**, **SpaceBoundaries**
 
 For components
-1. If **I** is empty and **S** equals **V**
-a) Export **S** with DefaultVisibility=true
-b) Set visible=true for all components in **S**
+
+1. If **I** is empty and **S** equals **V** 
+
+	a) Export **S** with DefaultVisibility=true
+
+	b) Set visible=true for all components in **S**
 
 2. If **V** is smaller than **I**
-a) Export **V** with DefaultVisibility=false
-b) Set visible=true for all components in **V**
+
+	a) Export **V** with DefaultVisibility=false
+
+	b) Set visible=true for all components in **V**
 
 3. Else
-a) Export **I** and **S** with DefaultVisibility=true
-b) Set visible=true for all components in **S**
-c) Set visible=false for all components in **I**
+
+	a) Export **I** and **S** with DefaultVisibility=true
+
+	b) Set visible=true for all components in **S**
+
+	c) Set visible=false for all components in **I**
