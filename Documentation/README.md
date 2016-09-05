@@ -1,4 +1,4 @@
-# BIM Collaboration Format v2.1 Technical Documentation
+	# BIM Collaboration Format v2.1 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
 Authors:
@@ -6,7 +6,7 @@ Authors:
 * Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0 / BCF 2.1)
 * Juha Laukala, Tekla (BCF 1.0)
 * Lassi Lifländer, Tekla (BCF 1.0)
-* Klaus Linhard, IABI (BCF 2.0)
+* Klaus Linhard, IABI (BCF 2.0 / BCF 2.1)
 * Erik Pijnenburg, Kubus (BCF 2.0)
 * Léon van Berlo, TNO (BCF 2.0)
 
@@ -29,7 +29,8 @@ Globally Unique ID in the IFC format. This format is used only when referring to
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
 
 ### BCF file structure
-A BCF file is a zip containing one folder for each topic. The root of the BCF zip contains the following files.
+A BCF file is a zip containing one folder for each topic with its file extension "bcfzip" for BCFv1.0 and BCFv2.0. The file extension as the version number "bcfv2.1" is introduced since BCFv2.1.
+The root of the BCF zip contains the following files.
 
 * project.bcfp (optional)
     - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
@@ -41,7 +42,7 @@ The folder name is the GUID of the topic. This GUID is in the UUID form. The fol
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
-    * An XML file following the visinfo.xsd schema that is described below (for compatibility with BCF 1.0).
+    * An XML file following the visinfo.xsd schema that is described below.
     * Multiple viewpoints are possible since BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
 * snapshot.png 
     *  A snapshot related to the topic (for compatibility with BCF 1.0).
@@ -55,16 +56,19 @@ Multiple snapshots are possible since BCF 2.0. Names of these files are not pred
 The project file contains reference information about the project the topics belong to.
 
 
-### Project
-Project node contains information about the name of the project. 
-
 
  Attribute | Optional | Description |  
 :-----------|:------------|:------------:
  ProjectId  |        Yes |     ProjectId of the project
  
-### ExtensionSchema
-URI to the extension schema. 
+ In addition it has the following nodes:
+
+
+ Element | Optional | Description |  
+:-----------|:------------|:------------
+Name | Yes | Name of the project.
+ExtensionSchema| No | URI to the extension schema.
+ 
 
 
 ## Markup (.bcf) file
@@ -105,17 +109,18 @@ In addition it has the following nodes:
 
  Element | Optional | Description |  
 :-----------|:------------|:------------
+ReferenceLink | Yes | List of references to the topic, for example, a work request management system or an URI to a model.
 Title | No | Title of the topic.
-ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
-Description | Yes | Description of the topic
-Priority | Yes | Topic priority. The list of possible values are defined in the extension schema
-Index | Yes | Number to maintain the order of the topics 
-Labels | Yes | Tags for grouping Topics
-CreationDate | No | Date when the topic was created
-CreationAuthor | No | User who created the topic
-ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation
-ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation
-AssignedTo | Yes | The user to whom this topic is assigned to
+Priority | Yes | Topic priority. The list of possible values are defined in the extension schema.
+Index | Yes | Number to maintain the order of the topics. 
+Labels | Yes | Tags for grouping Topics.
+CreationDate | No | Date when the topic was created.
+CreationAuthor | No | User who created the topic.
+ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation.
+ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation.
+                                                                                DueDate | Yes | Date until when the topics issue needs to be resolved.
+AssignedTo | Yes | The user to whom this topic is assigned to.
+Description | Yes | Description of the topic.
 
 
 ### BimSnippet (optional)
@@ -146,12 +151,12 @@ ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\example
 Description | Yes | Description of the document
 
 
-### RelatedTopics (optional)
+### RelatedTopic (optional)
 Relation between topics (Clash -> PfV -> Opening)
 
-Element/Attribute | Optional | Description |  
+Attribute | Optional | Description |  
 :-----------|:------------|:------------
-RelatedTopics/GUID | Yes | List of GUIDs of the referenced topics.
+RelatedTopic/GUID | Yes | List of GUIDs of the referenced topics.
 
 
 ### Comment
@@ -159,16 +164,12 @@ The markup file can contain comments related to the topic. Their purpose is to r
 
 Element | Optional | Description |  
 :-----------|:------------|:------------
-VerbalStatus | Yes | A free text status. The options for this can be agreed, for example, in a project.
-Status | No | Status of the comment / topic (Predefined list in “extension.xsd”)
 Date | No | Date of the comment
 Author |No | Comment author
 Comment | No | The comment text
-Topic | No | Back reference to the topic GUID.
 Viewpoint | Yes | Back reference to the viewpoint GUID.
-ReplyToComment | Yes | Guid of the comment to which this comment is a reply
 ModifiedDate | Yes | The date when comment was modified
-ModifiedAuthor | Yes | The author who modified the comment
+	ModifiedAuthor | Yes | The author who modified the comment
 
 ### Viewpoints
 The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
@@ -177,15 +178,25 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 Viewpoint | Yes | Filename of the viewpoint (.bcfv)
 Snapshot | Yes | Filename of the snapshot(.png)
+Index | Yes | Parameter for sorting
 
 
 ## Visualization information (.bcfv) file
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
 
 ### Components
-The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. 
+Component references are divided into 4 sets:
 
-Components has the following attributes:
+Name | Description |  
+:-----------|:------------
+components | List of physical components. That means components that are not of type IfcSpace, IfcSpaceBoundary or IfcOpening.
+Spaces | List of components with type IfcSpace.
+SpaceBoundaries | List of components with type IfcSpaceBoundary.
+Openings | List of components with type IfcOpening.
+
+The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint.
+
+A component has the following attributes:
 
 Attribute | Optional | Description |  
 :-----------|:------------|:------------
@@ -201,6 +212,51 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 OriginatingSystem | Yes | Name of the system in which the component is originated
 AuthoringToolId | Yes | System specific identifier of the component in the originating BIM tool
+
+#### Exporting Components in Viewpoint
+
+There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minimum. The following rules are developed to export the components in compact and unambiguous way.
+
+The components in viewpoints are exported according to  the following rules:
+Divide all components to the following sets: **Openings**, **Spaces**, **SpaceBoundaries**, and **Components**.
+
+- **Components** are physical building components, such as walls and doors.
+
+- **Spaces** are the rooms in the building.
+
+- **Openings** are the virtual elements modeling voids in components.
+
+- **SpaceBoundaries** are the virtual elements between spaces and building components, such as, walls and doors.
+
+For each set of sets above, divide them further to the following subsets:
+
+**V**: Visible components
+**I**: Invisible components
+**S**: Selected or colored components, subset of V
+
+Apply the following rules for **Components**, **Spaces**, **Openings**, **SpaceBoundaries**
+
+For components
+
+1. If **I** is empty and **S** equals **V** 
+
+	a) Export **S** with DefaultVisibility=true
+
+	b) Set visible=true for all components in **S**
+
+2. If **V** is smaller than **I**
+
+	a) Export **V** with DefaultVisibility=false
+
+	b) Set visible=true for all components in **V**
+
+3. Else
+
+	a) Export **I** and **S** with DefaultVisibility=true
+
+	b) Set visible=true for all components in **S**
+
+	c) Set visible=false for all components in **I**
 
 ### OrthogonalCamera (optional)
 This element describes a viewpoint using orthogonal camera. It has the following elements:
@@ -229,7 +285,7 @@ Lines can be used to add markup in 3D. Each line is defined by three dimensional
 ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.
 
 ### Bitmap (optional)
-Bitmap can be used to add more information, for example, text in the visualization. It has the following elements:
+A list of bitmaps can be used to add more information, for example, text in the visualization. It has the following elements:
 
 
 Element | Optional | Description |  
@@ -241,7 +297,7 @@ Normal | No | Normal vector of the bitmap
 Up | No | Up vector of the bitmap
 
 ## Implementation Agreements 
-Since BCF 2.1 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
+Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
 
 ### One to Many Mapping between Viewpoints and Comments
 The schema would allow to have many to many mapping between viewpoints and comments. This is not allowed. A viewpoint can have multiple comments, but a comment can only refer to one viewpoint.
@@ -254,49 +310,9 @@ When interpreting BCF 1.0 files use the following logic:
 - use Status of most recent comment as value of TopicType
 - use Verbalstatus of most recent comment as TopicStatus.
 
-When interpreting BCF 2.0 or later files: VerbalStatus and Status on comment level should all be neglected if TopicStatus and TopicType are present in Topic.
+When interpreting BCF 2.0 or higher files: VerbalStatus and Status on comment level should all be neglected if TopicStatus and TopicType are present in Topic.
 
-When writing BCF 2.1 files:
+When writing BCF 2.0 or higher files:
 
 - write the current type and status to Topic's TopicType and TopicStatus
 - write Status and VerbalStatus at Comment level for backward compatibility.
-
-### Usage of Selected Flag in Visualization
-The Selected flag in Component node in visualization is used as a hint to the visualization to indicate that the component should be selected. When the flag is true, the component is considered visible. The Color flag must not be exported, since a color might interfere with the native selection behavior of the visualization software. 
-
-### Usage of Color in Visualization
-The Color in Component node in visualization is used specify a custom color for a given component. When color is specified, the selected flag must not have true value.
-
-### Optimizing Viewpoint Size
-There can be lots of component references in a viewpoint. Sometimes all components in the model are listed in a viewpoint. This creates huge BCF files. Since BCF 2.0 the visibility of components is done with the new Selected and Visible flags, which give new possibilities to optimize and control visibility and reduce viewpoint sizes at the same time. The creating software should for example not list all components in a viewpoint and use clipping planes at the same time to reduce the visibility.
-
-The optimization is done with the following agreements:
-
-- If most of the components are visible, export the invisible components with the visible flag as false.
-- If most of the components are invisible, export the visible components with the visible flag as true.
-- Do NOT combine in one viewpoint components listed as visible and listed as invisible. This can lead to inconsistent visibility in (changed) IFC files
-- If NO components are listed in the viewpoint it means: all components are visible
-- Spaces and Openings are always invisible by default; they are only shown when set explicit to visible.
-
-The visualization is done then with the following logic:
-- If the viewpoint contains hidden components (visible is false), hide them and show all the rest.
-- If the viewpoint does not contain any hidden components, show only the visible components. 
-
-#### Specifying Selected and Colored Components when Most Components are Visible
-When most components in the model, except openings and spaces, are visible and some components are selected or colored, export these components with the visible flag set to false value. This is to distinguish from the situation when only the selected/colored components are visible. Rest of the invisible components are also exported with visible is false flag.
-
-The following table illustrates the different cases:
-
-Assume that you have a model consisting of three components, A, B, and C. The following table illustrates how combination of visibility and selected/colored flags would be used:
-
-Case | Exported to BCF
---------|-------
-All components visible | Export no components 
-Only A is visible | Export only A with visible=true 
-One A is visible and it is colored | Export only A with visible=true and colored 
-All components visible and component A is colored | Export only A with visible=false and with color information 
-C is hidden, A and B visible with default colors | Export C with visible=false 
-C is hidden A is colored, B is visible with default color | Export C with visible=false, export A with visible=false and with color information 
-
-#### Handling of Decomposed Components
-Decomposed components are ones that are build from several sub components. In IFC the relation used is IfcRelAggregates. Typical such components are, for example, curtain walls, stairs, etc. Decomposed components can also be nested, that is, they can contain other decomposed components. The visible, selected, and color information applies to all children recursively when such information is applied to a parent component of decomposed components. For example, when a parent component is colored, the color is applied to all its children. When visible, selected, or color information of a child differs from that of the parent, the child's information needs to be exported separately.
