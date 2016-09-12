@@ -213,6 +213,51 @@ Element | Optional | Description |
 OriginatingSystem | Yes | Name of the system in which the component is originated
 AuthoringToolId | Yes | System specific identifier of the component in the originating BIM tool
 
+#### Exporting Components in Viewpoint
+
+There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minimum. The following rules are developed to export the components in compact and unambiguous way.
+
+The components in viewpoints are exported according to  the following rules:
+Divide all components to the following sets: **Openings**, **Spaces**, **SpaceBoundaries**, and **Components**.
+
+- **Components** are physical building components, such as walls and doors.
+
+- **Spaces** are the rooms in the building.
+
+- **Openings** are the virtual elements modeling voids in components.
+
+- **SpaceBoundaries** are the virtual elements between spaces and building components, such as, walls and doors.
+
+For each set of sets above, divide them further to the following subsets:
+
+**V**: Visible components
+**I**: Invisible components
+**S**: Selected or colored components, subset of V
+
+Apply the following rules for **Components**, **Spaces**, **Openings**, **SpaceBoundaries**
+
+For components
+
+1. If **I** is empty and **S** equals **V** 
+
+	a) Export **S** with DefaultVisibility=true
+
+	b) Set visible=true for all components in **S**
+
+2. If **V** is smaller than **I**
+
+	a) Export **V** with DefaultVisibility=false
+
+	b) Set visible=true for all components in **V**
+
+3. Else
+
+	a) Export **I** and **S** with DefaultVisibility=true
+
+	b) Set visible=true for all components in **S**
+
+	c) Set visible=false for all components in **I**
+
 ### OrthogonalCamera (optional)
 This element describes a viewpoint using orthogonal camera. It has the following elements:
 
@@ -271,55 +316,3 @@ When writing BCF 2.0 or higher files:
 
 - write the current type and status to Topic's TopicType and TopicStatus
 - write Status and VerbalStatus at Comment level for backward compatibility.
-
-### Exporting Components in Viewpoint
-
-There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minimum. Each component set has a global variable to specify its default visibility.
-
-Element | Default | Applicable Component set |  
-:-----------|:------------|:------------
-AllComponentsVisible | Yes | Components
-AllSpacesVisible | No | Spaces
-AllSpaceBoundariesVisible | No | SpaceBoundaries
-AllOpeningsVisible | No | Openings
-
-The components in viewpoints are exported according to  the following rules:
-Divide all components to the following sets: **Openings**, **Spaces**, **SpaceBoundaries**, and **Components**.
-
-- **Components** are physical building components, such as walls and doors.
-
-- **Spaces** are the rooms in the building.
-
-- **Openings** are the virtual elements modeling voids in components.
-
-- **SpaceBoundaries** are the virtual elements between spaces and building components, such as, walls and doors.
-
-For each set of sets above, divide them further to the following subsets:
-
-**V**: Visible components
-**I**: Invisible components
-**S**: Selected or colored components, subset of V
-
-Apply the following rules for **Components**, **Spaces**, **Openings**, **SpaceBoundaries**
-
-For components
-
-1. If **I** is empty and **S** equals **V** 
-
-	a) Export **S** with DefaultVisibility=true
-
-	b) Set visible=true for all components in **S**
-
-2. If **V** is smaller than **I**
-
-	a) Export **V** with DefaultVisibility=false
-
-	b) Set visible=true for all components in **V**
-
-3. Else
-
-	a) Export **I** and **S** with DefaultVisibility=true
-
-	b) Set visible=true for all components in **S**
-
-	c) Set visible=false for all components in **I**
