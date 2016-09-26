@@ -316,3 +316,103 @@ When writing BCF 2.0 or higher files:
 
 - write the current type and status to Topic's TopicType and TopicStatus
 - write Status and VerbalStatus at Comment level for backward compatibility.
+
+### .BCFZIP encoding guide
+ 
+Software tool vendors are encouraged to follow the following guidelines to ensure that the .BCFZIP files produced by their software can be correctly exchanged with other tools.
+
+####  Use forward slash as path separator
+
+The forward slash (“/”) should be used as a path separator rather than the backslash (“\”). Windows developers should consult the following MSDN page when attempting to follow this guideline: https://msdn.microsoft.com/en-us/library/mt712573(v=vs.110).aspx
+
+
+| Correct |  Incorrect |
+|---------|------------|
+| `742b0df3-9a99-4da3-95ad-171e282f8122/snapshot.png` |  `742b0df3-9a99-4da3-95ad-171e282f8122\snapshot.png` |
+
+#### Create directory (folder) entries in the zip file's central directory
+
+When creating the zip archive make sure to create directory (folder) entries in the .BCFZIP file’s central directory.
+
+**Example of a zip file with directory entries (Correct)**
+
+```
+Archive:  correctly_encoded_file_with_directory_entries.bcfzip
+ Length      Date    Time    Name
+---------  ---------- -----   ----
+     217  2015-02-18 09:12   bcf.version
+       0  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/
+    1782  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/markup.bcf
+     565  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/viewpoint.bcfv
+  181641  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/snapshot.png
+---------                     -------
+  184205                     5 files
+```
+
+**Example of a zip file without directory entries (Incorrect)**
+```
+Archive:  incorrect_file_without_directory_entries.bcfzip
+ Length      Date    Time    Name
+---------  ---------- -----   ----
+   35525  2015-02-25 09:28   742b0df3-9a99-4da3-95ad-171e282f8122/snapshot.png
+     681  2015-02-25 09:28   742b0df3-9a99-4da3-95ad-171e282f8122/viewpoint.bcfv
+    1057  2015-02-25 09:28   742b0df3-9a99-4da3-95ad-171e282f8122/markup.bcf
+     119  2015-02-25 09:28   bcf.version
+---------                     -------
+   37382                     4 files
+```
+
+
+#### How to verify
+
+##### On windows 7 using 7zip and the windows command prompt
+
+1. Download and install 7zip from http://www.7-zip.org/download.html
+2. On the start menu type ‘cmd’ and select cmd.exe
+3. Execute the following:
+
+`“c:\Program Files\7-Zip\7z.exe"  l $PATH_TO_BCFZIP`
+
+**Example output**
+```
+7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+ 
+ Listing archive: E:\BIM\bcf files\bulkExport_1topic.bcfzip
+ 
+ --
+ Path = #### Path to the bcfzip file 
+ Type = zip
+ Physical Size = 183599
+ 
+    Date      Time    Attr         Size   Compressed  Name
+ ------------------- ----- ------------ ------------  ------------------------
+ 2015-02-18 09:12:40 .....          217          161  bcf.version
+ 2015-02-18 09:12:40 D....            0            0  bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e
+ 2015-02-18 09:12:40 .....         1782          632  bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e\markup.bcf
+ 2015-02-18 09:12:40 .....          565          336  bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e\viewpoint.bcfv
+ 2015-02-18 09:12:40 .....       181641       181678  bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e\snapshot.png
+ ------------------- ----- ------------ ------------  ------------------------
+                                 184205       182807  4 files, 1 folders
+
+```
+
+##### On Unix or Linux shell
+
+1. Start your favourite shell and execute the following:
+
+``` $ unzip -l $PATH_TO_BCFZIP ```
+
+**Example output**
+```
+Archive:  /mnt/engineering/BIM/bcf files/bulkExport_1topic.bcfzip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+      217  2015-02-18 09:12   bcf.version
+        0  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/
+     1782  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/markup.bcf
+      565  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/viewpoint.bcfv
+   181641  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/snapshot.png
+---------                     -------
+   184205                     5 files
+```
+
