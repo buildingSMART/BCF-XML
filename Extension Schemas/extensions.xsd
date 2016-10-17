@@ -50,7 +50,7 @@
 			</xs:restriction>
 		</xs:simpleType>
 			<!--List of UserId´s-->
-			<!--Should be in email format-->
+			<!--Recommended to be in email format-->
 		<xs:simpleType name="UserIdType">
 			<xs:restriction base="UserIdType">
 				<xs:enumeration value="karl@mustermann.de"/>
