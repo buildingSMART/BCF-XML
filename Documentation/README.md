@@ -113,7 +113,7 @@ ReferenceLink | Yes | List of references to the topic, for example, a work reque
 Title | No | Title of the topic.
 Priority | Yes | Topic priority. The list of possible values are defined in the extension schema.
 Index | Yes | Number to maintain the order of the topics. 
-Labels | Yes | Tags for grouping Topics.
+Labels | Yes | Tags for grouping Topics. The list of possible values are defined in the extension schema.
 CreationDate | No | Date when the topic was created.
 CreationAuthor | No | User who created the topic.
 ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation.
