@@ -120,7 +120,7 @@ ModifiedDate | Yes | Date when the topic was last modified. Exists only when Top
 ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation.
                                                                                 DueDate | Yes | Date until when the topics issue needs to be resolved.
 AssignedTo | Yes | The user to whom this topic is assigned to.
-Area | Yes | The area this topic is referencing (Predefined list in “extension.xsd”).
+TopicArea | Yes | The area this topic is referencing (Predefined list in “extension.xsd”).
 Description | Yes | Description of the topic.
 
 
