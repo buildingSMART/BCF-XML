@@ -35,7 +35,7 @@
 			<!-- the snapshot png -->
 			<xs:element name="Snapshot" type="xs:string" minOccurs="0"/>
 			<!-- the viewpoint index (sort order) -->
-			<xs:element name="Index" type="xs:integer" minOccurs="0"/>
+			<xs:element name="Index" type="xs:int" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 		<!-- Guid of the viewpoint -->
@@ -62,7 +62,7 @@
 			<xs:element name="Title" type="xs:string"/>
 			<xs:element name="Priority" type="Priority" minOccurs="0"/>
 			<!-- ISG Jira issue BCF-8 Add a way save order the topics -->
-			<xs:element name="Index" type="xs:integer" minOccurs="0"/>
+			<xs:element name="Index" type="xs:int" minOccurs="0"/>
 			<xs:element name="Labels" type="TopicLabel" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="CreationDate" type="xs:dateTime" minOccurs="1"/>
 			<xs:element name="CreationAuthor" type="UserIdType" minOccurs="1"/>
