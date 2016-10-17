@@ -180,6 +180,7 @@ Viewpoint | Yes | Filename of the viewpoint (.bcfv)
 Snapshot | Yes | Filename of the snapshot(.png)
 Index | Yes | Parameter for sorting
 
+Viewpoints are immutable, therefore they should never be changed once created. If new comments on a topic require different visualization, new viewpoints should be added.
 
 ## Visualization information (.bcfv) file
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
