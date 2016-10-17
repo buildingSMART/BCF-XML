@@ -56,7 +56,15 @@
 				<xs:enumeration value="hans@mustermann.de"/>
 				<xs:enumeration value="fritz@domain1.com"/>
 			</xs:restriction>
-		</xs:simpleType>		
+		</xs:simpleType>	
+			<!--List of defined areas for referencing in a topic-->
+		<xs:simpleType name="TopicArea">
+			<xs:restriction base="TopicArea">
+				<xs:enumeration value="West Wing"/>
+				<xs:enumeration value="Basement"/>
+				<xs:enumeration value="Garage"/>
+			</xs:restriction>
+		</xs:simpleType>			
 	</xs:redefine>
 	<xs:element name="ExtendedTopicType" type="TopicType"/>
 	<xs:element name="ExtendedTopicStatus" type="TopicStatus"/>
