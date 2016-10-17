@@ -57,6 +57,14 @@
 				<xs:enumeration value="fritz@domain1.com"/>
 			</xs:restriction>
 		</xs:simpleType>		
+					<!--List of Milestones-->
+		<xs:simpleType name="Milestone">
+			<xs:restriction base="Milestone">
+				<xs:enumeration value="Preliminary Planning End"/>
+				<xs:enumeration value="Construction Start"/>
+				<xs:enumeration value="Construction End"/>
+			</xs:restriction>
+		</xs:simpleType>	
 	</xs:redefine>
 	<xs:element name="ExtendedTopicType" type="TopicType"/>
 	<xs:element name="ExtendedTopicStatus" type="TopicStatus"/>
