@@ -119,7 +119,7 @@ CreationAuthor | No | User who created the topic.
 ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation.
 ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation.
 DueDate | Yes | Date until when the topics issue needs to be resolved.
-AssignedTo | Yes | List of users this topic is assigned to. Should be in email format.
+AssignedTo | Yes | List of users this topic is assigned to. Should be in email format. The list of possible values are defined in the extension schema.
 Description | Yes | Description of the topic.
 
 
