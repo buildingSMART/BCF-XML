@@ -121,7 +121,7 @@ ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has b
 DueDate | Yes | Date until when the topics issue needs to be resolved.
 AssignedTo | Yes | The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.
 Description | Yes | Description of the topic.
-
+Stage | Yes | Stage this topic is part of (Predefined list in “extension.xsd”).
 
 ### BimSnippet (optional)
 BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids.

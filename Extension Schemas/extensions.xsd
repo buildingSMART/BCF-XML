@@ -49,8 +49,8 @@
 				<xs:enumeration value="4"/>
 			</xs:restriction>
 		</xs:simpleType>
-			<!--List of UserId´s-->
-			<!--Recommended to be in email format-->
+		<!--List of UserId´s-->
+		<!--Recommended to be in email format-->
 		<xs:simpleType name="UserIdType">
 			<xs:restriction base="UserIdType">
 				<xs:enumeration value="karl@mustermann.de"/>
@@ -58,6 +58,14 @@
 				<xs:enumeration value="fritz@domain1.com"/>
 			</xs:restriction>
 		</xs:simpleType>		
+		<!--List of Stages-->
+		<xs:simpleType name="Stage">
+			<xs:restriction base="Stage">
+				<xs:enumeration value="Preliminary Planning End"/>
+				<xs:enumeration value="Construction Start"/>
+				<xs:enumeration value="Construction End"/>
+			</xs:restriction>
+		</xs:simpleType>	
 	</xs:redefine>
 	<xs:element name="ExtendedTopicType" type="TopicType"/>
 	<xs:element name="ExtendedTopicStatus" type="TopicStatus"/>
