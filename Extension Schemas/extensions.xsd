@@ -49,7 +49,7 @@
 				<xs:enumeration value="4"/>
 			</xs:restriction>
 		</xs:simpleType>
-			<!--List of UserId´s-->
+		<!--List of UserId´s-->
 		<xs:simpleType name="UserIdType">
 			<xs:restriction base="UserIdType">
 				<xs:enumeration value="karl@mustermann.de"/>
@@ -57,9 +57,9 @@
 				<xs:enumeration value="fritz@domain1.com"/>
 			</xs:restriction>
 		</xs:simpleType>		
-					<!--List of Milestones-->
-		<xs:simpleType name="Milestone">
-			<xs:restriction base="Milestone">
+		<!--List of Stages-->
+		<xs:simpleType name="Stage">
+			<xs:restriction base="Stage">
 				<xs:enumeration value="Preliminary Planning End"/>
 				<xs:enumeration value="Construction Start"/>
 				<xs:enumeration value="Construction End"/>

@@ -70,7 +70,7 @@
 			<xs:element name="ModifiedAuthor" type="UserIdType" minOccurs="0"/>
 			<xs:element name="DueDate" type="xs:dateTime" minOccurs="0"/>
 			<xs:element name="AssignedTo" type="UserIdType" minOccurs="0"/>
-			<xs:element name="Milestone" type="Milestone" minOccurs="0"/>
+			<xs:element name="Stage" type="Stage" minOccurs="0"/>
 			<xs:element name="Description" type="xs:string" minOccurs="0"/>
 			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0" maxOccurs="unbounded"/>
 			<!-- Name of the file in the topic folder or url -->
