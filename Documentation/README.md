@@ -186,14 +186,14 @@ Viewpoints are immutable, therefore they should never be changed once created. I
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
 
 ### Components
-Component references are divided into 4 sets:
+A component set has the following attributes:
 
-Name | Description |  
+Attribute | Description |  
 :-----------|:------------
-components | List of physical components. That means components that are not of type IfcSpace, IfcSpaceBoundary or IfcOpening.
-Spaces | List of components with type IfcSpace.
-SpaceBoundaries | List of components with type IfcSpaceBoundary.
-Openings | List of components with type IfcOpening.
+DefaultVisibilityComponents | Default visibility of physical components. That means components that are not of type IfcSpace, IfcSpaceBoundary or IfcOpening.
+DefaultVisibilitySpaces | Default visibility of components with type IfcSpace.
+DefaultVisibilitySpaceBoundaries | Default visibility of components with type IfcSpaceBoundary.
+DefaultVisibilityOpenings | Default visibility of components with type IfcOpening.
 
 The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint.
 
@@ -218,7 +218,7 @@ AuthoringToolId | Yes | System specific identifier of the component in the origi
 
 There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minimum. The following rules are developed to export the components in compact and unambiguous way.
 
-The components in viewpoints are exported according to  the following rules:
+The components in viewpoints are exported according to the following rules:
 Divide all components to the following sets: **Openings**, **Spaces**, **SpaceBoundaries**, and **Components**.
 
 - **Components** are physical building components, such as walls and doors.
@@ -237,23 +237,23 @@ For each set of sets above, divide them further to the following subsets:
 
 Apply the following rules for **Components**, **Spaces**, **Openings**, **SpaceBoundaries**
 
-For components
+Example components
 
 1. If **I** is empty and **S** equals **V** 
 
-	a) Export **S** with DefaultVisibility=true
+	a) Export **S** with DefaultVisibilityComponents=true
 
 	b) Set visible=true for all components in **S**
 
 2. If **V** is smaller than **I**
 
-	a) Export **V** with DefaultVisibility=false
+	a) Export **V** with DefaultVisibilityComponents=false
 
 	b) Set visible=true for all components in **V**
 
 3. Else
 
-	a) Export **I** and **S** with DefaultVisibility=true
+	a) Export **I** and **S** with DefaultVisibilityComponents=true
 
 	b) Set visible=true for all components in **S**
 
