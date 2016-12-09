@@ -7,17 +7,7 @@
 		</xs:annotation>
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="Components" minOccurs="0">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
-						</xs:sequence>
-						<xs:attribute name="DefaultVisibilityComponents" type="xs:boolean" default="true"/>
-						<xs:attribute name="DefaultVisibilitySpaces" type="xs:boolean" default="true"/>
-						<xs:attribute name="DefaultVisibilityOpenings" type="xs:boolean" default="true"/>
-						<xs:attribute name="DefaultVisibilitySpaceBoundaries" type="xs:boolean" default="true"/>
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="Components" type="Components" minOccurs="0"/>
 				<xs:element name="OrthogonalCamera" type="OrthogonalCamera" minOccurs="0"/>
 				<xs:element name="PerspectiveCamera" type="PerspectiveCamera" minOccurs="0"/>
 				<xs:element name="Lines" minOccurs="0">
@@ -97,19 +87,68 @@
 			<xs:maxInclusive value="60"/>
 		</xs:restriction>
 	</xs:simpleType>
+	<xs:complexType name="Components">
+		<xs:sequence>
+			<xs:element name="ViewSetupHint" type="ViewSetupHint" minOccurs="0" />
+			<!-- Components with relevance to the viewpoint. They should be displayed highlighted or selected in a viewer -->
+			<xs:element name="Highlighting" type="ComponentHighlighting" minOccurs="0" />
+			<xs:element name="Visibility" type="ComponentVisibility" minOccurs="1" />
+			<xs:element name="Coloring" type="ComponentColoring" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ViewSetupHint">
+		<xs:attribute name="SpacesVisible" type="xs:boolean"/>
+		<xs:attribute name="SpaceBoundariesVisible" type="xs:boolean"/>
+		<xs:attribute name="OpeningsVisible" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="ComponentHighlighting">
+		<xs:sequence>
+			<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ComponentVisibility">
+		<xs:sequence>
+			<xs:element name="Exceptions" minOccurs="0">
+				<!-- List Components that are different than the DefaultVisibility. E.g. if DefaultVisibility = false then list
+					 Components that should be visible -->
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>	
+		</xs:sequence>
+		<xs:attribute name="DefaultVisibility" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="ComponentColoring">
+		<xs:sequence>
+			<xs:element name="Color" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+					</xs:sequence>
+					<xs:attribute ref="Color"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
 	<xs:complexType name="Component">
 		<xs:sequence>
 			<xs:element name="OriginatingSystem" type="xs:string" minOccurs="0"/>
 			<xs:element name="AuthoringToolId" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 		<xs:attribute ref="IfcGuid"/>
-		<xs:attribute name="Selected" type="xs:boolean"/>
-		<xs:attribute name="Visible" type="xs:boolean" default="true"/>
-		<xs:attribute name="Color" type="xs:hexBinary"/>
 		<!-- ISG Jira Issue BCF-14 -->
 	</xs:complexType>
+	<xs:attribute name="Color">
+		<xs:simpleType>
+			<xs:restriction base="xs:normalizedString">
+			<!-- Should either match 3 or 4 hex bytes , e.g. "FF00FF" or "FF00FF99" -->
+				<xs:pattern value="[0-9,A-F]{6}([0-9,A-F]{2})?"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:attribute>
 	<xs:attribute name="IfcGuid">
-		<!-- 3dKX8qrKT4nfaFKnVwXlca -->
 		<xs:simpleType>
 			<xs:restriction base="xs:normalizedString">
 				<xs:length value="22"/>
