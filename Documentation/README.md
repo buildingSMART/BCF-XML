@@ -1,12 +1,12 @@
-# BIM Collaboration Format v2.0 Technical Documentation
+	# BIM Collaboration Format v2.1 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
 Authors:
 
-* Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0)
+* Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0 / BCF 2.1)
 * Juha Laukala, Tekla (BCF 1.0)
 * Lassi Lifländer, Tekla (BCF 1.0)
-* Klaus Linhard, IABI (BCF 2.0)
+* Klaus Linhard, IABI (BCF 2.0 / BCF 2.1)
 * Erik Pijnenburg, Kubus (BCF 2.0)
 * Léon van Berlo, TNO (BCF 2.0)
 
@@ -29,20 +29,24 @@ Globally Unique ID in the IFC format. This format is used only when referring to
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
 
 ### BCF file structure
-In the root of the BCF file is an XML file defining project related information. The name of this file is project.xml. This file follows the project.xsd schema.
-
-A BCF file is a zip containing one folder for each topic. The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
+A BCF file is a zip containing one folder for each topic with its file extension "bcfzip" for BCFv1.0 and BCFv2.0. The file extension as the version number "bcfv2.1" is introduced since BCFv2.1.
+The root of the BCF zip contains the following files.
 
 * project.bcfp (optional)
-    - An XML file referencing the extension.xsd to a project.
+    - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
+* bcf.version
+	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
+
+The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
+
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
 * viewpoint.bcfv
-    * An XML file following the visinfo.xsd schema that is described below (for compatibility with BCF 1.0).
-    * Multiple viewpoints are possible in BCF 2.0. Names of these files are not predefined.
+    * An XML file following the visinfo.xsd schema that is described below.
+    * Multiple viewpoints are possible since BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
 * snapshot.png 
     *  A snapshot related to the topic (for compatibility with BCF 1.0).
-Multiple snapshots are possible in BCF 2.0. Names of these files are not predefined.
+Multiple snapshots are possible since BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
 
 
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
@@ -52,16 +56,19 @@ Multiple snapshots are possible in BCF 2.0. Names of these files are not predefi
 The project file contains reference information about the project the topics belong to.
 
 
-### Project
-Project node contains information about the name of the project. 
-
 
  Attribute | Optional | Description |  
 :-----------|:------------|:------------:
  ProjectId  |        Yes |     ProjectId of the project
  
-### ExtensionSchema
-URI to the extension schema. 
+ In addition it has the following nodes:
+
+
+ Element | Optional | Description |  
+:-----------|:------------|:------------
+Name | Yes | Name of the project.
+ExtensionSchema| No | URI to the extension schema.
+ 
 
 
 ## Markup (.bcf) file
@@ -93,17 +100,28 @@ Topic node contains reference information of the topic. It has one attribute, Gu
 
  Attribute | Optional | Description |  
 :-----------|:------------|:------------
-Guid | Yes | Guid of the topic
+Guid | No | Guid of the topic
 TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
+TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
 
 In addition it has the following nodes:
 
 
  Element | Optional | Description |  
 :-----------|:------------|:------------
-ReferenceLink | Yes | Reference to the topic in, for example, a work request management system.
+ReferenceLink | Yes | List of references to the topic, for example, a work request management system or an URI to a model.
 Title | No | Title of the topic.
-Index | Yes | Number to maintain the order of the topics.
+Priority | Yes | Topic priority. The list of possible values are defined in the extension schema.
+Index | Yes | Number to maintain the order of the topics. 
+Labels | Yes | Tags for grouping Topics. The list of possible values are defined in the extension schema.
+CreationDate | No | Date when the topic was created.
+CreationAuthor | No | User who created the topic.
+ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation.
+ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation.
+DueDate | Yes | Date until when the topics issue needs to be resolved.
+AssignedTo | Yes | The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.
+Description | Yes | Description of the topic.
+Stage | Yes | Stage this topic is part of (Predefined list in “extension.xsd”).
 
 ### BimSnippet (optional)
 BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids.
@@ -133,17 +151,12 @@ ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\example
 Description | Yes | Description of the document
 
 
-
-### RelatedTopics (optional)
+### RelatedTopic (optional)
 Relation between topics (Clash -> PfV -> Opening)
 
-### AssignedTo (optional)
-A topic can be assigned to a person.
-
-Element | Optional | Description |  
+Attribute | Optional | Description |  
 :-----------|:------------|:------------
-AssignedToEmail | Yes | The email-address of the person the topic is assigned to
-AssignedToName | Yes | The name of the person the topic is assigned to
+RelatedTopic/GUID | Yes | List of GUIDs of the referenced topics.
 
 
 ### Comment
@@ -151,15 +164,12 @@ The markup file can contain comments related to the topic. Their purpose is to r
 
 Element | Optional | Description |  
 :-----------|:------------|:------------
-VerbalStatus | Yes | A free text status. The options for this can be agreed, for example, in a project.
-Status | No | Status of the comment / topic (Predefined list in “extension.xsd”)
 Date | No | Date of the comment
 Author |No | Comment author
 Comment | No | The comment text
-Topic | No | Back reference to the topic GUID.
-AuthorEmail | No | Email address of the comment author.
-Priority | Yes | Priority of the comment (Predefined list in “extension.xsd”)
-
+Viewpoint | Yes | Back reference to the viewpoint GUID.
+ModifiedDate | Yes | The date when comment was modified
+	ModifiedAuthor | Yes | The author who modified the comment
 
 ### Viewpoints
 The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
@@ -168,23 +178,33 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 Viewpoint | Yes | Filename of the viewpoint (.bcfv)
 Snapshot | Yes | Filename of the snapshot(.png)
-Comment | Yes | Back reference to the comment GUID.
+Index | Yes | Parameter for sorting
 
+Viewpoints are immutable, therefore they should never be changed once created. If new comments on a topic require different visualization, new viewpoints should be added.
 
 ## Visualization information (.bcfv) file
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
 
 ### Components
-The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. 
+A component set has the following attributes:
 
-Components has the following attributes:
+Attribute | Description |  
+:-----------|:------------
+DefaultVisibilityComponents | Default visibility of physical components. That means components that are not of type IfcSpace, IfcSpaceBoundary or IfcOpening.
+DefaultVisibilitySpaces | Default visibility of components with type IfcSpace.
+DefaultVisibilitySpaceBoundaries | Default visibility of components with type IfcSpaceBoundary.
+DefaultVisibilityOpenings | Default visibility of components with type IfcOpening.
+
+The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint.
+
+A component has the following attributes:
 
 Attribute | Optional | Description |  
 :-----------|:------------|:------------
 IfcGuid | Yes | Select the component in a BIM tool
 Selected | Yes | This flag is true if the component is actually involved in the topic. If the flag is false, the component is involved as reference.
 Visible | Yes | This flag is true when the component is visible in the visualization. By setting this false, you can hide components that would prevent seeing the topic from the camera position and angle of the viewpoint.
-Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint.
+Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint. The color is given in ARGB format.
 
 
 In addition, it has the following information:
@@ -193,6 +213,51 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 OriginatingSystem | Yes | Name of the system in which the component is originated
 AuthoringToolId | Yes | System specific identifier of the component in the originating BIM tool
+
+#### Exporting Components in Viewpoint
+
+There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minimum. The following rules are developed to export the components in compact and unambiguous way.
+
+The components in viewpoints are exported according to the following rules:
+Divide all components to the following sets: **Openings**, **Spaces**, **SpaceBoundaries**, and **Components**.
+
+- **Components** are physical building components, such as walls and doors.
+
+- **Spaces** are the rooms in the building.
+
+- **Openings** are the virtual elements modeling voids in components.
+
+- **SpaceBoundaries** are the virtual elements between spaces and building components, such as, walls and doors.
+
+For each set of sets above, divide them further to the following subsets:
+
+**V**: Visible components
+**I**: Invisible components
+**S**: Selected or colored components, subset of V
+
+Apply the following rules for **Components**, **Spaces**, **Openings**, **SpaceBoundaries**
+
+Example components
+
+1. If **I** is empty and **S** equals **V** 
+
+	a) Export **S** with DefaultVisibilityComponents=true
+
+	b) Set visible=true for all components in **S**
+
+2. If **V** is smaller than **I**
+
+	a) Export **V** with DefaultVisibilityComponents=false
+
+	b) Set visible=true for all components in **V**
+
+3. Else
+
+	a) Export **I** and **S** with DefaultVisibilityComponents=true
+
+	b) Set visible=true for all components in **S**
+
+	c) Set visible=false for all components in **I**
 
 ### OrthogonalCamera (optional)
 This element describes a viewpoint using orthogonal camera. It has the following elements:
@@ -215,13 +280,13 @@ CameraUpVector | No | Camera up vector
 FieldOfView | No | Camera’s field of view angle in degrees.
 
 ### Lines (optional)
-Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point.
+Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
 
 ### ClippingPlanes (optional)
 ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.
 
 ### Bitmap (optional)
-Bitmap can be used to add more information, for example, text in the visualization. It has the following elements:
+A list of bitmaps can be used to add more information, for example, text in the visualization. It has the following elements:
 
 
 Element | Optional | Description |  
@@ -232,9 +297,123 @@ Location | No | Location of the center of the bitmap in world coordinates
 Normal | No | Normal vector of the bitmap
 Up | No | Up vector of the bitmap
 
+## Implementation Agreements 
+Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
+
+### One to Many Mapping between Viewpoints and Comments
+The schema would allow to have many to many mapping between viewpoints and comments. This is not allowed. A viewpoint can have multiple comments, but a comment can only refer to one viewpoint.
+
+### Status and VerbalStatus to be Phased out
+Status and Verbal Status of Comment will be phased out and replaced by TopicStatus and TopicType in Topic. 
+
+When interpreting BCF 1.0 files use the following logic:
+
+- use Status of most recent comment as value of TopicType
+- use Verbalstatus of most recent comment as TopicStatus.
+
+When interpreting BCF 2.0 or higher files: VerbalStatus and Status on comment level should all be neglected if TopicStatus and TopicType are present in Topic.
+
+When writing BCF 2.0 or higher files:
+
+- write the current type and status to Topic's TopicType and TopicStatus
+- write Status and VerbalStatus at Comment level for backward compatibility.
+
+### .BCFZIP encoding guide
+ 
+Software tool vendors are encouraged to follow the following guidelines to ensure that the .BCFZIP files produced by their software can be correctly exchanged with other tools.
+
+####  Use forward slash as path separator
+
+The forward slash (“/”) should be used as a path separator rather than the backslash (“\”). Windows developers should consult the following MSDN page when attempting to follow this guideline: https://msdn.microsoft.com/en-us/library/mt712573(v=vs.110).aspx
 
 
+| Correct |  Incorrect |
+|---------|------------|
+| `742b0df3-9a99-4da3-95ad-171e282f8122/snapshot.png` |  `742b0df3-9a99-4da3-95ad-171e282f8122\snapshot.png` |
+
+#### Create directory (folder) entries in the zip file's central directory
+
+When creating the zip archive make sure to create directory (folder) entries in the .BCFZIP file’s central directory.
+
+**Example of a zip file with directory entries (Correct)**
+
+```
+Archive:  correctly_encoded_file_with_directory_entries.bcfzip
+ Length      Date    Time    Name
+---------  ---------- -----   ----
+     217  2015-02-18 09:12   bcf.version
+       0  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/
+    1782  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/markup.bcf
+     565  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/viewpoint.bcfv
+  181641  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/snapshot.png
+---------                     -------
+  184205                     5 files
+```
+
+**Example of a zip file without directory entries (Incorrect)**
+```
+Archive:  incorrect_file_without_directory_entries.bcfzip
+ Length      Date    Time    Name
+---------  ---------- -----   ----
+   35525  2015-02-25 09:28   742b0df3-9a99-4da3-95ad-171e282f8122/snapshot.png
+     681  2015-02-25 09:28   742b0df3-9a99-4da3-95ad-171e282f8122/viewpoint.bcfv
+    1057  2015-02-25 09:28   742b0df3-9a99-4da3-95ad-171e282f8122/markup.bcf
+     119  2015-02-25 09:28   bcf.version
+---------                     -------
+   37382                     4 files
+```
 
 
+#### How to verify
 
+##### On windows 7 using 7zip and the windows command prompt
+
+1. Download and install 7zip from http://www.7-zip.org/download.html
+2. On the start menu type ‘cmd’ and select cmd.exe
+3. Execute the following:
+
+`“c:\Program Files\7-Zip\7z.exe"  l $PATH_TO_BCFZIP`
+
+**Example output**
+```
+7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
+ 
+ Listing archive: E:\BIM\bcf files\bulkExport_1topic.bcfzip
+ 
+ --
+ Path = #### Path to the bcfzip file 
+ Type = zip
+ Physical Size = 183599
+ 
+    Date      Time    Attr         Size   Compressed  Name
+ ------------------- ----- ------------ ------------  ------------------------
+ 2015-02-18 09:12:40 .....          217          161  bcf.version
+ 2015-02-18 09:12:40 D....            0            0  bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e
+ 2015-02-18 09:12:40 .....         1782          632  bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e\markup.bcf
+ 2015-02-18 09:12:40 .....          565          336  bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e\viewpoint.bcfv
+ 2015-02-18 09:12:40 .....       181641       181678  bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e\snapshot.png
+ ------------------- ----- ------------ ------------  ------------------------
+                                 184205       182807  4 files, 1 folders
+
+```
+
+##### On Unix or Linux shell
+
+1. Start your favourite shell and execute the following:
+
+``` $ unzip -l $PATH_TO_BCFZIP ```
+
+**Example output**
+```
+Archive:  /mnt/engineering/BIM/bcf files/bulkExport_1topic.bcfzip
+  Length      Date    Time    Name
+---------  ---------- -----   ----
+      217  2015-02-18 09:12   bcf.version
+        0  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/
+     1782  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/markup.bcf
+      565  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/viewpoint.bcfv
+   181641  2015-02-18 09:12   bff0f7ed-6b0d-4aad-ab28-401cc1db7f6e/snapshot.png
+---------                     -------
+   184205                     5 files
+```
 
