@@ -89,9 +89,9 @@
 	</xs:simpleType>
 	<xs:complexType name="Components">
 		<xs:sequence>
-			<xs:element name="ViewSetupHint" type="ViewSetupHint" minOccurs="0" />
+			<xs:element name="ViewSetupHints" type="ViewSetupHint" minOccurs="0" />
 			<!-- Components with relevance to the viewpoint. They should be displayed highlighted or selected in a viewer -->
-			<xs:element name="Highlighting" type="ComponentHighlighting" minOccurs="0" />
+			<xs:element name="Selection" type="ComponentSelection" minOccurs="0" />
 			<xs:element name="Visibility" type="ComponentVisibility" minOccurs="1" />
 			<xs:element name="Coloring" type="ComponentColoring" minOccurs="0" />
 		</xs:sequence>
@@ -101,7 +101,7 @@
 		<xs:attribute name="SpaceBoundariesVisible" type="xs:boolean"/>
 		<xs:attribute name="OpeningsVisible" type="xs:boolean"/>
 	</xs:complexType>
-	<xs:complexType name="ComponentHighlighting">
+	<xs:complexType name="ComponentSelection">
 		<xs:sequence>
 			<xs:element name="Component" type="Component" maxOccurs="unbounded"/>
 		</xs:sequence>
