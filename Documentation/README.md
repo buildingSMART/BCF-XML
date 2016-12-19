@@ -204,7 +204,7 @@ Attribute | Optional | Description |
 IfcGuid | Yes | Select the component in a BIM tool
 Selected | Yes | This flag is true if the component is actually involved in the topic. If the flag is false, the component is involved as reference.
 Visible | Yes | This flag is true when the component is visible in the visualization. By setting this false, you can hide components that would prevent seeing the topic from the camera position and angle of the viewpoint.
-Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint. The color is given in ARGB format. Colors are repsesented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, `40E0D0` would be the color <span style="color:#40E0D0;";>Turquoise</span>. [More information about the color format can be found on Wikipedia.](https://en.wikipedia.org/wiki/RGBA_color_space)
+Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, `40E0D0` would be the color <span style="color:#40E0D0;";>Turquoise</span>. [More information about the color format can be found on Wikipedia.](https://en.wikipedia.org/wiki/RGBA_color_space)
 
 
 In addition, it has the following information:
