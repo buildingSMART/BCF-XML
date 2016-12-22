@@ -223,7 +223,7 @@ The `Coloring` element lists colors and a list of associated components that sho
 
 **Optimization Rules**
 
-BCF is suitable for coloring on a few components. A huge list of components causes poor performance. All clients should follow this rule:
+BCF is suitable for coloring a few components. A huge list of components causes poor performance. All clients should follow this rule:
 
 * If the size of colored components is huge (approximately 1000 components), alert the user and give him the opportunity to modify the coloring.
 
