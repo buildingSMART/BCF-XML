@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--XML-Beispieldatei von XMLSpy generiert v2011 rel. 3 (http://www.altova.com)-->
-<Version VersionId="2.0" xsi:noNamespaceSchemaLocation="version.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<DetailedVersion>2.0 RC</DetailedVersion>
+<Version VersionId="2.1" xsi:noNamespaceSchemaLocation="version.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<DetailedVersion>2.1</DetailedVersion>
 </Version>
