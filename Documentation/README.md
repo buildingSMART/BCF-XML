@@ -18,7 +18,7 @@ IfcGuid
 Globally Unique ID in the IFC format. This format is used only when referring to components in IFC files.
 
 
-|       |           |  
+|       |           |
 | ------------- |:-------------|
 | BCF      | BIM Collaboration Format |
 | BCF file     | File in BIM Collaboration Format     |
@@ -57,18 +57,18 @@ The project file contains reference information about the project the topics bel
 
 
 
- Attribute | Optional | Description |  
+ Attribute | Optional | Description |
 :-----------|:------------|:------------:
  ProjectId  |        Yes |     ProjectId of the project
- 
+
  In addition it has the following nodes:
 
 
- Element | Optional | Description |  
+ Element | Optional | Description |
 :-----------|:------------|:------------
 Name | Yes | Name of the project.
 ExtensionSchema| No | URI to the extension schema.
- 
+
 
 
 ## Markup (.bcf) file
@@ -80,7 +80,7 @@ Header node contains information about the IFC files relevant to this topic. It 
 Each File node has the following attributes:
 
 
- Attribute | Optional | Description |  
+ Attribute | Optional | Description |
 :-----------|:------------|:------------
  IfcProject  |        Yes |     IfcGuid Reference to the project to which this topic is related in the IFC file
 IfcSpatialStructureElement | Yes | IfcGuid Reference to the spatial structure element, e.g. IfcBuildingStorey, to which this topic is related.
@@ -88,7 +88,7 @@ isExternal | Yes | Is the IFC file external or within the bcfzip. (Default = tru
 
 In addition File has the following nodes:
 
- Attribute | Optional | Description |  
+ Attribute | Optional | Description |
 :-----------|:------------|:------------
 Filename | Yes | The BIM file related to this topic.
 Date | Yes | Date of the BIM file.
@@ -98,7 +98,7 @@ Reference | Yes | URI to IfcFile. <br> IsExternal=false “..\example.ifc“ (wi
 Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID. 
 
 
- Attribute | Optional | Description |  
+ Attribute | Optional | Description |
 :-----------|:------------|:------------
 Guid | No | Guid of the topic
 TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
@@ -107,7 +107,7 @@ TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
 In addition it has the following nodes:
 
 
- Element | Optional | Description |  
+ Element | Optional | Description |
 :-----------|:------------|:------------
 ReferenceLink | Yes | List of references to the topic, for example, a work request management system or an URI to a model.
 Title | No | Title of the topic.
@@ -126,12 +126,12 @@ Stage | Yes | Stage this topic is part of (Predefined list in “extension.xsd�
 ### BimSnippet (optional)
 BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids.
 
- Attribute | Optional | Description |  
+ Attribute | Optional | Description |
 :-----------|:------------|:------------
 SnippetType | No | Type of the Snippet (Predefined list in “extension.xsd”)
 IsExternal | Yes | Is the BimSnippet external or within the bcfzip. <br> (Default = false).
- 
- Element | Optional | Description |  
+
+ Element | Optional | Description |
 :-----------|:------------|:------------
 Reference | No | URI to BimSnippet. <br> IsExternal=false  “..\snippetExample.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../snippetExample.ifc“
 ReferenceSchema | Yes | URI to BimSnippetSchema (always external)
@@ -140,12 +140,12 @@ ReferenceSchema | Yes | URI to BimSnippetSchema (always external)
 ### DocumentReference (optional)
 DocumentReference provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location.
 
-Attribute | Optional | Description |  
+Attribute | Optional | Description |
 :-----------|:------------|:------------
 Guid | Yes | Guid attribute for identifying it uniquely
 IsExternal | Yes | Is the Document external or within the bcfzip. <br> (Default = false).
 
- Element | Optional | Description |  
+ Element | Optional | Description |
 :-----------|:------------|:------------
 ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\exampleDoc.docx“ (within bcfzip) <br> IsExternal=true  “https://.../ exampleDoc.docx“
 Description | Yes | Description of the document
@@ -154,7 +154,7 @@ Description | Yes | Description of the document
 ### RelatedTopic (optional)
 Relation between topics (Clash -> PfV -> Opening)
 
-Attribute | Optional | Description |  
+Attribute | Optional | Description |
 :-----------|:------------|:------------
 RelatedTopic/GUID | Yes | List of GUIDs of the referenced topics.
 
@@ -162,7 +162,7 @@ RelatedTopic/GUID | Yes | List of GUIDs of the referenced topics.
 ### Comment
 The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
 
-Element | Optional | Description |  
+Element | Optional | Description |
 :-----------|:------------|:------------
 Date | No | Date of the comment
 Author |No | Comment author
@@ -174,7 +174,7 @@ ModifiedDate | Yes | The date when comment was modified
 ### Viewpoints
 The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
 
-Element | Optional | Description |  
+Element | Optional | Description |
 :-----------|:------------|:------------
 Viewpoint | Yes | Filename of the viewpoint (.bcfv)
 Snapshot | Yes | Filename of the snapshot(.png)
@@ -186,83 +186,61 @@ Viewpoints are immutable, therefore they should never be changed once created. I
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
 
 ### Components
-A component set has the following attributes:
-
-Attribute | Description |  
-:-----------|:------------
-DefaultVisibilityComponents | Default visibility of physical components. That means components that are not of type IfcSpace, IfcSpaceBoundary or IfcOpening.
-DefaultVisibilitySpaces | Default visibility of components with type IfcSpace.
-DefaultVisibilitySpaceBoundaries | Default visibility of components with type IfcSpaceBoundary.
-DefaultVisibilityOpenings | Default visibility of components with type IfcOpening.
 
 The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint.
 
+The `Components` element contains the following properties.
+* `ViewSetupHints` to describe the visualization settings that were used in the application creating the viewpoint
+* `Selection` to list components of interest
+* `Visibility` to describe default visibility and exceptions
+* `Coloring` to convey coloring options for displaying components
+
+#### ViewSetupHints
+This element contains information about the default visibility for elements of certain types (`SpacesVisible`, `SpaceBoundariesVisible` and `OpeningsVisible`) that should be applied if not stated otherwise.
+
+#### Selection
+The `Selection` element lists all components that should be either highlighted or selected when displaying a viewpoint.
+
+**Optimization Rules**
+
+BCF is suitable for selecting a few components. A huge list of selected components causes poor performance. All clients should follow this rule:
+
+* If the size of the selected components is huge (approximately 1000 components), alert the user and give him the opportunity to modify the visibility.
+
+#### Visibility
+The `Visibility` element states the components `DefaultVisibility` and lists all `Exceptions` that apply to specific components.
+
+**Optimization Rules**
+
+BCF is suitable for hiding/showing a few components. A huge list of hidden/shown components causes poor performance. All clients should follow these rules:
+
+* If the list of hidden components is smaller than the list of visible components: set default_visibility to true and put the hidden components in exceptions.
+* If the list of visible components is smaller or equals the list of hidden components: set default_visibility to false and put the visible components in exceptions.
+* If the size of exceptions is huge (approximately 1000 components), alert the user and give him the opportunity to modify the visibility.
+
+#### Coloring
+The `Coloring` element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, `40E0D0` would be the color <span style="color:#40E0D0;";>Turquoise</span>. [More information about the color format can be found on Wikipedia.](https://en.wikipedia.org/wiki/RGBA_color_space)
+
+**Optimization Rules**
+
+BCF is suitable for coloring on a few components. A huge list of components causes poor performance. All clients should follow this rule:
+
+* If the size of colored components is huge (approximately 1000 components), alert the user and give him the opportunity to modify the coloring.
+
+#### Component
+
 A component has the following attributes:
 
-Attribute | Optional | Description |  
+Attribute | Optional | Description |
 :-----------|:------------|:------------
-IfcGuid | Yes | Select the component in a BIM tool
-Selected | Yes | This flag is true if the component is actually involved in the topic. If the flag is false, the component is involved as reference.
-Visible | Yes | This flag is true when the component is visible in the visualization. By setting this false, you can hide components that would prevent seeing the topic from the camera position and angle of the viewpoint.
-Color | Yes | Color of the component. This can be used to provide special highlighting of components in the viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, `40E0D0` would be the color <span style="color:#40E0D0;";>Turquoise</span>. [More information about the color format can be found on Wikipedia.](https://en.wikipedia.org/wiki/RGBA_color_space)
-
-
-In addition, it has the following information:
-
-Element | Optional | Description |  
-:-----------|:------------|:------------
+IfcGuid | No | The IfcGuid of the component
 OriginatingSystem | Yes | Name of the system in which the component is originated
 AuthoringToolId | Yes | System specific identifier of the component in the originating BIM tool
-
-#### Exporting Components in Viewpoint
-
-There can be lots of component references in a viewpoint. Therefore, these references must be kept to a minimum. The following rules are developed to export the components in compact and unambiguous way.
-
-The components in viewpoints are exported according to the following rules:
-Divide all components to the following sets: **Openings**, **Spaces**, **SpaceBoundaries**, and **Components**.
-
-- **Components** are physical building components, such as walls and doors.
-
-- **Spaces** are the rooms in the building.
-
-- **Openings** are the virtual elements modeling voids in components.
-
-- **SpaceBoundaries** are the virtual elements between spaces and building components, such as, walls and doors.
-
-For each set of sets above, divide them further to the following subsets:
-
-**V**: Visible components
-**I**: Invisible components
-**S**: Selected or colored components, subset of V
-
-Apply the following rules for **Components**, **Spaces**, **Openings**, **SpaceBoundaries**
-
-Example components
-
-1. If **I** is empty and **S** equals **V** 
-
-	a) Export **S** with DefaultVisibilityComponents=true
-
-	b) Set visible=true for all components in **S**
-
-2. If **V** is smaller than **I**
-
-	a) Export **V** with DefaultVisibilityComponents=false
-
-	b) Set visible=true for all components in **V**
-
-3. Else
-
-	a) Export **I** and **S** with DefaultVisibilityComponents=true
-
-	b) Set visible=true for all components in **S**
-
-	c) Set visible=false for all components in **I**
 
 ### OrthogonalCamera (optional)
 This element describes a viewpoint using orthogonal camera. It has the following elements:
 
-Element | Optional | Description |  
+Element | Optional | Description |
 :-----------|:------------|:------------
 CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
@@ -270,9 +248,9 @@ CameraUpVector | No | Camera up vector
 ViewToWorldScale | No | Scaling from view to world
 
 ### PerspectiveCamera (optional)
-This element describes a viewpoint using perspective camera. It has the following 
+This element describes a viewpoint using perspective camera. It has the following elements:
 
-Element | Optional | Description |  
+Element | Optional | Description |
 :-----------|:------------|:------------
 CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
@@ -289,7 +267,7 @@ ClippingPlanes can be used to define a subsection of a building model that is re
 A list of bitmaps can be used to add more information, for example, text in the visualization. It has the following elements:
 
 
-Element | Optional | Description |  
+Element | Optional | Description |
 :-----------|:------------|:------------
 Bitmap | No | Format of the bitmap (PNG/JPG)
 Reference | No | Name of the bitmap file in the topic folder
@@ -297,7 +275,7 @@ Location | No | Location of the center of the bitmap in world coordinates
 Normal | No | Normal vector of the bitmap
 Up | No | Up vector of the bitmap
 
-## Implementation Agreements 
+## Implementation Agreements
 Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
 
 ### One to Many Mapping between Viewpoints and Comments
@@ -377,14 +355,14 @@ Archive:  incorrect_file_without_directory_entries.bcfzip
 **Example output**
 ```
 7-Zip [64] 9.20  Copyright (c) 1999-2010 Igor Pavlov  2010-11-18
- 
+
  Listing archive: E:\BIM\bcf files\bulkExport_1topic.bcfzip
- 
+
  --
- Path = #### Path to the bcfzip file 
+ Path = #### Path to the bcfzip file
  Type = zip
  Physical Size = 183599
- 
+
     Date      Time    Attr         Size   Compressed  Name
  ------------------- ----- ------------ ------------  ------------------------
  2015-02-18 09:12:40 .....          217          161  bcf.version
