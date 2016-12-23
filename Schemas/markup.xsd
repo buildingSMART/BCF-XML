@@ -107,7 +107,7 @@
 			<xs:element name="Date" type="xs:dateTime"/>
 			<xs:element name="Author" type="UserIdType"/>
 			<xs:element name="Comment" type="xs:string"/>
-			<xs:element name="Viewpoint" minOccurs="0">
+			<xs:element name="Viewpoint" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:attribute name="Guid" type="Guid" use="required"/>
 				</xs:complexType>
