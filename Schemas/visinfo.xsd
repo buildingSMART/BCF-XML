@@ -83,8 +83,8 @@
 	</xs:complexType>
 	<xs:simpleType name="FieldOfView">
 		<xs:restriction base="xs:double">
-			<xs:minInclusive value="45"/>
-			<xs:maxInclusive value="60"/>
+			<xs:minInclusive value="0"/>
+			<xs:maxInclusive value="360"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Components">
