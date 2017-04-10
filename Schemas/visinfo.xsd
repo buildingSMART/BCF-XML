@@ -64,7 +64,15 @@
 			<xs:element name="CameraViewPoint" type="Point"/>
 			<xs:element name="CameraDirection" type="Direction"/>
 			<xs:element name="CameraUpVector" type="Direction"/>
-			<xs:element name="FieldOfView" type="FieldOfView"/>
+			<xs:element name="FieldOfView" type="FieldOfView">
+				<xs:annotation>
+					<xs:documentation>
+						It is currently limited to a value between 45 and 60 degrees.
+						This limitation will be dropped in the next release and viewers
+						should be expect values outside this range in current implementations.
+					</xs:documentation>
+				</xs:annotation>
+			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Point">
