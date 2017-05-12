@@ -1,6 +1,6 @@
 # Test Case Instructions
 
-This folder contains test cases for testing BCF 2.0 file exchange. Each test case should meet the following requirements:
+This folder contains test cases for testing BCF file exchange. Each test case should meet the following requirements:
 
 * Simplicity: Test case should test one thing at a time
 * Completeness: All necessary files need (e.g. IFC and BCFZIP) files need to be available
