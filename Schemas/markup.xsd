@@ -72,7 +72,7 @@
 			<xs:element name="AssignedTo" type="UserIdType" minOccurs="0"/>
 			<xs:element name="Stage" type="Stage" minOccurs="0"/>
 			<xs:element name="Description" type="xs:string" minOccurs="0"/>
-			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
+			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0" maxOccurs="unbounded"/>
 			<!-- Name of the file in the topic folder or url -->
 			<xs:element name="DocumentReference" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
