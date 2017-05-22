@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="3f6ac03e-de8e-4c5e-b3f0-c7bf5f87fe51" TopicStatus="Open">
+        <Title>Bitmap</Title>
+        <Index>0</Index>
+        <CreationDate>2015-06-09T11:08:49+03:00</CreationDate>
+        <CreationAuthor>rahul.sule</CreationAuthor>
+        <ModifiedDate>2015-06-09T11:08:49+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule</ModifiedAuthor>
+        <Description>there is text &quot;Bitmap&quot; on the wall.
+The text is bitmap image</Description>
+    </Topic>
+    <Comment Guid="9db6d0fc-3539-485e-9f11-1912de64c408">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:08:49+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:08:49+03:00</ModifiedDate>
+    </Comment>
+    <Viewpoints Guid="d1514fd3-290b-4830-b1fa-5bb780ce9e94">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

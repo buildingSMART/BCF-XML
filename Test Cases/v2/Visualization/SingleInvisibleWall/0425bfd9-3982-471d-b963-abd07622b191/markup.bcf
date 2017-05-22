@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header/>
+    <Topic TopicStatus="Open" TopicType="Error" Guid="0425bfd9-3982-471d-b963-abd07622b191">
+        <Title>Invisible wall</Title>
+        <CreationDate>2015-06-09T07:44:56.717Z</CreationDate>
+        <CreationAuthor>ec990910-b18c-44b3-9630-b214a1099ddf</CreationAuthor>
+        <ModifiedDate>2015-06-09T07:44:54.647Z</ModifiedDate>
+    </Topic>
+    <Comment Guid="451f78bf-42f4-425b-afb0-3a957672740f">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T07:44:54.647Z</Date>
+        <Author>jon.anders.sollien@catenda.no</Author>
+        <Comment>Single invisible wall</Comment>
+        <Topic Guid="0425bfd9-3982-471d-b963-abd07622b191"/>
+    </Comment>
+    <Viewpoints Guid="451f78bf-42f4-425b-afb0-3a957672740f">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

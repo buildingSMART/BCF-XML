@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="06cf5831-cde5-4b19-b2f9-a319a9590bc2" TopicStatus="Open">
+        <Title>component coloring</Title>
+        <Index>0</Index>
+        <CreationDate>2015-06-09T11:54:06+03:00</CreationDate>
+        <CreationAuthor>rahul.sule</CreationAuthor>
+        <ModifiedDate>2015-06-09T11:54:06+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule</ModifiedAuthor>
+        <Description>Wall colored green</Description>
+    </Topic>
+    <Comment Guid="fc72d354-8534-44b4-9686-f7b9c4a19adf">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:54:06+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:54:06+03:00</ModifiedDate>
+    </Comment>
+    <Viewpoints Guid="812da616-a239-404d-adeb-66dc69fa7cf1">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

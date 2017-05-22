@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!--Created with the iabi.BCF library, V1.1.0 at 22.05.2017 09:51. Visit http://iabi.eu to find out more.-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <redefine schemaLocation="markup.xsd">
+    <simpleType name="TopicType">
+      <restriction base="TopicType">
+        <enumeration value="Architecture" />
+        <enumeration value="Hidden Type" />
+        <enumeration value="Structural" />
+      </restriction>
+    </simpleType>
+    <simpleType name="TopicStatus">
+      <restriction base="TopicStatus">
+        <enumeration value="Finished status" />
+        <enumeration value="Open" />
+        <enumeration value="Closed" />
+      </restriction>
+    </simpleType>
+    <simpleType name="TopicLabel">
+      <restriction base="TopicLabel">
+        <enumeration value="Architecture" />
+        <enumeration value="IT Development" />
+        <enumeration value="Management" />
+        <enumeration value="Mechanical" />
+        <enumeration value="Structural" />
+      </restriction>
+    </simpleType>
+    <simpleType name="SnippetType">
+      <restriction base="SnippetType">
+        <enumeration value="IFC2X3" />
+        <enumeration value="PDF" />
+        <enumeration value="XLSX" />
+      </restriction>
+    </simpleType>
+    <simpleType name="Priority">
+      <restriction base="Priority">
+        <enumeration value="Low" />
+        <enumeration value="High" />
+        <enumeration value="Medium" />
+      </restriction>
+    </simpleType>
+    <simpleType name="UserIdType">
+      <restriction base="UserIdType">
+        <enumeration value="dangl@iabi.eu" />
+        <enumeration value="linhard@iabi.eu" />
+      </restriction>
+    </simpleType>
+    <simpleType name="Stage">
+      <restriction base="Stage" />
+    </simpleType>
+  </redefine>
+</schema>

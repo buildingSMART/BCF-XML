@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with the iabi.BCF library, V1.1.0 at 12.05.2017 12:26. Visit http://iabi.eu to find out more.-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <redefine schemaLocation="markup.xsd">
+    <simpleType name="TopicType">
+      <restriction base="TopicType">
+        <enumeration value="Information" />
+        <enumeration value="Warning" />
+        <enumeration value="Error" />
+        <enumeration value="Request" />
+      </restriction>
+    </simpleType>
+    <simpleType name="TopicStatus">
+      <restriction base="TopicStatus">
+        <enumeration value="Open" />
+        <enumeration value="Closed" />
+        <enumeration value="Reopened" />
+      </restriction>
+    </simpleType>
+    <simpleType name="TopicLabel">
+      <restriction base="TopicLabel">
+        <enumeration value="Development" />
+        <enumeration value="Architecture" />
+        <enumeration value="MEP" />
+      </restriction>
+    </simpleType>
+    <simpleType name="SnippetType">
+      <restriction base="SnippetType">
+        <enumeration value="IFC2X3" />
+        <enumeration value="IFC4" />
+        <enumeration value="JSON" />
+      </restriction>
+    </simpleType>
+    <simpleType name="Priority">
+      <restriction base="Priority">
+        <enumeration value="Low" />
+        <enumeration value="Medium" />
+        <enumeration value="High" />
+      </restriction>
+    </simpleType>
+    <simpleType name="UserIdType">
+      <restriction base="UserIdType">
+        <enumeration value="Architect@example.com" />
+        <enumeration value="MEPEngineer@example.com" />
+        <enumeration value="Developer@example.com" />
+      </restriction>
+    </simpleType>
+  </redefine>
+</schema>

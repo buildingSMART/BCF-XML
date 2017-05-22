@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with the iabi.BCF library, V1.1.0 at 12.05.2017 12:26. Visit http://iabi.eu to find out more.-->
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Components>
+    <Component IfcGuid="1GU8BMEqHBQxVAbwRD$4Jj" Selected="true" />
+    <Component IfcGuid="0AQJSsoeDDvwVqSNcwjy55" Selected="true" />
+    <Component IfcGuid="3DOu_tSXP6evQgY8Ml4CtC" Selected="true" />
+  </Components>
+  <PerspectiveCamera>
+    <CameraViewPoint>
+      <X>-16.4296623429377</X>
+      <Y>-0.160221005721745</Y>
+      <Z>4.97078624471391</Z>
+    </CameraViewPoint>
+    <CameraDirection>
+      <X>0.803157911518554</X>
+      <Y>-0.590456679305644</Y>
+      <Z>-0.0793614726687355</Z>
+    </CameraDirection>
+    <CameraUpVector>
+      <X>-0.379182758930675</X>
+      <Y>0.278763630961051</Y>
+      <Z>0.882332858610135</Z>
+    </CameraUpVector>
+    <FieldOfView>60</FieldOfView>
+  </PerspectiveCamera>
+</VisualizationInfo>
