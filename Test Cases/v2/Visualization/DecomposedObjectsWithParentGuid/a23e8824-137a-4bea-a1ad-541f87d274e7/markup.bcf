@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="a23e8824-137a-4bea-a1ad-541f87d274e7" TopicStatus="Open">
+        <Title>This should show the whole decomposed wall</Title>
+        <Index>0</Index>
+        <CreationDate>2015-06-09T11:56:47+03:00</CreationDate>
+        <CreationAuthor>ppa</CreationAuthor>
+        <ModifiedDate>2015-06-09T11:56:47+03:00</ModifiedDate>
+        <ModifiedAuthor>ppa</ModifiedAuthor>
+        <Description></Description>
+    </Topic>
+    <Viewpoints Guid="53968000-0c3e-41c8-864b-83ede8d7b443">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

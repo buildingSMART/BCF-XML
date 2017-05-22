@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with the iabi.BCF library, V1.1.0 at 12.05.2017 12:26. Visit http://iabi.eu to find out more.-->
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PerspectiveCamera>
+    <CameraViewPoint>
+      <X>19.1479514688529</X>
+      <Y>-22.614447888675</Y>
+      <Z>18.3473354318386</Z>
+    </CameraViewPoint>
+    <CameraDirection>
+      <X>-0.548840699373907</X>
+      <Y>0.560081664635821</Y>
+      <Z>-0.620550099642406</Z>
+    </CameraDirection>
+    <CameraUpVector>
+      <X>-0.0698737081383148</X>
+      <Y>0.0713048104294571</Y>
+      <Z>0.995004165278026</Z>
+    </CameraUpVector>
+    <FieldOfView>60</FieldOfView>
+  </PerspectiveCamera>
+</VisualizationInfo>

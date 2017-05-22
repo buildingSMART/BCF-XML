@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectExtension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Project ProjectId="single_visible_wall">
+    <Name>Single visible wall</Name>
+  </Project>
+  <ExtensionSchema>extension.xsd</ExtensionSchema>
+</ProjectExtension>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header/>
+    <Topic TopicStatus="Open" TopicType="Error" Guid="d83f5842-19ea-4ca9-85bf-03d4b8f504b8">
+        <Title>Related topic 2</Title>
+        <CreationDate>2015-06-09T08:40:57.301Z</CreationDate>
+        <CreationAuthor>ec990910-b18c-44b3-9630-b214a1099ddf</CreationAuthor>
+        <ModifiedDate>2015-06-09T08:40:57.301Z</ModifiedDate>
+    </Topic>
+    <Comment Guid="ae4837f0-f9de-43cc-ba81-6330a9d07d33">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T08:40:57.301Z</Date>
+        <Author>jon.anders.sollien@catenda.no</Author>
+        <Comment>Default comment</Comment>
+        <Topic Guid="d83f5842-19ea-4ca9-85bf-03d4b8f504b8"/>
+    </Comment>
+</Markup>
