@@ -169,7 +169,7 @@ Author |No | Comment author
 Comment | No | The comment text
 Viewpoint | Yes | Back reference to the viewpoint GUID.
 ModifiedDate | Yes | The date when comment was modified
-	ModifiedAuthor | Yes | The author who modified the comment
+ModifiedAuthor | Yes | The author who modified the comment
 
 ### Viewpoints
 The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
