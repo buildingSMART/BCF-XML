@@ -37,6 +37,8 @@ The root of the BCF zip contains the following files.
 * bcf.version
 	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 
+### Topic folder structure inside a BCFzip archive
+
 The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
 
 * markup.bcf
