@@ -29,13 +29,15 @@ Globally Unique ID in the IFC format. This format is used only when referring to
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
 
 ### BCF file structure
-A BCF file is a zip containing one folder for each topic with its file extension "bcfzip" for BCFv1.0 and BCFv2.0. The file extension as the version number "bcfv2.1" is introduced since BCFv2.1.
+A BCF file is a zip containing one folder for each topic with its file extension "bcfzip" for BCFv1.0 and BCFv2.0. The file extension "bcf" is introduced since BCFv2.1.
 The root of the BCF zip contains the following files.
 
 * project.bcfp (optional)
     - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
 * bcf.version
 	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
+
+### Topic folder structure inside a BCFzip archive
 
 The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
 
@@ -169,7 +171,7 @@ Author |No | Comment author
 Comment | No | The comment text
 Viewpoint | Yes | Back reference to the viewpoint GUID.
 ModifiedDate | Yes | The date when comment was modified
-	ModifiedAuthor | Yes | The author who modified the comment
+ModifiedAuthor | Yes | The author who modified the comment
 
 ### Viewpoints
 The markup file can contain multiple viewpoints related to one or more comments. A viewpoint has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
@@ -256,6 +258,8 @@ CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 FieldOfView | No | Camera’s field of view angle in degrees.
+
+The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release.
 
 ### Lines (optional)
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
