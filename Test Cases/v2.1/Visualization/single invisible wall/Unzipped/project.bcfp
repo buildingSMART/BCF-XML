@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProjectExtension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="project.xsd">
+    <Project ProjectId="f5fbb3c6-9527-4d18-9003-6bf64f77eb71">
+        <Name>Single invisible wall project</Name>
+    </Project>
+    <ExtensionSchema>extensions.xsd</ExtensionSchema>
+</ProjectExtension>
