@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="709b92c2-64e0-40cc-b861-00f8ab0e3945" TopicStatus="Open">
+        <Title>Clipping plane</Title>
+        <Index>0</Index>
+        <CreationDate>2015-06-09T11:18:46+03:00</CreationDate>
+        <CreationAuthor>rahul.sule</CreationAuthor>
+        <ModifiedDate>2015-06-09T11:18:46+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule</ModifiedAuthor>
+        <Description>One clipping plane that is cutting the model horizontally</Description>
+    </Topic>
+    <Comment Guid="b2cb4b77-83c8-47b4-a89c-bee37d667e4e">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:18:46+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:18:46+03:00</ModifiedDate>
+    </Comment>
+    <Viewpoints Guid="82b38f43-237b-45c2-96d0-8840ffb344ad">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

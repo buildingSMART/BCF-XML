@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="b215f0e9-b5fa-490b-8674-d5e01607728d" TopicType="Error" TopicStatus="Open">
+        <Title>Visible Opening</Title>
+        <Index>0</Index>
+        <CreationDate>2015-07-22T15:22:31+03:00</CreationDate>
+        <CreationAuthor>rsu</CreationAuthor>
+        <ModifiedDate>2015-07-22T15:22:31+03:00</ModifiedDate>
+        <ModifiedAuthor>rsu</ModifiedAuthor>
+        <Description></Description>
+    </Topic>
+    <Comment Guid="2143a906-d693-4c2b-8970-619d01c28a97">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-07-22T15:22:31+03:00</Date>
+        <Author>rsu</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-07-22T15:22:31+03:00</ModifiedDate>
+    </Comment>
+    <Viewpoints Guid="68190c8c-01e4-4852-a01d-66d756a520f3">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

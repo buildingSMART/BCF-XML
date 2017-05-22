@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="79d7bbbc-3029-43bf-91fd-47ef0915e7ae" TopicStatus="Open">
+        <Title>visible space and the rest of the model visible</Title>
+        <Index>0</Index>
+        <CreationDate>2015-06-09T11:35:52+03:00</CreationDate>
+        <CreationAuthor>rahul.sule</CreationAuthor>
+        <ModifiedDate>2015-06-09T11:35:52+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule</ModifiedAuthor>
+        <Description>visible spaces and the rest of the model visible</Description>
+    </Topic>
+    <Comment Guid="691ed8dc-0d52-498d-b2d3-d858a98b9a43">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:35:52+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:35:52+03:00</ModifiedDate>
+    </Comment>
+    <Viewpoints Guid="756d6918-4ee9-4c88-9c74-b00c6c2410e5">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

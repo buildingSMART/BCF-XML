@@ -14,3 +14,6 @@ The test cases are divided in the following folders depending on their primary f
 * Visualization: Test Cases that deal with visualization
 * Project: Examples of using extension schema
 * Real world: Examples of real world test cases
+
+Each test case has a folder adjacent to it with the same name as the _.bcf / .bcfzip_ file. This folder contains the
+unzipped content of the BCF zip archive.

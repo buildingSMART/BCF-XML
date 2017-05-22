@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
+    <Components/>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>-10.145333219159387</X>
+            <Y>-16.568003365198305</Y>
+            <Z>9.59991834776194</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>0.9982745095681629</X>
+            <Y>-0.028159874564116682</Y>
+            <Z>-0.05152693481061455</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>0.0515064464744075</X>
+            <Y>-0.0014529220751013485</Y>
+            <Z>0.9986716051781099</Z>
+        </CameraUpVector>
+        <FieldOfView>60.0</FieldOfView>
+    </PerspectiveCamera>
+    <Lines/>
+    <Bitmaps>
+        <Bitmap>PNG</Bitmap>
+        <Reference>3f6ac03e-de8e-4c5e-b3f0-c7bf5f87fe51/bitmaps-d1514fd3-290b-4830-b1fa-5bb780ce9e94-0.png</Reference>
+        <Location>
+            <X>10.064999999983305</X>
+            <Y>-10.40177106506878</Y>
+            <Z>7.011243681990698</Z>
+        </Location>
+        <Normal>
+            <X>-0.9999999999999999</X>
+            <Y>1.253656364893038E-16</Y>
+            <Z>0.0</Z>
+        </Normal>
+        <Up>
+            <X>-5.43903050550883E-34</X>
+            <Y>-4.338533794284917E-18</Y>
+            <Z>1.0</Z>
+        </Up>
+        <Height>1666.1814563907683</Height>
+    </Bitmaps>
+</VisualizationInfo>

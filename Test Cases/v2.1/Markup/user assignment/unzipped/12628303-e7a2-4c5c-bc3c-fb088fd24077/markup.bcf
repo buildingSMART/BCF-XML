@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header/>
+    <Topic Guid="12628303-e7a2-4c5c-bc3c-fb088fd24077" TopicType="Error" TopicStatus="Open">
+        <Title>Assigned issue</Title>
+        <CreationDate>2017-05-22T13:20:23.928Z</CreationDate>
+        <CreationAuthor>jon.anders.sollien@catenda.no</CreationAuthor>
+        <ModifiedDate>2017-05-22T13:20:23.928Z</ModifiedDate>
+        <AssignedTo>jon.anders.sollien@catenda.no</AssignedTo>
+        <Description></Description>
+    </Topic>
+    <Comment Guid="7a02a14b-5c22-433c-b98c-ac5b9153a62b">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2017-05-22T13:20:23.928Z</Date>
+        <Author>jon.anders.sollien@catenda.no</Author>
+        <Topic Guid="12628303-e7a2-4c5c-bc3c-fb088fd24077"/>
+    </Comment>
+</Markup>
