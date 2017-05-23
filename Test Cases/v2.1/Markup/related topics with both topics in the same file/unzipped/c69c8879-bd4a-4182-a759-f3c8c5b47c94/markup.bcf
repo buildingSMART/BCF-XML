@@ -7,7 +7,7 @@
         <CreationAuthor>jon.anders.sollien@catenda.no</CreationAuthor>
         <ModifiedDate>2017-05-22T12:11:58.651Z</ModifiedDate>
         <Description></Description>
-        <RelatedTopics Guid="a6f801b9-6bf6-4cb9-8b89-1ae24b76074a"/>
+        <RelatedTopic Guid="a6f801b9-6bf6-4cb9-8b89-1ae24b76074a"/>
     </Topic>
     <Comment Guid="2125e721-7501-4468-a479-23498b97c67c">
         <VerbalStatus>Open</VerbalStatus>
