@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <redefine schemaLocation="markup.xsd">
+    <simpleType name="TopicType">
+      <restriction base="TopicType">
+        <enumeration value="Error" />
+        <enumeration value="Warning" />
+        <enumeration value="Info" />
+      </restriction>
+    </simpleType>
+    <simpleType name="TopicStatus">
+      <restriction base="TopicStatus">
+        <enumeration value="Open" />
+        <enumeration value="Closed" />
+      </restriction>
+    </simpleType>
+    <simpleType name="UserIdType">
+      <restriction base="UserIdType">
+        <enumeration value="jon.anders.sollien@catenda.no" />
+      </restriction>
+    </simpleType>
+  </redefine>
+</schema>
