@@ -197,9 +197,6 @@ The `Components` element contains the following properties.
 * `Visibility` to describe default visibility and exceptions
 * `Coloring` to convey coloring options for displaying components
 
-#### ViewSetupHints
-This element contains information about the default visibility for elements of certain types (`SpacesVisible`, `SpaceBoundariesVisible` and `OpeningsVisible`) that should be applied if not stated otherwise.
-
 #### Selection
 The `Selection` element lists all components that should be either highlighted or selected when displaying a viewpoint.
 
@@ -207,10 +204,10 @@ The `Selection` element lists all components that should be either highlighted o
 
 BCF is suitable for selecting a few components. A huge list of selected components causes poor performance. All clients should follow this rule:
 
-* If the size of the selected components is huge (approximately 1000 components), alert the user and give him the opportunity to modify the visibility.
+* If the size of the selected components is huge (approximately 1000 components), alert the user and give him the opportunity to modify the selection.
 
 #### Visibility
-The `Visibility` element states the components `DefaultVisibility` and lists all `Exceptions` that apply to specific components.
+The `Visibility` element states the components `DefaultVisibility` and lists all `Exceptions` that apply to specific components. The components in the `Exceptions` have the opposite visibility than `DefaultVisibility.
 
 **Optimization Rules**
 
@@ -219,6 +216,15 @@ BCF is suitable for hiding/showing a few components. A huge list of hidden/shown
 * If the list of hidden components is smaller than the list of visible components: set default_visibility to true and put the hidden components in exceptions.
 * If the list of visible components is smaller or equals the list of hidden components: set default_visibility to false and put the visible components in exceptions.
 * If the size of exceptions is huge (approximately 1000 components), alert the user and give him the opportunity to modify the visibility.
+
+##### ViewSetupHints
+This element contains information about the default visibility for elements of certain types (`SpacesVisible`, `SpaceBoundariesVisible` and `OpeningsVisible`). These flags have the following logic when applied to spaces: When a viewpoint has no spaces visible, set the value of `SpacesVisible` to false. If there are any spaces visible in the viewpoint, set the value to the same as `DefaultVisibility`. The DefaultVisibility flag decides whetever to export the hidden or the visible spaces. The logic applied to spaces is also applied to `OpeningsVisible` and `SpaceBoundariesVisible` flags.
+
+##### Applying Visibility
+The visibility is applied in following order:
+1. Apply the `DefaultVisibility`
+2. Apply the `ViewSetupHints`
+3. Apply the `Exceptions`
 
 #### Coloring
 The `Coloring` element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, `40E0D0` would be the color <span style="color:#40E0D0;";>Turquoise</span>. [More information about the color format can be found on Wikipedia.](https://en.wikipedia.org/wiki/RGBA_color_space)
