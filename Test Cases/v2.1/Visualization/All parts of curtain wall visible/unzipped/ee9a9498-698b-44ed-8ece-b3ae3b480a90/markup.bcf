@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Topic Guid="ee9a9498-698b-44ed-8ece-b3ae3b480a90" TopicType="Error" TopicStatus="Open">
+        <Title>All components of curtain wall visible</Title>
+        <Index>2</Index>
+        <CreationDate>2017-05-23T10:26:49.974+02:00</CreationDate>
+        <CreationAuthor>pasi.paasiala@solibri.com</CreationAuthor>
+        <ModifiedDate>2017-05-23T10:27:44.085+02:00</ModifiedDate>
+        <ModifiedAuthor>pasi.paasiala@solibri.com</ModifiedAuthor>
+        <AssignedTo></AssignedTo>
+        <Description>All components of curtain wall visible. Only parent guid send as visible.</Description>
+    </Topic>
+    <Viewpoints Guid="cfeed42b-17c2-4851-8b93-07dda9188d2f">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

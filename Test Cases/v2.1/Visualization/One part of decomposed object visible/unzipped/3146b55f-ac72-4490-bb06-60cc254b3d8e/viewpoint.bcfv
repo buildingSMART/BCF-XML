@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
+    <Components>
+        <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+        <Selection/>
+        <Visibility DefaultVisibility="false">
+            <Exceptions>
+                <Component IfcGuid="32HeOfyn55zOiSkf6rlfHs">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+            </Exceptions>
+        </Visibility>
+        <Coloring/>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>26.00261522559086</X>
+            <Y>-26.152546069409244</Y>
+            <Z>20.25187937049607</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>-0.6658547449851194</X>
+            <Y>0.48425538694636966</Y>
+            <Z>-0.567568655577652</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-0.4590141077401259</X>
+            <Y>0.33382664316941446</Y>
+            <Z>0.8233260722252009</Z>
+        </CameraUpVector>
+        <FieldOfView>60.0</FieldOfView>
+    </PerspectiveCamera>
+</VisualizationInfo>
