@@ -56,3 +56,9 @@ This document lists various typical use cases of components in viewpoints. In ca
 * openings_on: false
 * space_boundaries_on: false
 
+## Case 9: Normal model: All spaces visible, no other components visible (50000 components (incl. spaces)) 
+* DefaultVisibility: false
+* component_list: visible spaces
+* spaces_on: false
+* openings_on: false
+* space_boundaries_on: false
