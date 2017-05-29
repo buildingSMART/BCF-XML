@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="false">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06.000+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="32365b99-17cb-4ca9-ad38-e595b2e45af6" TopicType="Error" TopicStatus="Open">
+        <Title>Bitmap</Title>
+        <Index>0</Index>
+        <CreationDate>2017-05-29T15:00:04.998+03:00</CreationDate>
+        <CreationAuthor>rahul.sule@solibri.com</CreationAuthor>
+        <ModifiedDate>2017-05-29T15:01:01.044+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule@solibri.com</ModifiedAuthor>
+        <AssignedTo></AssignedTo>
+        <Description></Description>
+    </Topic>
+    <Viewpoints Guid="27fe7689-546c-48e6-afea-4151debb5160">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+        <Index>0</Index>
+    </Viewpoints>
+</Markup>
