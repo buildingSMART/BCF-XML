@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="false">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06.000+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="6e43d6c2-2fce-4a9e-a8ca-8c6d2a3ae9ec" TopicType="Error" TopicStatus="Open">
+        <Title>Clipping planes</Title>
+        <Index>0</Index>
+        <CreationDate>2017-05-29T14:49:29.682+03:00</CreationDate>
+        <CreationAuthor>rahul.sule@solibri.com</CreationAuthor>
+        <ModifiedDate>2017-05-29T14:51:37.429+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule@solibri.com</ModifiedAuthor>
+        <AssignedTo></AssignedTo>
+        <Description>two clipping planes</Description>
+    </Topic>
+    <Viewpoints Guid="a43b59ac-79e6-4cca-af18-574a653808f9">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+        <Index>0</Index>
+    </Viewpoints>
+</Markup>

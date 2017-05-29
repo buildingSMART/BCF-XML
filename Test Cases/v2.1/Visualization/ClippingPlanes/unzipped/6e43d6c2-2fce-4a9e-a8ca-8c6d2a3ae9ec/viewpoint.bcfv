@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
+    <Components>
+        <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+        <Selection/>
+        <Visibility DefaultVisibility="true">
+            <Exceptions/>
+        </Visibility>
+        <Coloring/>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>24.44053833387205</X>
+            <Y>-30.912651091753023</Y>
+            <Z>16.802610046012234</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>-0.3710676931078972</X>
+            <Y>0.7368684647674618</Y>
+            <Z>-0.5650961270109958</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-0.2541606597038404</X>
+            <Y>0.5047137721736312</Y>
+            <Z>0.8250250706718996</Z>
+        </CameraUpVector>
+        <FieldOfView>60.0</FieldOfView>
+    </PerspectiveCamera>
+    <ClippingPlanes>
+        <ClippingPlane>
+            <Location>
+                <X>0.0</X>
+                <Y>0.0</Y>
+                <Z>7.8347954580573385</Z>
+            </Location>
+            <Direction>
+                <X>0.0</X>
+                <Y>0.0</Y>
+                <Z>1.0</Z>
+            </Direction>
+        </ClippingPlane>
+        <ClippingPlane>
+            <Location>
+                <X>14.24451241060038</X>
+                <Y>-0.9336346695051775</Y>
+                <Z>0.0</Z>
+            </Location>
+            <Direction>
+                <X>0.9978589232386044</X>
+                <Y>-0.06540312923012855</Y>
+                <Z>0.0</Z>
+            </Direction>
+        </ClippingPlane>
+    </ClippingPlanes>
+</VisualizationInfo>
