@@ -10,20 +10,40 @@
     </Components>
     <PerspectiveCamera>
         <CameraViewPoint>
-            <X>24.44053833387205</X>
-            <Y>-30.912651091753023</Y>
-            <Z>16.802610046012234</Z>
+            <X>13.918120977515107</X>
+            <Y>-21.112710850785167</Y>
+            <Z>8.84533847628754</Z>
         </CameraViewPoint>
         <CameraDirection>
-            <X>-0.3710676931080537</X>
+            <X>-0.3710676931080536</X>
             <Y>0.7368684647668834</Y>
             <Z>-0.5650961270116471</Z>
         </CameraDirection>
         <CameraUpVector>
-            <X>-0.25416065970413326</X>
-            <Y>0.5047137721742131</Y>
-            <Z>0.8250250706714533</Z>
+            <X>-0.254160659704378</X>
+            <Y>0.5047137721740897</Y>
+            <Z>0.8250250706714531</Z>
         </CameraUpVector>
         <FieldOfView>60.0</FieldOfView>
     </PerspectiveCamera>
+    <Bitmap>
+        <Bitmap>PNG</Bitmap>
+        <Reference>32365b99-17cb-4ca9-ad38-e595b2e45af6/bitmaps-15822744-b62e-4682-903b-1edaf8768a9f-0.png</Reference>
+        <Location>
+            <X>12.074301486204059</X>
+            <Y>-18.087602416298406</Y>
+            <Z>6.0199999999708815</Z>
+        </Location>
+        <Normal>
+            <X>0.0</X>
+            <Y>-0.0</Y>
+            <Z>1.0</Z>
+        </Normal>
+        <Up>
+            <X>-0.44976535416803437</X>
+            <Y>0.8931467551248802</Y>
+            <Z>0.0</Z>
+        </Up>
+        <Height>1900.3687464795244</Height>
+    </Bitmap>
 </VisualizationInfo>
