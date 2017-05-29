@@ -1,0 +1,5 @@
+Model = bcf2_testModel
+bcffile = Clipping plane.bcfzip
+
+BCF file has only one issue.
+The issue has one viewpoint and one section plane.

@@ -1,0 +1,6 @@
+Model = bcf2_testModel.ifc
+
+
+bcffile = Null.bcfzip 
+
+BCF file has "null" ProjectId and ExtensionSchema

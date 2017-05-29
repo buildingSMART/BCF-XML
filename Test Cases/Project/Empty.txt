@@ -1,0 +1,6 @@
+Model used = bcf2_testModel.ifc
+
+bcffile = Empty.bcfzip
+
+BCF file has "empty" ProjectId, Project name and ExtensionSchema
+

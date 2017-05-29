@@ -1,0 +1,4 @@
+Model = bcf2_testModel
+bcffile = empty viewpoint.bcfzip
+
+BCF file has one issue and one comment without any viewpoint.
