@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="false">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06.000+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="9d329098-090b-4504-803a-2b6857e77fb3" TopicType="Error" TopicStatus="Open">
+        <Title>multiple viewpoints without comments -&gt; ordering </Title>
+        <Index>0</Index>
+        <CreationDate>2017-05-29T13:47:27.346+03:00</CreationDate>
+        <CreationAuthor>rahul.sule@solibri.com</CreationAuthor>
+        <ModifiedDate>2017-05-29T13:48:14.461+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule@solibri.com</ModifiedAuthor>
+        <AssignedTo></AssignedTo>
+        <Description></Description>
+    </Topic>
+    <Viewpoints Guid="0e2000cc-c831-4cea-a847-a3d87ae572ff">
+        <Viewpoint>0e2000cc-c831-4cea-a847-a3d87ae572ff.bcfv</Viewpoint>
+        <Snapshot>0e2000cc-c831-4cea-a847-a3d87ae572ff.png</Snapshot>
+        <Index>0</Index>
+    </Viewpoints>
+    <Viewpoints Guid="b4b16672-04f5-478f-b927-51b7d919d6aa">
+        <Viewpoint>b4b16672-04f5-478f-b927-51b7d919d6aa.bcfv</Viewpoint>
+        <Snapshot>b4b16672-04f5-478f-b927-51b7d919d6aa.png</Snapshot>
+        <Index>1</Index>
+    </Viewpoints>
+    <Viewpoints Guid="8c48c959-8bd0-498d-a779-eee20d74d91b">
+        <Viewpoint>8c48c959-8bd0-498d-a779-eee20d74d91b.bcfv</Viewpoint>
+        <Snapshot>8c48c959-8bd0-498d-a779-eee20d74d91b.png</Snapshot>
+        <Index>2</Index>
+    </Viewpoints>
+    <Viewpoints Guid="81178d1c-54d6-480e-88b4-01d8c46acac6">
+        <Viewpoint>81178d1c-54d6-480e-88b4-01d8c46acac6.bcfv</Viewpoint>
+        <Snapshot>81178d1c-54d6-480e-88b4-01d8c46acac6.png</Snapshot>
+        <Index>3</Index>
+    </Viewpoints>
+    <Viewpoints Guid="14a149d9-f18f-4911-ab22-591ec2c78992">
+        <Viewpoint>14a149d9-f18f-4911-ab22-591ec2c78992.bcfv</Viewpoint>
+        <Snapshot>14a149d9-f18f-4911-ab22-591ec2c78992.png</Snapshot>
+        <Index>4</Index>
+    </Viewpoints>
+    <Viewpoints Guid="985ee425-a0ec-41ff-bc7d-bcb97b8f6e7d">
+        <Viewpoint>985ee425-a0ec-41ff-bc7d-bcb97b8f6e7d.bcfv</Viewpoint>
+        <Snapshot>985ee425-a0ec-41ff-bc7d-bcb97b8f6e7d.png</Snapshot>
+        <Index>5</Index>
+    </Viewpoints>
+    <Viewpoints Guid="52235326-3232-4586-8ed0-f98dd44ad441">
+        <Viewpoint>52235326-3232-4586-8ed0-f98dd44ad441.bcfv</Viewpoint>
+        <Snapshot>52235326-3232-4586-8ed0-f98dd44ad441.png</Snapshot>
+        <Index>6</Index>
+    </Viewpoints>
+    <Viewpoints Guid="082008b4-e492-40c2-951d-f237d2d3ece0">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+        <Index>7</Index>
+    </Viewpoints>
+</Markup>

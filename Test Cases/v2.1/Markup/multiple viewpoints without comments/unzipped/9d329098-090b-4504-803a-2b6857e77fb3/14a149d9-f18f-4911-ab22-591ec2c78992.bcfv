@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
+    <Components>
+        <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+        <Selection/>
+        <Visibility DefaultVisibility="true">
+            <Exceptions/>
+        </Visibility>
+        <Coloring/>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>0.28234433351493315</X>
+            <Y>8.466250483050723</Y>
+            <Z>13.73190489680304</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>0.399291765378425</X>
+            <Y>-0.8812886555623675</Y>
+            <Z>-0.2527773559440319</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>0.10431975560945904</X>
+            <Y>-0.23024721554806815</Y>
+            <Z>0.9675244742754285</Z>
+        </CameraUpVector>
+        <FieldOfView>60.0</FieldOfView>
+    </PerspectiveCamera>
+</VisualizationInfo>
