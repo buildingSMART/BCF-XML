@@ -3,15 +3,15 @@
     <Header>
         <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="false">
             <Filename>C:\e.ifc</Filename>
-            <Date>2015-06-09T09:39:06.000+03:00</Date>
+            <Date>2015-06-09T09:39:06+03:00</Date>
         </File>
     </Header>
     <Topic Guid="9d329098-090b-4504-803a-2b6857e77fb3" TopicType="Error" TopicStatus="Open">
         <Title>multiple viewpoints without comments -&gt; ordering </Title>
         <Index>0</Index>
-        <CreationDate>2017-05-29T13:47:27.346+03:00</CreationDate>
+        <CreationDate>2017-05-29T13:47:27+03:00</CreationDate>
         <CreationAuthor>rahul.sule@solibri.com</CreationAuthor>
-        <ModifiedDate>2017-05-29T13:48:14.461+03:00</ModifiedDate>
+        <ModifiedDate>2017-05-29T13:48:14+03:00</ModifiedDate>
         <ModifiedAuthor>rahul.sule@solibri.com</ModifiedAuthor>
         <AssignedTo></AssignedTo>
         <Description></Description>
