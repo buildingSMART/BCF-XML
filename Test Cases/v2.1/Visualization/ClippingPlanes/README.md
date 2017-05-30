@@ -4,7 +4,7 @@ This test case verifies support for Clipping Planes
 
 ## Testing process
 
-1. Import \ClippingPlanes.bcf
+1. Import ClippingPlanes.bcf
 2. Verify the bcf was imported correctly:
 
 > 1. Check that the viewpoint has two Clipping Planes cutting the model horizontally and vertically

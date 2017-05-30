@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="false">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="3328d7c9-da65-44b2-b590-8bb6768dc900" TopicType="Error" TopicStatus="Open">
+        <Title>Visible space and rest of model visible</Title>
+        <Index>0</Index>
+        <CreationDate>2017-05-30T14:13:18+03:00</CreationDate>
+        <CreationAuthor>rahul.sule@solibri.com</CreationAuthor>
+        <ModifiedDate>2017-05-30T14:13:55+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule@solibri.com</ModifiedAuthor>
+        <AssignedTo></AssignedTo>
+        <Description>Whole model visible and one space visible</Description>
+    </Topic>
+    <Viewpoints Guid="ebab1856-0161-40a9-9f66-7f755b890227">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+        <Index>0</Index>
+    </Viewpoints>
+</Markup>

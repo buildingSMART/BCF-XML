@@ -1,13 +1,13 @@
-# Bitmap
+# Component Coloring
 
-This test case verifies support for Bitmap
+This test case verifies support for Component colors
 
 ## Testing process
 
-1. Import Bitmap.bcf
+1. Import "Component Coloring.bcf"
 2. Verify the bcf was imported correctly:
 
-> 1. Check that the viewpoint has one Bitmap (Bitmap created with text "Bitmap")
+> 1. Check that the viewpoint has one component with green color
 
 > 
 > Verification paragrpah 2 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="false">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="1e7b79b3-175f-4708-838b-77cf08a0eaff" TopicType="Error" TopicStatus="Open">
+        <Title>Visible openings</Title>
+        <Index>0</Index>
+        <CreationDate>2017-05-30T14:16:40+03:00</CreationDate>
+        <CreationAuthor>rahul.sule@solibri.com</CreationAuthor>
+        <ModifiedDate>2017-05-30T14:16:54+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule@solibri.com</ModifiedAuthor>
+        <AssignedTo></AssignedTo>
+        <Description>Three openings are visible</Description>
+    </Topic>
+    <Viewpoints Guid="3576ff57-667f-4132-bf1a-b12e3627b753">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+        <Index>0</Index>
+    </Viewpoints>
+</Markup>

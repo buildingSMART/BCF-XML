@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
+    <Components>
+        <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+        <Selection/>
+        <Visibility DefaultVisibility="true">
+            <Exceptions/>
+        </Visibility>
+        <Coloring/>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>27.1539388093444</X>
+            <Y>-29.07070196979158</Y>
+            <Z>14.958228137540653</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>-0.7210462522450313</X>
+            <Y>0.6195013495950796</Y>
+            <Z>-0.3103391370311995</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-0.23539109277223516</X>
+            <Y>0.20224097857942283</Y>
+            <Z>0.9506259096125722</Z>
+        </CameraUpVector>
+        <FieldOfView>60.0</FieldOfView>
+    </PerspectiveCamera>
+    <Lines>
+        <Line>
+            <StartPoint>
+                <X>14.135559533602265</X>
+                <Y>-14.53191841242439</Y>
+                <Z>8.153603891856193</Z>
+            </StartPoint>
+            <EndPoint>
+                <X>14.575383329472723</X>
+                <Y>-7.821504024784225</Y>
+                <Z>7.83459831885308</Z>
+            </EndPoint>
+        </Line>
+        <Line>
+            <StartPoint>
+                <X>14.575383329472723</X>
+                <Y>-7.821504024784225</Y>
+                <Z>7.83459831885308</Z>
+            </StartPoint>
+            <EndPoint>
+                <X>14.529314553614054</X>
+                <Y>-8.524377719306642</Y>
+                <Z>7.194017603363865</Z>
+            </EndPoint>
+        </Line>
+        <Line>
+            <StartPoint>
+                <X>14.575383329472723</X>
+                <Y>-7.821504024784225</Y>
+                <Z>7.83459831885308</Z>
+            </StartPoint>
+            <EndPoint>
+                <X>14.533487346157303</X>
+                <Y>-8.460713207789842</Y>
+                <Z>8.538980148942917</Z>
+            </EndPoint>
+        </Line>
+    </Lines>
+</VisualizationInfo>
