@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="visinfo.xsd">
+	<Components>
+		<ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"></ViewSetupHints>
+		<Selection></Selection>
+		<Visibility DefaultVisibility="false">
+			<Exceptions>
+				<Component IfcGuid="1E8YkwPMfB$h99jtn_uAjI">
+					<OriginatingSystem>https://bimsync.com</OriginatingSystem>
+				</Component>
+			</Exceptions>
+		</Visibility>
+		<Coloring></Coloring>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>17.215579591546742</X>
+            <Y>-16.51693001290806</Y>
+            <Z>9.504509184867453</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>-0.5650988558624445</X>
+            <Y>0.651737861315487</Y>
+            <Z>-0.5058666259310565</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-0.3313943565424513</X>
+            <Y>0.3822025950758132</Y>
+            <Z>0.8626117068351953</Z>
+        </CameraUpVector>
+        <FieldOfView>60.0</FieldOfView>
+    </PerspectiveCamera>
+    <Lines/>
+    <ClippingPlanes/>
+</VisualizationInfo>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="03d501f8-1025-462f-841b-35846cb36c31" TopicStatus="Open">
+        <Title>multiple viewpoints without comments</Title>
+        <Index>0</Index>
+        <CreationDate>2015-06-09T11:24:23+03:00</CreationDate>
+        <CreationAuthor>rahul.sule</CreationAuthor>
+        <ModifiedDate>2015-06-09T11:24:23+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule</ModifiedAuthor>
+        <Description></Description>
+    </Topic>
+    <Comment Guid="2d80a5da-2296-47fc-9fe5-a60b5a02cfb3">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:24:23+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:24:23+03:00</ModifiedDate>
+    </Comment>
+    <Comment Guid="55f6b17c-2c02-4e0e-99de-64c5f1f255c3">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:24:23+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:24:23+03:00</ModifiedDate>
+    </Comment>
+    <Comment Guid="e244a1ee-1972-45e3-b919-5ab5002f96ce">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:24:23+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:24:23+03:00</ModifiedDate>
+    </Comment>
+    <Comment Guid="992a3421-a60b-4594-864b-583feaed9d16">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:24:23+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:24:23+03:00</ModifiedDate>
+    </Comment>
+    <Comment Guid="12fdc962-6ce8-4494-8224-56642068c84f">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:24:23+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:24:23+03:00</ModifiedDate>
+    </Comment>
+    <Comment Guid="ab78330d-c14d-4ca6-9cbb-662be812c9b1">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T11:24:23+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T11:24:23+03:00</ModifiedDate>
+    </Comment>
+    <Viewpoints Guid="d4568303-f5b8-4d29-b3aa-c79d7262f6d6">
+        <Viewpoint>d4568303-f5b8-4d29-b3aa-c79d7262f6d6.bcfv</Viewpoint>
+        <Snapshot>d4568303-f5b8-4d29-b3aa-c79d7262f6d6.png</Snapshot>
+    </Viewpoints>
+    <Viewpoints Guid="03c51a6f-13e0-4579-8a54-c6815630d63c">
+        <Viewpoint>03c51a6f-13e0-4579-8a54-c6815630d63c.bcfv</Viewpoint>
+        <Snapshot>03c51a6f-13e0-4579-8a54-c6815630d63c.png</Snapshot>
+    </Viewpoints>
+    <Viewpoints Guid="ac1c4776-4a20-49fc-bf58-dcd0c8bc2058">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+    <Viewpoints Guid="0138577b-6590-478a-af2b-7674fa87d821">
+        <Viewpoint>0138577b-6590-478a-af2b-7674fa87d821.bcfv</Viewpoint>
+        <Snapshot>0138577b-6590-478a-af2b-7674fa87d821.png</Snapshot>
+    </Viewpoints>
+    <Viewpoints Guid="80adf3ef-d542-40f3-9b9e-5057caabc023">
+        <Viewpoint>80adf3ef-d542-40f3-9b9e-5057caabc023.bcfv</Viewpoint>
+        <Snapshot>80adf3ef-d542-40f3-9b9e-5057caabc023.png</Snapshot>
+    </Viewpoints>
+    <Viewpoints Guid="1f9ea9fc-0617-43aa-a227-bd8c4abc1c53">
+        <Viewpoint>1f9ea9fc-0617-43aa-a227-bd8c4abc1c53.bcfv</Viewpoint>
+        <Snapshot>1f9ea9fc-0617-43aa-a227-bd8c4abc1c53.png</Snapshot>
+    </Viewpoints>
+</Markup>
