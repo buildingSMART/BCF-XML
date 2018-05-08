@@ -1,0 +1,1 @@
+This folder contains examples of real world test cases. When providing IFC files, please zip them.

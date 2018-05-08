@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="markup.xsd">
+    <Header>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+            <Filename>C:\e.ifc</Filename>
+            <Date>2015-06-09T09:39:06+03:00</Date>
+        </File>
+    </Header>
+    <Topic Guid="64124059-3964-4c0b-9987-11036e9f0d54" TopicStatus="Open">
+        <Title>Lines</Title>
+        <Index>0</Index>
+        <CreationDate>2015-06-09T10:41:23+03:00</CreationDate>
+        <CreationAuthor>rahul.sule</CreationAuthor>
+        <ModifiedDate>2015-06-09T10:41:23+03:00</ModifiedDate>
+        <ModifiedAuthor>rahul.sule</ModifiedAuthor>
+        <Description>There should be four lines</Description>
+    </Topic>
+    <Comment Guid="ec54ee6d-3ed0-45d8-8c80-398f9f8d80da">
+        <VerbalStatus>Open</VerbalStatus>
+        <Status>Error</Status>
+        <Date>2015-06-09T10:41:23+03:00</Date>
+        <Author>rahul.sule</Author>
+        <Comment></Comment>
+        <ModifiedDate>2015-06-09T10:41:23+03:00</ModifiedDate>
+    </Comment>
+    <Viewpoints Guid="6e225887-aad7-42ec-a9f4-8f8c796832dd">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
+</Markup>

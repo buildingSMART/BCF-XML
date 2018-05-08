@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with the iabi.BCF library, V1.1.0 at 22.05.2017 09:51. Visit http://iabi.eu to find out more.-->
+<ProjectExtension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Project ProjectId="F338B6F0-A93E-40FF-A4D6-6117CD21EC2A">
+    <Name>BCF API Implementation</Name>
+  </Project>
+  <ExtensionSchema>extensions.xsd</ExtensionSchema>
+</ProjectExtension>

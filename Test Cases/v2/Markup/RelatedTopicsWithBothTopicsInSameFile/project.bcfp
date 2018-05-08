@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProjectExtension xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="project.xsd">
+    <Project ProjectId="396191a4-c3af-4f0e-844f-1359f5beb406">
+        <Name>Jon Anders Test</Name>
+    </Project>
+    <ExtensionSchema>schema.bcfs</ExtensionSchema>
+</ProjectExtension>

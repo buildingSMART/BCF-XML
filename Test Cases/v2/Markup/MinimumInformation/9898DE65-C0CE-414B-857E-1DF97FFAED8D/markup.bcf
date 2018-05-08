@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with the iabi.BCF library, V1.1.0 at 12.05.2017 12:26. Visit http://iabi.eu to find out more.-->
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Topic Guid="9898DE65-C0CE-414B-857E-1DF97FFAED8D">
+    <Title>Minimum information BCFZip topic.</Title>
+    <CreationDate>2015-07-15T13:12:42Z</CreationDate>
+    <CreationAuthor>Developer@example.com</CreationAuthor>
+  </Topic>
+</Markup>

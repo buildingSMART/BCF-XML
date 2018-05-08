@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
+    <Components>
+        <Component IfcGuid="3Y2or6_nrAThmGw6ix74XH" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="3whxQQj6n1yxpfvs8yWrLD" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="1R77vG21n8CO3r0ZB6ZCEd" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="0rJ0O3r_fE3wq5ZvqG1ca8" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="14rw$C3xD3ZeUJL3YaqCEK" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="0X5Hin7ETD4eD_tnQCqUw$" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="0PpVn8zUX0iQ8DPpGXDeud" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="2spd5sl$D6jPfhUUrvNSBT" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="0JfoI2ggH5dAXuiXIzno_Q" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="1w$P5qZYr6_QfPZswXjyz7" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="3WLG7tgoz4Uv1tYJ_sHcTM" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="2KzrOd_K11EeFQOqktYzuk" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="0UbkmHtRf5c816X8x8X2B6" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="32HeOfyn55zOiSkf6rlfHs" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="3IPAnX2rj1igFu_ktDolzW" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="28Fol_2rT8D93IPNMW2ztB" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="10ae708bj40vsJoK4_6PcB" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="1CeN79nY94R8rlGWRrrVtO" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="2bM16nS211PRcT27W2evLU" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="31l3Z9ErP0z8$Muw0aHVWa" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="2wXYP_0gvEAvu_fX9L41MG" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="3wHOXJ$UrA7hYKzfBHFFB2" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="1R2rXHz5z23hHJ$6AQkZwC" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="3uqDqBfwfDouqAVvw8yBe7" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="15LX1o$dj1O8G53cOqE8W$" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="1lee363Ur8kf0hNj6taejp" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="3jqUQqXwH8COcfmRO5YmUr" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="1449m4vmjAvwRWPOrYOtlm" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="05RdX$_czEfOObj5UjtAWZ" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="2VbWydojn0hPRmEDFU9w48" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="2AAtOdP3z3ceWHqht7KDcA" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="2mjK7hlaj7PAuZddqhJCBf" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="0wvB6JDbT0GeWC07SvTvQI" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="06CD3po7zB1Q96iTOBaJs5" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="2pR$5uSOrCfh5cFueWPHky" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="35KPDXcPf9Y9p$iCqY8HKK" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+        <Component IfcGuid="0vpT3kKsfEaQxwxwIGKYhw" Selected="false" Visible="true">
+            <OriginatingSystem>Allplan</OriginatingSystem>
+        </Component>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>22.84257242557163</X>
+            <Y>-32.19547303418686</Y>
+            <Z>14.081824349611649</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>-0.5345224838248488</X>
+            <Y>0.8017837257372732</Y>
+            <Z>-0.2672612419124243</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-0.14824986333222018</X>
+            <Y>0.2223747949983303</Y>
+            <Z>0.9636241116594317</Z>
+        </CameraUpVector>
+        <FieldOfView>60.0</FieldOfView>
+    </PerspectiveCamera>
+</VisualizationInfo>

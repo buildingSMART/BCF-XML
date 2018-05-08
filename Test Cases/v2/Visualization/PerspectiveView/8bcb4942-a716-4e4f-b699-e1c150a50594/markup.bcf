@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Markup>
+	<Header />
+	<Topic Guid="8bcb4942-a716-4e4f-b699-e1c150a50594" TopicType="Issue" TopicStatus="Active">
+		<Title>Perspective view</Title>
+		<Priority>Normal</Priority>
+		<Index>1</Index>
+		<CreationDate>2015-06-09T07:58:02+00:00</CreationDate>
+		<CreationAuthor>pbuts@kubusinfo.nl</CreationAuthor>
+		<ModifiedDate>2015-06-09T07:58:02+00:00</ModifiedDate>
+		<ModifiedAuthor>pbuts@kubusinfo.nl</ModifiedAuthor>
+		<AssignedTo>pbuts@kubusinfo.nl</AssignedTo>
+	</Topic>
+	<Comment Guid="4b181afe-c628-4516-9c19-b0dce3a49a47">
+		<Date>2015-06-09T07:58:02+00:00</Date>
+		<Author>pbuts@kubusinfo.nl</Author>
+		<Comment></Comment>
+		<Topic Guid="8bcb4942-a716-4e4f-b699-e1c150a50594" />
+		<Viewpoint Guid="8ab3bf5c-3c8d-4f49-b974-8968f94b59d4" />
+		<ModifiedDate>2015-06-09T07:58:02+00:00</ModifiedDate>
+		<ModifiedAuthor>pbuts@kubusinfo.nl</ModifiedAuthor>
+	</Comment>
+	<Viewpoints Guid="8ab3bf5c-3c8d-4f49-b974-8968f94b59d4">
+		<Viewpoint>viewpoint.bcfv</Viewpoint>
+		<Snapshot>snapshot.png</Snapshot>
+	</Viewpoints>
+</Markup>

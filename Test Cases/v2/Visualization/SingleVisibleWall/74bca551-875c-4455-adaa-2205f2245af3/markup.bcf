@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Topic Guid="74bca551-875c-4455-adaa-2205f2245af3" TopicType="Comment" TopicStatus="Open">
+    <Title>wall</Title>
+    <Index>0</Index>
+    <CreationDate>2015-06-09T11:17:43.9559441+03:00</CreationDate>
+    <ModifiedDate>2015-06-09T11:17:43.9559441+03:00</ModifiedDate>
+  </Topic>
+  <Viewpoints Guid="21c7c4a7-8c7a-4b0b-8c93-0026af8bc63c">
+    <Viewpoint>viewpoint.bcfv</Viewpoint>
+    <Snapshot>snapshot.png</Snapshot>
+  </Viewpoints>
+</Markup>

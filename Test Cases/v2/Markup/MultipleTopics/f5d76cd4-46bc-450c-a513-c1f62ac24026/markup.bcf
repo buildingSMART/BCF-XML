@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Topic Guid="f5d76cd4-46bc-450c-a513-c1f62ac24026" TopicType="Comment" TopicStatus="In Progress">
+    <ReferenceLink>http://www.referenceone.com</ReferenceLink>
+    <Title>Topic one</Title>
+    <Index>0</Index>
+    <CreationDate>2015-06-09T10:36:51.3008624+03:00</CreationDate>
+    <ModifiedDate>2015-06-09T10:36:51.3008624+03:00</ModifiedDate>
+    <AssignedTo>user_one@company.com</AssignedTo>
+  </Topic>
+  <Comment Guid="1e7bc348-8807-4d4a-bdbd-fab6761076a1">
+    <VerbalStatus>In Progress</VerbalStatus>
+    <Status>Comment</Status>
+    <Date>2015-06-09T10:43:13.4277711+03:00</Date>
+    <Author>user_one</Author>
+    <Comment>comment one</Comment>
+    <Topic Guid="f5d76cd4-46bc-450c-a513-c1f62ac24026" />
+	<Viewpoint Guid="2f5041e7-1b8b-4310-abff-e0e7e620b878" />
+  </Comment>
+  <Viewpoints Guid="2f5041e7-1b8b-4310-abff-e0e7e620b878">
+    <Viewpoint>viewpoint.bcfv</Viewpoint>
+    <Snapshot>snapshot.png</Snapshot>
+  </Viewpoints>
+</Markup>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Topic Guid="402d5148-88ef-4510-8b9d-e632602541c6" TopicType="Issue" TopicStatus="ReOpened">
+    <ReferenceLink>http://www.referencetwo.com</ReferenceLink>
+    <Title>Topic two</Title>
+    <Index>1</Index>
+    <CreationDate>2015-06-09T10:37:58.062212+03:00</CreationDate>
+    <ModifiedDate>2015-06-09T10:37:58.062212+03:00</ModifiedDate>
+    <AssignedTo>user_two@company.com</AssignedTo>
+  </Topic>
+  <Comment Guid="a3e4a0d7-49ed-4a9b-93d6-1f99266417c3">
+    <VerbalStatus>ReOpened</VerbalStatus>
+    <Status>Issue</Status>
+    <Date>2015-06-09T10:43:40.7739538+03:00</Date>
+    <Author>user_two</Author>
+    <Comment>comment two</Comment>
+    <Topic Guid="402d5148-88ef-4510-8b9d-e632602541c6" />
+	<Viewpoint Guid="5485542b-5bb6-4314-90df-537f8246473" />
+  </Comment>
+  <Viewpoints Guid="5485542b-5bb6-4314-90df-537f8246473f">
+    <Viewpoint>viewpoint.bcfv</Viewpoint>
+    <Snapshot>snapshot.png</Snapshot>
+  </Viewpoints>
+</Markup>
