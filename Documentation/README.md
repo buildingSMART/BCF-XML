@@ -404,4 +404,6 @@ Archive:  /mnt/engineering/BIM/bcf files/bulkExport_1topic.bcfzip
 ---------                     -------
    184205                     5 files
 ```
+### Additional Document Properties
 
+If any Xml file in an imported BCF container contains additional or unknown properties, BCF clients shall ignore them and not produce errors. This is to allow BCF implementations the freedom to add additional functionality. Client implementations are not required to preserve these properties.
