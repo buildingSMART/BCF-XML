@@ -217,6 +217,9 @@ BCF is suitable for hiding/showing a few components. A huge list of hidden/shown
 * If the list of visible components is smaller or equals the list of hidden components: set default_visibility to false and put the visible components in exceptions.
 * If the size of exceptions is huge (approximately 1000 components), alert the user and give him the opportunity to modify the visibility.
 
+**Decomposed Components**
+When a viewpoint is referring to decomposed components, such as, curtain wall or assemblies, only the parent component should be considered in the components list. If only some parts of decomposed object are visible, then only the child objects should be considered in the components list.
+
 ##### ViewSetupHints
 This element contains information about the default visibility for elements of certain types (`SpacesVisible`, `SpaceBoundariesVisible` and `OpeningsVisible`). These flags have the following logic when applied to spaces: When a viewpoint has no spaces visible, set the value of `SpacesVisible` to false. If there are any spaces visible in the viewpoint, set the value to the same as `DefaultVisibility`. The DefaultVisibility flag decides whetever to export the hidden or the visible spaces. The logic applied to spaces is also applied to `OpeningsVisible` and `SpaceBoundariesVisible` flags.
 
