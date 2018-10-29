@@ -9,6 +9,7 @@ Authors:
 * Klaus Linhard, IABI (BCF 2.0 / BCF 2.1)
 * Erik Pijnenburg, Kubus (BCF 2.0)
 * Léon van Berlo, TNO (BCF 2.0)
+* Jon Anders Sollien, bimsync (BCF 2.0 / BCF 2.1)
 
 ### Terms and Abbreviations
 
