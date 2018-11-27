@@ -262,7 +262,7 @@ CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 FieldOfView | No | Camera’s field of view angle in degrees.
 
-The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release.
+The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. `FieldOfView` represents the horizontal field of view.
 
 ### Lines (optional)
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
