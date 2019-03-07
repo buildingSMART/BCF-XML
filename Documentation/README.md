@@ -8,7 +8,7 @@ Authors:
 * Lassi Lifländer, Tekla (BCF 1.0)
 * Klaus Linhard, IABI (BCF 2.0 / BCF 2.1)
 * Erik Pijnenburg, Kubus (BCF 2.0)
-* Léon van Berlo, TNO (BCF 2.0)
+* Léon van Berlo, TNO / open source BIM Collective (BCF 2.0 / BCF 2.1)
 * Jon Anders Sollien, bimsync (BCF 2.0 / BCF 2.1)
 
 ### Terms and Abbreviations
@@ -16,7 +16,7 @@ Authors:
 GUID
 Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
 IfcGuid
-Globally Unique ID in the IFC format. This format is used only when referring to components in IFC files.
+Globally Unique Identifier in the IFC data. This format is used only when referring to objects in IFC datasets.
 
 
 |       |           |
