@@ -37,6 +37,10 @@ The root of the BCF zip contains the following files.
 * bcf.version
 	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 
+#### Required Data
+
+When a property or an attribute is required, it must not be an empty value. For example, a required string means that a value with a length of at least one letter is expected.
+
 ### Topic folder structure inside a BCFzip archive
 
 The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
