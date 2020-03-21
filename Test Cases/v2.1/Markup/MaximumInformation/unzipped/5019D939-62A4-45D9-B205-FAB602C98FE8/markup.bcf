@@ -4,6 +4,7 @@
   <Topic Guid="5019D939-62A4-45D9-B205-FAB602C98FE8">
     <Title>Referenced topic</Title>
     <CreationDate>2017-05-22T07:51:00.0429879Z</CreationDate>
+    <CreationAuthor>dangl@iabi.eu</CreationAuthor>
     <Description>This is just an empty topic that acts as a referenced topic.</Description>
   </Topic>
 </Markup>
