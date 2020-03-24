@@ -19,7 +19,9 @@
     <CreationAuthor>dangl@iabi.eu</CreationAuthor>
     <ModifiedDate>2015-06-21T14:22:47Z</ModifiedDate>
     <ModifiedAuthor>dangl@iabi.eu</ModifiedAuthor>
+    <DueDate>2016-10-02T14:22:47Z</DueDate>
     <AssignedTo>linhard@iabi.eu</AssignedTo>
+    <Stage>Construction Start</Stage>
     <Description>This is a topic with all informations present.</Description>
     <BimSnippet SnippetType="JSON">
       <Reference>JsonElement.json</Reference>
