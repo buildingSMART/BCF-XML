@@ -66,13 +66,16 @@ Hopefully, the modifier did catch them all.</Comment>
   <Viewpoints Guid="8dc86298-9737-40b4-a448-98a9e953293a">
     <Viewpoint>Viewpoint_8dc86298-9737-40b4-a448-98a9e953293a.bcfv</Viewpoint>
     <Snapshot>Snapshot_8dc86298-9737-40b4-a448-98a9e953293a.png</Snapshot>
+    <Index>2</Index>
   </Viewpoints>
   <Viewpoints Guid="21dd4807-e9af-439e-a980-04d913a6b1ce">
     <Viewpoint>Viewpoint_21dd4807-e9af-439e-a980-04d913a6b1ce.bcfv</Viewpoint>
     <Snapshot>Snapshot_21dd4807-e9af-439e-a980-04d913a6b1ce.png</Snapshot>
+    <Index>0</Index>
   </Viewpoints>
   <Viewpoints Guid="81daa431-bf01-4a49-80a2-1ab07c177717">
     <Viewpoint>Viewpoint_81daa431-bf01-4a49-80a2-1ab07c177717.bcfv</Viewpoint>
     <Snapshot>Snapshot_81daa431-bf01-4a49-80a2-1ab07c177717.png</Snapshot>
+    <Index>1</Index>
   </Viewpoints>
 </Markup>
