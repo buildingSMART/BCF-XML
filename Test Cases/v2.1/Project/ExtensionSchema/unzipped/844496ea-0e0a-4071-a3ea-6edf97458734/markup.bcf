@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Created with the iabi.BCF library, V1.1.0 at 22.05.2017 09:51. Visit http://iabi.eu to find out more.-->
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Topic Guid="9898DE65-C0CE-414B-857E-1DF97FFAED8D">
-    <Title>Minimum information BCFZip topic.</Title>
-    <CreationDate>2015-07-15T13:12:42Z</CreationDate>
+  <Topic Guid="844496ea-0e0a-4071-a3ea-6edf97458734" TopicType="Information" TopicStatus="Open">
+    <Title>Test case for checking extension schema within the BCFZip container.</Title>
+    <CreationDate>2017-05-22T07:51:01.2140438Z</CreationDate>
     <CreationAuthor>Developer@example.com</CreationAuthor>
   </Topic>
 </Markup>

@@ -8,7 +8,7 @@
       <Reference>../IfcPile_01.ifc</Reference>
     </File>
   </Header>
-  <Topic Guid="63E78882-7C6A-4BF7-8982-FC478AFB9C97" TopicType="Structural" TopicStatus="Open">
+  <Topic Guid="63e78882-7c6a-4bf7-8982-fc478afb9c97" TopicType="Structural" TopicStatus="Open">
     <ReferenceLink>https://bim--it.net</ReferenceLink>
     <Title>Maximum Content</Title>
     <Priority>High</Priority>
