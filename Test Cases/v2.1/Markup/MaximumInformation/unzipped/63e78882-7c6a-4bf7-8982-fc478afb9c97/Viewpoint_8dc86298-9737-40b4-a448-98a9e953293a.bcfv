@@ -110,4 +110,44 @@
       </Direction>
     </ClippingPlane>
   </ClippingPlanes>
+  <Bitmap>
+    <Bitmap>PNG</Bitmap>
+    <Reference>bitmap.png</Reference>
+    <Location>
+      <X>10.0</X>
+      <Y>-10.0</Y>
+      <Z>7.0</Z>
+    </Location>
+    <Normal>
+      <X>0.0</X>
+      <Y>1.0</Y>
+      <Z>0.0</Z>
+    </Normal>
+    <Up>
+      <X>0.0</X>
+      <Y>0.0</Y>
+      <Z>1.0</Z>
+    </Up>
+    <Height>5.0</Height>
+  </Bitmap>
+  <Bitmap>
+    <Bitmap>PNG</Bitmap>
+    <Reference>tux.png</Reference>
+    <Location>
+      <X>20.0</X>
+      <Y>-10.0</Y>
+      <Z>7.0</Z>
+    </Location>
+    <Normal>
+      <X>0.0</X>
+      <Y>1.0</Y>
+      <Z>0.0</Z>
+    </Normal>
+    <Up>
+      <X>0.0</X>
+      <Y>0.0</Y>
+      <Z>1.0</Z>
+    </Up>
+    <Height>5.0</Height>
+  </Bitmap>
 </VisualizationInfo>
