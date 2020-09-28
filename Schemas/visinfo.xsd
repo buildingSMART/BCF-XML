@@ -97,17 +97,11 @@
 	</xs:simpleType>
 	<xs:complexType name="Components">
 		<xs:sequence>
-			<xs:element name="ViewSetupHints" type="ViewSetupHints" minOccurs="0" />
 			<!-- Components with relevance to the viewpoint. They should be displayed highlighted or selected in a viewer -->
 			<xs:element name="Selection" type="ComponentSelection" minOccurs="0" />
 			<xs:element name="Visibility" type="ComponentVisibility" minOccurs="1" />
 			<xs:element name="Coloring" type="ComponentColoring" minOccurs="0" />
 		</xs:sequence>
-	</xs:complexType>
-	<xs:complexType name="ViewSetupHints">
-		<xs:attribute name="SpacesVisible" type="xs:boolean"/>
-		<xs:attribute name="SpaceBoundariesVisible" type="xs:boolean"/>
-		<xs:attribute name="OpeningsVisible" type="xs:boolean"/>
 	</xs:complexType>
 	<xs:complexType name="ComponentSelection">
 		<xs:sequence>
@@ -116,6 +110,7 @@
 	</xs:complexType>
 	<xs:complexType name="ComponentVisibility">
 		<xs:sequence>
+			<xs:element name="ViewSetupHints" type="ViewSetupHints" minOccurs="0" />
 			<xs:element name="Exceptions" minOccurs="0">
 				<!-- List Components that are different than the DefaultVisibility. E.g. if DefaultVisibility = false then list
 					 Components that should be visible -->
@@ -127,6 +122,11 @@
 			</xs:element>	
 		</xs:sequence>
 		<xs:attribute name="DefaultVisibility" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="ViewSetupHints">
+		<xs:attribute name="SpacesVisible" type="xs:boolean"/>
+		<xs:attribute name="SpaceBoundariesVisible" type="xs:boolean"/>
+		<xs:attribute name="OpeningsVisible" type="xs:boolean"/>
 	</xs:complexType>
 	<xs:complexType name="ComponentColoring">
 		<xs:sequence>
