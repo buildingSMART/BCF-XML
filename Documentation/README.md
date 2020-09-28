@@ -144,7 +144,7 @@ DocumentReference provides a means to associate additional payloads or links wit
 
 Attribute | Optional | Description |
 :-----------|:------------|:------------
-Guid | Yes | Guid attribute for identifying it uniquely
+Guid | No | Guid attribute for identifying it uniquely
 IsExternal | Yes | Is the Document external or within the bcfzip. <br> (Default = false).
 
  Element | Optional | Description |
