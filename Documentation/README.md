@@ -8,14 +8,15 @@ Authors:
 * Lassi Lifländer, Tekla (BCF 1.0)
 * Klaus Linhard, IABI (BCF 2.0 / BCF 2.1)
 * Erik Pijnenburg, Kubus (BCF 2.0)
-* Léon van Berlo, TNO (BCF 2.0)
+* Léon van Berlo, TNO / open source BIM Collective (BCF 2.0)
+* Jon Anders Sollien, bimsync (BCF 2.0 / BCF 2.1)
 
 ### Terms and Abbreviations
 
 GUID
 Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
 IfcGuid
-Globally Unique ID in the IFC format. This format is used only when referring to components in IFC files.
+Globally Unique Identifier in the IFC data. This format is used only when referring to objects in IFC datasets.
 
 
 |       |           |
@@ -36,6 +37,8 @@ The root of the BCF zip contains the following files.
     - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
 * bcf.version
 	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
+
+It is possible to store additional files in the BCF zip container as documents. These files can be referenced by other files via their relative paths. It is recommended to put them in a folder called `Documents` in the root folder of the zip archive.
 
 ### Topic folder structure inside a BCFzip archive
 
@@ -268,7 +271,7 @@ CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 FieldOfView | No | Camera’s field of view angle in degrees.
 
-The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release.
+The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. `FieldOfView` represents the horizontal field of view.
 
 ### Lines (optional)
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
