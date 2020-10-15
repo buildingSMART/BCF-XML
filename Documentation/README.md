@@ -13,18 +13,13 @@ Authors:
 
 ### Terms and Abbreviations
 
-GUID
-Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
-IfcGuid
-Globally Unique Identifier in the IFC data. This format is used only when referring to objects in IFC datasets.
-
-
-|       |           |
-| ------------- |:-------------|
+|          |           |
+| -------- |-------------|
 | BCF      | BIM Collaboration Format |
-| BCF file     | File in BIM Collaboration Format     |
-| Topic | One topic, such as a problem in the design, described in BCF file    |
-| GUID |Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
+| BCF file | File in BIM Collaboration Format     |
+| Topic    | One topic, such as a problem in the design, described in BCF file    |
+| GUID     |Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
+| IfcGuid  | Globally Unique Identifier in the IFC data. This format is used only when referring to objects in IFC datasets.
 
 ### Background
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
