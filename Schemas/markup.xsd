@@ -98,7 +98,7 @@
 	<!-- Reference to a document inside of the topic folder or a url pointing to the web -->
 	<xs:attributeGroup name="DocumentReference">
 		<!-- Guid of the DocumentReference -->
-		<xs:attribute name="Guid" type="Guid"/>
+		<xs:attribute name="Guid" type="Guid" use="required"/>
 		<!-- A flag that is true when the ReferencedDocument points outside of the BCF file (a URL) -->
 		<xs:attribute name="isExternal" type="xs:boolean" default="false"/>
 	</xs:attributeGroup>
