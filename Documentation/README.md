@@ -89,7 +89,7 @@ Each File node has the following attributes:
 :-----------|:------------|:------------
  IfcProject  |        Yes |     IfcGuid Reference to the project to which this topic is related in the IFC file
 IfcSpatialStructureElement | Yes | IfcGuid Reference to the spatial structure element, e.g. IfcBuildingStorey, to which this topic is related.
-isExternal | Yes | Is the IFC file external or within the bcfzip. (Default = true).
+IsExternal | Yes | Is the IFC file external or within the bcfzip. (Default = true).
 
 In addition File has the following nodes:
 
