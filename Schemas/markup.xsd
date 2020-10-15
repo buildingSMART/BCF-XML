@@ -73,16 +73,11 @@
 			<xs:element name="Stage" type="Stage" minOccurs="0"/>
 			<xs:element name="Description" type="xs:string" minOccurs="0"/>
 			<xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
-			<!-- Name of the file in the topic folder or url -->
-			<xs:element name="DocumentReference" minOccurs="0" maxOccurs="unbounded">
+			<xs:element name="DocumentReferences" minOccurs="0">
 				<xs:complexType>
 					<xs:sequence>
-						<!-- Name of the file in the topic folder or url -->
-						<xs:element name="ReferencedDocument" type="xs:string" minOccurs="0"/>
-						<!-- Human readable name of the document -->
-						<xs:element name="Description" type="xs:string" minOccurs="0"/>
+						<xs:element name="DocumentReference" type="DocumentReference" maxOccurs="unbounded"/>
 					</xs:sequence>
-					<xs:attributeGroup ref="DocumentReference"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
@@ -94,6 +89,15 @@
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 		<xs:attribute name="TopicType" type="TopicType"/>
 		<xs:attribute name="TopicStatus" type="TopicStatus"/>
+	</xs:complexType>
+	<xs:complexType name="DocumentReference">
+		<xs:sequence>
+			<!-- Name of the file in the topic folder or url -->
+			<xs:element name="ReferencedDocument" type="xs:string" minOccurs="0"/>
+			<!-- Human readable name of the document -->
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attributeGroup ref="DocumentReference"/>
 	</xs:complexType>
 	<!-- Reference to a document inside of the topic folder or a url pointing to the web -->
 	<xs:attributeGroup name="DocumentReference">
