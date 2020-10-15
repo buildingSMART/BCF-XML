@@ -50,7 +50,7 @@ The folder name is the GUID of the topic. This GUID is in the UUID form. The fol
     * An XML file following the visinfo.xsd schema that is described below.
     * Multiple viewpoints are possible since BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
 * snapshot.png 
-    *  A snapshot related to the topic (for compatibility with BCF 1.0).
+    *  A snapshot related to the topic (for compatibility with BCF 1.0). The longest dimension of should not exceed 1500 px, length or width.
 Multiple snapshots are possible since BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
 
 
