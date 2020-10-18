@@ -53,7 +53,7 @@
 			<xs:element name="ReferenceSchema" type="xs:string"/>
 		</xs:sequence>
 		<xs:attribute name="SnippetType" type="xs:string" use="required"/>
-		<xs:attribute name="isExternal" type="xs:boolean" default="false"/>
+		<xs:attribute name="IsExternal" type="xs:boolean" default="false"/>
 		<!-- This flag is true when the reference is a URL pointing outside of the BCF file-->
 	</xs:complexType>
 	<xs:complexType name="Topic">
@@ -100,7 +100,7 @@
 		<!-- Guid of the DocumentReference -->
 		<xs:attribute name="Guid" type="Guid" use="required"/>
 		<!-- A flag that is true when the ReferencedDocument points outside of the BCF file (a URL) -->
-		<xs:attribute name="isExternal" type="xs:boolean" default="false"/>
+		<xs:attribute name="IsExternal" type="xs:boolean" default="false"/>
 	</xs:attributeGroup>
 	<xs:complexType name="Comment">
 		<xs:sequence>
@@ -149,6 +149,6 @@
 	<xs:attributeGroup name="FileAttributes">
 		<xs:attribute name="IfcProject" type="IfcGuid"/>
 		<xs:attribute name="IfcSpatialStructureElement" type="IfcGuid"/>
-		<xs:attribute name="isExternal" type="xs:boolean" default="true"/>
+		<xs:attribute name="IsExternal" type="xs:boolean" default="true"/>
 	</xs:attributeGroup>
 </xs:schema>
