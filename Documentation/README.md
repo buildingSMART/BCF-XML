@@ -42,7 +42,7 @@ It is possible to store additional files in the BCF zip container as documents. 
 
 ### Topic folder structure inside a BCFzip archive
 
-The folder name is the GUID of the topic. This GUID is in the UUID form. The folder contains the following files:
+The folder name is the GUID of the topic. This GUID is in the UUID form. The GUID must be all-lowercase. The folder contains the following files:
 
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
@@ -100,12 +100,12 @@ Date | Yes | Date of the BIM file.
 Reference | Yes | URI to IfcFile. <br> IsExternal=false “..\example.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../example.ifc“
 
 ### Topic
-Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID. 
+Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.
 
 
  Attribute | Optional | Description |
 :-----------|:------------|:------------
-Guid | No | Guid of the topic
+Guid | No | Guid of the topic, in lowercase
 TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
 TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
 
