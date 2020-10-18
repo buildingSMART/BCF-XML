@@ -282,7 +282,6 @@ ClippingPlanes can be used to define a subsection of a building model that is re
 ### Bitmap (optional)
 A list of bitmaps can be used to add more information, for example, text in the visualization. It has the following elements:
 
-
 Element | Optional | Description |
 :-----------|:------------|:------------
 Bitmap | No | Format of the bitmap (PNG/JPG)
@@ -290,6 +289,7 @@ Reference | No | Name of the bitmap file in the topic folder
 Location | No | Location of the center of the bitmap in world coordinates
 Normal | No | Normal vector of the bitmap
 Up | No | Up vector of the bitmap
+Height | No | The height of the bitmap in the model, in meters
 
 ## Implementation Agreements
 Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
