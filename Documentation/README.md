@@ -1,16 +1,6 @@
 	# BIM Collaboration Format v2.1 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
-Authors:
-
-* Pasi Paasiala, Solibri (BCF 1.0 / BCF 2.0 / BCF 2.1)
-* Juha Laukala, Tekla (BCF 1.0)
-* Lassi Lifländer, Tekla (BCF 1.0)
-* Klaus Linhard, IABI (BCF 2.0 / BCF 2.1)
-* Erik Pijnenburg, Kubus (BCF 2.0)
-* Léon van Berlo, TNO / open source BIM Collective (BCF 2.0)
-* Jon Anders Sollien, bimsync (BCF 2.0 / BCF 2.1)
-
 ### Terms and Abbreviations
 
 GUID
