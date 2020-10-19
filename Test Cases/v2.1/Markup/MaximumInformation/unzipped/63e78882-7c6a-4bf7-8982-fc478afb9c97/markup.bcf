@@ -8,7 +8,7 @@
       <Reference>../IfcPile_01.ifc</Reference>
     </File>
   </Header>
-  <Topic Guid="63E78882-7C6A-4BF7-8982-FC478AFB9C97" TopicType="Structural" TopicStatus="Open">
+  <Topic Guid="63e78882-7c6a-4bf7-8982-fc478afb9c97" TopicType="Structural" TopicStatus="Open">
     <ReferenceLink>https://bim--it.net</ReferenceLink>
     <Title>Maximum Content</Title>
     <Priority>High</Priority>
@@ -19,7 +19,9 @@
     <CreationAuthor>dangl@iabi.eu</CreationAuthor>
     <ModifiedDate>2015-06-21T14:22:47Z</ModifiedDate>
     <ModifiedAuthor>dangl@iabi.eu</ModifiedAuthor>
+    <DueDate>2016-10-02T14:22:47Z</DueDate>
     <AssignedTo>linhard@iabi.eu</AssignedTo>
+    <Stage>Construction Start</Stage>
     <Description>This is a topic with all informations present.</Description>
     <BimSnippet SnippetType="JSON">
       <Reference>JsonElement.json</Reference>
@@ -64,13 +66,16 @@ Hopefully, the modifier did catch them all.</Comment>
   <Viewpoints Guid="8dc86298-9737-40b4-a448-98a9e953293a">
     <Viewpoint>Viewpoint_8dc86298-9737-40b4-a448-98a9e953293a.bcfv</Viewpoint>
     <Snapshot>Snapshot_8dc86298-9737-40b4-a448-98a9e953293a.png</Snapshot>
+    <Index>2</Index>
   </Viewpoints>
   <Viewpoints Guid="21dd4807-e9af-439e-a980-04d913a6b1ce">
     <Viewpoint>Viewpoint_21dd4807-e9af-439e-a980-04d913a6b1ce.bcfv</Viewpoint>
     <Snapshot>Snapshot_21dd4807-e9af-439e-a980-04d913a6b1ce.png</Snapshot>
+    <Index>0</Index>
   </Viewpoints>
   <Viewpoints Guid="81daa431-bf01-4a49-80a2-1ab07c177717">
     <Viewpoint>Viewpoint_81daa431-bf01-4a49-80a2-1ab07c177717.bcfv</Viewpoint>
     <Snapshot>Snapshot_81daa431-bf01-4a49-80a2-1ab07c177717.png</Snapshot>
+    <Index>1</Index>
   </Viewpoints>
 </Markup>

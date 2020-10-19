@@ -70,7 +70,7 @@ ExtensionSchema| No | URI to the extension schema.
 The markup file contains textual information about the topic.
 
 ### Header
-Header node contains information about the IFC files relevant to this topic. It has one attribute, ProjectGuid, which is the project GUID. Header has also a list of File nodes.
+Header node contains information about the IFC files relevant to this topic. Header has also a list of File nodes.
 
 Each File node has the following attributes:
 

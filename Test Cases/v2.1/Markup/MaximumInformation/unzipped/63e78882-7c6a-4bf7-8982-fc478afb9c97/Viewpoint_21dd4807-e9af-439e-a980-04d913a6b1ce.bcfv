@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Created with the iabi.BCF library, V1.1.0 at 22.05.2017 09:51. Visit http://iabi.eu to find out more.-->
-<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="81daa431-bf01-4a49-80a2-1ab07c177717">
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Guid="21dd4807-e9af-439e-a980-04d913a6b1ce">
   <Components>
-    <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="true" />
+    <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false" />
     <Selection>
       <Component IfcGuid="0cSRUx$EX1NRjqiKcYQ$a0" />
       <Component IfcGuid="1jQQiGIAnFzxOUzrdmJYDS" />
@@ -10,7 +10,7 @@
       <Component IfcGuid="23Zwlpd71EyvHlH6OZ77nK" />
       <Component IfcGuid="1OpjQ1Nlv4sQuTxfUC_8zS" />
     </Selection>
-    <Visibility DefaultVisibility="true">
+    <Visibility DefaultVisibility="false">
       <Exceptions>
         <Component IfcGuid="0Gl71cVurFn8bxAOox6M4X" />
         <Component IfcGuid="23Zwlpd71EyvHlH6OZ77nK" />
@@ -30,19 +30,19 @@
   </Components>
   <PerspectiveCamera>
     <CameraViewPoint>
-      <X>-30.0807178226062</X>
-      <Y>17.1180195726065</Y>
-      <Z>11.4769701040657</Z>
+      <X>-47.18794250488281</X>
+      <Y>43.829200744628906</Y>
+      <Z>10.666350364685059</Z>
     </CameraViewPoint>
     <CameraDirection>
-      <X>0.520915589917324</X>
-      <Y>-0.661777065303802</Y>
-      <Z>-0.539164240672219</Z>
+      <X>0.6745243072509766</X>
+      <Y>-0.6599355936050415</Y>
+      <Z>-0.33091068267822266</Z>
     </CameraDirection>
     <CameraUpVector>
-      <X>-1.13083372396512E-08</X>
-      <Y>-8.90132135110878E-09</Y>
-      <Z>1</Z>
+      <X>0.2271970510482788</X>
+      <Y>-0.24091780185699463</Y>
+      <Z>0.9435783624649048</Z>
     </CameraUpVector>
     <FieldOfView>60</FieldOfView>
   </PerspectiveCamera>
