@@ -43,8 +43,16 @@ The folder name is the GUID of the topic. This GUID is in the UUID form. The GUI
     *  A snapshot related to the topic (for compatibility with BCF 1.0). The longest dimension of should not exceed 1500 px, length or width.
 Multiple snapshots are possible since BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
 
-
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
+
+### DateTime Format
+
+DateTime values in this specification are always of type `xs:dateTime` which is an ISO 8601 compatible `YYYY-MM-DDThh:mm:ss` format with optional time zone indicators. This is the same format as defined in the BCF-API specification.
+
+For example, `2016-04-28T16:31:12.270+02:00` would represent _Thursday, April 28th, 2016, 16:31:12 (270ms) with a time zone offset of +2 hours relative to UTC._
+Please note that the colon in the timezone offset is optional, so `+02:00` is equivalent to `+0200`.
+
+To void ambiguity, This speicifcation steps away from ISO 8601 on the topic of DateTime values with no timezone: The ISO 8601 says that DateTime values with no timezone designator are local times - **In BCF all DateTime values with no timezone designator as assumed to be in UTC**.
 
 ## Project (.bcfp) file
 
