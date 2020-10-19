@@ -8,8 +8,10 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="Components" type="Components" minOccurs="0"/>
-				<xs:element name="OrthogonalCamera" type="OrthogonalCamera" minOccurs="0"/>
-				<xs:element name="PerspectiveCamera" type="PerspectiveCamera" minOccurs="0"/>
+				<xs:choice>
+					<xs:element name="OrthogonalCamera" type="OrthogonalCamera"/>
+					<xs:element name="PerspectiveCamera" type="PerspectiveCamera"/>
+				</xs:choice>
 				<xs:element name="Lines" minOccurs="0">
 					<xs:complexType>
 						<xs:sequence>

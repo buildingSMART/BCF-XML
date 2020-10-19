@@ -249,7 +249,11 @@ IfcGuid | No | The IfcGuid of the component
 OriginatingSystem | Yes | Name of the system in which the component is originated
 AuthoringToolId | Yes | System specific identifier of the component in the originating BIM tool
 
-### OrthogonalCamera (optional)
+### Camera
+
+The visualization information file must specify exactly one of either an orthogonal or a perspective camera. 
+
+#### OrthogonalCamera
 This element describes a viewpoint using orthogonal camera. It has the following elements:
 
 Element | Optional | Description |
@@ -259,7 +263,7 @@ CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 ViewToWorldScale | No | Scaling from view to world
 
-### PerspectiveCamera (optional)
+#### PerspectiveCamera
 This element describes a viewpoint using perspective camera. It has the following elements:
 
 Element | Optional | Description |
