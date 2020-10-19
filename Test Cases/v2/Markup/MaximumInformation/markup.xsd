@@ -139,7 +139,7 @@
   <xs:simpleType name="IfcGuid">
     <xs:restriction base="xs:string">
       <xs:length value="22" />
-      <xs:pattern value="[0-9,A-Z,a-z,_$]*" />
+      <xs:pattern value="[0-9A-Za-z_$]*" />
     </xs:restriction>
   </xs:simpleType>
   <xs:attributeGroup name="FileAttributes">
