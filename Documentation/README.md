@@ -155,14 +155,14 @@ RelatedTopic/GUID | Yes | List of GUIDs of the referenced topics.
 
 
 ### Comment
-The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Comment has also the Guid attribute for identifying it uniquely. In addition, it has the following nodes:
+The markup file can contain comments related to the topic. Their purpose is to record discussion between different parties related to the topic. Each Comment has a Guid attribute for identifying it uniquely. A comment can reference a viewpoint to support the discussion. At least one of Viewpoint and/or Comment (text) must be provided. In addition, it has the following nodes:
 
 Element | Optional | Description |
 :-----------|:------------|:------------
 Date | No | Date of the comment
 Author |No | Comment author
-Comment | No | The comment text
-Viewpoint | Yes | Back reference to the viewpoint GUID.
+Comment | Yes, if Viewpoint exists | The comment text, must not be empty if provided 
+Viewpoint | Yes, if Comment exists | Back reference to the viewpoint GUID.
 ModifiedDate | Yes | The date when comment was modified
 ModifiedAuthor | Yes | The author who modified the comment
 
