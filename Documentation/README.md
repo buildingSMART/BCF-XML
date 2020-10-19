@@ -267,7 +267,7 @@ The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. 
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
 
 ### ClippingPlanes (optional)
-ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction.
+ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction. The Direction vector points in the _invisible_ direction meaning the half-space that is clipped. 
 
 ### Bitmap (optional)
 A list of bitmaps can be used to add more information, for example, text in the visualization. It has the following elements:
