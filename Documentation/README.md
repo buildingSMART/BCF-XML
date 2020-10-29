@@ -253,11 +253,12 @@ AuthoringToolId | Yes | System specific identifier of the component in the origi
 
 The visualization information file must specify exactly one of either an orthogonal or a perspective camera. 
 
-In either case the projection view will be centered around the `CameraViewPoint` (i.e. the Left,Bottom point will be simmetric to the Top,Right point).
+In either case the projection is centered around the `CameraViewPoint` (i.e. the Left,Bottom point is centrally simmetric to the Top,Right point).
 
 ![Representation of Camera parameters](Graphics/Cameras.png)
 
 #### OrthogonalCamera
+
 This element describes a viewpoint using an orthogonal projection. 
 
 It has the following elements:
@@ -269,14 +270,12 @@ CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 ViewToWorldScale | No | Vertical scaling from view to world
 AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
-NearPlane | Yes | Distance of the near cutting plane from the viewpoint, positive values growing in the `CameraDirection`.
+NearPlane | Yes | Distance of the near cutting plane from the viewpoint, positive values growing in the `CameraDirection`
 
-Since it is known that, due to incomplete specifications in version 2.1, `ViewToWorldScale` was previously interpreted differently across the industry, when converting old BCF files the newly introduced `AspectRatio` field, will default to `1.0`.
-
-In orthogonal projections `NearPlane` can be negative to signify a cutting plane behind the camera.
-
+In orthogonal projections `NearPlane` can be negative to signify a cutting plane behind the camera. **FarPlane** clipping values are not considered in the current version, a reasonably large number will be used to ensure the representation of the entire model.
 
 #### PerspectiveCamera
+
 This element describes a viewpoint using perspective camera. It has the following elements:
 
 Element | Optional | Description |
@@ -286,19 +285,19 @@ CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 FieldOfView | No | Camera’s vertical field of view angle in degrees.
 AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
-NearPlane | Yes | Distance of the near cutting plane from the viewpoint, positive values growing in the `CameraDirection`.
+NearPlane | Yes | Distance of the near cutting plane from the viewpoint, positive values growing in the `CameraDirection`
 
 The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. 
 
-Since it is known that, due to incomplete specifications in version 2.1, `FieldOfView` was previously interpreted differently across the industry, when converting old BCF files the newly introduced `AspectRatio` field, will default to `1.0`.
-
-`NearPlane` will always be a non-zero positive value. If the information is not provided the viewer will adopt a reasonably small positive value.
+In perspective projections `NearPlane` shall always be a non-zero positive value. If the information is not provided the viewer will adopt a reasonably small positive value. **FarPlane** clipping values are not considered in the current version, a reasonably large number will be used to ensure the representation of the entire model.
 
 #### Implementation notes
 
-When reproducing a camera viewpoint on a system that cannot adjust aspect ratio, the actual camera parameters used, view will be determined to ensure that all the contents of the original view box or view frustum are displayed, this might mean that more content is visible beyond the original view.
+When reproducing a camera viewpoint on a system that cannot adjust aspect ratio, the actual camera parameters shall be determined to ensure that all the contents of the original **view box** or **view frustum** are displayed, this might result in extra model content visible beyond the original view.
 
 ![Adjustment of view on different ratio display](Graphics/RatioAdjustment.png)
+
+Due to incomplete specifications in previous versions, `FieldOfView` and `ViewToWorldScale` were interpreted differently across the various implementers; to mitigate the impact of this differences, when converting legacy BCF files lacking the `AspectRatio` field, the default of `1.0` shall be used and thereafter `FieldOfView` and `ViewToWorldScale` shall be interpreted according to the current specifications.
 
 Exact reproduction of the optional `NearPlane` parameter is not enforced in this version.
 
