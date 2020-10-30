@@ -55,7 +55,6 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NearPlane" type="xs:double" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="PerspectiveCamera">
@@ -80,7 +79,6 @@
 					</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="NearPlane" type="PositiveDouble" minOccurs="0" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Point">

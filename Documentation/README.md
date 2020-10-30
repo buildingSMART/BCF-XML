@@ -253,9 +253,11 @@ AuthoringToolId | Yes | System specific identifier of the component in the origi
 
 The visualization information file must specify exactly one of either an orthogonal or a perspective camera. 
 
-In either case the projection is centered around the `CameraViewPoint` (i.e. the Left,Bottom point is centrally simmetric to the Top,Right point).
+In either case the projection is centered around the `CameraViewPoint` (i.e. the Left,Bottom point is centrally symmetric to the Top,Right point).
 
 ![Representation of Camera parameters](Graphics/Cameras.png)
+
+**NearPlane** and **FarPlane** clipping values are not considered in the current version, the values that different implementation have adopted, lacking formal requirements, appear to be similar enough to prevent known issues of compatibility.
 
 #### OrthogonalCamera
 
@@ -270,9 +272,6 @@ CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 ViewToWorldScale | No | Vertical scaling from view to world
 AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
-NearPlane | Yes | Distance of the near cutting plane from the viewpoint, positive values growing in the `CameraDirection`
-
-In orthogonal projections `NearPlane` can be negative to signify a cutting plane behind the camera. **FarPlane** clipping values are not considered in the current version, a reasonably large number will be used to ensure the representation of the entire model.
 
 #### PerspectiveCamera
 
@@ -285,11 +284,8 @@ CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 FieldOfView | No | Camera’s vertical field of view angle in degrees.
 AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
-NearPlane | Yes | Distance of the near cutting plane from the viewpoint, positive values growing in the `CameraDirection`
 
 The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. 
-
-In perspective projections `NearPlane` shall always be a non-zero positive value. If the information is not provided the viewer will adopt a reasonably small positive value. **FarPlane** clipping values are not considered in the current version, a reasonably large number will be used to ensure the representation of the entire model.
 
 #### Implementation notes
 
@@ -298,8 +294,6 @@ When reproducing a camera viewpoint on a system that cannot adjust aspect ratio,
 ![Adjustment of view on different ratio display](Graphics/RatioAdjustment.png)
 
 Due to incomplete specifications in previous versions, `FieldOfView` and `ViewToWorldScale` were interpreted differently across the various implementers; to mitigate the impact of this differences, when converting legacy BCF files lacking the `AspectRatio` field, the default of `1.0` shall be used and thereafter `FieldOfView` and `ViewToWorldScale` shall be interpreted according to the current specifications.
-
-Exact reproduction of the optional `NearPlane` parameter is not enforced in this version.
 
 ### Lines (optional)
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
