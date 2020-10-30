@@ -253,7 +253,7 @@ AuthoringToolId | Yes | System specific identifier of the component in the origi
 
 The visualization information file must specify exactly one of either an orthogonal or a perspective camera. 
 
-In either case the projection is centered around the `CameraViewPoint` (i.e. the Left,Bottom point is centrally symmetric to the Top,Right point).
+In either case the projection is centered around the `CameraViewPoint` (i.e. the Left,Bottom point and Right,Top point are centrally symmetric relatively to the ViewCenter).
 
 ![Representation of Camera parameters](Graphics/Cameras.png)
 
