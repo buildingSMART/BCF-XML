@@ -282,7 +282,7 @@ Element | Optional | Description |
 CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
-FieldOfView | No | Camera’s vertical field of view angle in degrees.
+FieldOfView | No | The entire vertical field of view angle of the camera, expressed in degrees
 AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
 
 The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. 

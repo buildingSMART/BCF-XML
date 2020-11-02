@@ -1385,15 +1385,15 @@
      inkscape:window-x="-8"
      inkscape:window-height="1377"
      inkscape:window-width="2560"
-     inkscape:snap-grids="true"
+     inkscape:snap-grids="false"
      inkscape:snap-intersection-paths="true"
      showgrid="true"
      inkscape:document-rotation="0"
      inkscape:current-layer="layer6"
      inkscape:document-units="mm"
-     inkscape:cy="183.82759"
-     inkscape:cx="373.76857"
-     inkscape:zoom="2.8284273"
+     inkscape:cy="219.10655"
+     inkscape:cx="191.63286"
+     inkscape:zoom="5.6568546"
      inkscape:pageshadow="2"
      inkscape:pageopacity="0.0"
      borderopacity="1.0"
@@ -1410,7 +1410,8 @@
      fit-margin-right="0"
      fit-margin-bottom="0"
      inkscape:snap-global="true"
-     inkscape:snap-bbox="true">
+     inkscape:snap-bbox="true"
+     inkscape:snap-nodes="true">
     <inkscape:grid
        units="mm"
        spacingy="1"
@@ -2496,14 +2497,13 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-weight:normal;font-size:1.41111px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
-         x="362.06412"
-         y="236.52606"
-         id="text4477-9-3-1-1-8-7"
-         transform="translate(-239.94998,-163.94998)"><tspan
+         x="122.048"
+         y="72.57608"
+         id="text4477-9-3-1-1-8-7"><tspan
            sodipodi:role="line"
            id="tspan4475-1-5-5-9-5-0"
-           x="362.06412"
-           y="236.52606"
+           x="122.048"
+           y="72.57608"
            style="font-size:1.41111px;stroke-width:0.264583">CameraDirection</tspan></text>
       <path
          style="display:inline;fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4936-2-7-7-5)"
@@ -2531,7 +2531,7 @@
          style="font-size:1.41111px;stroke-width:0.264583">FieldOfView</tspan></text>
     <path
        style="display:inline;fill:none;stroke:#000000;stroke-width:0.1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker4936-2-7-2-7-5-4)"
-       d="m 38.04992,71.05 h 16 l 7,-7"
+       d="m 37.979812,71.061703 h 17 l 6,-6"
        id="path4497-88-6-2-6-0-1"
        sodipodi:nodetypes="ccc" />
     <g
