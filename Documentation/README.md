@@ -245,9 +245,9 @@ A component has the following attributes:
 
 Attribute | Optional | Description |
 :-----------|:------------|:------------
-IfcGuid | No | The IfcGuid of the component
+IfcGuid | Yes, if AuthoringToolId is Provided | The IfcGuid of the component
 OriginatingSystem | Yes | Name of the system in which the component is originated
-AuthoringToolId | Yes | System specific identifier of the component in the originating BIM tool
+AuthoringToolId | Yes, if IfcGuid is Provided  | System specific identifier of the component in the originating BIM tool
 
 ### Camera
 
