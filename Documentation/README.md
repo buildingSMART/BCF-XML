@@ -25,10 +25,14 @@ The root of the BCF zip contains the following files.
 
 * project.bcfp (optional)
     - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
+* documents.xml (optional)
+    - An XML file referencing the documents in a project. The schema for this file is documents.xsd.
 * bcf.version
 	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 
-It is possible to store additional files in the BCF zip container as documents. These files can be referenced by other files via their relative paths. It is recommended to put them in a folder called `Documents` in the root folder of the zip archive.
+It is possible to store additional files in the BCF zip container as documents.
+The documents should be located in a folder called `Documents` in the root directory, and must be referenced by the documents.xml file.
+The file name of a document should be the document guid.
 
 ### Topic folder structure inside a BCFzip archive
 

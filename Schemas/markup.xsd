@@ -77,8 +77,10 @@
 			<xs:element name="DocumentReference" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:sequence>
-						<!-- Name of the file in the topic folder or url -->
-						<xs:element name="ReferencedDocument" type="xs:string" minOccurs="0"/>
+						<!-- Guid of the document: If pointing to an internal document -->
+						<xs:element name="DocumentGuid" type="Guid" minOccurs="0"/>
+						<!-- Url of the reference. If pointing to an external document -->
+						<xs:element name="Url" type="xs:string" minOccurs="0"/>
 						<!-- Human readable name of the document -->
 						<xs:element name="Description" type="xs:string" minOccurs="0"/>
 					</xs:sequence>
