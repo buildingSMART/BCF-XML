@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="./guid.xsd" />
+
+    <xs:element name="Documents">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Document" type="Document" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Document">
+        <xs:sequence>
+            <!-- Guid of the document -->
+            <xs:element name="Guid" type="Guid" />
+            <!-- Filename of the document -->
+            <xs:element name="Filename" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
