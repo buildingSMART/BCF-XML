@@ -15,7 +15,7 @@
     <Author>user_one</Author>
     <Comment>comment one</Comment>
     <Topic Guid="f5d76cd4-46bc-450c-a513-c1f62ac24026" />
-	<Viewpoint Guid="2f5041e7-1b8b-4310-abff-e0e7e620b878" />
+    <Viewpoint Guid="2f5041e7-1b8b-4310-abff-e0e7e620b878" />
   </Comment>
   <Viewpoints Guid="2f5041e7-1b8b-4310-abff-e0e7e620b878">
     <Viewpoint>viewpoint.bcfv</Viewpoint>

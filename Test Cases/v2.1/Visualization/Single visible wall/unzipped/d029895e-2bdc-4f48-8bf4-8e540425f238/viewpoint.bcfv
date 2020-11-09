@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="visinfo.xsd">
-	<Components>
-		<ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"></ViewSetupHints>
-		<Selection></Selection>
-		<Visibility DefaultVisibility="false">
-			<Exceptions>
-				<Component IfcGuid="1E8YkwPMfB$h99jtn_uAjI">
-					<OriginatingSystem>https://bimsync.com</OriginatingSystem>
-				</Component>
-			</Exceptions>
-		</Visibility>
-		<Coloring></Coloring>
+    <Components>
+        <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"></ViewSetupHints>
+        <Selection></Selection>
+        <Visibility DefaultVisibility="false">
+            <Exceptions>
+                <Component IfcGuid="1E8YkwPMfB$h99jtn_uAjI">
+                    <OriginatingSystem>https://bimsync.com</OriginatingSystem>
+                </Component>
+            </Exceptions>
+        </Visibility>
+        <Coloring></Coloring>
     </Components>
     <PerspectiveCamera>
         <CameraViewPoint>

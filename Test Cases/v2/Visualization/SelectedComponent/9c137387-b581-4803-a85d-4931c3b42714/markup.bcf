@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Markup>
-	<Header />
-	<Topic Guid="9c137387-b581-4803-a85d-4931c3b42714" TopicType="Issue" TopicStatus="Active">
-		<Title>Front and left wall visible, front wall selected</Title>
-		<Priority>Normal</Priority>
-		<Index>1</Index>
-		<CreationDate>2015-06-09T08:27:56+00:00</CreationDate>
-		<CreationAuthor>pbuts@kubusinfo.nl</CreationAuthor>
-		<ModifiedDate>2015-06-09T08:27:56+00:00</ModifiedDate>
-		<ModifiedAuthor>pbuts@kubusinfo.nl</ModifiedAuthor>
-		<AssignedTo>pbuts@kubusinfo.nl</AssignedTo>
-	</Topic>
-	<Comment Guid="54b2b92a-55d2-4c37-9d83-1582269c3e67">
-		<Date>2015-06-09T08:27:56+00:00</Date>
-		<Author>pbuts@kubusinfo.nl</Author>
-		<Comment></Comment>
-		<Topic Guid="9c137387-b581-4803-a85d-4931c3b42714" />
-		<Viewpoint Guid="5324f8f9-199b-42a2-8982-60a1febabded" />
-		<ModifiedDate>2015-06-09T08:27:56+00:00</ModifiedDate>
-		<ModifiedAuthor>pbuts@kubusinfo.nl</ModifiedAuthor>
-	</Comment>
-	<Viewpoints Guid="5324f8f9-199b-42a2-8982-60a1febabded">
-		<Viewpoint>viewpoint.bcfv</Viewpoint>
-		<Snapshot>snapshot.png</Snapshot>
-	</Viewpoints>
+    <Header />
+    <Topic Guid="9c137387-b581-4803-a85d-4931c3b42714" TopicType="Issue" TopicStatus="Active">
+        <Title>Front and left wall visible, front wall selected</Title>
+        <Priority>Normal</Priority>
+        <Index>1</Index>
+        <CreationDate>2015-06-09T08:27:56+00:00</CreationDate>
+        <CreationAuthor>pbuts@kubusinfo.nl</CreationAuthor>
+        <ModifiedDate>2015-06-09T08:27:56+00:00</ModifiedDate>
+        <ModifiedAuthor>pbuts@kubusinfo.nl</ModifiedAuthor>
+        <AssignedTo>pbuts@kubusinfo.nl</AssignedTo>
+    </Topic>
+    <Comment Guid="54b2b92a-55d2-4c37-9d83-1582269c3e67">
+        <Date>2015-06-09T08:27:56+00:00</Date>
+        <Author>pbuts@kubusinfo.nl</Author>
+        <Comment></Comment>
+        <Topic Guid="9c137387-b581-4803-a85d-4931c3b42714" />
+        <Viewpoint Guid="5324f8f9-199b-42a2-8982-60a1febabded" />
+        <ModifiedDate>2015-06-09T08:27:56+00:00</ModifiedDate>
+        <ModifiedAuthor>pbuts@kubusinfo.nl</ModifiedAuthor>
+    </Comment>
+    <Viewpoints Guid="5324f8f9-199b-42a2-8982-60a1febabded">
+        <Viewpoint>viewpoint.bcfv</Viewpoint>
+        <Snapshot>snapshot.png</Snapshot>
+    </Viewpoints>
 </Markup>

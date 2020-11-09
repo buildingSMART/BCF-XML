@@ -8,7 +8,7 @@ project.xsd
 
 
 markup.xsd
-  * Modified element "Topic/ReferenceLink" to be a list of reference links.	
+  * Modified element "Topic/ReferenceLink" to be a list of reference links.
 
   * Added element "Topic/DueDate". Date until when the topics issue needs to be resolved.
 
@@ -25,7 +25,7 @@ markup.xsd
   * Added element "Viewpoints/Index". Parameter for sorting.
 
 visinfo.xsd
-  * Added attribute "Components/DefaultVisibility" that indicates true or false for all components of this viewpoint.	
+  * Added attribute "Components/DefaultVisibility" that indicates true or false for all components of this viewpoint.
 
   * Added component list elements "Spaces".
 
