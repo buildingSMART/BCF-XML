@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="visinfo.xsd">
     <Components>
-		<ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"></ViewSetupHints>
-		<Selection></Selection>
-		<Visibility DefaultVisibility="true"></Visibility>
-		<Coloring></Coloring>
+        <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"></ViewSetupHints>
+        <Selection></Selection>
+        <Visibility DefaultVisibility="true"></Visibility>
+        <Coloring></Coloring>
     </Components>
     <PerspectiveCamera>
         <CameraViewPoint>

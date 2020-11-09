@@ -1,4 +1,4 @@
-	# BIM Collaboration Format v2.1 Technical Documentation
+    # BIM Collaboration Format v2.1 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
 ### Terms and Abbreviations
@@ -26,7 +26,7 @@ The root of the BCF zip contains the following files.
 * project.bcfp (optional)
     - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
 * bcf.version
-	* An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
+    * An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 
 It is possible to store additional files in the BCF zip container as documents. These files can be referenced by other files via their relative paths. It is recommended to put them in a folder called `Documents` in the root folder of the zip archive.
 
