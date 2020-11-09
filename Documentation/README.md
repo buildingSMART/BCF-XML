@@ -1,4 +1,4 @@
-    # BIM Collaboration Format v2.1 Technical Documentation
+# BIM Collaboration Format v2.1 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
 ### Terms and Abbreviations
@@ -294,6 +294,8 @@ When reproducing a camera viewpoint on a system that cannot adjust aspect ratio,
 ![Adjustment of view on different ratio display](Graphics/RatioAdjustment.png)
 
 Due to incomplete specifications in previous versions, `FieldOfView` and `ViewToWorldScale` were interpreted differently across the various implementers; to mitigate the impact of this differences, when converting legacy BCF files lacking the `AspectRatio` field, the default of `1.0` shall be used and thereafter `FieldOfView` and `ViewToWorldScale` shall be interpreted according to the current specifications.
+
+For any camera, ```CameraDirection``` and ```CameraUpVector``` cannot be zero length vectors or be parallel to each other.
 
 ### Lines (optional)
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
