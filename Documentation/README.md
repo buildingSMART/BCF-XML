@@ -1,4 +1,4 @@
-    # BIM Collaboration Format v2.1 Technical Documentation
+# BIM Collaboration Format v2.1 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
 ### Terms and Abbreviations
@@ -253,17 +253,28 @@ AuthoringToolId | Yes | System specific identifier of the component in the origi
 
 The visualization information file must specify exactly one of either an orthogonal or a perspective camera. 
 
+In either case the projection is centered around the `CameraViewPoint` (i.e. the Left,Bottom point and Right,Top point are centrally symmetric relatively to the ViewCenter).
+
+![Representation of Camera parameters](Graphics/Cameras.png)
+
+**NearPlane** and **FarPlane** clipping values are not considered in the current version, the values that different implementation have adopted, lacking formal requirements, appear to be similar enough to prevent known issues of compatibility.
+
 #### OrthogonalCamera
-This element describes a viewpoint using orthogonal camera. It has the following elements:
+
+This element describes a viewpoint using an orthogonal projection. 
+
+It has the following elements:
 
 Element | Optional | Description |
 :-----------|:------------|:------------
 CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
-ViewToWorldScale | No | Scaling from view to world
+ViewToWorldScale | No | Vertical scaling from view to world
+AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
 
 #### PerspectiveCamera
+
 This element describes a viewpoint using perspective camera. It has the following elements:
 
 Element | Optional | Description |
@@ -271,9 +282,20 @@ Element | Optional | Description |
 CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
-FieldOfView | No | Camera’s field of view angle in degrees.
+FieldOfView | No | The entire vertical field of view angle of the camera, expressed in degrees
+AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
 
-The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. `FieldOfView` represents the horizontal field of view.
+The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. 
+
+#### Implementation notes
+
+When reproducing a camera viewpoint on a system that cannot adjust aspect ratio, the actual camera parameters shall be determined to ensure that all the contents of the original **view box** or **view frustum** are displayed, this might result in extra model content visible beyond the original view.
+
+![Adjustment of view on different ratio display](Graphics/RatioAdjustment.png)
+
+Due to incomplete specifications in previous versions, `FieldOfView` and `ViewToWorldScale` were interpreted differently across the various implementers; to mitigate the impact of this differences, when converting legacy BCF files lacking the `AspectRatio` field, the default of `1.0` shall be used and thereafter `FieldOfView` and `ViewToWorldScale` shall be interpreted according to the current specifications.
+
+For any camera, ```CameraDirection``` and ```CameraUpVector``` cannot be zero length vectors or be parallel to each other.
 
 ### Lines (optional)
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
