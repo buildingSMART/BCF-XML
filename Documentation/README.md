@@ -1,4 +1,4 @@
-# BIM Collaboration Format v2.1 Technical Documentation
+# BIM Collaboration Format v2.2 Technical Documentation
 ![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
 
 ### Terms and Abbreviations
