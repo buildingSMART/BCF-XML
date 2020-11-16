@@ -143,20 +143,15 @@ IsExternal | Yes | Is the BimSnippet external or within the bcfzip. <br> (Defaul
 Reference | No | URI to BimSnippet. <br> IsExternal=false  “..\snippetExample.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../snippetExample.ifc“
 ReferenceSchema | Yes | URI to BimSnippetSchema (always external)
 
-
-### DocumentReference (optional)
-DocumentReference provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location.
+### DocumentReferences (optional)
+DocumentReferences provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location.
 
 Attribute | Optional | Description |
 :-----------|:------------|:------------
-Guid | No | Guid attribute for identifying it uniquely
-IsExternal | Yes | Is the Document external or within the bcfzip. <br> (Default = false).
-
- Element | Optional | Description |
-:-----------|:------------|:------------
-ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\exampleDoc.docx“ (within bcfzip) <br> IsExternal=true  “https://.../ exampleDoc.docx“
-Description | Yes | Description of the document
-
+Guid | No | Guid attribute for identifying the reference uniquely
+DocumentGuid | No, mutually exclusive with `Url` | Guid of the referenced document. 
+Url | No, mutually exclusive with `DocumentGuid` | Url of an external document.
+Description | Yes | Human readable description of the document reference
 
 ### RelatedTopic (optional)
 Relation between topics (Clash -> PfV -> Opening)

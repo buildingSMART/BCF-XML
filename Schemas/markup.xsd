@@ -74,17 +74,11 @@
             <xs:element name="Description" type="xs:string" minOccurs="0"/>
             <xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
             <!-- Name of the file in the topic folder or url -->
-            <xs:element name="DocumentReference" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="DocumentReferences" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <!-- Guid of the document: If pointing to an internal document -->
-                        <xs:element name="DocumentGuid" type="Guid" minOccurs="0"/>
-                        <!-- Url of the reference. If pointing to an external document -->
-                        <xs:element name="Url" type="xs:string" minOccurs="0"/>
-                        <!-- Human readable description of the document reference -->
-                        <xs:element name="Description" type="xs:string" minOccurs="0"/>
+                        <xs:element name="DocumentReference" type="DocumentReference"/>
                     </xs:sequence>
-                    <xs:attributeGroup ref="DocumentReferenceAttributes"/>
                 </xs:complexType>
             </xs:element>
             <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
@@ -98,6 +92,19 @@
         <xs:attribute name="TopicStatus" type="TopicStatus"/>
     </xs:complexType>
     <!-- Reference to a document inside of the topic folder or a url pointing to the web -->
+    <xs:complexType name="DocumentReference">
+        <xs:sequence>
+            <xs:choice>
+                <!-- Guid of the document: If pointing to an internal document -->
+                <xs:element name="DocumentGuid" type="Guid" minOccurs="0"/>
+                <!-- Url of the reference. If pointing to an external document -->
+                <xs:element name="Url" type="xs:string" minOccurs="0"/>
+            </xs:choice>
+            <!-- Human readable description of the document reference -->
+            <xs:element name="Description" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+        <xs:attributeGroup ref="DocumentReferenceAttributes"/>
+    </xs:complexType>
     <xs:attributeGroup name="DocumentReferenceAttributes">
         <!-- Guid of the document reference -->
         <xs:attribute name="Guid" type="Guid" use="required"/>
