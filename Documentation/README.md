@@ -144,7 +144,7 @@ Reference | No | URI to BimSnippet. <br> IsExternal=false  “..\snippetExample.
 ReferenceSchema | Yes | URI to BimSnippetSchema (always external)
 
 ### DocumentReferences (optional)
-DocumentReferences provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location.
+DocumentReferences provides a means to associate documents with topics. The references may point to files within the BCF or to external locations.
 
 Attribute | Optional | Description |
 :-----------|:------------|:------------
