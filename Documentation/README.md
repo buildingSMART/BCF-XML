@@ -249,6 +249,8 @@ IfcGuid | Yes, if AuthoringToolId is Provided | The IfcGuid of the component
 OriginatingSystem | Yes | Name of the system in which the component is originated
 AuthoringToolId | Yes, if IfcGuid is Provided  | System specific identifier of the component in the originating BIM tool
 
+Note that `IfcGuid` must be provided, if possible. The `AuthoringToolId` can be used as a fallback when an `IfcGuid` is not available.
+
 ### Camera
 
 The visualization information file must specify exactly one of either an orthogonal or a perspective camera. 
