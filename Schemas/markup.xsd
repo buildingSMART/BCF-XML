@@ -81,10 +81,10 @@
                         <xs:element name="DocumentGuid" type="Guid" minOccurs="0"/>
                         <!-- Url of the reference. If pointing to an external document -->
                         <xs:element name="Url" type="xs:string" minOccurs="0"/>
-                        <!-- Human readable name of the document -->
+                        <!-- Human readable description of the document reference -->
                         <xs:element name="Description" type="xs:string" minOccurs="0"/>
                     </xs:sequence>
-                    <xs:attributeGroup ref="DocumentReference"/>
+                    <xs:attributeGroup ref="DocumentReferenceAttributes"/>
                 </xs:complexType>
             </xs:element>
             <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
@@ -98,11 +98,9 @@
         <xs:attribute name="TopicStatus" type="TopicStatus"/>
     </xs:complexType>
     <!-- Reference to a document inside of the topic folder or a url pointing to the web -->
-    <xs:attributeGroup name="DocumentReference">
-        <!-- Guid of the DocumentReference -->
+    <xs:attributeGroup name="DocumentReferenceAttributes">
+        <!-- Guid of the document reference -->
         <xs:attribute name="Guid" type="Guid" use="required"/>
-        <!-- A flag that is true when the ReferencedDocument points outside of the BCF file (a URL) -->
-        <xs:attribute name="IsExternal" type="xs:boolean" default="false"/>
     </xs:attributeGroup>
     <xs:complexType name="Comment">
         <xs:sequence>
