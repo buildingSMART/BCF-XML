@@ -30,9 +30,9 @@ The root of the BCF zip contains the following files.
 * bcf.version
     * An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 
-It is possible to store additional files in the BCF zip container as documents.
-The documents should be located in a folder called `Documents` in the root directory, and must be referenced by the documents.xml file.
-The file name of a document should be the document guid.
+It is possible to store additional files in the BCF container as documents.
+The documents must be located in a folder called `Documents` in the root directory, and must be referenced by the `documents.xml` file.
+For uniqueness, the filename of a document in the BCF must be the document guid. The actual filename is stored in the `documents.xml`.
 
 ### Topic folder structure inside a BCFzip archive
 
