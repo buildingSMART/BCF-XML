@@ -74,13 +74,7 @@
             <xs:element name="Description" type="xs:string" minOccurs="0"/>
             <xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
             <!-- Name of the file in the topic folder or url -->
-            <xs:element name="DocumentReferences" minOccurs="0" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="DocumentReference" type="DocumentReference"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
+            <xs:element name="DocumentReferences"  type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:attribute name="Guid" type="Guid" use="required"/>
