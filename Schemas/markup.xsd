@@ -73,7 +73,6 @@
             <xs:element name="Stage" type="Stage" minOccurs="0"/>
             <xs:element name="Description" type="xs:string" minOccurs="0"/>
             <xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
-            <!-- Name of the file in the topic folder or url -->
             <xs:element name="DocumentReferences"  type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
