@@ -5,7 +5,7 @@
     <xs:element name="Documents">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Document" type="Document" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Documents" type="Document" minOccurs="0" maxOccurs="unbounded"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
