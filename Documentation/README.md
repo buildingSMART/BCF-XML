@@ -25,10 +25,14 @@ The root of the BCF zip contains the following files.
 
 * project.bcfp (optional)
     - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
+* documents.xml (optional)
+    - An XML file referencing the documents in a project. The schema for this file is documents.xsd.
 * bcf.version
     * An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 
-It is possible to store additional files in the BCF zip container as documents. These files can be referenced by other files via their relative paths. It is recommended to put them in a folder called `Documents` in the root folder of the zip archive.
+It is possible to store additional files in the BCF container as documents.
+The documents must be located in a folder called `Documents` in the root directory, and must be referenced by the `documents.xml` file.
+For uniqueness, the filename of a document in the BCF must be the document guid. The actual filename is stored in the `documents.xml`.
 
 ### Topic folder structure inside a BCFzip archive
 
@@ -139,20 +143,15 @@ IsExternal | Yes | Is the BimSnippet external or within the bcfzip. <br> (Defaul
 Reference | No | URI to BimSnippet. <br> IsExternal=false  “..\snippetExample.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../snippetExample.ifc“
 ReferenceSchema | Yes | URI to BimSnippetSchema (always external)
 
-
-### DocumentReference (optional)
-DocumentReference provides a means to associate additional payloads or links with topics. The references may point to a file within the .bcfzip or to an external location.
+### DocumentReferences (optional)
+DocumentReferences provides a means to associate documents with topics. The references may point to files within the BCF or to external locations.
 
 Attribute | Optional | Description |
 :-----------|:------------|:------------
-Guid | No | Guid attribute for identifying it uniquely
-IsExternal | Yes | Is the Document external or within the bcfzip. <br> (Default = false).
-
- Element | Optional | Description |
-:-----------|:------------|:------------
-ReferencedDocument | Yes | URI to document. <br> IsExternal=false  “..\exampleDoc.docx“ (within bcfzip) <br> IsExternal=true  “https://.../ exampleDoc.docx“
-Description | Yes | Description of the document
-
+Guid | No | Guid attribute for identifying the reference uniquely
+DocumentGuid | No, mutually exclusive with `Url` | Guid of the referenced document. 
+Url | No, mutually exclusive with `DocumentGuid` | Url of an external document.
+Description | Yes | Human readable description of the document reference
 
 ### RelatedTopic (optional)
 Relation between topics (Clash -> PfV -> Opening)
