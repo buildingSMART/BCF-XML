@@ -119,7 +119,7 @@ In addition it has the following nodes:
 ReferenceLink | Yes | List of references to the topic, for example, a work request management system or an URI to a model.
 Title | No | Title of the topic.
 Priority | Yes | Topic priority. The list of possible values are defined in the extension schema.
-Index | Yes | Number to maintain the order of the topics. 
+Index | Yes | Number to maintain the order of the topics. **This property is deprecated and will be removed in a future release.**
 Labels | Yes | Tags for grouping Topics. The list of possible values are defined in the extension schema.
 CreationDate | No | Date when the topic was created.
 CreationAuthor | No | User who created the topic.

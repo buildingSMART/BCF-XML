@@ -62,6 +62,7 @@
             <xs:element name="Title" type="xs:string"/>
             <xs:element name="Priority" type="Priority" minOccurs="0"/>
             <!-- ISG Jira issue BCF-8 Add a way save order the topics -->
+            <!-- This property is deprecated and will be removed in a future release -->
             <xs:element name="Index" type="xs:int" minOccurs="0"/>
             <xs:element name="Labels" type="TopicLabel" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="CreationDate" type="xs:dateTime" minOccurs="1"/>
@@ -73,7 +74,7 @@
             <xs:element name="Stage" type="Stage" minOccurs="0"/>
             <xs:element name="Description" type="xs:string" minOccurs="0"/>
             <xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
-            <xs:element name="DocumentReferences"  type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="DocumentReferences" type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:attribute name="Guid" type="Guid" use="required"/>
@@ -106,7 +107,7 @@
         <xs:sequence>
             <xs:element name="Date" type="xs:dateTime"/>
             <xs:element name="Author" type="UserIdType"/>
-            <xs:element name="Comment" minOccurs="0" >
+            <xs:element name="Comment" minOccurs="0">
                 <xs:simpleType>
                     <xs:restriction base="xs:string">
                         <xs:minLength value="1"/>
