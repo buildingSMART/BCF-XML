@@ -14,7 +14,8 @@ Globally Unique Identifier in the IFC data. This format is used only when referr
 | BCF      | BIM Collaboration Format |
 | BCF file     | File in BIM Collaboration Format     |
 | Topic | One topic, such as a problem in the design, described in BCF file    |
-| GUID |Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
+| GUID |Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier |
+| ServerId | A mandatory, server controlled, user friendly and project-unique issue identifier. More details in [BCF-API](https://github.com/buildingSMART/BCF-API/tree/release_2_2#429-topic-identifiers) |
 
 ### Background
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
@@ -108,8 +109,14 @@ Topic node contains reference information of the topic. It has one attribute, Gu
  Attribute | Optional | Description |
 :-----------|:------------|:------------
 Guid | No | Guid of the topic, in lowercase
+ServerId | No | A server controlled, user friendly and project-unique issue identifier. Client provided values will be disregarded by the server |
 TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
 TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
+
+**Server ID**
+
+The `ServerId` is controlled by the server, as described in [BCF-API](https://github.com/buildingSMART/BCF-API/tree/release_2_2#429-topic-identifiers). The specification can't distinguish between server-side BCF and client-side BCF - so it was decided to require the ServerId in the XSD schema. When creating new issues, clients should provide a place-holder value and expect the server to override it.  
+
 
 In addition it has the following nodes:
 
