@@ -81,7 +81,7 @@
             </xs:element>
         </xs:sequence>
         <xs:attribute name="Guid" type="Guid" use="required"/>
-        <xs:attribute name="ServerId" type="ServerId" use="required"/>
+        <xs:attribute name="ServerAssignedId" type="NonWhiteSpaceString" use="optional"/>
         <xs:attribute name="TopicType" type="TopicType"/>
         <xs:attribute name="TopicStatus" type="TopicStatus"/>
     </xs:complexType>
@@ -143,7 +143,7 @@
     <xs:simpleType name="Stage">
         <xs:restriction base="xs:string"/>
     </xs:simpleType>
-    <xs:simpleType name="ServerId">
+    <xs:simpleType name="NonWhiteSpaceString">
         <xs:restriction base="xs:string">
             <xs:minLength value="1"/>
             <xs:whiteSpace value="collapse"/>
