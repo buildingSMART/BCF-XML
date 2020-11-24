@@ -37,6 +37,10 @@ It is possible to store additional files in the BCF container as documents.
 The documents must be located in a folder called `Documents` in the root directory, and must be referenced by the `documents.xml` file.
 For uniqueness, the filename of a document in the BCF must be the document guid. The actual filename is stored in the `documents.xml`.
 
+#### Required Data
+
+When a property or an attribute is required, it must not be an empty value. For example, a required string means that a value with a length of at least one letter is expected.
+
 ### Topic folder structure inside a BCFzip archive
 
 The folder name is the GUID of the topic. This GUID is in the UUID form. The GUID must be all-lowercase. The folder contains the following file:
