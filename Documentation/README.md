@@ -120,9 +120,10 @@ When exported to XML this information may be critical to the understanding of to
 However, since the specifications dont't distinguish between server-side BCF and client-side BCF, it was decided to mark the field as optional in the XSD schema.
 
 Clients should:
-- expect that any value provided shall be disregarded upon a server-upload,
+- display the field and enable searching topcis by its content,
 - prevent setting the field when creating a new topic, to avoid any reference in the text by the user,
-- prevent edits of the field when editing an existing topic
+- prevent changes tp the value when editing an existing topic
+- expect that any value provided shall be disregarded upon a server-upload,
 
 **Nodes**
 
