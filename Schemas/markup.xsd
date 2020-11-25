@@ -6,9 +6,21 @@
             <xs:sequence>
                 <xs:element name="Header" type="Header" minOccurs="0"/>
                 <xs:element name="Topic" type="Topic"/>
-                <xs:element name="Comment" type="Comment" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Comments" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Comment" type="Comment" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
                 <!-- ISG Jira issue BCF-9. Add support for several viewpoints and snapshots per issue -->
-                <xs:element name="Viewpoints" type="ViewPoint" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Viewpoints" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="ViewPoint" type="ViewPoint" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -58,13 +70,25 @@
     </xs:complexType>
     <xs:complexType name="Topic">
         <xs:sequence>
-            <xs:element name="ReferenceLink" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="ReferenceLinks" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ReferenceLink" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="Title" type="xs:string"/>
             <xs:element name="Priority" type="Priority" minOccurs="0"/>
             <!-- ISG Jira issue BCF-8 Add a way save order the topics -->
             <!-- This property is deprecated and will be removed in a future release -->
             <xs:element name="Index" type="xs:int" minOccurs="0"/>
-            <xs:element name="Labels" type="TopicLabel" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="Labels" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Label" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
             <xs:element name="CreationDate" type="xs:dateTime" minOccurs="1"/>
             <xs:element name="CreationAuthor" type="UserIdType" minOccurs="1"/>
             <xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0"/>
@@ -74,10 +98,29 @@
             <xs:element name="Stage" type="Stage" minOccurs="0"/>
             <xs:element name="Description" type="xs:string" minOccurs="0"/>
             <xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
-            <xs:element name="DocumentReferences" type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="DocumentReferences" minOccurs="0">
                 <xs:complexType>
-                    <xs:attribute name="Guid" type="Guid" use="required"/>
+                    <xs:sequence>
+                        <xs:element name="DocumentReference" type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="DocumentReferences" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="DocumentReference" type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="RelatedTopics" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
+                            <xs:complexType>
+                                <xs:attribute name="Guid" type="Guid" use="required"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
