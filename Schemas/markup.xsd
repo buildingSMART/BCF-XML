@@ -105,13 +105,6 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="DocumentReferences" minOccurs="0">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="DocumentReference" type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
             <xs:element name="RelatedTopics" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
