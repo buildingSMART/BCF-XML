@@ -14,7 +14,8 @@ Globally Unique Identifier in the IFC data. This format is used only when referr
 | BCF      | BIM Collaboration Format |
 | BCF file     | File in BIM Collaboration Format     |
 | Topic | One topic, such as a problem in the design, described in BCF file    |
-| GUID |Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier
+| GUID |Globally Unique Identifier: http://en.wikipedia.org/wiki/Globally_Unique_Identifier |
+| ServerAssignedId | A server-controlled, user-friendly and project-unique issue identifier. More details in [BCF-API](https://github.com/buildingSMART/BCF-API/tree/release_2_2#429-topic-identifiers) |
 
 ### Background
 * This document describes the BCF format that is used to exchange topics, such as, issues, scenes, etc. between different BIM software.
@@ -102,17 +103,31 @@ Date | Yes | Date of the BIM file.
 Reference | Yes | URI to IfcFile. <br> IsExternal=false “..\example.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../example.ifc“
 
 ### Topic
-Topic node contains reference information of the topic. It has one attribute, Guid, which is the topic GUID.
-
+Topic node contains reference information of the topic. It has one required attribute, which is the topic GUID (`Guid`).
 
  Attribute | Optional | Description |
 :-----------|:------------|:------------
 Guid | No | Guid of the topic, in lowercase
+ServerAssignedId | Yes | A server controlled, user friendly and project-unique issue identifier. Clients provided values will be disregarded by the server |
 TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
 TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
 
-In addition it has the following nodes:
+**Server Assigned ID**
 
+Many server-side implementation follow a long-standing practice of assigning project-specific human-readable IDs to topics for ease of reference; for stability they do not allow users to set or change the value (see [BCF-API](https://github.com/buildingSMART/BCF-API/tree/release_2_2#429-topic-identifiers). 
+When exported to XML this information may be critical to the understanding of topics (e.g. when referenced in the descriptions), so it is an implementation agreement that server-exported BCFs shall always provide the attribute.
+
+However, since the BCF-XML specification can't distinguish between server-side BCF and client-side BCF, it was decided to mark the field as optional in the XSD schema.
+
+Clients should:
+- Display the `ServerAssignedId` and enable searching topics by its content
+- Prevent setting the `ServerAssignedId` when creating a new topic
+- Prevent changes to the `ServerAssignedId` when editing an existing topic
+- Expect that any value provided shall be disregarded by the server
+
+**Nodes**
+
+In addition, a topic has the following nodes:
 
  Element | Optional | Description |
 :-----------|:------------|:------------
