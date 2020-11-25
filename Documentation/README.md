@@ -37,16 +37,19 @@ For uniqueness, the filename of a document in the BCF must be the document guid.
 
 ### Topic folder structure inside a BCFzip archive
 
-The folder name is the GUID of the topic. This GUID is in the UUID form. The GUID must be all-lowercase. The folder contains the following files:
+The folder name is the GUID of the topic. This GUID is in the UUID form. The GUID must be all-lowercase. The folder contains the following file:
 
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
-* viewpoint.bcfv
+
+Additionally the folder can contain pair of files:
+
+* $viewpoint$.bcfv
     * An XML file following the visinfo.xsd schema that is described below.
-    * Multiple viewpoints are possible since BCF 2.0. Names of these files are not predefined. Note: One viewpoint needs to be be named viewpoint.bcfv even in the case of multiple viewpoints.
-* snapshot.png 
-    *  A snapshot related to the topic (for compatibility with BCF 1.0). The longest dimension of should not exceed 1500 px, length or width.
-Multiple snapshots are possible since BCF 2.0. Names of these files are not predefined. Note: One snapshot needs to be named snapshot.png even in the case of multiple viewpoints.
+    * File name is according to ViewPoint tag (see https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#viewpoints).
+* $snapshot$.png 
+    * The longest dimension of should not exceed 1500 px, length or width.
+    * File name is according to Snapshot tag (see https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#viewpoints).
 
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
 
