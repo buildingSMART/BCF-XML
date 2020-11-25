@@ -117,17 +117,17 @@ TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
 Many server-side implementation follow a long-standing practice of assigning project-specific human-readable IDs to topics for ease of reference; for stability they do not allow users to set or change the value (see [BCF-API](https://github.com/buildingSMART/BCF-API/tree/release_2_2#429-topic-identifiers). 
 When exported to XML this information may be critical to the understanding of topics (e.g. when referenced in the descriptions), so it is an implementation agreement that server-exported BCFs shall always provide the attribute.
 
-However, since the specifications dont't distinguish between server-side BCF and client-side BCF, it was decided to mark the field as optional in the XSD schema.
+However, since the BCF-XML specification can't distinguish between server-side BCF and client-side BCF, it was decided to mark the field as optional in the XSD schema.
 
 Clients should:
-- display the field and enable searching topcis by its content,
-- prevent setting the field when creating a new topic, to avoid any reference in the text by the user,
-- prevent changes tp the value when editing an existing topic
-- expect that any value provided shall be disregarded upon a server-upload,
+- Display the `ServerAssignedId` and enable searching topics by its content
+- Prevent setting the `ServerAssignedId` when creating a new topic
+- Prevent changes to the `ServerAssignedId` when editing an existing topic
+- Expect that any value provided shall be disregarded by the server
 
 **Nodes**
 
-In addition it has the following nodes:
+In addition, a topic has the following nodes:
 
  Element | Optional | Description |
 :-----------|:------------|:------------
