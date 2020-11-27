@@ -42,14 +42,16 @@ The folder name is the GUID of the topic. This GUID is in the UUID form. The GUI
 * markup.bcf
     * An XML file following the markup.xsd schema that is described below.
 
-Additionally the folder can contain pair of files:
+Additionally the folder can contain other files:
 
 * $viewpoint$.bcfv
     * An XML file following the visinfo.xsd schema that is described below.
-    * File name is according to ViewPoint tag (see https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#viewpoints).
+    * File name should match the Viewpoint GUID (see https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#viewpoints).
 * $snapshot$.png 
     * The longest dimension of should not exceed 1500 px, length or width.
-    * File name is according to Snapshot tag (see https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#viewpoints).
+    * File name should match Snapshot element (see https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#viewpoints).
+* Bitmaps
+    * See https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#bitmap-optional.
 
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
 
