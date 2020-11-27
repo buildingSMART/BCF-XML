@@ -6,21 +6,6 @@
             <xs:sequence>
                 <xs:element name="Header" type="Header" minOccurs="0"/>
                 <xs:element name="Topic" type="Topic"/>
-                <xs:element name="Comments" minOccurs="0">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="Comment" type="Comment" minOccurs="0" maxOccurs="unbounded"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-                <!-- ISG Jira issue BCF-9. Add support for several viewpoints and snapshots per issue -->
-                <xs:element name="Viewpoints" minOccurs="0">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="ViewPoint" type="ViewPoint" minOccurs="0" maxOccurs="unbounded"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -113,6 +98,21 @@
                                 <xs:attribute name="Guid" type="Guid" use="required"/>
                             </xs:complexType>
                         </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="Comments" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Comment" type="Comment" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <!-- ISG Jira issue BCF-9. Add support for several viewpoints and snapshots per issue -->
+            <xs:element name="Viewpoints" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="ViewPoint" type="ViewPoint" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
