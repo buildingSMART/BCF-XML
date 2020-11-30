@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:include schemaLocation="./guid.xsd" />
+    <xs:include schemaLocation="shared-types.xsd" />
 
     <xs:element name="Documents">
         <xs:complexType>
@@ -12,9 +12,9 @@
     <xs:complexType name="Document">
         <xs:sequence>
             <!-- Filename of the document with the file extension. Not used to store the file in the BCF -->
-            <xs:element name="Filename" type="xs:string" />
+            <xs:element name="Filename" type="NonEmptyOrBlankString" />
             <!-- Human readable description of the document -->
-            <xs:element name="Description" type="xs:string" minOccurs="0"/>
+            <xs:element name="Description" type="NonEmptyOrBlankString" minOccurs="0"/>
         </xs:sequence>
         <xs:attributeGroup ref="DocumentAttributes"/>
     </xs:complexType>
