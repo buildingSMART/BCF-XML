@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--XML-Beispieldatei von XMLSpy generiert v2011 rel. 3 (http://www.altova.com)-->
 <Version VersionId="2.2" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_2_2/Schemas/version.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <DetailedVersion>2.2</DetailedVersion>
