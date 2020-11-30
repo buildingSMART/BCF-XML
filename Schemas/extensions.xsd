@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:include schemaLocation="shared-types.xsd" />
+
+    <xs:element name="Extensions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="TopicTypes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TopicType" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TopicStatuses">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TopicStatus" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Priorities">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Priority" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="TopicLabels">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="TopicLabel" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="Users">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="User" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element name="SnippetTypes">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="SnippetType" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
