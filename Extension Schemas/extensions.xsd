@@ -49,10 +49,10 @@
                 <xs:enumeration value="4"/>
             </xs:restriction>
         </xs:simpleType>
-        <!--List of UserId´s-->
+        <!--List of User-->
         <!--Recommended to be in email format-->
-        <xs:simpleType name="UserIdType">
-            <xs:restriction base="UserIdType">
+        <xs:simpleType name="User">
+            <xs:restriction base="User">
                 <xs:enumeration value="karl@mustermann.de"/>
                 <xs:enumeration value="hans@mustermann.de"/>
                 <xs:enumeration value="fritz@domain1.com"/>
