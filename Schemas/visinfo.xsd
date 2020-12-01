@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
-    <xs:include schemaLocation="./guid.xsd" />
+    <xs:include schemaLocation="shared-types.xsd" />
     <xs:element name="VisualizationInfo">
         <xs:annotation>
             <xs:documentation>VisualizationInfo documentation</xs:documentation>
@@ -159,8 +159,8 @@
     </xs:complexType>
     <xs:complexType name="Component">
         <xs:sequence>
-            <xs:element name="OriginatingSystem" type="xs:string" minOccurs="0"/>
-            <xs:element name="AuthoringToolId" type="xs:string" minOccurs="0"/>
+            <xs:element name="OriginatingSystem" type="NonEmptyOrBlankString" minOccurs="0"/>
+            <xs:element name="AuthoringToolId" type="NonEmptyOrBlankString" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute ref="IfcGuid"/>
         <!-- ISG Jira Issue BCF-14 -->
@@ -197,7 +197,7 @@
         <xs:sequence>
             <xs:element name="Format" type="BitmapFormat"/>
             <!-- Name of the bitmap file in the topic folder -->
-            <xs:element name="Reference" type="xs:string"/>
+            <xs:element name="Reference" type="NonEmptyOrBlankString"/>
             <!-- Location of the center of the bitmap -->
             <xs:element name="Location" type="Point"/>
             <!-- Normal of the bitmap -->
