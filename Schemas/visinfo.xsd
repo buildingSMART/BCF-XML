@@ -144,7 +144,13 @@
             <xs:element name="Color" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+                        <xs:element name="Components" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
                     </xs:sequence>
                     <xs:attribute ref="Color"/>
                 </xs:complexType>
