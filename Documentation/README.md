@@ -217,22 +217,22 @@ The `Components` element contains the following properties.
 The IFC format specifies this: "Geometry for decomposed elements shall be either at the element container or at the element part level" 
 https://standards.buildingsmart.org/documents/Implementation/IFC_Implementation_Agreements/CV-2x3-119.html
 
-This allows the BCF to be optimized by following these rules.
+This allows the viewpoints to be optimized by following these rules.
 
 When hiding, showing or coloring decomposed components, such as, curtain wall or assemblies the following rules should be applied to these component lists:
 - `exceptions` in `visibility`.
 - `components` in `color`.
 
-#### When creating viewpoint
+##### When creating the viewpoint
 
-* If the decomposed components are all considered, only the parent component should be considered in the component list
-* If only some parts of decomposed object are considered, then only the decomposed components should be considered in the component list.
+* If the decomposed components are all considered, only the parent component should be added to the component list
+* If only some parts of decomposed object are considered, then only the decomposed components should be added to the component list.
 
-Note: If the intention is to not include any future decomposed components in the BCF, you are allowed to add all decomposed components in the component list.
+Note: If you, by intention, not want to not include any future decomposed components in later revisions of the IFC, you are allowed to add all decomposed components in the component list.
 
-#### When visualizing viewpoint
+##### When visualizing the viewpoint
 
-When visualizing viewpoint, decomposed components should also be considered for all decomposing components in the component list.
+Decomposed components should be considered for all decomposing components in the component list.
 
 #### Selection
 The `Selection` element lists all components that should be either highlighted or selected when displaying a viewpoint.
