@@ -224,12 +224,14 @@ When hiding, showing or coloring decomposed components, such as, curtain wall or
 - `components` in `color`.
 
 When creating viewpoint
-1: If the decomposed components are all considered, only the parent component should be considered in the component list
-2: If only some parts of decomposed object are considered, then only the decomposed components should be considered in the component list.
+
+* If the decomposed components are all considered, only the parent component should be considered in the component list
+* If only some parts of decomposed object are considered, then only the decomposed components should be considered in the component list.
 
 Note: If the intention is to not include any future decomposed components in the BCF, you are allowed to add all decomposed components in the component list.
 
 When visualizing viewpoint
+
 When visualizing viewpoint, decomposed components should also be considered for all decomposing components in the component list.
 
 #### Selection
