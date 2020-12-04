@@ -7,13 +7,7 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Components" minOccurs="0">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="Component" type="Component" minOccurs="0" maxOccurs="unbounded"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element name="Components" type="Components" minOccurs="0" />
                 <xs:choice>
                     <xs:element name="OrthogonalCamera" type="OrthogonalCamera"/>
                     <xs:element name="PerspectiveCamera" type="PerspectiveCamera"/>
@@ -150,7 +144,13 @@
             <xs:element name="Color" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+                        <xs:element name="Components" minOccurs="0">
+                            <xs:complexType>
+                                <xs:sequence>
+                                    <xs:element name="Component" type="Component" maxOccurs="unbounded"/>
+                                </xs:sequence>
+                            </xs:complexType>
+                        </xs:element>
                     </xs:sequence>
                     <xs:attribute ref="Color"/>
                 </xs:complexType>
