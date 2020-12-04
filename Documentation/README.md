@@ -212,8 +212,25 @@ The `Components` element contains the following properties.
 * `Visibility` to describe default visibility and exceptions
 * `Coloring` to convey coloring options for displaying components
 
-**Composite Components**
-When a viewpoint is referring to decomposed components, such as, curtain wall or assemblies, only the parent component should be considered in the components list. If only some parts of decomposed object are visible, then only the child objects should be considered in the components list.
+**Composite Components in visibility and colors**
+
+The IFC format specifies this: "Geometry for decomposed elements shall be either at the element container or at the element part level" 
+https://standards.buildingsmart.org/documents/Implementation/IFC_Implementation_Agreements/CV-2x3-119.html
+
+This allows the BCF to be optimized by following these rules.
+
+When hiding, showing or coloring decomposed components, such as, curtain wall or assemblies the following rules should be applied to these component lists:
+- `exceptions` in `visibility`.
+- `components` in `color`.
+
+* When creating viewpoint
+1: If the decomposed components are all considered, only the parent component should be considered in the component list
+2: If only some parts of decomposed object are considered, then only the decomposed components should be considered in the component list.
+
+Note: If the intention is to not include any future decomposed components in the BCF, you are allowed to add all decomposed components in the component list.
+
+* When visualizing viewpoint
+When visualizing viewpoint, decomposed components should also be considered for all decomposing components in the component list.
 
 #### Selection
 The `Selection` element lists all components that should be either highlighted or selected when displaying a viewpoint.
