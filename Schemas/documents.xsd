@@ -2,10 +2,16 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:include schemaLocation="shared-types.xsd" />
 
-    <xs:element name="Documents">
+    <xs:element name="DocumentInfo">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Document" type="Document" minOccurs="0" maxOccurs="unbounded"/>
+                <xs:element name="Documents">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="Document" type="Document" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
