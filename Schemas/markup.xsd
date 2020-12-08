@@ -82,8 +82,8 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="CreationDate" type="xs:dateTime" minOccurs="1"/>
-            <xs:element name="CreationAuthor" type="NonEmptyOrBlankString" minOccurs="1"/>
+            <xs:element name="CreationDate" type="xs:dateTime"/>
+            <xs:element name="CreationAuthor" type="NonEmptyOrBlankString"/>
             <xs:element name="ModifiedDate" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="ModifiedAuthor" type="NonEmptyOrBlankString" minOccurs="0"/>
             <xs:element name="DueDate" type="xs:dateTime" minOccurs="0"/>
