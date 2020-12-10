@@ -90,14 +90,14 @@
             <xs:element name="Stage" type="NonEmptyOrBlankString" minOccurs="0"/>
             <xs:element name="Description" type="NonEmptyOrBlankString" minOccurs="0"/>
             <xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
-            <xs:element name="DocumentReferences" minOccurs="0">
+            <xs:element name="DocumentReferences">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="DocumentReference" type="DocumentReference" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="RelatedTopics" minOccurs="0">
+            <xs:element name="RelatedTopics">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="RelatedTopic" minOccurs="0" maxOccurs="unbounded">
@@ -108,7 +108,7 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="Comments" minOccurs="0">
+            <xs:element name="Comments">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="Comment" type="Comment" minOccurs="0" maxOccurs="unbounded"/>
@@ -116,7 +116,7 @@
                 </xs:complexType>
             </xs:element>
             <!-- ISG Jira issue BCF-9. Add support for several viewpoints and snapshots per issue -->
-            <xs:element name="Viewpoints" minOccurs="0">
+            <xs:element name="Viewpoints">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="ViewPoint" type="ViewPoint" minOccurs="0" maxOccurs="unbounded"/>
