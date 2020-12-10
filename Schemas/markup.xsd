@@ -65,8 +65,7 @@
             <xs:element name="ReferenceLinks" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="ReferenceLink" type="NonEmptyOrBlankString" minOccurs="0"
-                                    maxOccurs="unbounded"/>
+                        <xs:element name="ReferenceLink" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
