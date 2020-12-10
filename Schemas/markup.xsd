@@ -11,13 +11,6 @@
     </xs:element>
     <xs:complexType name="Header">
         <xs:sequence>
-            <xs:element name="Files">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="File" type="File" minOccurs="0" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
             <xs:element name="File" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
@@ -65,8 +58,7 @@
             <xs:element name="ReferenceLinks" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
-                        <xs:element name="ReferenceLink" type="NonEmptyOrBlankString" minOccurs="0"
-                                    maxOccurs="unbounded"/>
+                        <xs:element name="ReferenceLink" type="NonEmptyOrBlankString" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
@@ -130,20 +122,6 @@
         <xs:attribute name="TopicType" type="NonEmptyOrBlankString"/>
         <xs:attribute name="TopicStatus" type="NonEmptyOrBlankString"/>
     </xs:complexType>
-    <xs:complexType name="File">
-        <xs:sequence>
-            <xs:element name="Filename" type="NonEmptyOrBlankString" minOccurs="0"/>
-            <xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
-            <!-- Reference (URL) of the file -->
-            <xs:element name="Reference" type="NonEmptyOrBlankString" minOccurs="0"/>
-        </xs:sequence>
-        <xs:attributeGroup ref="FileAttributes"/>
-    </xs:complexType>
-    <xs:attributeGroup name="FileAttributes">
-        <xs:attribute name="IfcProject" type="IfcGuid"/>
-        <xs:attribute name="IfcSpatialStructureElement" type="IfcGuid"/>
-        <xs:attribute name="IsExternal" type="xs:boolean" default="true"/>
-    </xs:attributeGroup>
     <!-- Reference to a document inside of the topic folder or a url pointing to the web -->
     <xs:complexType name="DocumentReference">
         <xs:sequence>
@@ -183,4 +161,9 @@
             <xs:pattern value="[0-9A-Za-z_$]*"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:attributeGroup name="FileAttributes">
+        <xs:attribute name="IfcProject" type="IfcGuid"/>
+        <xs:attribute name="IfcSpatialStructureElement" type="IfcGuid"/>
+        <xs:attribute name="IsExternal" type="xs:boolean" default="true"/>
+    </xs:attributeGroup>
 </xs:schema>
