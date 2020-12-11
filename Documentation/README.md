@@ -204,39 +204,37 @@ The visualization information file contains information of components related to
 
 ### Components
 
-The components node contains a set of Component references. The numeric values in this file are all given in fixed units (meters for length and degrees for angle). Unit conversion is not required, since the values are not relevant to the user. The components node has also the DefaultVisibility attribute which indicates true or false for all components of the viewpoint.
-
 The `Components` element contains the following properties.
-* `ViewSetupHints` to describe the visualization settings that were used in the application creating the viewpoint
 * `Selection` to list components of interest
-* `Visibility` to describe default visibility and exceptions
+* `Visibility` to describe which component is visible and which isn't
 * `Coloring` to convey coloring options for displaying components
 
-**Composite Components**
-When a viewpoint is referring to decomposed components, such as, curtain wall or assemblies, only the parent component should be considered in the components list. If only some parts of decomposed object are visible, then only the child objects should be considered in the components list.
-
 #### Selection
-The `Selection` element lists all components that should be either highlighted or selected when displaying a viewpoint.
+The `Selection` element lists all components that should be selected (highlighted) when displaying a viewpoint.
 
 **Optimization Rules**
 
 BCF is suitable for selecting a few components. A huge list of selected components causes poor performance. All clients should follow this rule:
 
-* If the size of the selected components is huge (approximately 1000 components), alert the user and give him the opportunity to modify the selection.
+* If the size of the selected components is huge (over 1000 components), alert the user and ask them to reduce the number of selected components.
 
 #### Visibility
-The `Visibility` element states the components `DefaultVisibility` and lists all `Exceptions` that apply to specific components. The components in the `Exceptions` have the opposite visibility than `DefaultVisibility.
+The `Visibility` element decides which objects are visible and which are hidden. 
+
+Element/Attribute | Optional | Description |
+:-----------|:------------|:------------
+DefaultVisibility | Yes | Boolean. Defaults to `false`</br><ul><li>When `true`, all components should be visible unless listed in the exceptions</li><li>When `false` all components should be invisible unless listed in the exceptions</li></ul>
+Exceptions | Yes | A list of components to hide when `DefaultVisibility=true` or to show when `DefaultVisibility=false`
+ViewSetupHints | Yes | Boolean flags to allow fine control over the visibility of [spaces](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcproductextension/lexical/ifcspace.htm), [space boundaries](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcproductextension/lexical/ifcrelspaceboundary.htm) and [openings](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcproductextension/lexical/ifcopeningelement.htm). A typical use of these flags is when `DefaultVisibility=true` but spaces, spaces boundaries and openings should remain hidden. </br>All flags default to `false`</br><ul><li>SpacesVisible - same as `DefaultVisibility` but restricted to spaces only</li><li>SpaceBoundariesVisible - same as `DefaultVisibility` but restricted to space boundaries only</li><li>OpeningsVisible - same as `DefaultVisibility` but restricted to openings only</li></ul>
 
 **Optimization Rules**
 
-BCF is suitable for hiding/showing a few components. A huge list of hidden/shown components causes poor performance. All clients should follow these rules:
+BCF is suitable for hiding/showing a few components. A huge list of hidden/shown components causes poor performance. When encoding a viewpoint follow these rules:
 
-* If the list of hidden components is smaller than the list of visible components: set default_visibility to true and put the hidden components in exceptions.
+* If the list of hidden components is smaller than the list of visible components: set `DefaultVisibility` to true and put the hidden components in exceptions.
 * If the list of visible components is smaller or equals the list of hidden components: set default_visibility to false and put the visible components in exceptions.
-* If the size of exceptions is huge (approximately 1000 components), alert the user and give him the opportunity to modify the visibility.
-
-##### ViewSetupHints
-This element contains information about the default visibility for elements of certain types (`SpacesVisible`, `SpaceBoundariesVisible` and `OpeningsVisible`). These flags have the following logic when applied to spaces: When a viewpoint has no spaces visible, set the value of `SpacesVisible` to false. If there are any spaces visible in the viewpoint, set the value to the same as `DefaultVisibility`. The DefaultVisibility flag decides whetever to export the hidden or the visible spaces. The logic applied to spaces is also applied to `OpeningsVisible` and `SpaceBoundariesVisible` flags.
+* If the size of exceptions is huge (over 1000 components), alert the user and ask them to alter the visibility to allow efficient encoding.
+* For spaces, space boundaries and openings follow the following guideline (using spaces as an example): When a viewpoint has no visible spaces, set the value of `SpacesVisible` to false. If there are any spaces visible in the viewpoint, set the value to be the same as `DefaultVisibility` and follow the optimization rules above while treating spaces like any other component.
 
 ##### Applying Visibility
 The visibility is applied in following order:
@@ -245,13 +243,33 @@ The visibility is applied in following order:
 3. Apply the `Exceptions`
 
 #### Coloring
-The `Coloring` element lists colors and a list of associated components that should be displayed with the specified color when displaying a viewpoint. The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, `40E0D0` would be the color <span style="color:#40E0D0;";>Turquoise</span>. [More information about the color format can be found on Wikipedia.](https://en.wikipedia.org/wiki/RGBA_color_space)
+The `Coloring` element allows specifying the color of components. For each color a list of components to be displayed with the that color should be provided. 
+
+The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, `40E0D0` would be the color Turquoise. [More information about the color format can be found on Wikipedia.](https://en.wikipedia.org/wiki/RGBA_color_space)
+
 
 **Optimization Rules**
 
 BCF is suitable for coloring a few components. A huge list of components causes poor performance. All clients should follow this rule:
 
-* If the size of colored components is huge (approximately 1000 components), alert the user and give him the opportunity to modify the coloring.
+* If the size of colored components is huge (over 1000 components), alert the user and ask them to reduce the number of colored components.
+
+#### Encoding composite Components in selection, visibility and coloring
+
+In IFC, it is [specified](https://standards.buildingsmart.org/documents/Implementation/IFC_Implementation_Agreements/CV-2x3-119.html) that "Geometry for decomposed elements shall be either at the element container or at the element part level". 
+This allows the encoding of viewpoints to be optimized by the guidelines below. The guidelines apply wherever components are listed e.g. `exceptions` in visibility and `components` in selection and coloring.
+
+When selecting, hiding, showing or coloring decomposed components, such as curtain wall or assemblies the following rules (using coloring as an example) should be applied: 
+
+##### When creating the viewpoint
+
+* If the container element and all its parts have the same color then only the container element should be added to the component list
+* If only some parts have the same color, then only those parts should be added to the component list.
+* Adding all the parts to the component list is allowed and would result in excluding any parts that will be added in later revisions of the model
+
+##### When visualizing the viewpoint
+
+The color of a container element should be applied to all its parts.
 
 #### Component
 
