@@ -254,28 +254,22 @@ BCF is suitable for coloring a few components. A huge list of components causes 
 
 * If the size of colored components is huge (over 1000 components), alert the user and ask them to reduce the number of colored components.
 
-**Composite Components in visibility and colors**
+#### Encoding composite Components in selection, visibility and coloring
 
-The IFC format specifies this: "Geometry for decomposed elements shall be either at the element container or at the element part level" 
-https://standards.buildingsmart.org/documents/Implementation/IFC_Implementation_Agreements/CV-2x3-119.html
+In IFC, it is [specified](https://standards.buildingsmart.org/documents/Implementation/IFC_Implementation_Agreements/CV-2x3-119.html) that "Geometry for decomposed elements shall be either at the element container or at the element part level". 
+This allows the encoding of viewpoints to be optimized by the guidelines below. The guidelines apply wherever components are listed e.g. `exceptions` in visibility and `components` in selection and coloring.
 
-This allows the viewpoints to be optimized by following these rules.
-
-When hiding, showing or coloring decomposed components, such as, curtain wall or assemblies the following rules should be applied to these component lists:
-- `exceptions` in `visibility`.
-- `components` in `color`.
+When selecting, hiding, showing or coloring decomposed components, such as curtain wall or assemblies the following rules (using coloring as an example) should be applied: 
 
 ##### When creating the viewpoint
 
-* If the decomposed components are all considered, only the parent component should be added to the component list
-* If only some parts of decomposed object are considered, then only the decomposed components should be added to the component list.
-
-Note: If you, by intention, not want to not include any future decomposed components in later revisions of the IFC, you are allowed to add all decomposed components in the component list.
+* If the container element and all its parts have the same color then only the container element should be added to the component list
+* If only some parts have the same color, then only those parts should be added to the component list.
+* Adding all the parts to the component list is allowed and would result in excluding any parts that will be added in later revisions of the model
 
 ##### When visualizing the viewpoint
 
-Decomposed components should be considered for all decomposing components in the component list.
-
+The color of a container element should be applied to all its parts.
 
 #### Component
 
