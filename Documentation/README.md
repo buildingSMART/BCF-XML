@@ -44,14 +44,15 @@ The folder name is the GUID of the topic. This GUID is in the UUID form. The GUI
 
 Additionally the folder can contain other files:
 
-* $viewpoint$.bcfv
-    * An XML file following the visinfo.xsd schema that is described below.
-    * File name should match the Viewpoint GUID (see https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#viewpoints).
-* $snapshot$.png 
+* Viewpoint files
+    * An XML file conforming to the visinfo.xsd schema that is described below.
+    * File names should  end with the `.bcfv` extension and match the value of one of the [`Viewpoint` elements](https://github.com/BuildingSMART/BCF-XML/tree/release_3_0/Documentation#viewpoints).
+* Snapshot files
+    * Both PNG and JPEG snapshots are allowed. 
     * The longest dimension of should not exceed 1500 px, length or width.
-    * File name should match Snapshot element (see https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#viewpoints).
+    * File names should match the value of one of the [`Snapshot` elements](https://github.com/BuildingSMART/BCF-XML/tree/release_3_0/Documentation#viewpoints).
 * Bitmaps
-    * See https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation#bitmap-optional.
+    * See https://github.com/BuildingSMART/BCF-XML/tree/release_3_0/Documentation#bitmap-optional.
 
 *Note: The elements in the XML files must appear in the order given in the schemas and described below.*
 
@@ -199,7 +200,7 @@ The markup file can contain multiple viewpoints related to one or more comments.
 Element | Optional | Description |
 :-----------|:------------|:------------
 Viewpoint | Yes | Filename of the viewpoint (.bcfv)
-Snapshot | Yes | Filename of the snapshot(.png)
+Snapshot | Yes | Filename of the snapshot (png or jpeg)
 Index | Yes | Parameter for sorting
 
 Viewpoints are immutable, therefore they should never be changed once created. If new comments on a topic require different visualization, new viewpoints should be added.
