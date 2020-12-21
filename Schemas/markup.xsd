@@ -6,7 +6,7 @@
 			<xs:sequence>
 				<xs:element name="Header" type="Header" minOccurs="0"/>
 				<xs:element name="Topic" type="Topic"/>
-				<xs:element name="Comment" type="Comment" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element name="Comments" type="Comment" minOccurs="0" maxOccurs="unbounded"/>
 				<!-- ISG Jira issue BCF-9. Add support for several viewpoints and snapshots per issue -->
 				<xs:element name="Viewpoints" type="ViewPoint" minOccurs="0" maxOccurs="unbounded"/>
 			</xs:sequence>
