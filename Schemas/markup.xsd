@@ -18,17 +18,6 @@
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
-            <xs:element name="File" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="Filename" type="NonEmptyOrBlankString" minOccurs="0"/>
-                        <xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
-                        <!-- Reference (URL) of the file -->
-                        <xs:element name="Reference" type="NonEmptyOrBlankString" minOccurs="0"/>
-                    </xs:sequence>
-                    <xs:attributeGroup ref="FileAttributes"/>
-                </xs:complexType>
-            </xs:element>
         </xs:sequence>
     </xs:complexType>
     <!-- ISG Jira issue BCF-9. Add support for several viewpoints and snapshots per issue -->
