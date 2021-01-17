@@ -311,7 +311,7 @@ CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 ViewToWorldScale | No | Vertical scaling from view to world
-AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
+AspectRatio | No | Proportional relationship between the width and the height of the view (w/h). Assume 1.0 when reading previous BCF versions.
 
 #### PerspectiveCamera
 
@@ -323,19 +323,64 @@ CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 FieldOfView | No | The entire vertical field of view angle of the camera, expressed in degrees
-AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
+AspectRatio | No | Proportional relationship between the width and the height of the view (w/h). Assume 1.0 when reading previous BCF versions.
 
 The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. 
 
 #### Implementation notes
 
-When reproducing a camera viewpoint on a system that cannot adjust aspect ratio, the actual camera parameters shall be determined to ensure that all the contents of the original **view box** or **view frustum** are displayed, this might result in extra model content visible beyond the original view.
+1. **Reading previous formats**: Due to incomplete specifications in previous versions, `FieldOfView` and `ViewToWorldScale` were interpreted differently across the various implementers; to mitigate the impact of this differences, when converting legacy BCF files lacking the `AspectRatio` field, the default of `1.0` shall be used and thereafter `FieldOfView` and `ViewToWorldScale` shall be interpreted according to the current specifications.
+
+2. **Constraints**: For any camera, `CameraDirection` and `CameraUpVector` cannot be zero length vectors or be parallel to each other.
+
+3. **Aspect ratio adjustment**: When reproducing a camera viewpoint on a system that cannot adjust aspect ratio, the  camera parameters shall be determined to ensure that all the contents of the original **view box** or **view frustum** remain visible, this might result in extra model content becoming visible compared to the original view.
 
 ![Adjustment of view on different ratio display](Graphics/RatioAdjustment.png)
 
-Due to incomplete specifications in previous versions, `FieldOfView` and `ViewToWorldScale` were interpreted differently across the various implementers; to mitigate the impact of this differences, when converting legacy BCF files lacking the `AspectRatio` field, the default of `1.0` shall be used and thereafter `FieldOfView` and `ViewToWorldScale` shall be interpreted according to the current specifications.
+Since adjusting `CameraViewPoint` might impact element object occlusion, the preferred adjustment is to change `FieldOfView` or `ViewToWorldScale` according to the following sample code:
 
-For any camera, ```CameraDirection``` and ```CameraUpVector``` cannot be zero length vectors or be parallel to each other.
+``` csharp
+/// <summary>
+/// If we cannot adjust the ratio of the viewer, we need to adjust the properties of the camera
+/// so that everything that was visible in the previous configuration fits in the current frame.
+/// </summary>
+/// <param name="availableRatio">The ratio of the frame where we intend to display the content. Throws exception if 0.</param>
+/// <returns>true if the camera was adjusted, false if not</returns>
+public bool AdjustToRatio(double availableRatio)
+{
+	// both perspective and ortho mode save fields related to vertical size,
+	// so there's no risk of losing content on the sides if the available aspect ratio
+	// is wider than the current
+	//
+	if (availableRatio >= AspectRatio)
+		return false;
+
+	// the available screen is narrower than required, so we have to increase vertical size
+	// to ensure visibility of the original frame
+	//
+	if (Ortho)
+	{
+		// we need to grow vertical size to accomodate all horizontal content
+		//
+		var scaledUpH = ViewToWorldScale * (AspectRatio / availableRatio);
+		ViewToWorldScale = scaledUpH;
+	}
+	else
+	{
+		// same logic of the orthogonal mode applies to the size of the frame evaluated
+		// at any distance from the camera; to simplify the math we are considering
+		// a frame at unit distance from viewpoint
+		//
+		var origH = 2 * Math.Tan(ToRadians(FieldOfView / 2));
+		double scaledUpH = origH * (AspectRatio / availableRatio);
+		var scaledUpFoV = 2 * ToDegrees(Math.Atan(scaledUpH / 2));
+		FieldOfView = scaledUpFoV;
+	}
+	return true;
+}
+```
+
+
 
 ### Lines (optional)
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
