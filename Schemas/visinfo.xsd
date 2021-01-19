@@ -7,6 +7,9 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
+                <!--
+                Although plural, 'Components' is not a collection
+                -->
                 <xs:element name="Components" type="Components" minOccurs="0" />
                 <xs:choice>
                     <xs:element name="OrthogonalCamera" type="OrthogonalCamera"/>
@@ -102,8 +105,8 @@
     </xs:simpleType>
     <xs:simpleType name="FieldOfView">
         <xs:restriction base="xs:double">
-            <xs:minInclusive value="0"/>
-            <xs:maxInclusive value="360"/>
+            <xs:minExclusive value="0"/>
+            <xs:maxExclusive value="180"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="Components">
