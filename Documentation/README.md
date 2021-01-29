@@ -403,7 +403,7 @@ Up | No | Up vector of the bitmap
 Height | No | The height of the bitmap in the model, in meters
 
 ## Implementation Agreements
-Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the implementation. The following agreements are written to clarify the implementation.
+The following agreements clarify ambiguities in the schema or explain how to interpret information from previous BCF versions.
 
 ### One to Many Mapping between Viewpoints and Comments
 The schema would allow to have many to many mapping between viewpoints and comments. This is not allowed. A viewpoint can have multiple comments, but a comment can only refer to one viewpoint.
