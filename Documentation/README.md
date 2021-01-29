@@ -48,7 +48,7 @@ Additionally the folder can contain other files:
     * An XML file conforming to the visinfo.xsd schema that is described below.
     * File names should  end with the `.bcfv` extension and match the value of one of the [`Viewpoint` elements](https://github.com/BuildingSMART/BCF-XML/tree/release_3_0/Documentation#viewpoints).
 * Snapshot files
-    * Both PNG and JPEG snapshots are allowed. 
+    * Both PNG and JPEG snapshots are allowed.
     * The longest dimension of should not exceed 1500 px, length or width.
     * File names should match the value of one of the [`Snapshot` elements](https://github.com/BuildingSMART/BCF-XML/tree/release_3_0/Documentation#viewpoints).
 * Bitmaps
@@ -120,7 +120,7 @@ TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
 
 **Server Assigned ID**
 
-Many server-side implementation follow a long-standing practice of assigning project-specific human-readable IDs to topics for ease of reference; for stability they do not allow users to set or change the value (see [BCF-API](https://github.com/buildingSMART/BCF-API/tree/release_2_2#429-topic-identifiers). 
+Many server-side implementation follow a long-standing practice of assigning project-specific human-readable IDs to topics for ease of reference; for stability they do not allow users to set or change the value (see [BCF-API](https://github.com/buildingSMART/BCF-API/tree/release_2_2#429-topic-identifiers).
 When exported to XML this information may be critical to the understanding of topics (e.g. when referenced in the descriptions), so it is an implementation agreement that server-exported BCFs shall always provide the attribute.
 
 However, since the BCF-XML specification can't distinguish between server-side BCF and client-side BCF, it was decided to mark the field as optional in the XSD schema.
@@ -170,7 +170,7 @@ DocumentReferences provides a means to associate documents with topics. The refe
 Attribute | Optional | Description |
 :-----------|:------------|:------------
 Guid | No | Guid attribute for identifying the reference uniquely
-DocumentGuid | No, mutually exclusive with `Url` | Guid of the referenced document. 
+DocumentGuid | No, mutually exclusive with `Url` | Guid of the referenced document.
 Url | No, mutually exclusive with `DocumentGuid` | Url of an external document.
 Description | Yes | Human readable description of the document reference
 
@@ -189,7 +189,7 @@ Element | Optional | Description |
 :-----------|:------------|:------------
 Date | No | Date of the comment
 Author |No | Comment author
-Comment | Yes, if Viewpoint exists | The comment text, must not be empty if provided 
+Comment | Yes, if Viewpoint exists | The comment text, must not be empty if provided
 Viewpoint | Yes, if Comment exists | Back reference to the viewpoint GUID.
 ModifiedDate | Yes | The date when comment was modified
 ModifiedAuthor | Yes | The author who modified the comment
@@ -225,7 +225,7 @@ BCF is suitable for selecting a few components. A huge list of selected componen
 * If the size of the selected components is huge (over 1000 components), alert the user and ask them to reduce the number of selected components.
 
 #### Visibility
-The `Visibility` element decides which objects are visible and which are hidden. 
+The `Visibility` element decides which objects are visible and which are hidden.
 
 Element/Attribute | Optional | Description |
 :-----------|:------------|:------------
@@ -249,7 +249,7 @@ The visibility is applied in following order:
 3. Apply the `Exceptions`
 
 #### Coloring
-The `Coloring` element allows specifying the color of components. For each color a list of components to be displayed with the that color should be provided. 
+The `Coloring` element allows specifying the color of components. For each color a list of components to be displayed with the that color should be provided.
 
 The color is given in ARGB format. Colors are represented as 6 or 8 hexadecimal digits. If 8 digits are present, the first two represent the alpha (transparency) channel. For example, `40E0D0` would be the color Turquoise. [More information about the color format can be found on Wikipedia.](https://en.wikipedia.org/wiki/RGBA_color_space)
 
@@ -262,10 +262,10 @@ BCF is suitable for coloring a few components. A huge list of components causes 
 
 #### Encoding composite Components in selection, visibility and coloring
 
-In IFC, it is [specified](https://standards.buildingsmart.org/documents/Implementation/IFC_Implementation_Agreements/CV-2x3-119.html) that "Geometry for decomposed elements shall be either at the element container or at the element part level". 
+In IFC, it is [specified](https://standards.buildingsmart.org/documents/Implementation/IFC_Implementation_Agreements/CV-2x3-119.html) that "Geometry for decomposed elements shall be either at the element container or at the element part level".
 This allows the encoding of viewpoints to be optimized by the guidelines below. The guidelines apply wherever components are listed e.g. `exceptions` in visibility and `components` in selection and coloring.
 
-When selecting, hiding, showing or coloring decomposed components, such as curtain wall or assemblies the following rules (using coloring as an example) should be applied: 
+When selecting, hiding, showing or coloring decomposed components, such as curtain wall or assemblies the following rules (using coloring as an example) should be applied:
 
 ##### When creating the viewpoint
 
@@ -291,7 +291,7 @@ Note that `IfcGuid` must be provided, if possible. The `AuthoringToolId` can be 
 
 ### Camera
 
-The visualization information file must specify exactly one of either an orthogonal or a perspective camera. 
+The visualization information file must specify exactly one of either an orthogonal or a perspective camera.
 
 In either case the projection is centered around the `CameraViewPoint` (i.e. the Left,Bottom point and Right,Top point are centrally symmetric relatively to the ViewCenter).
 
@@ -301,7 +301,7 @@ In either case the projection is centered around the `CameraViewPoint` (i.e. the
 
 #### OrthogonalCamera
 
-This element describes a viewpoint using an orthogonal projection. 
+This element describes a viewpoint using an orthogonal projection.
 
 It has the following elements:
 
@@ -311,7 +311,7 @@ CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 ViewToWorldScale | No | Vertical scaling from view to world
-AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
+AspectRatio | No | Proportional relationship between the width and the height of the view (w/h). Assume 1.0 when reading previous BCF versions.
 
 #### PerspectiveCamera
 
@@ -322,26 +322,73 @@ Element | Optional | Description |
 CameraViewPoint | No | Camera location
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
-FieldOfView | No | The entire vertical field of view angle of the camera, expressed in degrees
-AspectRatio | No | Proportional relationship between the width and the height of the view (w/h)
-
-The `FieldOfView` is currently restricted to a value between 45 and 60 degrees. There may be viewpoints that are not within this range, therefore imports should be expecting any values between 0 and 360 degrees. The limitation will be dropped in the next schema release. 
+FieldOfView | No | The entire vertical field of view angle of the camera, expressed in degrees. Valid range 0 to 180 exclusive.
+AspectRatio | No | Proportional relationship between the width and the height of the view (w/h). Assume 1.0 when reading previous BCF versions.
 
 #### Implementation notes
 
-When reproducing a camera viewpoint on a system that cannot adjust aspect ratio, the actual camera parameters shall be determined to ensure that all the contents of the original **view box** or **view frustum** are displayed, this might result in extra model content visible beyond the original view.
+1. **Reading previous formats**: Due to incomplete specifications in previous versions, `FieldOfView` and `ViewToWorldScale` were interpreted differently across the various implementers; to mitigate the impact of this differences, when converting legacy BCF files lacking the `AspectRatio` field, the default of `1.0` shall be used and thereafter `FieldOfView` and `ViewToWorldScale` shall be interpreted according to the current specifications.
+
+2. **Constraints**: For any camera, `CameraDirection` and `CameraUpVector` cannot be zero length vectors or be parallel to each other.
+
+3. **Aspect ratio adjustment**: When reproducing a camera viewpoint on a system that cannot adjust aspect ratio, the  camera parameters shall be determined to ensure that all the contents of the original **view box** or **view frustum** remain visible, this might result in extra model content becoming visible compared to the original view.
 
 ![Adjustment of view on different ratio display](Graphics/RatioAdjustment.png)
 
-Due to incomplete specifications in previous versions, `FieldOfView` and `ViewToWorldScale` were interpreted differently across the various implementers; to mitigate the impact of this differences, when converting legacy BCF files lacking the `AspectRatio` field, the default of `1.0` shall be used and thereafter `FieldOfView` and `ViewToWorldScale` shall be interpreted according to the current specifications.
+Implementers are free to adjust the camera settings to achieve that as preferred, the most obvious methods being variations of `CameraViewPoint`, `FieldOfView` or `ViewToWorldScale`.
 
-For any camera, ```CameraDirection``` and ```CameraUpVector``` cannot be zero length vectors or be parallel to each other.
+![Adjustment of aspect ratio via retreating of camera position](Graphics/RatioAdjustmentByCameraPosition.png)
+
+In perspective cameras, ratio adjustment by retreating `CameraViewPoint` while retaining content, requires estimating  the deepest model bounding box displayed in the view, and might result in view obstructions due to new elements in view or change of projection occlusions. Orthogonal cameras do not require the evaluation of model bounding box, and don't suffer from changes in projection occlusion, but can still be impacted by new elements obscuring others in the view.
+
+Adjustment via `FieldOfView` or `ViewToWorldScale`, retains identical characteristics of elements in the original view, but might result in distortion of elements in the extra bands and require UI methods to permit users to restore viewing preferences. The code below provides guidance for camera adjustment via this method.
+
+``` csharp
+/// <summary>
+/// If we cannot adjust the ratio of the viewer, we need to adjust the properties of the camera
+/// so that everything that was visible in the previous configuration fits in the current frame.
+/// </summary>
+/// <param name="availableRatio">The ratio of the frame where we intend to display the content. Throws exception if 0.</param>
+/// <returns>true if the camera was adjusted, false if not</returns>
+public bool AdjustToRatio(double availableRatio)
+{
+	// both perspective and ortho mode save fields related to vertical size,
+	// so there's no risk of losing content on the sides if the available aspect ratio
+	// is wider than the current
+	//
+	if (availableRatio >= AspectRatio)
+		return false;
+
+	// the available screen is narrower than required, so we have to increase vertical size
+	// to ensure visibility of the original frame
+	//
+	if (Ortho)
+	{
+		// we need to grow vertical size to accomodate all horizontal content
+		//
+		var scaledUpH = ViewToWorldScale * (AspectRatio / availableRatio);
+		ViewToWorldScale = scaledUpH;
+	}
+	else
+	{
+		// same logic of the orthogonal mode applies to the size of the frame evaluated
+		// at any distance from the camera; to simplify the math we are considering
+		// a frame at unit distance from viewpoint
+		//
+		var origH = 2 * Math.Tan(ToRadians(FieldOfView / 2));
+		double scaledUpH = origH * (AspectRatio / availableRatio);
+		var scaledUpFoV = 2 * ToDegrees(Math.Atan(scaledUpH / 2));
+		FieldOfView = scaledUpFoV;
+	}
+	return true;
+}
+```
 
 ### Lines (optional)
 Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
 
 ### ClippingPlanes (optional)
-ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction. The Direction vector points in the _invisible_ direction meaning the half-space that is clipped. 
+ClippingPlanes can be used to define a subsection of a building model that is related to the topic. Each clipping plane is defined by Location and Direction. The Direction vector points in the _invisible_ direction meaning the half-space that is clipped.
 
 ### Bitmap (optional)
 A list of bitmaps can be used to add more information, for example, text in the visualization. It has the following elements:
@@ -362,7 +409,7 @@ Since BCF 2.0 is compatible with version 1.0, there are some ambiguities in the 
 The schema would allow to have many to many mapping between viewpoints and comments. This is not allowed. A viewpoint can have multiple comments, but a comment can only refer to one viewpoint.
 
 ### Status and VerbalStatus to be Phased out
-Status and Verbal Status of Comment will be phased out and replaced by TopicStatus and TopicType in Topic. 
+Status and Verbal Status of Comment will be phased out and replaced by TopicStatus and TopicType in Topic.
 
 When interpreting BCF 1.0 files use the following logic:
 
@@ -377,7 +424,7 @@ When writing BCF 2.0 or higher files:
 - write Status and VerbalStatus at Comment level for backward compatibility.
 
 ### .BCFZIP encoding guide
- 
+
 Software tool vendors are encouraged to follow the following guidelines to ensure that the .BCFZIP files produced by their software can be correctly exchanged with other tools.
 
 ####  Use forward slash as path separator
