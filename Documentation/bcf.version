@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Version VersionId="3.0" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_3_0/Schemas/version.xsd"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <DetailedVersion>3.0</DetailedVersion>
 </Version>
