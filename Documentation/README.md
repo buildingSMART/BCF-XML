@@ -395,7 +395,7 @@ A list of bitmaps can be used to add more information, for example, text in the 
 
 Element | Optional | Description |
 :-----------|:------------|:------------
-Bitmap | No | Format of the bitmap (PNG/JPG)
+Bitmap | No | Format of the bitmap (`png` or `jpg`)
 Reference | No | Name of the bitmap file in the topic folder
 Location | No | Location of the center of the bitmap in world coordinates
 Normal | No | Normal vector of the bitmap
