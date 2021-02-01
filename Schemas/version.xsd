@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
     <xs:element name="Version">
         <xs:complexType>
-            <xs:attribute name="VersionId" type="xs:string"/>
+            <xs:attribute name="VersionId" type="xs:string" use="required"/>
         </xs:complexType>
     </xs:element>
 </xs:schema>

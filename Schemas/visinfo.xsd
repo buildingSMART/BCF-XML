@@ -213,8 +213,8 @@
     </xs:complexType>
     <xs:simpleType name="BitmapFormat">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="PNG"/>
-            <xs:enumeration value="JPG"/>
+            <xs:enumeration value="png"/>
+            <xs:enumeration value="jpg"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
