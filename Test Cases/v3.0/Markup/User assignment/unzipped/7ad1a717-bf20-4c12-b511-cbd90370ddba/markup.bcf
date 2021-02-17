@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="7ad1a717-bf20-4c12-b511-cbd90370ddba" ServerAssignedId="5" TopicStatus="Open">
+        <ReferenceLinks/>
+        <Title>User assignment</Title>
+        <Labels/>
+        <CreationDate>2021-02-17T09:15:35.610Z</CreationDate>
+        <CreationAuthor>reetta.puska@solibri.com</CreationAuthor>
+        <ModifiedDate>2021-02-17T09:15:35.610Z</ModifiedDate>
+        <AssignedTo>pasi.paasiala@solibri.com</AssignedTo>
+        <Description></Description>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments>
+            <Comment Guid="dd6119c6-745b-4575-974d-e0ae54953e0d">
+                <Date>2021-02-17T09:15:35.610Z</Date>
+                <Author>reetta.puska@solibri.com</Author>
+                <Comment></Comment>
+                <Viewpoint Guid="f6a0cc29-056c-4d4f-95fa-41aa9cc14416"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="f6a0cc29-056c-4d4f-95fa-41aa9cc14416">
+                <Viewpoint>Viewpoint_f6a0cc29-056c-4d4f-95fa-41aa9cc14416.bcfv</Viewpoint>
+                <Snapshot>Snapshot_f6a0cc29-056c-4d4f-95fa-41aa9cc14416.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>
