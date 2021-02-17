@@ -1,15 +1,35 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Created with the iabi.BCF library, V1.1.0 at 22.05.2017 09:51. Visit http://iabi.eu to find out more.-->
-<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Topic Guid="1b66b5cb-18b4-4edd-a700-d02c3a673710">
-    <Title>Document Reference External</Title>
-    <Index>0</Index>
-    <CreationDate>2015-10-11T12:13:14Z</CreationDate>
-    <CreationAuthor>dangl@iabi.eu</CreationAuthor>
-    <Description>This topic has a document reference to an external file via an absolute URL. It references the old BCFv1 Markup Schema.</Description>
-    <DocumentReference isExternal="true">
-      <ReferencedDocument>http://www.buildingsmart-tech.org/specifications/bcf-releases/bcfxml-v1/markup.xsd/at_download/file</ReferencedDocument>
-      <Description>BCFv1 Markup Schema</Description>
-    </DocumentReference>
-  </Topic>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="1b66b5cb-18b4-4edd-a700-d02c3a673710" ServerAssignedId="1" TopicStatus="Open">
+        <ReferenceLinks/>
+        <Title>Document Reference External</Title>
+        <Labels/>
+        <CreationDate>2015-10-11T12:13:14.000Z</CreationDate>
+        <CreationAuthor>dangl@iabi.eu</CreationAuthor>
+        <ModifiedDate>2021-02-17T09:28:00.634Z</ModifiedDate>
+        <Description>This topic has a document reference to an external file via an absolute URL. It references the old BCFv1 Markup Schema.</Description>
+        <DocumentReferences>
+            <DocumentReference Guid="f295b548-e9b6-4abb-8895-4ed0bb34ea7f">
+                <Url>http://www.buildingsmart-tech.org/specifications/bcf-releases/bcfxml-v1/markup.xsd/at_download/file</Url>
+                <Description>BCFv1 Markup Schema</Description>
+            </DocumentReference>
+        </DocumentReferences>
+        <RelatedTopics/>
+        <Comments>
+            <Comment Guid="a4ea8296-5d17-498e-8a85-5a2518ebe3c5">
+                <Date>2021-02-17T09:28:00.634Z</Date>
+                <Author>pasi.paasiala@solibri.com</Author>
+                <Viewpoint Guid="bd634f89-bec7-4cb1-be74-2057c5fea0fb"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="bd634f89-bec7-4cb1-be74-2057c5fea0fb">
+                <Viewpoint>Viewpoint_bd634f89-bec7-4cb1-be74-2057c5fea0fb.bcfv</Viewpoint>
+                <Snapshot>Snapshot_bd634f89-bec7-4cb1-be74-2057c5fea0fb.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
 </Markup>
