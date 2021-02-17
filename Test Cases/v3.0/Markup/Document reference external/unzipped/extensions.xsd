@@ -13,12 +13,9 @@
     <Priorities/>
     <TopicLabels/>
     <Users>
-        <User>jon.anders.sollien@catenda.no</User>
-        <User>pasi.paasiala@solibri.com</User>
-        <User>dangl@iabi.eu</User>
-        <User>tf@dds-cad.de</User>
-        <User>reetta.puska@solibri.com</User>
-        <User>lionel.ong@oracle.com</User>
+        <User>Architect@example.com</User>
+        <User>Engineer@example.com</User>
+        <User>MEPDesigner@example.com</User>
     </Users>
     <Stages/>
     <SnippetTypes/>

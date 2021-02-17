@@ -8,7 +8,7 @@
         <Title>Document Reference External</Title>
         <Labels/>
         <CreationDate>2015-10-11T12:13:14.000Z</CreationDate>
-        <CreationAuthor>dangl@iabi.eu</CreationAuthor>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2015-10-11T12:13:14.000Z</ModifiedDate>
         <Description>This topic has a document reference to an external file via an absolute URL. It references the old BCFv1 Markup Schema.</Description>
         <DocumentReferences>
