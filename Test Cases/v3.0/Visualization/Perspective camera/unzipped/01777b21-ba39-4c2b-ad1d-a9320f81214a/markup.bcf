@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup>
+  <Header/>
+  <Topic Guid="01777b21-ba39-4c2b-ad1d-a9320f81214a" ServerAssignedId="3" TopicType="OTHER" TopicStatus="OPEN">
+    <Title>Perspective camera</Title>
+    <CreationDate>2021-02-17T10:49:50.286Z</CreationDate>
+    <CreationAuthor>blackhole@aconex.com</CreationAuthor>
+    <ModifiedDate>2021-02-17T10:49:50.559Z</ModifiedDate>
+    <ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
+    <Description>A perspective camera viewpoint</Description>
+    <Comments/>
+    <Viewpoints>
+      <ViewPoint Guid="f99eb1ed-6bd2-46da-95f1-663a86d5a38d">
+        <Viewpoint>viewpoint-f99eb1ed-6bd2-46da-95f1-663a86d5a38d.bcfv</Viewpoint>
+        <Snapshot>snapshot-f99eb1ed-6bd2-46da-95f1-663a86d5a38d.png</Snapshot>
+      </ViewPoint>
+    </Viewpoints>
+  </Topic>
+</Markup>
