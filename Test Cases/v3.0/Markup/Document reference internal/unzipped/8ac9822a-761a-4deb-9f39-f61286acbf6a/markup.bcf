@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="8ac9822a-761a-4deb-9f39-f61286acbf6a" ServerAssignedId="6" TopicStatus="Open">
+        <ReferenceLinks/>
+        <Title>Document Reference Internal</Title>
+        <Labels/>
+        <CreationDate>2021-02-17T09:16:04.160Z</CreationDate>
+        <CreationAuthor>tf@dds-cad.de</CreationAuthor>
+        <ModifiedDate>2021-02-17T09:16:04.160Z</ModifiedDate>
+        <AssignedTo>pasi.paasiala@solibri.com</AssignedTo>
+        <Description></Description>
+        <DocumentReferences>
+            <DocumentReference Guid="048e898f-555f-47c3-a273-6c664fb2ef69">
+                <DocumentGuid>b1d1b7f0-60b9-457d-ad12-16e0fb997bc5</DocumentGuid>
+                <Description>ThisIsADocument.txt</Description>
+            </DocumentReference>
+        </DocumentReferences>
+        <RelatedTopics/>
+        <Comments>
+            <Comment Guid="c045ef04-324d-4c36-9ac8-831f2a15c6d6">
+                <Date>2021-02-17T09:16:04.160Z</Date>
+                <Author>tf@dds-cad.de</Author>
+                <Comment>A comment</Comment>
+                <Viewpoint Guid="20ad2ff7-ceac-4d4b-b288-ad92a0f65182"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="20ad2ff7-ceac-4d4b-b288-ad92a0f65182">
+                <Viewpoint>Viewpoint_20ad2ff7-ceac-4d4b-b288-ad92a0f65182.bcfv</Viewpoint>
+                <Snapshot>Snapshot_20ad2ff7-ceac-4d4b-b288-ad92a0f65182.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>
