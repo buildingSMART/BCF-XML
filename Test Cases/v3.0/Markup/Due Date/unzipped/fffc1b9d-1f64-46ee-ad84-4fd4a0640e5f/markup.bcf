@@ -8,10 +8,10 @@
         <Title>Issue that needs to be fixed by a certain date</Title>
         <Labels/>
         <CreationDate>2021-02-17T09:25:22.056Z</CreationDate>
-        <CreationAuthor>dangl@iabi.eu</CreationAuthor>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2021-02-17T09:25:22.056Z</ModifiedDate>
         <DueDate>2021-03-15T11:00:00.000Z</DueDate>
-        <AssignedTo>dangl@iabi.eu</AssignedTo>
+        <AssignedTo>Architect@example.com</AssignedTo>
         <Description></Description>
         <DocumentReferences/>
         <RelatedTopics/>

@@ -6,6 +6,6 @@
     <Topic Guid="b0ddb128-a997-44c1-8ad8-59492daa5f6b" TopicStatus="Open" TopicType="Error">
         <Title>Minimum information</Title>
         <CreationDate>2021-02-17T09:16:36.674Z</CreationDate>
-        <CreationAuthor>lionel.ong@oracle.com</CreationAuthor>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
     </Topic>
 </Markup>
