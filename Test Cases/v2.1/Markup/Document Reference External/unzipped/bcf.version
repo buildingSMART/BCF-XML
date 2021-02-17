@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--Created with the iabi.BCF library, V1.1.0 at 22.05.2017 09:51. Visit http://iabi.eu to find out more.-->
-<Version xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" VersionId="2.1">
-  <DetailedVersion>2.1</DetailedVersion>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Version xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" VersionId="3.0" xsi:schemaLocation="version.xsd">
+    <DetailedVersion>3.0</DetailedVersion>
 </Version>
