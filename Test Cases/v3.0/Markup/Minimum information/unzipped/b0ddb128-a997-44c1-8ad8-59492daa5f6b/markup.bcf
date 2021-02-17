@@ -7,5 +7,9 @@
         <Title>Minimum information</Title>
         <CreationDate>2021-02-17T09:16:36.674Z</CreationDate>
         <CreationAuthor>Architect@example.com</CreationAuthor>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments/>
+        <Viewpoints/>
     </Topic>
 </Markup>
