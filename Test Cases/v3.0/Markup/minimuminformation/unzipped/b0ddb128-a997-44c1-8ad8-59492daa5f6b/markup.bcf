@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="b0ddb128-a997-44c1-8ad8-59492daa5f6b" TopicStatus="Open" TopicType="Error">
+        <Title>Minimum information</Title>
+        <CreationDate>2021-02-17T09:16:36.674Z</CreationDate>
+        <CreationAuthor>lionel.ong@oracle.com</CreationAuthor>
+    </Topic>
+</Markup>
