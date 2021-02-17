@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo Guid="bb62a667-15a1-4942-a372-12ad9519994d">
+  <Components>
+    <Selection/>
+    <Visibility DefaultVisibility="true">
+      <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+      <Exceptions/>
+    </Visibility>
+    <Coloring/>
+  </Components>
+  <PerspectiveCamera>
+    <CameraViewPoint>
+      <X>19.20812637329101</X>
+      <Y>-45.11646087646487</Y>
+      <Z>26.709012985229492</Z>
+    </CameraViewPoint>
+    <CameraDirection>
+      <X>-0.19508367776870728</X>
+      <Y>0.8380681872367859</Y>
+      <Z>-0.5094939470291138</Z>
+    </CameraDirection>
+    <CameraUpVector>
+      <X>-0.11551066488027573</X>
+      <Y>0.4962271451950073</Y>
+      <Z>0.8604742288589478</Z>
+    </CameraUpVector>
+    <FieldOfView>35.98339777135764</FieldOfView>
+    <AspectRatio>1.7777777777777777</AspectRatio>
+  </PerspectiveCamera>
+  <ClippingPlanes/>
+</VisualizationInfo>

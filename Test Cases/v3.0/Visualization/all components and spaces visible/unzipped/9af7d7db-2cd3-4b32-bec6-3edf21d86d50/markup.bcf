@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup>
+  <Header/>
+  <Topic Guid="9af7d7db-2cd3-4b32-bec6-3edf21d86d50" ServerAssignedId="1" TopicType="INFORMATION" TopicStatus="OPEN">
+    <Title>All Components And Spaces Visible</Title>
+    <CreationDate>2021-02-17T09:29:27.888Z</CreationDate>
+    <CreationAuthor>blackhole@aconex.com</CreationAuthor>
+    <ModifiedDate>2021-02-17T09:29:28.211Z</ModifiedDate>
+    <ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
+    <Description>All Components And Spaces Visible</Description>
+    <Comments/>
+    <Viewpoints>
+      <ViewPoint Guid="bb62a667-15a1-4942-a372-12ad9519994d">
+        <Viewpoint>viewpoint-bb62a667-15a1-4942-a372-12ad9519994d.bcfv</Viewpoint>
+        <Snapshot>snapshot-bb62a667-15a1-4942-a372-12ad9519994d.png</Snapshot>
+      </ViewPoint>
+    </Viewpoints>
+  </Topic>
+</Markup>
+
