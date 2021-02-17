@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="3146b55f-ac72-4490-bb06-60cc254b3d8e" ServerAssignedId="829" TopicType="Error" TopicStatus="Open">
+        <ReferenceLinks/>
+        <Title>One plate visible</Title>
+        <Labels/>
+        <CreationDate>2017-05-23T08:22:35.531Z</CreationDate>
+        <CreationAuthor>pasi.paasiala@solibri.com</CreationAuthor>
+        <ModifiedDate>2017-05-23T08:22:35.531Z</ModifiedDate>
+        <Description>One plate of a curtain wall visible everything else hidded.</Description>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments/>
+        <Viewpoints>
+            <ViewPoint Guid="e5c663c1-ad6f-4067-b861-65b7584e4cfa">
+                <Viewpoint>Viewpoint_e5c663c1-ad6f-4067-b861-65b7584e4cfa.bcfv</Viewpoint>
+                <Snapshot>Snapshot_e5c663c1-ad6f-4067-b861-65b7584e4cfa.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>
