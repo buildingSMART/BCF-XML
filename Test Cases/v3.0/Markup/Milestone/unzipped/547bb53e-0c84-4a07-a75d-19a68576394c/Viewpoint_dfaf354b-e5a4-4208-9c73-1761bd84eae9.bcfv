@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Guid="dfaf354b-e5a4-4208-9c73-1761bd84eae9" xsi:schemaLocation="visinfo.xsd">
+    <Components>
+        <Selection/>
+        <Visibility DefaultVisibility="true">
+            <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+            <Exceptions>
+                <Component IfcGuid="1m5wAJelDFdhn6qBdOGjos">
+                    <OriginatingSystem>https://bimsync.com</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt">
+                    <OriginatingSystem>https://bimsync.com</OriginatingSystem>
+                </Component>
+            </Exceptions>
+        </Visibility>
+        <Coloring/>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>28.114865821324496</X>
+            <Y>-24.454087520883107</Y>
+            <Z>14.284947221331485</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>-0.8519099627155464</X>
+            <Y>0.4661844832508105</Y>
+            <Z>-0.23858215147443676</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-0.20929445029543983</X>
+            <Y>0.11453067745237853</Y>
+            <Z>0.9711223182472069</Z>
+        </CameraUpVector>
+        <FieldOfView>60.0</FieldOfView>
+        <AspectRatio>1.0</AspectRatio>
+    </PerspectiveCamera>
+    <Lines/>
+    <ClippingPlanes/>
+    <Bitmaps/>
+</VisualizationInfo>
