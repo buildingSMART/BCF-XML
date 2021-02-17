@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup>
+  <Header/>
+  <Topic Guid="647bca1c-cac3-4f16-84a8-912e081edd57" ServerAssignedId="2" TopicType="WARNING" TopicStatus="OPEN">
+    <Title>Component Selection</Title>
+    <CreationDate>2021-02-17T10:14:27.064Z</CreationDate>
+    <CreationAuthor>blackhole@aconex.com</CreationAuthor>
+    <ModifiedDate>2021-02-17T10:14:27.317Z</ModifiedDate>
+    <ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
+    <Description>Exactly three components are selected</Description>
+    <Comments/>
+    <Viewpoints>
+      <ViewPoint Guid="7b2c1bf5-5854-433d-8136-981c957ed910">
+        <Viewpoint>viewpoint-7b2c1bf5-5854-433d-8136-981c957ed910.bcfv</Viewpoint>
+        <Snapshot>snapshot-7b2c1bf5-5854-433d-8136-981c957ed910.png</Snapshot>
+      </ViewPoint>
+    </Viewpoints>
+  </Topic>
+</Markup>
