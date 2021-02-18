@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
     <Header>
-        <Files/>
-    </Header>
-    <Topic Guid="1b66b5cb-18b4-4edd-a700-d02c3a673710" ServerAssignedId="1" TopicStatus="Open">
+        <Files>
+			<File IfcProject="2TaLqCNHvEn9_7cUVrypdX" IsExternal="true">
+				<Filename>IFC BCF MEP.ifc</Filename>
+				<Date>2015-06-09T10:34:38+03:00</Date>
+			</File>
+			<File IfcProject="2SugUv4EX5LAhcVpDp2dUH" IsExternal="true">
+				<Filename>C:\e.ifc</Filename>
+				<Date>2015-06-09T09:39:06+03:00</Date>
+			</File>
+		</Files>
+	</Header>
+    <Topic Guid="1b66b5cb-18b4-4edd-a700-d02c3a673710" ServerAssignedId="1" TopicType="Error" TopicStatus="Open">
         <ReferenceLinks/>
         <Title>Document Reference External</Title>
         <Labels/>
         <CreationDate>2015-10-11T12:13:14.000Z</CreationDate>
-        <CreationAuthor>Architect@example.com</CreationAuthor>
-        <ModifiedDate>2015-10-11T12:13:14.000Z</ModifiedDate>
+        <CreationAuthor>dangl@iabi.eu</CreationAuthor>
+        <ModifiedDate>2021-02-17T09:28:00.634Z</ModifiedDate>
         <Description>This topic has a document reference to an external file via an absolute URL. It references the old BCFv1 Markup Schema.</Description>
         <DocumentReferences>
             <DocumentReference Guid="f295b548-e9b6-4abb-8895-4ed0bb34ea7f">
@@ -18,7 +27,18 @@
             </DocumentReference>
         </DocumentReferences>
         <RelatedTopics/>
-        <Comments/>
-        <Viewpoints/>
+        <Comments>
+            <Comment Guid="a4ea8296-5d17-498e-8a85-5a2518ebe3c5">
+                <Date>2021-02-17T09:28:00.634Z</Date>
+                <Author>pasi.paasiala@solibri.com</Author>
+                <Viewpoint Guid="bd634f89-bec7-4cb1-be74-2057c5fea0fb"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="bd634f89-bec7-4cb1-be74-2057c5fea0fb">
+                <Viewpoint>Viewpoint_bd634f89-bec7-4cb1-be74-2057c5fea0fb.bcfv</Viewpoint>
+                <Snapshot>Snapshot_bd634f89-bec7-4cb1-be74-2057c5fea0fb.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
     </Topic>
 </Markup>
