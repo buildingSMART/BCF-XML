@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Guid="1605cfd7-f798-4e4f-b6c3-18562ad6df13" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_3_0/Schemas/visinfo.xsd">
+    <Components>
+        <Selection/>
+        <Visibility DefaultVisibility="false">
+            <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+            <Exceptions>
+                <Component IfcGuid="15LX1o$dj1O8G53cOqE8W$">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="0vpT3kKsfEaQxwxwIGKYhw">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="0PpVn8zUX0iQ8DPpGXDeud">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="2mjK7hlaj7PAuZddqhJCBf">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="31l3Z9ErP0z8$Muw0aHVWa">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="0JfoI2ggH5dAXuiXIzno_Q">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="32HeOfyn55zOiSkf6rlfHs">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="05RdX$_czEfOObj5UjtAWZ">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="28Fol_2rT8D93IPNMW2ztB">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="1449m4vmjAvwRWPOrYOtlm">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="10ae708bj40vsJoK4_6PcB">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="2AAtOdP3z3ceWHqht7KDcA">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="0wvB6JDbT0GeWC07SvTvQI">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="3jqUQqXwH8COcfmRO5YmUr">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="1R2rXHz5z23hHJ$6AQkZwC">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="3wHOXJ$UrA7hYKzfBHFFB2">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="1R77vG21n8CO3r0ZB6ZCEd">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="2wXYP_0gvEAvu_fX9L41MG">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="3IPAnX2rj1igFu_ktDolzW">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="0UbkmHtRf5c816X8x8X2B6">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="35KPDXcPf9Y9p$iCqY8HKK">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="2VbWydojn0hPRmEDFU9w48">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="0X5Hin7ETD4eD_tnQCqUw$">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="2KzrOd_K11EeFQOqktYzuk">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="06CD3po7zB1Q96iTOBaJs5">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="1lee363Ur8kf0hNj6taejp">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="1w$P5qZYr6_QfPZswXjyz7">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="3WLG7tgoz4Uv1tYJ_sHcTM">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="1CeN79nY94R8rlGWRrrVtO">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="2pR$5uSOrCfh5cFueWPHky">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="3whxQQj6n1yxpfvs8yWrLD">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="3Y2or6_nrAThmGw6ix74XH">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="3uqDqBfwfDouqAVvw8yBe7">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="0rJ0O3r_fE3wq5ZvqG1ca8">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="2spd5sl$D6jPfhUUrvNSBT">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+                <Component IfcGuid="2bM16nS211PRcT27W2evLU">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+            </Exceptions>
+        </Visibility>
+        <Coloring/>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>16.587450354818614</X>
+            <Y>-16.499197975783936</Y>
+            <Z>9.38133028821751</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>-0.6658547449859127</X>
+            <Y>0.48425538694449827</Y>
+            <Z>-0.5675686555783183</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-0.45901410774094714</X>
+            <Y>0.3338266431694178</Y>
+            <Z>0.8233260722247416</Z>
+        </CameraUpVector>
+        <FieldOfView>59.99999999999999</FieldOfView>
+        <AspectRatio>2.58739837398374</AspectRatio>
+    </PerspectiveCamera>
+    <Bitmaps/>
+</VisualizationInfo>

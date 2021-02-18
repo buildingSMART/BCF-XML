@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_3_0/Schemas/project.xsd">
+    <Project ProjectId="255491b7-c5a8-43e0-8c95-860f242bd9df">
+        <Name>TestProject</Name>
+    </Project>
+</ProjectInfo>
