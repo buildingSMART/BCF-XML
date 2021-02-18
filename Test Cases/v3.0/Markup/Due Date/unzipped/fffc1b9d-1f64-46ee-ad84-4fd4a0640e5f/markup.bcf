@@ -3,7 +3,7 @@
     <Header>
         <Files/>
     </Header>
-    <Topic Guid="fffc1b9d-1f64-46ee-ad84-4fd4a0640e5f" ServerAssignedId="8" TopicStatus="Open">
+    <Topic Guid="fffc1b9d-1f64-46ee-ad84-4fd4a0640e5f" ServerAssignedId="8" TopicStatus="Open" TopicType="Error">
         <ReferenceLinks/>
         <Title>Issue that needs to be fixed by a certain date</Title>
         <Labels/>
