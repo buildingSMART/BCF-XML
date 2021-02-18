@@ -16,7 +16,9 @@
         <TopicLabel>Engineers</TopicLabel>
     </TopicLabels>
     <Users>
-        <User>tf@dds-cad.de</User>
+        <User>Architect@example.com</User>
+        <User>Engineer@example.com</User>
+        <User>MEPDesigner@example.com</User>
     </Users>
     <Stages>
         <Stage>February</Stage>
