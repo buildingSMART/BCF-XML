@@ -115,8 +115,8 @@
         </xs:sequence>
         <xs:attribute name="Guid" type="Guid" use="required"/>
         <xs:attribute name="ServerAssignedId" type="NonEmptyOrBlankString" use="optional"/>
-        <xs:attribute name="TopicType" type="NonEmptyOrBlankString"/>
-        <xs:attribute name="TopicStatus" type="NonEmptyOrBlankString"/>
+        <xs:attribute name="TopicType" type="NonEmptyOrBlankString" use="required"/>
+        <xs:attribute name="TopicStatus" type="NonEmptyOrBlankString" use="required"/>
     </xs:complexType>
     <xs:complexType name="File">
         <xs:sequence>
@@ -128,8 +128,8 @@
         <xs:attributeGroup ref="FileAttributes"/>
     </xs:complexType>
     <xs:attributeGroup name="FileAttributes">
-        <xs:attribute name="IfcProject" type="IfcGuid"/>
-        <xs:attribute name="IfcSpatialStructureElement" type="IfcGuid"/>
+        <xs:attribute name="IfcProject" type="IfcGuid" use="optional"/>
+        <xs:attribute name="IfcSpatialStructureElement" type="IfcGuid" use="optional"/>
         <xs:attribute name="IsExternal" type="xs:boolean" default="true"/>
     </xs:attributeGroup>
     <!-- Reference to a document inside of the topic folder or a url pointing to the web -->
