@@ -3,7 +3,7 @@
     <Header>
         <Files/>
     </Header>
-    <Topic Guid="a6f801b9-6bf6-4cb9-8b89-1ae24b76074a" ServerAssignedId="3" TopicStatus="Open">
+    <Topic Guid="a6f801b9-6bf6-4cb9-8b89-1ae24b76074a" ServerAssignedId="3" TopicStatus="Open" TopicType="Error">
         <ReferenceLinks/>
         <Title>Related topic B</Title>
         <Labels/>
