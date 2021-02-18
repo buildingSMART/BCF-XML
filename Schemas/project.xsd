@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:include schemaLocation="shared-types.xsd" />
-    <xs:element name="ProjectExtension">
+    <xs:include schemaLocation="shared-types.xsd"/>
+    <xs:element name="ProjectInfo">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="Project" type="Project" minOccurs="0"/>
+                <xs:element name="Project" type="Project"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
