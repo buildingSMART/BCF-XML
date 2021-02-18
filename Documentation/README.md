@@ -115,8 +115,8 @@ Topic node contains reference information of the topic. It has one required attr
 :-----------|:------------|:------------
 Guid | No | Guid of the topic, in lowercase
 ServerAssignedId | Yes | A server controlled, user friendly and project-unique issue identifier. Clients provided values will be disregarded by the server |
-TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
-TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
+TopicType | No | Type of the topic (Predefined list in “extension.xsd”)
+TopicStatus | No | Type of the topic (Predefined list in “extension.xsd”)
 
 **Server Assigned ID**
 
