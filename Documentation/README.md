@@ -24,10 +24,12 @@ Globally Unique Identifier in the IFC data. This format is used only when referr
 A BCF file is a zip containing one folder for each topic with its file extension "bcfzip" for BCFv1.0 and BCFv2.0. The file extension "bcf" is introduced since BCFv2.1.
 The root of the BCF zip contains the following files.
 
+* extensions.xml
+    - An XML file defining the extensions of a project. The schema for this file is extensions.xsd.
 * project.bcfp (optional)
-    - An XML file referencing the extension.xsd to a project. The schema for this file is project.xsd.
+    - An XML file defining the details of a project. The schema for this file is project.xsd.
 * documents.xml (optional)
-    - An XML file referencing the documents in a project. The schema for this file is documents.xsd.
+    - An XML file defining the documents in a project. The schema for this file is documents.xsd.
 * bcf.version
     * An XML file following the version.xsd schema with information of the BCF schema used. The file content should be identical to the contents of [bcf.version](bcf.version "bcf.version")
 
@@ -115,8 +117,8 @@ Topic node contains reference information of the topic. It has one required attr
 :-----------|:------------|:------------
 Guid | No | Guid of the topic, in lowercase
 ServerAssignedId | Yes | A server controlled, user friendly and project-unique issue identifier. Clients provided values will be disregarded by the server |
-TopicType | Yes | Type of the topic (Predefined list in “extension.xsd”)
-TopicStatus | Yes | Type of the topic (Predefined list in “extension.xsd”)
+TopicType | Yes | Type of the topic (Predefined list in “extensions.xml”)
+TopicStatus | Yes | Type of the topic (Predefined list in “extensions.xml”)
 
 **Server Assigned ID**
 
@@ -149,14 +151,14 @@ ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has b
 DueDate | Yes | Date until when the topics issue needs to be resolved.
 AssignedTo | Yes | The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.
 Description | Yes | Description of the topic.
-Stage | Yes | Stage this topic is part of (Predefined list in “extension.xsd”).
+Stage | Yes | Stage this topic is part of (Predefined list in “extensions.xml”).
 
 ### BimSnippet (optional)
 BimSnippet is an additional file containing information related to one or multiple topics. For example, it can be an IFC file containing provisions for voids.
 
  Attribute | Optional | Description |
 :-----------|:------------|:------------
-SnippetType | No | Type of the Snippet (Predefined list in “extension.xsd”)
+SnippetType | No | Type of the Snippet (Predefined list in “extensions.xml”)
 IsExternal | Yes | Is the BimSnippet external or within the bcfzip. <br> (Default = false).
 
  Element | Optional | Description |
