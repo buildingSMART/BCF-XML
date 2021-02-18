@@ -3,7 +3,7 @@
     <Header>
         <Files/>
     </Header>
-    <Topic Guid="e1fff3a6-db0f-48e8-a240-0e2f38b2fc21" ServerAssignedId="827" TopicStatus="Open">
+    <Topic Guid="e1fff3a6-db0f-48e8-a240-0e2f38b2fc21" ServerAssignedId="827" TopicStatus="Open" TopicType="Info">
         <ReferenceLinks/>
         <Title>Single invisible wall</Title>
         <Labels/>
