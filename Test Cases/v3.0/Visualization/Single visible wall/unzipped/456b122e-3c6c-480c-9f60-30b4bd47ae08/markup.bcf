@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup>
+  <Header/>
+  <Topic Guid="456b122e-3c6c-480c-9f60-30b4bd47ae08" ServerAssignedId="4" TopicType="ERROR" TopicStatus="OPEN">
+    <Title>Single visible wall</Title>
+    <CreationDate>2021-02-17T11:03:34.498Z</CreationDate>
+    <CreationAuthor>blackhole@aconex.com</CreationAuthor>
+    <ModifiedDate>2021-02-17T11:03:34.643Z</ModifiedDate>
+    <ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
+    <Description/>
+    <Comments/>
+    <Viewpoints>
+      <ViewPoint Guid="9e913da8-860c-4d48-9d94-ccccc2e1d9ca">
+        <Viewpoint>viewpoint-9e913da8-860c-4d48-9d94-ccccc2e1d9ca.bcfv</Viewpoint>
+        <Snapshot>snapshot-9e913da8-860c-4d48-9d94-ccccc2e1d9ca.png</Snapshot>
+      </ViewPoint>
+    </Viewpoints>
+  </Topic>
+</Markup>
