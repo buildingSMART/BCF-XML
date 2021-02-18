@@ -11,5 +11,12 @@
         <TopicStatus>Closed</TopicStatus>
     </TopicStatuses>
     <Priorities/>
+    <TopicLabels/>
+    <Users>
+        <User>Architect@example.com</User>
+        <User>Engineer@example.com</User>
+        <User>MEPDesigner@example.com</User>
+    </Users>
     <SnippetTypes/>
+    <Stages/>
 </Extensions>
