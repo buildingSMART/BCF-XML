@@ -155,7 +155,7 @@
                             </xs:complexType>
                         </xs:element>
                     </xs:sequence>
-                    <xs:attribute ref="Color"/>
+                    <xs:attribute ref="Color" use="required"/>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
@@ -165,8 +165,7 @@
             <xs:element name="OriginatingSystem" type="NonEmptyOrBlankString" minOccurs="0"/>
             <xs:element name="AuthoringToolId" type="NonEmptyOrBlankString" minOccurs="0"/>
         </xs:sequence>
-        <xs:attribute ref="IfcGuid"/>
-        <!-- ISG Jira Issue BCF-14 -->
+        <xs:attribute ref="IfcGuid" use="optional"/>
     </xs:complexType>
     <xs:attribute name="Color">
         <xs:simpleType>
