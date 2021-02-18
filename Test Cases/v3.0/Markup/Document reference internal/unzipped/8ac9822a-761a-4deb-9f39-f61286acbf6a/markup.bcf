@@ -3,7 +3,7 @@
     <Header>
         <Files/>
     </Header>
-    <Topic Guid="8ac9822a-761a-4deb-9f39-f61286acbf6a" ServerAssignedId="6" TopicStatus="Open" TopicType="Error">
+    <Topic Guid="8ac9822a-761a-4deb-9f39-f61286acbf6a" ServerAssignedId="6" TopicStatus="OPEN" TopicType="ERROR">
         <ReferenceLinks/>
         <Title>Document Reference Internal</Title>
         <Labels/>
