@@ -83,8 +83,6 @@ The project file contains reference information about the project the topics bel
  Element | Optional | Description |
 :-----------|:------------|:------------
 Name | Yes | Name of the project.
-ExtensionSchema| No | URI to the extension schema.
-
 
 
 ## Markup (.bcf) file
@@ -141,15 +139,15 @@ In addition, a topic has the following nodes:
 :-----------|:------------|:------------
 ReferenceLink | Yes | List of references to the topic, for example, a work request management system or an URI to a model.
 Title | No | Title of the topic.
-Priority | Yes | Topic priority. The list of possible values are defined in the extension schema.
+Priority | Yes | Topic priority (Predefined list in “extensions.xml”).
 Index | Yes | Number to maintain the order of the topics. **This property is deprecated and will be removed in a future release.**
-Labels | Yes | Tags for grouping Topics. The list of possible values are defined in the extension schema.
+Labels | Yes | Tags for grouping Topics (Predefined list in “extensions.xml”).
 CreationDate | No | Date when the topic was created.
 CreationAuthor | No | User who created the topic.
 ModifiedDate | Yes | Date when the topic was last modified. Exists only when Topic has been modified after creation.
 ModifiedAuthor | Yes | User who modified the topic. Exists only when Topic has been modified after creation.
 DueDate | Yes | Date until when the topics issue needs to be resolved.
-AssignedTo | Yes | The user to whom this topic is assigned to. Recommended to be in email format. The list of possible values are defined in the extension schema.
+AssignedTo | Yes | The user to whom this topic is assigned to. Recommended to be in email format (Predefined list in “extensions.xml”).
 Description | Yes | Description of the topic.
 Stage | Yes | Stage this topic is part of (Predefined list in “extensions.xml”).
 
