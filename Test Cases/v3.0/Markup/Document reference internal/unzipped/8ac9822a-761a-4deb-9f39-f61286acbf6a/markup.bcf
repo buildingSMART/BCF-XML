@@ -8,7 +8,7 @@
         <Title>Document Reference Internal</Title>
         <Labels/>
         <CreationDate>2021-02-17T09:16:04.160Z</CreationDate>
-        <CreationAuthor>john@doe.de</CreationAuthor>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2021-02-17T09:16:04.160Z</ModifiedDate>
         <AssignedTo>OtherUser@doe.com</AssignedTo>
         <Description></Description>
@@ -22,7 +22,7 @@
         <Comments>
             <Comment Guid="c045ef04-324d-4c36-9ac8-831f2a15c6d6">
                 <Date>2021-02-17T09:16:04.160Z</Date>
-                <Author>john@doe.de</Author>
+                <Author>Architect@example.com</Author>
                 <Comment>A comment</Comment>
                 <Viewpoint Guid="20ad2ff7-ceac-4d4b-b288-ad92a0f65182"/>
             </Comment>
