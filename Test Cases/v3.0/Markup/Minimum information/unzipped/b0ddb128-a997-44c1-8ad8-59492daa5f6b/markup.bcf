@@ -3,7 +3,7 @@
     <Header>
         <Files/>
     </Header>
-    <Topic Guid="b0ddb128-a997-44c1-8ad8-59492daa5f6b" TopicStatus="Open" TopicType="Error">
+    <Topic Guid="b0ddb128-a997-44c1-8ad8-59492daa5f6b" TopicStatus="OPEN" TopicType="ERROR">
         <Title>Minimum information</Title>
         <CreationDate>2021-02-17T09:16:36.674Z</CreationDate>
         <CreationAuthor>Architect@example.com</CreationAuthor>

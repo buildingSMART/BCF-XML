@@ -3,7 +3,7 @@
     <Header>
         <Files/>
     </Header>
-    <Topic Guid="c69c8879-bd4a-4182-a759-f3c8c5b47c94" ServerAssignedId="2" TopicStatus="Open" TopicType="Error">
+    <Topic Guid="c69c8879-bd4a-4182-a759-f3c8c5b47c94" ServerAssignedId="2" TopicStatus="OPEN" TopicType="ERROR">
         <ReferenceLinks/>
         <Title>Related topic</Title>
         <Labels/>
@@ -12,9 +12,7 @@
         <ModifiedDate>2017-05-22T12:11:58.651Z</ModifiedDate>
         <Description></Description>
         <DocumentReferences/>
-        <RelatedTopics>
-            <RelatedTopic Guid="a6f801b9-6bf6-4cb9-8b89-1ae24b76074a"></RelatedTopic>
-        </RelatedTopics>
+        <RelatedTopics/>
         <Comments/>
         <Viewpoints/>
     </Topic>
