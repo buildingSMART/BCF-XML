@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Markup><Header><File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="true"/></Header><Topic Guid="8127b587-2b97-477e-8a82-fb5a2facd171" TopicType="Error" TopicStatus="Open"><Title>default component visibility test</Title><CreationDate>2015-06-09T08:11:54.424Z</CreationDate><CreationAuthor>blackhole@aconex.com</CreationAuthor><ModifiedDate>2015-06-09T08:11:56.626Z</ModifiedDate><ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor></Topic><Comment Guid="9050d65a-6e84-492c-9820-0caeaf2a4ada"><VerbalStatus>Open</VerbalStatus><Status>Error</Status><Date>2015-06-09T08:11:55.797Z</Date><Author>blackhole@aconex.com</Author><Comment>There is a single selected components and no component marked as visible or not visible.</Comment><Topic Guid="8127b587-2b97-477e-8a82-fb5a2facd171"/><Viewpoint Guid="e8d2035a-a30e-40a5-947c-6f0c8f6d8b13"/></Comment><Viewpoints Guid="e8d2035a-a30e-40a5-947c-6f0c8f6d8b13"><Viewpoint>viewpoint.bcfv</Viewpoint><Snapshot>snapshot.png</Snapshot></Viewpoints></Markup>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup>
+	<Header>
+		<File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="true"/>
+	</Header>
+	<Topic Guid="8127b587-2b97-477e-8a82-fb5a2facd171" TopicType="Error" TopicStatus="Open">
+		<Title>default component visibility test</Title>
+		<CreationDate>2015-06-09T08:11:54.424Z</CreationDate>
+		<CreationAuthor>blackhole@aconex.com</CreationAuthor>
+		<ModifiedDate>2015-06-09T08:11:56.626Z</ModifiedDate>
+		<ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
+	</Topic>
+	<Comment Guid="9050d65a-6e84-492c-9820-0caeaf2a4ada">
+		<VerbalStatus>Open</VerbalStatus>
+		<Status>Error</Status>
+		<Date>2015-06-09T08:11:55.797Z</Date>
+		<Author>blackhole@aconex.com</Author>
+		<Comment>There is a single selected components and no component marked as visible or not visible.</Comment>
+		<Topic Guid="8127b587-2b97-477e-8a82-fb5a2facd171"/>
+		<Viewpoint Guid="e8d2035a-a30e-40a5-947c-6f0c8f6d8b13"/>
+	</Comment>
+	<Viewpoints Guid="e8d2035a-a30e-40a5-947c-6f0c8f6d8b13">
+		<Viewpoint>viewpoint.bcfv</Viewpoint>
+		<Snapshot>snapshot.png</Snapshot>
+	</Viewpoints>
+</Markup>

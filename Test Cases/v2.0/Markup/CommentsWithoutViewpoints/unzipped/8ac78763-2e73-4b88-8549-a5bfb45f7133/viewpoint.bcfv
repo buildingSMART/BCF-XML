@@ -1,1 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><VisualizationInfo><Components/><PerspectiveCamera><CameraViewPoint><X>7.991648286369388</X><Y>-28.102597313338926</Y><Z>43.66186175497668</Z></CameraViewPoint><CameraDirection><X>0.017292065307002037</X><Y>0.4056539389169654</Y><Z>-0.9138631551378845</Z></CameraDirection><CameraUpVector><X>0.03892047341755708</X><Y>0.9130339879038033</Y><Z>0.4060223315058307</Z></CameraUpVector><FieldOfView>45.0</FieldOfView></PerspectiveCamera></VisualizationInfo>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo>
+	<Components/>
+	<PerspectiveCamera>
+		<CameraViewPoint>
+			<X>7.991648286369388</X>
+			<Y>-28.102597313338926</Y>
+			<Z>43.66186175497668</Z>
+		</CameraViewPoint>
+		<CameraDirection>
+			<X>0.017292065307002037</X>
+			<Y>0.4056539389169654</Y>
+			<Z>-0.9138631551378845</Z>
+		</CameraDirection>
+		<CameraUpVector>
+			<X>0.03892047341755708</X>
+			<Y>0.9130339879038033</Y>
+			<Z>0.4060223315058307</Z>
+		</CameraUpVector>
+		<FieldOfView>45.0</FieldOfView>
+	</PerspectiveCamera>
+</VisualizationInfo>

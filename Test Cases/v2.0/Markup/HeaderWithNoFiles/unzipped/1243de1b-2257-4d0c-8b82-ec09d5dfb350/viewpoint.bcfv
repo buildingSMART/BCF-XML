@@ -1,1 +1,26 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?><VisualizationInfo><Components><Component IfcGuid="0hm_TZ7fj2wQv5AxxV1KqF" Selected="true" Visible="false"/><Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt" Visible="false"/><Component IfcGuid="1m5wAJelDFdhn6qBdOGjos" Visible="false"/></Components><PerspectiveCamera><CameraViewPoint><X>7.7786197765154945</X><Y>-17.18637762853958</Y><Z>-27.420529388514716</Z></CameraViewPoint><CameraDirection><X>0.022139384653803506</X><Y>-0.022406664154012105</Y><Z>0.9995037714029098</Z></CameraDirection><CameraUpVector><X>0.7025026630882719</X><Y>-0.7109836829369055</Y><Z>-0.03149938017421551</Z></CameraUpVector><FieldOfView>45.0</FieldOfView></PerspectiveCamera></VisualizationInfo>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo>
+	<Components>
+		<Component IfcGuid="0hm_TZ7fj2wQv5AxxV1KqF" Selected="true" Visible="false"/>
+		<Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt" Visible="false"/>
+		<Component IfcGuid="1m5wAJelDFdhn6qBdOGjos" Visible="false"/>
+	</Components>
+	<PerspectiveCamera>
+		<CameraViewPoint>
+			<X>7.7786197765154945</X>
+			<Y>-17.18637762853958</Y>
+			<Z>-27.420529388514716</Z>
+		</CameraViewPoint>
+		<CameraDirection>
+			<X>0.022139384653803506</X>
+			<Y>-0.022406664154012105</Y>
+			<Z>0.9995037714029098</Z>
+		</CameraDirection>
+		<CameraUpVector>
+			<X>0.7025026630882719</X>
+			<Y>-0.7109836829369055</Y>
+			<Z>-0.03149938017421551</Z>
+		</CameraUpVector>
+		<FieldOfView>45.0</FieldOfView>
+	</PerspectiveCamera>
+</VisualizationInfo>
