@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DocumentInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="documents.xsd">
+  <Documents>
+    <Document Guid="b1d1b7f0-60b9-457d-ad12-16e0fb997bc5">
+      <Filename>ThisIsADocument.txt</Filename>
+    </Document>
+  </Documents>
+</DocumentInfo>

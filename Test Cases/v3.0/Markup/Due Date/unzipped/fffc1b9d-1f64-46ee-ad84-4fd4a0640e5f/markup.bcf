@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="fffc1b9d-1f64-46ee-ad84-4fd4a0640e5f" ServerAssignedId="8" TopicStatus="Open" TopicType="Error">
+        <ReferenceLinks/>
+        <Title>Issue that needs to be fixed by a certain date</Title>
+        <Labels/>
+        <CreationDate>2021-02-17T09:25:22.056Z</CreationDate>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
+        <ModifiedDate>2021-02-17T09:25:22.056Z</ModifiedDate>
+        <DueDate>2021-03-15T11:00:00.000Z</DueDate>
+        <AssignedTo>Architect@example.com</AssignedTo>
+        <Description></Description>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments/>
+        <Viewpoints/>
+    </Topic>
+</Markup>

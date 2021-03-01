@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="bee19eb8-3ec0-4e0d-90df-52afc806beaf" ServerAssignedId="4" TopicStatus="Open" TopicType="Error">
+        <ReferenceLinks/>
+        <Title>Labels</Title>
+        <Labels>
+            <Label>Architects</Label>
+        </Labels>
+        <CreationDate>2021-02-17T09:08:17.927Z</CreationDate>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
+        <ModifiedDate>2021-02-17T09:08:17.927Z</ModifiedDate>
+        <Description></Description>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments>
+            <Comment Guid="be7e5ead-6d29-48b1-a634-2a7bdcf11df1">
+                <Date>2021-02-17T09:08:17.927Z</Date>
+                <Author>Architect@example.com</Author>
+                <Comment>Here is a viewpoint also</Comment>
+                <Viewpoint Guid="064ad3a0-f778-4b7a-b928-614ab5e27d90"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="064ad3a0-f778-4b7a-b928-614ab5e27d90">
+                <Viewpoint>Viewpoint_064ad3a0-f778-4b7a-b928-614ab5e27d90.bcfv</Viewpoint>
+                <Snapshot>Snapshot_064ad3a0-f778-4b7a-b928-614ab5e27d90.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>

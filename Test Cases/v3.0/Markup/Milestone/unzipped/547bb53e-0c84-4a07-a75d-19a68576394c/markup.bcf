@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="547bb53e-0c84-4a07-a75d-19a68576394c" ServerAssignedId="9" TopicStatus="Open">
+        <ReferenceLinks/>
+        <Title>Milestone</Title>
+        <Labels/>
+        <CreationDate>2021-02-17T09:27:28.186Z</CreationDate>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
+        <ModifiedDate>2021-02-17T09:27:58.715Z</ModifiedDate>
+        <ModifiedAuthor>Architect@example.com</ModifiedAuthor>
+        <Description></Description>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments>
+            <Comment Guid="c0ea7456-e0cb-4def-b580-085b09b19e0b">
+                <Date>2021-02-17T09:27:28.186Z</Date>
+                <Author>Architect@example.com</Author>
+                <Comment></Comment>
+                <Viewpoint Guid="dfaf354b-e5a4-4208-9c73-1761bd84eae9"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="dfaf354b-e5a4-4208-9c73-1761bd84eae9">
+                <Viewpoint>Viewpoint_dfaf354b-e5a4-4208-9c73-1761bd84eae9.bcfv</Viewpoint>
+                <Snapshot>Snapshot_dfaf354b-e5a4-4208-9c73-1761bd84eae9.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>
