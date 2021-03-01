@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Extensions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="extensions.xsd">
+    <TopicTypes>
+        <TopicType>Error</TopicType>
+        <TopicType>Warning</TopicType>
+        <TopicType>Info</TopicType>
+        <TopicType>Clash</TopicType>
+    </TopicTypes>
+    <TopicStatuses>
+        <TopicStatus>Open</TopicStatus>
+        <TopicStatus>In_progress</TopicStatus>
+        <TopicStatus>Solved</TopicStatus>
+        <TopicStatus>Closed</TopicStatus>
+    </TopicStatuses>
+    <Priorities>
+        <Priority>Low</Priority>
+        <Priority>Medium</Priority>
+        <Priority>High</Priority>
+        <Priority>Critical</Priority>
+    </Priorities>
+    <TopicLabels/>
+    <Users>
+        <User>Architect@example.com</User>
+        <User>Engineer@example.com</User>
+        <User>MEPDesigner@example.com</User>
+    </Users>
+    <SnippetTypes/>
+    <Stages/>
+</Extensions>
