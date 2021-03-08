@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup>
+	<Header>
+		<File IfcProject="2SugUv4EX5LAhcVpDp2dUH" isExternal="true"/>
+	</Header>
+	<Topic Guid="8ac78763-2e73-4b88-8549-a5bfb45f7133" TopicType="Error" TopicStatus="Open">
+		<Title>Comments without a viewpoint</Title>
+		<CreationDate>2015-06-09T08:42:36.513Z</CreationDate>
+		<CreationAuthor>blackhole@aconex.com</CreationAuthor>
+		<ModifiedDate>2015-06-09T08:43:21.851Z</ModifiedDate>
+		<ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
+	</Topic>
+	<Comment Guid="ab0016e8-016c-4bdb-a19f-a1b4957734b1">
+		<Date>2015-06-09T08:42:36.931Z</Date>
+		<Author>blackhole@aconex.com</Author>
+		<Comment>This test case verifies support for comments that don't have a viewpoint</Comment>
+		<Topic Guid="8ac78763-2e73-4b88-8549-a5bfb45f7133"/>
+		<Viewpoint Guid="228cdc2d-18d2-402e-9e1a-a758e0b22ed5"/>
+	</Comment>
+	<Comment Guid="3d56f8d1-149a-4cb5-86df-ec3049648169">
+		<Date>2015-06-09T08:43:02.706Z</Date>
+		<Author>blackhole@aconex.com</Author>
+		<Comment>This is a comment that has no viewpoint</Comment>
+		<Topic Guid="8ac78763-2e73-4b88-8549-a5bfb45f7133"/>
+		<Viewpoint/>
+	</Comment>
+	<Comment Guid="987dbb75-2d91-4c81-8a3c-aabeb5547f09">
+		<VerbalStatus>Open</VerbalStatus>
+		<Status>Error</Status>
+		<Date>2015-06-09T08:43:21.851Z</Date>
+		<Author>blackhole@aconex.com</Author>
+		<Comment>This also is a comment that has no viewpoint</Comment>
+		<Topic Guid="8ac78763-2e73-4b88-8549-a5bfb45f7133"/>
+		<Viewpoint/>
+	</Comment>
+	<Viewpoints Guid="228cdc2d-18d2-402e-9e1a-a758e0b22ed5">
+		<Viewpoint>viewpoint.bcfv</Viewpoint>
+		<Snapshot>snapshot.png</Snapshot>
+	</Viewpoints>
+</Markup>
