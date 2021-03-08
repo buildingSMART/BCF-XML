@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
-    <Components/>
     <PerspectiveCamera>
         <CameraViewPoint>
             <X>-10.145333219159387</X>
@@ -19,7 +18,6 @@
         </CameraUpVector>
         <FieldOfView>60.0</FieldOfView>
     </PerspectiveCamera>
-    <Lines/>
     <Bitmaps>
         <Bitmap>PNG</Bitmap>
         <Reference>3f6ac03e-de8e-4c5e-b3f0-c7bf5f87fe51/bitmaps-d1514fd3-290b-4830-b1fa-5bb780ce9e94-0.png</Reference>

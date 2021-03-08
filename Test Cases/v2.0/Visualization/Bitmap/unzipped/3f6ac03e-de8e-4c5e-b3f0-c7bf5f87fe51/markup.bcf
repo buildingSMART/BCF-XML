@@ -21,7 +21,8 @@ The text is bitmap image</Description>
         <Status>Error</Status>
         <Date>2015-06-09T11:08:49+03:00</Date>
         <Author>rahul.sule</Author>
-        <Comment></Comment>
+		<Comment>Comment text</Comment>
+		<Topic Guid="3f6ac03e-de8e-4c5e-b3f0-c7bf5f87fe51" />
         <ModifiedDate>2015-06-09T11:08:49+03:00</ModifiedDate>
     </Comment>
     <Viewpoints Guid="d1514fd3-290b-4830-b1fa-5bb780ce9e94">

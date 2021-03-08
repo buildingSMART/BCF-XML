@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Markup>
-    <Header />
     <Topic Guid="8bcb4942-a716-4e4f-b699-e1c150a50594" TopicType="Issue" TopicStatus="Active">
         <Title>Perspective view</Title>
         <Priority>Normal</Priority>

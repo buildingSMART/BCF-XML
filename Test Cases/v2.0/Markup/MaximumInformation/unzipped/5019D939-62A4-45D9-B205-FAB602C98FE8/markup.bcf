@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Created with the iabi.BCF library, V1.1.0 at 12.05.2017 12:26. Visit http://iabi.eu to find out more.-->
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Topic Guid="5019D939-62A4-45D9-B205-FAB602C98FE8">
+  <Topic Guid="5019d939-62a4-45d9-b205-fab602c98fe8">
     <Title>Referenced topic</Title>
     <CreationDate>2017-05-12T10:26:20.4410751Z</CreationDate>
     <Description>This is just an empty topic that acts as a referenced topic.</Description>

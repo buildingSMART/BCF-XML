@@ -23,6 +23,4 @@
         </CameraUpVector>
         <FieldOfView>50.0</FieldOfView>
     </PerspectiveCamera>
-    <Lines/>
-    <ClippingPlanes/>
 </VisualizationInfo>

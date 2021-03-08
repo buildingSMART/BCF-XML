@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
-    <Header/>
     <Topic TopicStatus="Open" TopicType="Error" Guid="d83f5842-19ea-4ca9-85bf-03d4b8f504b8">
         <Title>Related topic 2</Title>
         <CreationDate>2015-06-09T08:40:57.301Z</CreationDate>

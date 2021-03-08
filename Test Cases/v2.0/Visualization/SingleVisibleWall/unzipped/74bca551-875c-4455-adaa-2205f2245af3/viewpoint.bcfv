@@ -19,6 +19,6 @@
       <Y>0.22873935586234598</Y>
       <Z>0.97210849620311857</Z>
     </CameraUpVector>
-    <FieldOfView>60.058803523029333</FieldOfView>
+    <FieldOfView>60</FieldOfView>
   </PerspectiveCamera>
 </VisualizationInfo>

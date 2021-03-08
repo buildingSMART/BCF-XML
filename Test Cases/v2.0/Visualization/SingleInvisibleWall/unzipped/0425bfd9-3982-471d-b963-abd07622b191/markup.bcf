@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
-    <Header/>
     <Topic TopicStatus="Open" TopicType="Error" Guid="0425bfd9-3982-471d-b963-abd07622b191">
         <Title>Invisible wall</Title>
         <CreationDate>2015-06-09T07:44:56.717Z</CreationDate>
@@ -15,7 +14,7 @@
         <Comment>Single invisible wall</Comment>
         <Topic Guid="0425bfd9-3982-471d-b963-abd07622b191"/>
     </Comment>
-    <Viewpoints Guid="451f78bf-42f4-425b-afb0-3a957672740f">
+    <Viewpoints Guid="caa3c86e-07b1-46bc-9afc-7fec3b82e64e">
         <Viewpoint>viewpoint.bcfv</Viewpoint>
         <Snapshot>snapshot.png</Snapshot>
     </Viewpoints>
