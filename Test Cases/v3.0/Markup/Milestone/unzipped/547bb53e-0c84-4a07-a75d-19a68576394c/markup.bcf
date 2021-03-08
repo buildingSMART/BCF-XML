@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
     <Header>
-        <Files/>
+        <Files>
+            <File IsExternal="true">
+                <Filename>BCF-ARK</Filename>
+                <Date>2021-01-04T09:37:45.000Z</Date>
+                <Reference>https://bimsync.com/project/f5fbb3c695274d1890036bf64f77eb71/revisions/007afab57f264d2296aae0a452486ae1</Reference>
+            </File>
+            <File IsExternal="true">
+                <Filename>BCF-MEP</Filename>
+                <Date>2017-08-07T09:51:34.000Z</Date>
+                <Reference>https://bimsync.com/project/f5fbb3c695274d1890036bf64f77eb71/revisions/a21ed391f9e046a2bb2bc879c48f1d48</Reference>
+            </File>
+        </Files>
     </Header>
     <Topic Guid="547bb53e-0c84-4a07-a75d-19a68576394c" ServerAssignedId="9" TopicStatus="Open">
         <ReferenceLinks/>
