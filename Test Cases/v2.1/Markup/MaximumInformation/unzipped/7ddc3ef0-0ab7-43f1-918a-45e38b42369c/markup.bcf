@@ -8,7 +8,7 @@
       <Reference>../IfcPile_01.ifc</Reference>
     </File>
   </Header>
-  <Topic Guid="63e78882-7c6a-4bf7-8982-fc478afb9c97" TopicType="Structural" TopicStatus="Open">
+  <Topic Guid="7ddc3ef0-0ab7-43f1-918a-45e38b42369c" TopicType="Structural" TopicStatus="Open">
     <ReferenceLink>https://bim--it.net</ReferenceLink>
     <Title>Maximum Content</Title>
     <Priority>High</Priority>
@@ -35,27 +35,27 @@
       <ReferencedDocument>../markup.xsd</ReferencedDocument>
       <Description>Markup.xsd Schema</Description>
     </DocumentReference>
-    <RelatedTopic Guid="5019D939-62A4-45D9-B205-FAB602C98FE8" />
+    <RelatedTopic Guid="5019d939-62a4-45d9-b205-fab602c98fe8" />
   </Topic>
-  <Comment Guid="780FAE52-C432-42BE-ADEA-FF3E7A8CD8E1">
+  <Comment Guid="07ccdba0-1736-47e1-807d-67dc6f3addaa">
     <Date>2015-08-31T12:40:17Z</Date>
     <Author>dangl@iabi.eu</Author>
     <Comment>This is an unmodified topic at the uppermost hierarchical level.
 All times in the XML are marked as UTC times.</Comment>
   </Comment>
-  <Comment Guid="897E4909-BDF3-4CC7-A283-6506CAFF93DD">
+  <Comment Guid="a12766c2-61bc-40b4-ab19-e9f45fd0b0bf">
     <Date>2015-08-31T14:00:01Z</Date>
     <Author>dangl@iabi.eu</Author>
     <Comment>This comment was a reply to the first comment in BCF v2.0. This is a no longer supported functionality and therefore is to be treated as a regular comment in v2.1.</Comment>
   </Comment>
-  <Comment Guid="39C4B780-1B48-44E5-9802-D359007AA44E">
+  <Comment Guid="c2bb5bb0-773d-45dd-bdaa-19a216439ed3">
     <Date>2015-08-31T13:07:11Z</Date>
     <Author>dangl@iabi.eu</Author>
     <Comment>This comment again is in the highest hierarchy level.
 It references a viewpoint.</Comment>
-    <Viewpoint Guid="8dc86298-9737-40b4-a448-98a9e953293a" />
+    <Viewpoint Guid="4ab7514b-b216-4d56-98d2-45cf8500ff5a" />
   </Comment>
-  <Comment Guid="BD17158C-4267-4433-98C1-904F9B41CA50">
+  <Comment Guid="0b843a5c-c3bf-41ef-be98-52a9f7bd9790">
     <Date>2015-08-31T15:42:58Z</Date>
     <Author>dangl@iabi.eu</Author>
     <Comment>This comment contained some spllng errs.
@@ -63,19 +63,19 @@ Hopefully, the modifier did catch them all.</Comment>
     <ModifiedDate>2015-08-31T16:07:11Z</ModifiedDate>
     <ModifiedAuthor>dangl@iabi.eu</ModifiedAuthor>
   </Comment>
-  <Viewpoints Guid="8dc86298-9737-40b4-a448-98a9e953293a">
-    <Viewpoint>Viewpoint_8dc86298-9737-40b4-a448-98a9e953293a.bcfv</Viewpoint>
-    <Snapshot>Snapshot_8dc86298-9737-40b4-a448-98a9e953293a.png</Snapshot>
+  <Viewpoints Guid="4ab7514b-b216-4d56-98d2-45cf8500ff5a">
+    <Viewpoint>Viewpoint_4ab7514b-b216-4d56-98d2-45cf8500ff5a.bcfv</Viewpoint>
+    <Snapshot>Snapshot_4ab7514b-b216-4d56-98d2-45cf8500ff5a.png</Snapshot>
     <Index>2</Index>
   </Viewpoints>
-  <Viewpoints Guid="21dd4807-e9af-439e-a980-04d913a6b1ce">
-    <Viewpoint>Viewpoint_21dd4807-e9af-439e-a980-04d913a6b1ce.bcfv</Viewpoint>
-    <Snapshot>Snapshot_21dd4807-e9af-439e-a980-04d913a6b1ce.png</Snapshot>
+  <Viewpoints Guid="fc4019d7-365e-47f3-b6d0-b39fc48f15fc">
+    <Viewpoint>Viewpoint_fc4019d7-365e-47f3-b6d0-b39fc48f15fc.bcfv</Viewpoint>
+    <Snapshot>Snapshot_fc4019d7-365e-47f3-b6d0-b39fc48f15fc.png</Snapshot>
     <Index>0</Index>
   </Viewpoints>
-  <Viewpoints Guid="81daa431-bf01-4a49-80a2-1ab07c177717">
-    <Viewpoint>Viewpoint_81daa431-bf01-4a49-80a2-1ab07c177717.bcfv</Viewpoint>
-    <Snapshot>Snapshot_81daa431-bf01-4a49-80a2-1ab07c177717.png</Snapshot>
+  <Viewpoints Guid="9a4a1878-ecbd-4916-83a8-dad82e560231">
+    <Viewpoint>Viewpoint_9a4a1878-ecbd-4916-83a8-dad82e560231.bcfv</Viewpoint>
+    <Snapshot>Snapshot_9a4a1878-ecbd-4916-83a8-dad82e560231.png</Snapshot>
     <Index>1</Index>
   </Viewpoints>
 </Markup>

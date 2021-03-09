@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Created with the iabi.BCF library, V1.1.0 at 22.05.2017 09:51. Visit http://iabi.eu to find out more.-->
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Topic Guid="c26df753-b8af-42f2-b7cf-81a70b49f362">
-    <Title>External BIM Snippet</Title>
+  <Topic Guid="857dd755-c5a8-4474-903f-f865e510f627">
+    <Title>Internal BIM Snippet</Title>
     <Index>0</Index>
     <CreationDate>2015-06-21T12:00:00Z</CreationDate>
     <CreationAuthor>dangl@iabi.eu</CreationAuthor>
-    <Description>This topic has an external BIM Snippet reference</Description>
-    <BimSnippet SnippetType="JSON" isExternal="true">
-      <Reference>http://bimfiles.example.com/JsonElement.json</Reference>
+    <Description>This topic has an internal BIM Snippet reference</Description>
+    <BimSnippet SnippetType="JSON">
+      <Reference>JsonElement.json</Reference>
       <ReferenceSchema>http://json-schema.org</ReferenceSchema>
     </BimSnippet>
   </Topic>

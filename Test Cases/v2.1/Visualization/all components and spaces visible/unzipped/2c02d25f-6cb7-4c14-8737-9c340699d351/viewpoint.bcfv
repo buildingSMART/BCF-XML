@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="visinfo.xsd">
+<VisualizationInfo Guid="6189d9b2-fc81-4e4c-8754-e58248e7b68a" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="visinfo.xsd">
     <Components>
         <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"></ViewSetupHints>
-        <Selection></Selection>
         <Visibility DefaultVisibility="true"></Visibility>
         <Coloring></Coloring>
     </Components>
@@ -24,6 +23,4 @@
         </CameraUpVector>
         <FieldOfView>60.0</FieldOfView>
     </PerspectiveCamera>
-    <Lines/>
-    <ClippingPlanes/>
 </VisualizationInfo>
