@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
-    <Header/>
     <Topic Guid="a3befb7d-8395-4e52-bbca-382fc4198217" TopicType="Error" TopicStatus="Open">
         <Title>Single visible space</Title>
         <CreationDate>2017-05-23T08:34:51.230Z</CreationDate>
@@ -9,19 +8,14 @@
         <Description></Description>
     </Topic>
     <Comment Guid="a6d6a846-4bdf-497f-a0a1-a4049ccdd6eb">
-        <VerbalStatus>Open</VerbalStatus>
-        <Status>Error</Status>
         <Date>2017-05-23T08:34:51.230Z</Date>
         <Author>jon.anders.sollien@catenda.no</Author>
-        <Topic Guid="a3befb7d-8395-4e52-bbca-382fc4198217"/>
+		<Comment>No comment</Comment>
     </Comment>
     <Comment Guid="b5595959-2956-48a8-acbc-fcdd47f78c93">
-        <VerbalStatus>Open</VerbalStatus>
-        <Status>Error</Status>
         <Date>2017-05-23T08:34:51.230Z</Date>
         <Author>jon.anders.sollien@catenda.no</Author>
-        <Comment></Comment>
-        <Topic Guid="a3befb7d-8395-4e52-bbca-382fc4198217"/>
+        <Comment>Some text</Comment>
         <Viewpoint Guid="cd21c8ce-c0b8-4554-b623-2ae1d3798806"/>
     </Comment>
     <Viewpoints Guid="cd21c8ce-c0b8-4554-b623-2ae1d3798806">

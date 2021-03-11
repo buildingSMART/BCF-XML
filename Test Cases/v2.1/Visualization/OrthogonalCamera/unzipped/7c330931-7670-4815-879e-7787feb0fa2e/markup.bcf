@@ -8,15 +8,15 @@
       <Reference>../Estructura.ifc</Reference>
     </File>
   </Header>
-  <Topic Guid="42929e02-f00f-4db8-918e-0fbbc64a45d3">
-    <Title>Component Selection</Title>
+  <Topic Guid="7c330931-7670-4815-879e-7787feb0fa2e">
+    <Title>Orthogonal Camera</Title>
     <Index>0</Index>
     <CreationDate>2015-10-16T12:13:15Z</CreationDate>
     <CreationAuthor>dangl@iabi.eu</CreationAuthor>
-    <Description>This topic has three selected components (as shown in the snapshot). All other components should be displayed with their default settings.</Description>
+    <Description>This topic has a single viewpoint with an orthogonal camera. The viewpoint camera was manually created and should provide a straight view from the center of the coordinate system top down to the model.</Description>
   </Topic>
-  <Viewpoints Guid="817b50b5-f6b2-4e5d-8a37-b692d67cdd91">
-    <Viewpoint>Viewpoint_817b50b5-f6b2-4e5d-8a37-b692d67cdd91.bcfv</Viewpoint>
-    <Snapshot>Snapshot_817b50b5-f6b2-4e5d-8a37-b692d67cdd91.png</Snapshot>
+  <Viewpoints Guid="524faed0-0d90-46cc-846d-369ffe02a8f7">
+    <Viewpoint>Viewpoint_524faed0-0d90-46cc-846d-369ffe02a8f7.bcfv</Viewpoint>
+    <Snapshot>Snapshot_524faed0-0d90-46cc-846d-369ffe02a8f7.png</Snapshot>
   </Viewpoints>
 </Markup>

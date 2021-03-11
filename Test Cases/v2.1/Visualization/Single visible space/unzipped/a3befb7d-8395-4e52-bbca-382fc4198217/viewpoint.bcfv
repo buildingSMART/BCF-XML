@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="visinfo.xsd">
+<VisualizationInfo Guid="4342ff8c-a8af-45bf-bcfc-407a220ac591" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="visinfo.xsd">
     <Components>
-        <Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt" Selected="false" Visible="true">
-            <OriginatingSystem>https://bimsync.com</OriginatingSystem>
-        </Component>
+		<Visibility DefaultVisibility="false">
+			<Exceptions>
+				<Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt" >
+					<OriginatingSystem>https://bimsync.com</OriginatingSystem>
+				</Component>
+			</Exceptions>
+		</Visibility>
     </Components>
     <PerspectiveCamera>
         <CameraViewPoint>
@@ -23,6 +27,4 @@
         </CameraUpVector>
         <FieldOfView>60.0</FieldOfView>
     </PerspectiveCamera>
-    <Lines/>
-    <ClippingPlanes/>
 </VisualizationInfo>

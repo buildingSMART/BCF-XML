@@ -3,7 +3,6 @@
     <Components>
         <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"></ViewSetupHints>
         <Visibility DefaultVisibility="true"></Visibility>
-        <Coloring></Coloring>
     </Components>
     <PerspectiveCamera>
         <CameraViewPoint>
