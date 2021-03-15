@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo Guid="9e913da8-860c-4d48-9d94-ccccc2e1d9ca">
+  <Components>
+    <Selection/>
+    <Visibility DefaultVisibility="false">
+      <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+      <Exceptions>
+        <Component IfcGuid="1XbKhGD91DvhOpYZbhzGTI"/>
+      </Exceptions>
+    </Visibility>
+    <Coloring/>
+  </Components>
+  <OrthogonalCamera>
+    <CameraViewPoint>
+      <X>18.674638207107783</X>
+      <Y>-19.54805982455614</Y>
+      <Z>10.538476791232824</Z>
+    </CameraViewPoint>
+    <CameraDirection>
+      <X>-0.8050867319107056</X>
+      <Y>0.5154458284378052</Y>
+      <Z>-0.29351478815078735</Z>
+    </CameraDirection>
+    <CameraUpVector>
+      <X>-0.24719256162643433</X>
+      <Y>0.15826167166233063</Y>
+      <Z>0.9559545516967773</Z>
+    </CameraUpVector>
+    <ViewToWorldScale>9.673289179801941</ViewToWorldScale>
+    <AspectRatio>1.7777777777777777</AspectRatio>
+  </OrthogonalCamera>
+  <ClippingPlanes/>
+</VisualizationInfo>
