@@ -14,8 +14,8 @@ class Build : NukeBuild
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
-    [PackageExecutable("bcf-tool.CommandLine", "tools/netcoreapp3.1/bcf-tool.dll")] Tool BcfTool;
-    private string BcfToolPath => System.IO.Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("bcf-tool.CommandLine", "tools/netcoreapp3.1/bcf-tool.dll"));
+    [PackageExecutable("bcf-tool.CommandLine", "tools/net5.0/bcf-tool.dll")] Tool BcfTool;
+    private string BcfToolPath => System.IO.Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("bcf-tool.CommandLine", "tools/net5.0/bcf-tool.dll"));
 
     Target CheckTestCases => _ => _
         .Executes(() =>
