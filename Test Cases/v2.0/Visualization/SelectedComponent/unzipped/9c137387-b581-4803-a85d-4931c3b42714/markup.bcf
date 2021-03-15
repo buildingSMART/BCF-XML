@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Markup>
-    <Header />
     <Topic Guid="9c137387-b581-4803-a85d-4931c3b42714" TopicType="Issue" TopicStatus="Active">
         <Title>Front and left wall visible, front wall selected</Title>
         <Priority>Normal</Priority>

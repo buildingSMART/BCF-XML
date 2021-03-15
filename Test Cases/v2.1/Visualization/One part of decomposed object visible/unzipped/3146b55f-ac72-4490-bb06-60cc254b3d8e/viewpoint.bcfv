@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
+<VisualizationInfo Guid="5c0b5748-1bc2-4ce7-b6cb-39e4594617f0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="visinfo.xsd">
     <Components>
         <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
-        <Selection/>
         <Visibility DefaultVisibility="false">
             <Exceptions>
                 <Component IfcGuid="32HeOfyn55zOiSkf6rlfHs">
@@ -10,7 +9,6 @@
                 </Component>
             </Exceptions>
         </Visibility>
-        <Coloring/>
     </Components>
     <PerspectiveCamera>
         <CameraViewPoint>

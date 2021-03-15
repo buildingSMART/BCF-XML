@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Created with the iabi.BCF library, V1.1.0 at 22.05.2017 09:51. Visit http://iabi.eu to find out more.-->
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Header>
+    <File IfcProject="0M6o7Znnv7hxsbWgeu7oQq" IfcSpatialStructureElement="23B$bNeGHFQuMYJzvUX0FD" isExternal="false">
+      <Filename>IfcPile_01.ifc</Filename>
+      <Date>2014-10-27T16:27:27Z</Date>
+      <Reference>../IfcPile_01.ifc</Reference>
+    </File>
+  </Header>
+  <Topic Guid="7ddc3ef0-0ab7-43f1-918a-45e38b42369c" TopicType="Structural" TopicStatus="Open">
+    <ReferenceLink>https://bim--it.net</ReferenceLink>
+    <Title>Maximum Content</Title>
+    <Priority>High</Priority>
+    <Index>0</Index>
+    <Labels>Structural</Labels>
+    <Labels>IT Development</Labels>
+    <CreationDate>2015-06-21T12:00:00Z</CreationDate>
+    <CreationAuthor>dangl@iabi.eu</CreationAuthor>
+    <ModifiedDate>2015-06-21T14:22:47Z</ModifiedDate>
+    <ModifiedAuthor>dangl@iabi.eu</ModifiedAuthor>
+    <DueDate>2016-10-02T14:22:47Z</DueDate>
+    <AssignedTo>linhard@iabi.eu</AssignedTo>
+    <Stage>Construction Start</Stage>
+    <Description>This is a topic with all informations present.</Description>
+    <BimSnippet SnippetType="JSON">
+      <Reference>JsonElement.json</Reference>
+      <ReferenceSchema>http://json-schema.org</ReferenceSchema>
+    </BimSnippet>
+    <DocumentReference isExternal="true">
+      <ReferencedDocument>https://github.com/BuildingSMART/BCF-XML</ReferencedDocument>
+      <Description>GitHub BCF Specification</Description>
+    </DocumentReference>
+    <DocumentReference>
+      <ReferencedDocument>../markup.xsd</ReferencedDocument>
+      <Description>Markup.xsd Schema</Description>
+    </DocumentReference>
+    <RelatedTopic Guid="d1068c81-af04-4546-b63c-348810f6c716" />
+  </Topic>
+  <Comment Guid="07ccdba0-1736-47e1-807d-67dc6f3addaa">
+    <Date>2015-08-31T12:40:17Z</Date>
+    <Author>dangl@iabi.eu</Author>
+    <Comment>This is an unmodified topic at the uppermost hierarchical level.
+All times in the XML are marked as UTC times.</Comment>
+  </Comment>
+  <Comment Guid="a12766c2-61bc-40b4-ab19-e9f45fd0b0bf">
+    <Date>2015-08-31T14:00:01Z</Date>
+    <Author>dangl@iabi.eu</Author>
+    <Comment>This comment was a reply to the first comment in BCF v2.0. This is a no longer supported functionality and therefore is to be treated as a regular comment in v2.1.</Comment>
+  </Comment>
+  <Comment Guid="c2bb5bb0-773d-45dd-bdaa-19a216439ed3">
+    <Date>2015-08-31T13:07:11Z</Date>
+    <Author>dangl@iabi.eu</Author>
+    <Comment>This comment again is in the highest hierarchy level.
+It references a viewpoint.</Comment>
+    <Viewpoint Guid="4ab7514b-b216-4d56-98d2-45cf8500ff5a" />
+  </Comment>
+  <Comment Guid="0b843a5c-c3bf-41ef-be98-52a9f7bd9790">
+    <Date>2015-08-31T15:42:58Z</Date>
+    <Author>dangl@iabi.eu</Author>
+    <Comment>This comment contained some spllng errs.
+Hopefully, the modifier did catch them all.</Comment>
+    <ModifiedDate>2015-08-31T16:07:11Z</ModifiedDate>
+    <ModifiedAuthor>dangl@iabi.eu</ModifiedAuthor>
+  </Comment>
+  <Viewpoints Guid="4ab7514b-b216-4d56-98d2-45cf8500ff5a">
+    <Viewpoint>Viewpoint_4ab7514b-b216-4d56-98d2-45cf8500ff5a.bcfv</Viewpoint>
+    <Snapshot>Snapshot_4ab7514b-b216-4d56-98d2-45cf8500ff5a.png</Snapshot>
+    <Index>2</Index>
+  </Viewpoints>
+  <Viewpoints Guid="fc4019d7-365e-47f3-b6d0-b39fc48f15fc">
+    <Viewpoint>Viewpoint_fc4019d7-365e-47f3-b6d0-b39fc48f15fc.bcfv</Viewpoint>
+    <Snapshot>Snapshot_fc4019d7-365e-47f3-b6d0-b39fc48f15fc.png</Snapshot>
+    <Index>0</Index>
+  </Viewpoints>
+  <Viewpoints Guid="9a4a1878-ecbd-4916-83a8-dad82e560231">
+    <Viewpoint>Viewpoint_9a4a1878-ecbd-4916-83a8-dad82e560231.bcfv</Viewpoint>
+    <Snapshot>Snapshot_9a4a1878-ecbd-4916-83a8-dad82e560231.png</Snapshot>
+    <Index>1</Index>
+  </Viewpoints>
+</Markup>

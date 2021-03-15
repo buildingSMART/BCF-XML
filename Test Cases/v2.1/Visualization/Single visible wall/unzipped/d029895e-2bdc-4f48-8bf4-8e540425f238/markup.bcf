@@ -1,28 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
-    <Header/>
     <Topic Guid="d029895e-2bdc-4f48-8bf4-8e540425f238" TopicType="Error" TopicStatus="Open">
         <Title>Single visible wall</Title>
         <CreationDate>2017-05-23T09:29:22.284Z</CreationDate>
         <CreationAuthor>jon.anders.sollien@catenda.no</CreationAuthor>
         <ModifiedDate>2017-05-23T09:29:22.284Z</ModifiedDate>
         <Description></Description>
-        <RelatedTopics Guid="7c365689-6a65-4e07-bb90-7f834fa595d1"/>
     </Topic>
     <Comment Guid="6c265117-83fd-4850-b576-41502463a8f7">
-        <VerbalStatus>Open</VerbalStatus>
-        <Status>Error</Status>
         <Date>2017-05-23T09:29:22.284Z</Date>
         <Author>jon.anders.sollien@catenda.no</Author>
-        <Topic Guid="d029895e-2bdc-4f48-8bf4-8e540425f238"/>
+		<Comment></Comment>
     </Comment>
     <Comment Guid="9ca4dad3-c05e-4397-8acc-e7271826a495">
-        <VerbalStatus>Open</VerbalStatus>
-        <Status>Error</Status>
         <Date>2017-05-23T09:29:22.284Z</Date>
         <Author>jon.anders.sollien@catenda.no</Author>
         <Comment></Comment>
-        <Topic Guid="d029895e-2bdc-4f48-8bf4-8e540425f238"/>
         <Viewpoint Guid="96604a56-c32d-49a9-9e81-70bc1c961568"/>
     </Comment>
     <Viewpoints Guid="96604a56-c32d-49a9-9e81-70bc1c961568">

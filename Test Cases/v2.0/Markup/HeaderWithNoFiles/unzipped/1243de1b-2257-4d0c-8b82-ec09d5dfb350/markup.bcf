@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup>
-	<Header/>
+	<Header><File /></Header>
 	<Topic Guid="1243de1b-2257-4d0c-8b82-ec09d5dfb350" TopicType="Error" TopicStatus="Open">
 		<Title>header with no files</Title>
 		<CreationDate>2015-06-26T10:10:59.486Z</CreationDate>

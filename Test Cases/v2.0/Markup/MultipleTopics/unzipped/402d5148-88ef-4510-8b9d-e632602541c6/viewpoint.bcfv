@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Components />
   <PerspectiveCamera>
     <CameraViewPoint>
       <X>11.235137255796985</X>
@@ -17,6 +16,6 @@
       <Y>0.65127976060027293</Y>
       <Z>0.74225514661060132</Z>
     </CameraUpVector>
-    <FieldOfView>60.058803523029333</FieldOfView>
+    <FieldOfView>60</FieldOfView>
   </PerspectiveCamera>
 </VisualizationInfo>

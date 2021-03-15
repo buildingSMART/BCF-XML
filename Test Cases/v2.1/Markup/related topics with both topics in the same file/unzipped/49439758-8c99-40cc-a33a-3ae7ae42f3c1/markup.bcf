@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Topic Guid="49439758-8c99-40cc-a33a-3ae7ae42f3c1" TopicType="Error" TopicStatus="Open">
+        <Title>Related topic B</Title>
+        <CreationDate>2017-05-22T12:12:15.621Z</CreationDate>
+        <CreationAuthor>jon.anders.sollien@catenda.no</CreationAuthor>
+        <ModifiedDate>2017-05-22T12:12:15.621Z</ModifiedDate>
+        <Description></Description>
+        <RelatedTopic Guid="c357e96a-cb90-4ed2-888f-44a7c53e8b75"/>
+    </Topic>
+    <Comment Guid="7269cc66-6412-49ef-9ef2-7a116f98c866">
+        <Date>2017-05-22T12:12:15.621Z</Date>
+        <Author>jon.anders.sollien@catenda.no</Author>
+        <Comment></Comment>
+    </Comment>
+    <Comment Guid="da5306a4-b02c-43f9-aeba-602bc4db925a">
+        <Date>2017-05-22T12:12:15.621Z</Date>
+        <Author>jon.anders.sollien@catenda.no</Author>
+        <Comment>#[c357e96a-cb90-4ed2-888f-44a7c53e8b75]</Comment>
+    </Comment>
+</Markup>

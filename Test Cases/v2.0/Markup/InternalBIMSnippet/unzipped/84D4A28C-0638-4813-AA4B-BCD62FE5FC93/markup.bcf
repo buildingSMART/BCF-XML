@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--Created with the iabi.BCF library, V1.1.0 at 12.05.2017 12:26. Visit http://iabi.eu to find out more.-->
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Topic Guid="84D4A28C-0638-4813-AA4B-BCD62FE5FC93">
+  <Topic Guid="84d4a28c-0638-4813-aa4b-bcd62fe5fc93">
     <Title>Internal BIM Snippet</Title>
     <Index>0</Index>
     <CreationDate>2017-05-12T10:26:21.0095895Z</CreationDate>

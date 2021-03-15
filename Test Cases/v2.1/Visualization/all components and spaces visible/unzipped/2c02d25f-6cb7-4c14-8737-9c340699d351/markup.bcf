@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
-    <Header/>
     <Topic Guid="2c02d25f-6cb7-4c14-8737-9c340699d351" TopicType="Error" TopicStatus="Open">
         <Title>Both spaces and components visible</Title>
         <CreationDate>2017-05-23T07:47:09.405Z</CreationDate>
@@ -9,19 +8,14 @@
         <Description></Description>
     </Topic>
     <Comment Guid="82575370-2b8a-4731-a9d9-960b6da7e5fd">
-        <VerbalStatus>Open</VerbalStatus>
-        <Status>Error</Status>
         <Date>2017-05-23T07:47:09.405Z</Date>
         <Author>jon.anders.sollien@catenda.no</Author>
-        <Topic Guid="2c02d25f-6cb7-4c14-8737-9c340699d351"/>
+		<Comment>Some comment</Comment>
     </Comment>
     <Comment Guid="d05376b9-5ad4-488e-b839-4c4d63408c27">
-        <VerbalStatus>Open</VerbalStatus>
-        <Status>Error</Status>
         <Date>2017-05-23T07:47:09.405Z</Date>
         <Author>jon.anders.sollien@catenda.no</Author>
-        <Comment></Comment>
-        <Topic Guid="2c02d25f-6cb7-4c14-8737-9c340699d351"/>
+        <Comment>Some more comment</Comment>
         <Viewpoint Guid="20d8e1e0-7987-4baf-aaa1-e79246f4ca0b"/>
     </Comment>
     <Viewpoints Guid="20d8e1e0-7987-4baf-aaa1-e79246f4ca0b">

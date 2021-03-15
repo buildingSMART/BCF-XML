@@ -8,7 +8,7 @@
       <Reference>../IfcPile_01.ifc</Reference>
     </File>
   </Header>
-  <Topic Guid="63E78882-7C6A-4BF7-8982-FC478AFB9C97" TopicType="Structural" TopicStatus="Open">
+  <Topic Guid="63e78882-7c6a-4bf7-8982-fc478afb9c97" TopicType="Structural" TopicStatus="Open">
     <ReferenceLink>https://bim--it.net</ReferenceLink>
     <Title>Maximum Content</Title>
     <Priority>High</Priority>
@@ -35,38 +35,42 @@
     </DocumentReferences>
     <RelatedTopics Guid="5019D939-62A4-45D9-B205-FAB602C98FE8" />
   </Topic>
-  <Comment Guid="780FAE52-C432-42BE-ADEA-FF3E7A8CD8E1">
+  <Comment Guid="780fae52-c432-42be-adea-ff3e7a8cd8e1">
     <VerbalStatus>Open</VerbalStatus>
     <Status>Open</Status>
     <Date>2015-08-31T12:40:17Z</Date>
     <Author>dangl@iabi.eu</Author>
     <Comment>This is an unmodified topic at the uppermost hierarchical level.
 All times in the XML are marked as UTC times.</Comment>
+    <Topic Guid="63e78882-7c6a-4bf7-8982-fc478afb9c97" /> 
   </Comment>
-  <Comment Guid="897E4909-BDF3-4CC7-A283-6506CAFF93DD">
+  <Comment Guid="897e4909-bdf3-4cc7-a283-6506caff93dd">
     <VerbalStatus>Open</VerbalStatus>
     <Status>Open</Status>
     <Date>2015-08-31T14:00:01Z</Date>
     <Author>dangl@iabi.eu</Author>
     <Comment>This comment is a reply to the first comment, therefore it should be displayed on the second level.</Comment>
-    <ReplyToComment Guid="780FAE52-C432-42BE-ADEA-FF3E7A8CD8E1" />
+    <Topic Guid="63e78882-7c6a-4bf7-8982-fc478afb9c97" /> 	
+    <ReplyToComment Guid="780fae52-c432-42be-adea-ff3e7a8cd8e1" />
   </Comment>
-  <Comment Guid="39C4B780-1B48-44E5-9802-D359007AA44E">
+  <Comment Guid="39c4b780-1b48-44e5-9802-d359007aa44e">
     <VerbalStatus>Open</VerbalStatus>
     <Status>Open</Status>
     <Date>2015-08-31T13:07:11Z</Date>
     <Author>dangl@iabi.eu</Author>
     <Comment>This comment again is in the highest hierarchy level.
 It references a viewpoint.</Comment>
+    <Topic Guid="63e78882-7c6a-4bf7-8982-fc478afb9c97" /> 
     <Viewpoint Guid="8dc86298-9737-40b4-a448-98a9e953293a" />
   </Comment>
-  <Comment Guid="BD17158C-4267-4433-98C1-904F9B41CA50">
+  <Comment Guid="bd17158c-4267-4433-98c1-904f9b41ca50">
     <VerbalStatus>Closed</VerbalStatus>
     <Status>Closed</Status>
     <Date>2015-08-31T15:42:58Z</Date>
     <Author>dangl@iabi.eu</Author>
     <Comment>This comment contained some spllng errs.
 Hopefully, the modifier did catch them all.</Comment>
+    <Topic Guid="63e78882-7c6a-4bf7-8982-fc478afb9c97" /> 
     <ModifiedDate>2015-08-31T16:07:11Z</ModifiedDate>
     <ModifiedAuthor>dangl@iabi.eu</ModifiedAuthor>
   </Comment>
