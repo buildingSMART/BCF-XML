@@ -248,6 +248,57 @@ The visibility is applied in following order:
 2. Apply the `ViewSetupHints`
 3. Apply the `Exceptions`
 
+###### Example
+
+Consider the viewpoint provided below.
+1. Applying `DefaultVisibility="false"` hides all objects
+2. Applying `SpacesVisible="true"` shows all spaces
+3. Applying Exceptions:
+> 1. Inverting the Wall visibility makes it visible
+> 2. Interting the Space visibility makes it invisible 
+
+In summary, after applying the following viewpoint:
+1. All spaces are visible except one space which is hidden
+2. All the other objects are hidden except for one wall which is visible 
+
+``` xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo Guid="9e913da8-860c-4d48-9d94-ccccc2e1d9ca">
+  <Components>
+    <Selection/>
+    <Visibility DefaultVisibility="false">
+      <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+      <Exceptions>
+        <Component IfcGuid="1XbKhGD91DvhOpYZbhzGTI"/> <!-- Wall -->
+        <Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt"/> <!-- Space -->
+      </Exceptions>
+    </Visibility>
+    <Coloring/>
+  </Components>
+  <OrthogonalCamera>
+    <CameraViewPoint>
+      <X>18.674638207107783</X>
+      <Y>-19.54805982455614</Y>
+      <Z>10.538476791232824</Z>
+    </CameraViewPoint>
+    <CameraDirection>
+      <X>-0.8050867319107056</X>
+      <Y>0.5154458284378052</Y>
+      <Z>-0.29351478815078735</Z>
+    </CameraDirection>
+    <CameraUpVector>
+      <X>-0.24719256162643433</X>
+      <Y>0.15826167166233063</Y>
+      <Z>0.9559545516967773</Z>
+    </CameraUpVector>
+    <ViewToWorldScale>9.673289179801941</ViewToWorldScale>
+    <AspectRatio>1.7777777777777777</AspectRatio>
+  </OrthogonalCamera>
+  <ClippingPlanes/>
+</VisualizationInfo>
+```
+
+
 #### Coloring
 The `Coloring` element allows specifying the color of components. For each color a list of components to be displayed with the that color should be provided.
 
