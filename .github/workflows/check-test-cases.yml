@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "Test Cases/**"
+      - "Schemas/**"
 
 jobs:
   check-test-cases:
