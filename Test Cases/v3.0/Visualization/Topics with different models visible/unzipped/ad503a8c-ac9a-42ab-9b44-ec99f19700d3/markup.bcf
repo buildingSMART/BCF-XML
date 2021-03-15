@@ -16,14 +16,12 @@
         <CreationDate>2021-03-15T11:11:30.523+01:00</CreationDate>
         <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2021-03-15T11:11:30.523+01:00</ModifiedDate>
-        <Description></Description>
         <DocumentReferences/>
         <RelatedTopics/>
         <Comments>
             <Comment Guid="d398c10e-1b71-40bc-8b17-1db0caf68df2">
                 <Date>2021-03-15T11:11:30.523+01:00</Date>
                 <Author>Architect@example.com</Author>
-                <Comment></Comment>
                 <Viewpoint Guid="53ea08d5-9f7b-4b64-a5b0-57555536cc3f"/>
             </Comment>
         </Comments>
