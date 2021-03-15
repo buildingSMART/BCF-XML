@@ -1,0 +1,8 @@
+
+build/bin/
+
+build/obj/
+
+.vscode/
+
+.tmp/

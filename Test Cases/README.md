@@ -17,3 +17,13 @@ The test cases are divided in the following folders depending on their primary f
 
 Each test case has a folder adjacent to it with the same name as the _.bcf / .bcfzip_ file. This folder contains the
 unzipped content of the BCF zip archive.
+
+## Automated Checking
+
+This repository includes a tool that runs automatic checks against all test cases in the `Test Cases` folder. To run this tool, run the following command in a shell on the root level of this repository:
+
+    ./build.cmd CheckTestCases
+
+The command will work on any operating system, but first runs might take a few minutes to download required dependencies. Errors will be logged to the console output.
+
+Claudio Benghi (@CBenghi) wrote the tool that checks the test cases. It is available at: https://github.com/CBenghi/bcf-tool
