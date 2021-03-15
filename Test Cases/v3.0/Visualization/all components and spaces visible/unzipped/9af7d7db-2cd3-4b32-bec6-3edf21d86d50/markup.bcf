@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup>
+    <Header>
+      <Files>
+        <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" IsExternal="true">
+          <Filename>Architectural.ifc</Filename>
+          <Date>2021-03-09T09:39:06.000Z</Date>
+        </File>
+        <File IfcProject="2TaLqCNHvEn9_7cUVrypdX" IsExternal="true">
+          <Filename>MEP.ifc</Filename>
+          <Date>2021-03-09T10:34:38.000Z</Date>
+        </File>
+      </Files>
+    </Header>	
+    <Topic Guid="9af7d7db-2cd3-4b32-bec6-3edf21d86d50" ServerAssignedId="1" TopicType="INFORMATION" TopicStatus="OPEN">
+    <Title>All Components And Spaces Visible</Title>
+    <CreationDate>2021-02-17T09:29:27.888Z</CreationDate>
+    <CreationAuthor>blackhole@aconex.com</CreationAuthor>
+    <ModifiedDate>2021-02-17T09:29:28.211Z</ModifiedDate>
+    <ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
+    <Description>All Components And Spaces Visible</Description>
+    <DocumentReferences/>
+    <RelatedTopics/>
+    <Comments/>
+    <Viewpoints>
+      <ViewPoint Guid="bb62a667-15a1-4942-a372-12ad9519994d">
+        <Viewpoint>viewpoint-bb62a667-15a1-4942-a372-12ad9519994d.bcfv</Viewpoint>
+        <Snapshot>snapshot-bb62a667-15a1-4942-a372-12ad9519994d.png</Snapshot>
+      </ViewPoint>
+    </Viewpoints>
+  </Topic>
+</Markup>
+

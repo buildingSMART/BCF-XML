@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Extensions>
+    <TopicTypes>
+		<TopicType>ERROR</TopicType>
+		<TopicType>WARNING</TopicType>
+		<TopicType>INFORMATION</TopicType>
+		<TopicType>CLASH</TopicType>
+		<TopicType>OTHER</TopicType>
+    </TopicTypes>
+    <TopicStatuses>
+		<TopicStatus>OPEN</TopicStatus>
+		<TopicStatus>IN_PROGRESS</TopicStatus>
+		<TopicStatus>SOLVED</TopicStatus>
+		<TopicStatus>CLOSED</TopicStatus>
+    </TopicStatuses>
+    <Priorities>
+		<Priority>LOW</Priority>
+		<Priority>MEDIUM</Priority>
+		<Priority>HIGH</Priority>
+		<Priority>CRITICAL</Priority>
+    </Priorities>
+    <TopicLabels/>
+    <Users>
+        <User>Architect@example.com</User>
+        <User>Engineer@example.com</User>
+        <User>MEPDesigner@example.com</User>
+    </Users>
+    <SnippetTypes/>
+    <Stages/>
+</Extensions>
