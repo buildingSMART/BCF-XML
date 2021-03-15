@@ -14,7 +14,7 @@
             </File>
         </Files>
     </Header>
-    <Topic Guid="547bb53e-0c84-4a07-a75d-19a68576394c" ServerAssignedId="9" TopicStatus="Open">
+    <Topic Guid="547bb53e-0c84-4a07-a75d-19a68576394c" ServerAssignedId="9" TopicStatus="Open" TopicType="Error">
         <ReferenceLinks/>
         <Title>Milestone</Title>
         <Labels/>
@@ -22,14 +22,14 @@
         <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2021-02-17T09:27:58.715Z</ModifiedDate>
         <ModifiedAuthor>Architect@example.com</ModifiedAuthor>
-        <Description></Description>
+        <Stage>February</Stage>
+        <Description>This topic has a milestone</Description>
         <DocumentReferences/>
         <RelatedTopics/>
         <Comments>
             <Comment Guid="c0ea7456-e0cb-4def-b580-085b09b19e0b">
                 <Date>2021-02-17T09:27:28.186Z</Date>
                 <Author>Architect@example.com</Author>
-                <Comment></Comment>
                 <Viewpoint Guid="dfaf354b-e5a4-4208-9c73-1761bd84eae9"/>
             </Comment>
         </Comments>
