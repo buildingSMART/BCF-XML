@@ -27,5 +27,7 @@
     <FieldOfView>35.98339777135764</FieldOfView>
     <AspectRatio>1.7777777777777777</AspectRatio>
   </PerspectiveCamera>
+  <Lines/>
   <ClippingPlanes/>
+  <Bitmaps/>
 </VisualizationInfo>
