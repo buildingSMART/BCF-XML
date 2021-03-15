@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup>
-  <Header/>
+  <Header>
+    <Files>
+      <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" IsExternal="true">
+        <Filename>Architectural.ifc</Filename>
+        <Date>2021-03-09T09:39:06.000Z</Date>
+      </File>
+      <File IfcProject="2TaLqCNHvEn9_7cUVrypdX" IsExternal="true">
+        <Filename>MEP.ifc</Filename>
+        <Date>2021-03-09T10:34:38.000Z</Date>
+      </File>
+    </Files>
+  </Header>	
   <Topic Guid="456b122e-3c6c-480c-9f60-30b4bd47ae08" ServerAssignedId="4" TopicType="ERROR" TopicStatus="OPEN">
     <Title>Single visible wall</Title>
     <CreationDate>2021-02-17T11:03:34.498Z</CreationDate>
     <CreationAuthor>blackhole@aconex.com</CreationAuthor>
     <ModifiedDate>2021-02-17T11:03:34.643Z</ModifiedDate>
     <ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
-    <Description/>
+    <Description>Single Visible Wall</Description>
+    <DocumentReferences/>
+    <RelatedTopics/>    
     <Comments/>
     <Viewpoints>
       <ViewPoint Guid="9e913da8-860c-4d48-9d94-ccccc2e1d9ca">
