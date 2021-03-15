@@ -34,5 +34,7 @@
     <ViewToWorldScale>18.97427487373352</ViewToWorldScale>
     <AspectRatio>1.7777777777777777</AspectRatio>
   </OrthogonalCamera>
+  <Lines/>
   <ClippingPlanes/>
+  <Bitmaps/>
 </VisualizationInfo>

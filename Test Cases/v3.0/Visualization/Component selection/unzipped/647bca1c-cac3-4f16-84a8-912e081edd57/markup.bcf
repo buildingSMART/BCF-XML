@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Markup>
-  <Header/>
+  <Header>
+    <Files>
+  	  <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" IsExternal="true">
+  	  <Filename>Architectural.ifc</Filename>
+  	  <Date>2021-03-09T09:39:06.000Z</Date>
+  	  </File>
+  	  <File IfcProject="2TaLqCNHvEn9_7cUVrypdX" IsExternal="true">
+  	  <Filename>MEP.ifc</Filename>
+  	  <Date>2021-03-09T10:34:38.000Z</Date>
+  	  </File>
+    </Files>
+  </Header>	
   <Topic Guid="647bca1c-cac3-4f16-84a8-912e081edd57" ServerAssignedId="2" TopicType="WARNING" TopicStatus="OPEN">
     <Title>Component Selection</Title>
     <CreationDate>2021-02-17T10:14:27.064Z</CreationDate>
@@ -8,6 +19,8 @@
     <ModifiedDate>2021-02-17T10:14:27.317Z</ModifiedDate>
     <ModifiedAuthor>blackhole@aconex.com</ModifiedAuthor>
     <Description>Exactly three components are selected</Description>
+	<DocumentReferences />
+	<RelatedTopics />
     <Comments/>
     <Viewpoints>
       <ViewPoint Guid="7b2c1bf5-5854-433d-8136-981c957ed910">
