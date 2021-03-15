@@ -20,6 +20,6 @@ class Build : NukeBuild
     Target CheckTestCases => _ => _
         .Executes(() =>
         {
-            BcfTool($"check -q -r v3.0 {RootDirectory}", workingDirectory: BcfToolPath);
+            BcfTool($"check -q -r v3.0 \"{RootDirectory}\"", workingDirectory: BcfToolPath);
         });
 }
