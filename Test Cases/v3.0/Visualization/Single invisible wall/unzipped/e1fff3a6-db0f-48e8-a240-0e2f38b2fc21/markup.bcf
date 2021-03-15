@@ -3,21 +3,19 @@
     <Header>
         <Files/>
     </Header>
-    <Topic Guid="e1fff3a6-db0f-48e8-a240-0e2f38b2fc21" ServerAssignedId="827" TopicStatus="Open" TopicType="Info">
+    <Topic Guid="d5121f1c-11e0-4f25-9d23-7ace76853a8f" ServerAssignedId="827" TopicStatus="Open" TopicType="Info">
         <ReferenceLinks/>
         <Title>Single invisible wall</Title>
         <Labels/>
         <CreationDate>2017-05-22T09:48:06.902Z</CreationDate>
         <CreationAuthor>jon.anders.sollien@catenda.no</CreationAuthor>
         <ModifiedDate>2017-05-22T09:48:06.902Z</ModifiedDate>
-        <Description></Description>
         <DocumentReferences/>
         <RelatedTopics/>
         <Comments>
             <Comment Guid="5d1463e3-c6b1-4867-9b32-046461e81bb5">
                 <Date>2017-05-22T09:48:06.902Z</Date>
                 <Author>jon.anders.sollien@catenda.no</Author>
-                <Comment></Comment>
                 <Viewpoint Guid="194f2ccb-9526-4f41-bfe0-635397a79873"/>
             </Comment>
         </Comments>
