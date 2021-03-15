@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="project.xsd">
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_3_0/Schemas/project.xsd">
     <Project ProjectId="147ec8fd-70d9-412a-9e35-abda1fdf24c0">
         <Name>Visualization BCF3.0</Name>
     </Project>
