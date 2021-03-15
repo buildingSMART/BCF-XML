@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_3_0/Schemas/markup.xsd">
+    <Header>
+        <Files>
+            <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" IsExternal="true">
+                <Filename>C:\e.ifc</Filename>
+                <Date>2015-06-09T09:39:06+03:00</Date>
+            </File>
+        </Files>
+    </Header>
+    <Topic Guid="28942812-8783-4d92-9c54-8a8f31937975" TopicType="ERROR" TopicStatus="OPEN">
+        <ReferenceLinks/>
+        <Title>All components except one plate visible</Title>
+        <Index>1</Index>
+        <Labels/>
+        <CreationDate>2017-05-23T11:25:28+03:00</CreationDate>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
+        <ModifiedDate>2017-05-23T11:26:04+03:00</ModifiedDate>
+        <ModifiedAuthor>Architect@example.com</ModifiedAuthor>
+        <AssignedTo></AssignedTo>
+        <Description>All components of a curtain wall except one plate visible</Description>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments/>
+        <Viewpoints>
+            <ViewPoint Guid="1605cfd7-f798-4e4f-b6c3-18562ad6df13">
+                <Viewpoint>1605cfd7-f798-4e4f-b6c3-18562ad6df13.bcfv</Viewpoint>
+                <Snapshot>1605cfd7-f798-4e4f-b6c3-18562ad6df13.png</Snapshot>
+                <Index>0</Index>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>
