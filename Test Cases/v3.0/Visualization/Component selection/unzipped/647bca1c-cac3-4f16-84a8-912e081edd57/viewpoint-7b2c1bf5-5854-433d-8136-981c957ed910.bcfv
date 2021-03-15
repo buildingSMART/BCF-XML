@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo Guid="7b2c1bf5-5854-433d-8136-981c957ed910">
+  <Components>
+    <Selection>
+      <Component IfcGuid="0KkZ20so9BsO1d1hFcfLOl"/>
+      <Component IfcGuid="1XbKhGD91DvhOpYZbhzGTI"/>
+      <Component IfcGuid="3D9pjHJ0HCnggyepvsht8s"/>
+    </Selection>
+    <Visibility DefaultVisibility="true">
+      <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+      <Exceptions>
+        <Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt"/>
+        <Component IfcGuid="1m5wAJelDFdhn6qBdOGjos"/>
+      </Exceptions>
+    </Visibility>
+    <Coloring/>
+  </Components>
+  <OrthogonalCamera>
+    <CameraViewPoint>
+      <X>9.061518529355535</X>
+      <Y>-39.13140881031754</Y>
+      <Z>37.183202420175064</Z>
+    </CameraViewPoint>
+    <CameraDirection>
+      <X>0.08950452506542206</X>
+      <Y>0.6515632271766663</Y>
+      <Z>-0.7532956004142761</Z>
+    </CameraDirection>
+    <CameraUpVector>
+      <X>0.10251666605472565</X>
+      <Y>0.7462871670722961</Y>
+      <Z>0.6576820611953735</Z>
+    </CameraUpVector>
+    <ViewToWorldScale>18.97427487373352</ViewToWorldScale>
+    <AspectRatio>1.7777777777777777</AspectRatio>
+  </OrthogonalCamera>
+  <Lines/>
+  <ClippingPlanes/>
+  <Bitmaps/>
+</VisualizationInfo>
