@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Guid="4028120e-91f7-435c-bf3c-4aaf97b8a1d1" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_3_0/Schemas/visinfo.xsd">
+    <Components>
+        <Selection/>
+        <Visibility DefaultVisibility="false">
+            <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+            <Exceptions>
+                <Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt">
+                    <OriginatingSystem>Allplan</OriginatingSystem>
+                </Component>
+            </Exceptions>
+        </Visibility>
+        <Coloring/>
+    </Components>
+    <PerspectiveCamera>
+        <CameraViewPoint>
+            <X>17.673731454433497</X>
+            <Y>-19.632777681169216</Y>
+            <Z>14.666616488555475</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>-0.350088845302548</X>
+            <Y>0.6303022991023318</Y>
+            <Z>-0.6929334832009805</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-0.3364601560545018</X>
+            <Y>0.6057651158071284</Y>
+            <Z>0.7210015172376246</Z>
+        </CameraUpVector>
+        <FieldOfView>56.0</FieldOfView>
+        <AspectRatio>1.4694783573806882</AspectRatio>
+    </PerspectiveCamera>
+    <Bitmaps/>
+</VisualizationInfo>

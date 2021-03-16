@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Guid="a1bdeab5-bfa6-48b5-b0b3-de08f3fe7128" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_3_0/Schemas/visinfo.xsd">
+    <Components>
+        <Selection/>
+        <Visibility DefaultVisibility="true">
+            <ViewSetupHints SpacesVisible="false" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+            <Exceptions/>
+        </Visibility>
+        <Coloring/>
+    </Components>
+    <OrthogonalCamera>
+        <CameraViewPoint>
+            <X>9.928923736113727</X>
+            <Y>-12.825000000000015</Y>
+            <Z>31.784224509439586</Z>
+        </CameraViewPoint>
+        <CameraDirection>
+            <X>0.0</X>
+            <Y>0.0</Y>
+            <Z>-1.0</Z>
+        </CameraDirection>
+        <CameraUpVector>
+            <X>-1.0</X>
+            <Y>0.0</Y>
+            <Z>0.0</Z>
+        </CameraUpVector>
+        <ViewToWorldScale>12.079612252278443</ViewToWorldScale>
+        <AspectRatio>1.4694783573806882</AspectRatio>
+    </OrthogonalCamera>
+    <Bitmaps/>
+</VisualizationInfo>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/buildingSMART/BCF-XML/release_3_0/Schemas/markup.xsd">
+    <Header>
+        <Files>
+            <File IfcProject="2SugUv4EX5LAhcVpDp2dUH" IsExternal="true">
+                <Filename>C:\e.ifc</Filename>
+                <Date>2015-06-09T09:39:06+03:00</Date>
+            </File>
+            <File IfcProject="2TaLqCNHvEn9_7cUVrypdX" IsExternal="true">
+                <Filename>IFC BCF MEP.ifc</Filename>
+                <Date>2015-06-09T10:34:38+03:00</Date>
+            </File>
+        </Files>
+    </Header>
+    <Topic Guid="793a5f9f-788e-46e4-b484-9c44d3061577" TopicType="ERROR" TopicStatus="OPEN">
+        <ReferenceLinks/>
+        <Title>Orthogonal Camera</Title>
+        <Index>0</Index>
+        <Labels/>
+        <CreationDate>2021-02-17T11:35:54+02:00</CreationDate>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
+        <ModifiedDate>2021-02-17T11:36:57+02:00</ModifiedDate>
+        <ModifiedAuthor>Architect@example.com</ModifiedAuthor>
+        <AssignedTo>Architect@example.com</AssignedTo>
+        <Description>This topic has a single viewpoint with an orthogonal camera. The viewpoint camera was manually created and should provide a straight view from the center of the coordinate system top down to the model.</Description>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments/>
+        <Viewpoints>
+            <ViewPoint Guid="a1bdeab5-bfa6-48b5-b0b3-de08f3fe7128">
+                <Viewpoint>a1bdeab5-bfa6-48b5-b0b3-de08f3fe7128.bcfv</Viewpoint>
+                <Snapshot>a1bdeab5-bfa6-48b5-b0b3-de08f3fe7128.png</Snapshot>
+                <Index>0</Index>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>
