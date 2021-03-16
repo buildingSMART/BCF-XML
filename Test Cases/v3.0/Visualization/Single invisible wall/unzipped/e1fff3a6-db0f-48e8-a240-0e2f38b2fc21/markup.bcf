@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files/>
+    </Header>
+    <Topic Guid="d5121f1c-11e0-4f25-9d23-7ace76853a8f" ServerAssignedId="827" TopicStatus="Open" TopicType="Info">
+        <ReferenceLinks/>
+        <Title>Single invisible wall</Title>
+        <Labels/>
+        <CreationDate>2017-05-22T09:48:06.902Z</CreationDate>
+        <CreationAuthor>jon.anders.sollien@catenda.no</CreationAuthor>
+        <ModifiedDate>2017-05-22T09:48:06.902Z</ModifiedDate>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments>
+            <Comment Guid="5d1463e3-c6b1-4867-9b32-046461e81bb5">
+                <Date>2017-05-22T09:48:06.902Z</Date>
+                <Author>jon.anders.sollien@catenda.no</Author>
+                <Viewpoint Guid="194f2ccb-9526-4f41-bfe0-635397a79873"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="194f2ccb-9526-4f41-bfe0-635397a79873">
+                <Viewpoint>Viewpoint_194f2ccb-9526-4f41-bfe0-635397a79873.bcfv</Viewpoint>
+                <Snapshot>Snapshot_194f2ccb-9526-4f41-bfe0-635397a79873.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>
