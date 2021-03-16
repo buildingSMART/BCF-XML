@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
     <RootNamespace></RootNamespace>
     <NoWarn>CS0649;CS0169</NoWarn>
     <NukeRootDirectory>..</NukeRootDirectory>
@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Nuke.Common" Version="5.0.2" />
-    <PackageDownload Include="bcf-tool.CommandLine" Version="[1.0.5]" />
+    <PackageDownload Include="bcf-tool.CommandLine" Version="[1.0.6]" />
   </ItemGroup>
 
 </Project>
