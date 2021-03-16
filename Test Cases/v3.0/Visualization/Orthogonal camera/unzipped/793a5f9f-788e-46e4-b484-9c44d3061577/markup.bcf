@@ -21,7 +21,7 @@
         <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2021-02-17T11:36:57+02:00</ModifiedDate>
         <ModifiedAuthor>Architect@example.com</ModifiedAuthor>
-        <AssignedTo></AssignedTo>
+        <AssignedTo>Architect@example.com</AssignedTo>
         <Description>This topic has a single viewpoint with an orthogonal camera. The viewpoint camera was manually created and should provide a straight view from the center of the coordinate system top down to the model.</Description>
         <DocumentReferences/>
         <RelatedTopics/>
