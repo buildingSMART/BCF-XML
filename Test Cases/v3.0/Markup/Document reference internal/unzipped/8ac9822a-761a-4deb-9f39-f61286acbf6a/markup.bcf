@@ -22,7 +22,6 @@
         <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2021-02-17T09:16:04.160Z</ModifiedDate>
         <AssignedTo>OtherUser@doe.com</AssignedTo>
-        <Description></Description>
         <DocumentReferences>
             <DocumentReference Guid="048e898f-555f-47c3-a273-6c664fb2ef69">
                 <DocumentGuid>b1d1b7f0-60b9-457d-ad12-16e0fb997bc5</DocumentGuid>

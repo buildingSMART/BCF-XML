@@ -8,7 +8,7 @@
             </File>
         </Files>
     </Header>
-    <Topic Guid="28942812-8783-4d92-9c54-8a8f31937975" TopicType="ERROR" TopicStatus="OPEN">
+    <Topic Guid="6e9a9f2f-263c-4358-815e-87baf9c7df15" TopicType="ERROR" TopicStatus="OPEN">
         <ReferenceLinks/>
         <Title>All components except one plate visible</Title>
         <Index>1</Index>
@@ -17,7 +17,6 @@
         <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2017-05-23T11:26:04+03:00</ModifiedDate>
         <ModifiedAuthor>Architect@example.com</ModifiedAuthor>
-        <AssignedTo></AssignedTo>
         <Description>All components of a curtain wall except one plate visible</Description>
         <DocumentReferences/>
         <RelatedTopics/>

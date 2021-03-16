@@ -8,7 +8,7 @@
             </File>
         </Files>
     </Header>
-    <Topic Guid="a3befb7d-8395-4e52-bbca-382fc4198217" TopicType="ERROR" TopicStatus="OPEN">
+    <Topic Guid="aeb8d729-ec2f-4f46-aa9e-e7a9f15582b0" TopicType="ERROR" TopicStatus="OPEN">
         <ReferenceLinks/>
         <Title>Single visible space</Title>
         <Index>0</Index>
@@ -17,7 +17,6 @@
         <CreationAuthor>Architect@example.com</CreationAuthor>
         <ModifiedDate>2021-02-17T12:34:18+02:00</ModifiedDate>
         <ModifiedAuthor>Architect@example.com</ModifiedAuthor>
-        <AssignedTo></AssignedTo>
         <Description>Single visible space: 1bbI761TbBCOoIa5Kt6PXt</Description>
         <DocumentReferences/>
         <RelatedTopics/>
