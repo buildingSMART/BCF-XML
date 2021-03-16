@@ -93,10 +93,14 @@ Name | Yes | Name of the project.
 The markup file contains textual information about the topic.
 
 ### Header
-Header node contains information about the IFC files relevant to this topic. Header has also a list of File nodes.
+Header node contains information about the IFC files relevant to this topic. 
+
+The "files" should be used to match which models to be opened when displaying the topic viewpoints.
+
+As IFC-files don't have an unique id, this matching might not be fully automated.
+Therefore the software importing the BCF file should give the user a possibility to match these files, with the internal models.
 
 Each File node has the following attributes:
-
 
  Attribute | Optional | Description |
 :-----------|:------------|:------------
