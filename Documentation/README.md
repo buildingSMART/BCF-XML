@@ -27,7 +27,7 @@ The root of the BCF zip contains the following files.
 * extensions.xml
     - An XML file defining the extensions of a project. The schema for this file is extensions.xsd.
 * project.bcfp (optional)
-    - An XML file defining the details of a project. The schema for this file is project.xsd.
+    - An XML file defining the details and files_information of a project. The schema for this file is project.xsd.
 * documents.xml (optional)
     - An XML file defining the documents in a project. The schema for this file is documents.xsd.
 * bcf.version
@@ -71,11 +71,20 @@ Please note that the colon in the timezone offset is optional, so `+02:00` is eq
 
 To void ambiguity, this specification steps away from ISO 8601 on the topic of DateTime values with no timezone: The ISO 8601 says that DateTime values with no timezone designator are local times - **In BCF all DateTime values with no timezone designator are assumed to be in UTC**.
 
-## Project (.bcfp) file
+## Project information (project.bcfp file)
 
-The project file contains reference information about the project the topics belong to.
+The project information file contains details about the project and the files_information.
 
+There should be one entry per unique `File` found in `Markup`.`Header`s 
 
+ Attribute | Optional | Description |
+:-----------|:------------|:------------:
+ Project  |        No |     Project
+ FilesInformation  |        Yes |     List of `File information`
+
+### Project
+
+Project contains reference information about the project the topics belong to.
 
  Attribute | Optional | Description |
 :-----------|:------------|:------------:
@@ -89,18 +98,29 @@ The project file contains reference information about the project the topics bel
 Name | Yes | Name of the project.
 
 
-## Markup (.bcf) file
-The markup file contains textual information about the topic.
+### File information
 
-### Header
-Header node contains information about the IFC files relevant to this topic. 
-
-The "files" should be used to match which models to be opened when displaying the topic viewpoints.
+Consists of both human readable and machine readable information about the file.
 
 As IFC-files don't have an unique id, this matching might not be fully automated.
 Therefore the software importing the BCF file should give the user a possibility to match these files, with the internal models.
 
-Each File node has the following attributes:
+ Attribute | Optional | Description |
+:-----------|:------------|:------------:
+ File  |        No |     `File` - Machine readable information about the file
+ DisplayInformation  |        no |     List of `Display information` - Human readable information about the file
+
+### DisplayInformation
+
+Consists of human readable information about a file
+
+ Attribute | Optional | Description |
+:-----------|:------------|:------------:
+ FieldDisplayName  |        No |     The display name of the value
+ DisplayInformation  |        no |     The value
+
+### File
+Consists of properties being used to identify a `file`
 
  Attribute | Optional | Description |
 :-----------|:------------|:------------
@@ -115,6 +135,19 @@ In addition File has the following nodes:
 Filename | Yes | The BIM file related to this topic.
 Date | Yes | Date of the BIM file.
 Reference | Yes | URI to IfcFile. <br> IsExternal=false “..\example.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../example.ifc“
+
+## Markup (.bcf) file
+The markup file contains textual information about the topic.
+
+### Header
+Header node contains information about the IFC files relevant to this topic. 
+
+The "files" should be used to match which models to be opened when displaying the topic viewpoints.
+The file should also be registered in `Files information` in `project.bcfp`
+
+Attribute | Optional | Description |
+:-----------|:------------|:------------
+ Files  |        Yes |     List of `File`
 
 ### Topic
 Topic node contains reference information of the topic. It has one required attribute, which is the topic GUID (`Guid`).
