@@ -112,8 +112,8 @@ In addition File has the following nodes:
 
  Attribute | Optional | Description |
 :-----------|:------------|:------------
-Filename | Yes | The BIM file related to this topic.
-Date | Yes | Date of the BIM file.
+Filename | Yes | The BIM file related to this topic. For IFC files this is the first item in the FILE_NAME entry in the IFC file's [header](https://standards.buildingsmart.org/documents/Implementation/ImplementationGuide_IFCHeaderData_Version_1.0.2.pdf).
+Date | Yes | Date of the BIM file. For IFC files this is the second entry of the FILE_NAME entry in the IFC file's [header](https://standards.buildingsmart.org/documents/Implementation/ImplementationGuide_IFCHeaderData_Version_1.0.2.pdf). When the timestamp given in the header does not provide timezone, it is interpreted as UTC.
 Reference | Yes | URI to IfcFile. <br> IsExternal=false “..\example.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../example.ifc“
 
 ### Topic
