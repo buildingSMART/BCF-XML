@@ -5,6 +5,13 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Project" type="Project"/>
+                <xs:element name="FilesInformation" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="FileInformation" type="FileInformation" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -13,5 +20,19 @@
             <xs:element name="Name" type="NonEmptyOrBlankString" minOccurs="0"/>
         </xs:sequence>
         <xs:attribute name="ProjectId" type="NonEmptyOrBlankString" use="required"/>
+    </xs:complexType>
+    <xs:complexType name="FileInformation">
+        <xs:sequence>
+            <xs:element name="DisplayInformation" type="DisplayInformation"/>
+            <xs:element name="File" type="File"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DisplayInformation">
+        <xs:sequence>
+            <!-- Filename of the document with the file extension. Not used to store the file in the BCF -->
+            <xs:element name="FieldDisplayName" type="NonEmptyOrBlankString"/>
+            <!-- Human readable description of the document -->
+            <xs:element name="FieldDisplayValue" type="NonEmptyOrBlankString"/>
+        </xs:sequence>
     </xs:complexType>
 </xs:schema>
