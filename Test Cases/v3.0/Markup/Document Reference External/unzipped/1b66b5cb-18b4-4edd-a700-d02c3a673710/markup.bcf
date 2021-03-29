@@ -3,11 +3,11 @@
     <Header>
         <Files>
 			<File IfcProject="2TaLqCNHvEn9_7cUVrypdX" IsExternal="true">
-				<Filename>IFC BCF MEP.ifc</Filename>
+				<Filename>MEP.ifc</Filename>
 				<Date>2015-06-09T10:34:38+03:00</Date>
 			</File>
 			<File IfcProject="2SugUv4EX5LAhcVpDp2dUH" IsExternal="true">
-				<Filename>C:\e.ifc</Filename>
+				<Filename>Architectural.ifc</Filename>
 				<Date>2015-06-09T09:39:06+03:00</Date>
 			</File>
 		</Files>

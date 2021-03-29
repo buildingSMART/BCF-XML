@@ -1,6 +1,6 @@
 ISO-10303-21;
 HEADER;FILE_DESCRIPTION(('IFC2x3 Coordination View'),'2;1');
-FILE_NAME('C:\\e.ifc',
+FILE_NAME('Architectural.ifc',
 '2015-06-09T09:39:06',('Eduard Mrazek'),('',''),
 'The EXPRESS Data Manager Version 5.02.0110.b05 : 16 Jul 2014',
 'Allplan 2016.0 04.06.2015 - 22:07:41','');
