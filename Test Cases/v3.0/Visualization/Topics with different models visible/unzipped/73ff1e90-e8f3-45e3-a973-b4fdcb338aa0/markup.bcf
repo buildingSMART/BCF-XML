@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files>
+            <File IsExternal="true" IfcProject="2SugUv4EX5LAhcVpDp2dUH">
+                <Filename>ARK</Filename>
+                <Date>2015-06-09T09:39:06</Date>
+                <Reference>https://bimsync.com/project/2ab3d33f07974dc0b3cfe6f0fd104ad2/revisions/111f62250c1147eda20639e3de1c894e</Reference>
+            </File>
+        </Files>
+    </Header>
+    <Topic Guid="73ff1e90-e8f3-45e3-a973-b4fdcb338aa0" ServerAssignedId="89" TopicType="Error" TopicStatus="Open">
+        <ReferenceLinks/>
+        <Title>Topics with different model visible - Architectural</Title>
+        <Labels/>
+        <CreationDate>2021-03-15T11:10:38.121+01:00</CreationDate>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
+        <ModifiedDate>2021-03-15T11:10:38.345+01:00</ModifiedDate>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments>
+            <Comment Guid="289af7ea-2005-4177-a922-0c22abe94361">
+                <Date>2021-03-15T11:10:38.345+01:00</Date>
+                <Author>Architect@example.com</Author>
+                <Viewpoint Guid="441baec2-8eb7-481d-9ad7-c7eb3996ab66"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="441baec2-8eb7-481d-9ad7-c7eb3996ab66">
+                <Viewpoint>Viewpoint_441baec2-8eb7-481d-9ad7-c7eb3996ab66.bcfv</Viewpoint>
+                <Snapshot>Snapshot_441baec2-8eb7-481d-9ad7-c7eb3996ab66.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>

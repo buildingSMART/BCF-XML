@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Markup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="markup.xsd">
+    <Header>
+        <Files>
+            <File IsExternal="true" IfcProject="2TaLqCNHvEn9_7cUVrypdX">
+                <Filename>MEP</Filename>
+                <Date>2015-06-09T10:34:38</Date>
+                <Reference>https://bimsync.com/project/2ab3d33f07974dc0b3cfe6f0fd104ad2/revisions/754c1a440d3b4103abf1df15203feeeb</Reference>
+            </File>
+        </Files>
+    </Header>
+    <Topic Guid="ad503a8c-ac9a-42ab-9b44-ec99f19700d3" ServerAssignedId="90" TopicType="Error" TopicStatus="Open">
+        <ReferenceLinks/>
+        <Title>Topics with different model visible - MEP</Title>
+        <Labels/>
+        <CreationDate>2021-03-15T11:11:30.523+01:00</CreationDate>
+        <CreationAuthor>Architect@example.com</CreationAuthor>
+        <ModifiedDate>2021-03-15T11:11:30.523+01:00</ModifiedDate>
+        <DocumentReferences/>
+        <RelatedTopics/>
+        <Comments>
+            <Comment Guid="d398c10e-1b71-40bc-8b17-1db0caf68df2">
+                <Date>2021-03-15T11:11:30.523+01:00</Date>
+                <Author>Architect@example.com</Author>
+                <Viewpoint Guid="53ea08d5-9f7b-4b64-a5b0-57555536cc3f"/>
+            </Comment>
+        </Comments>
+        <Viewpoints>
+            <ViewPoint Guid="53ea08d5-9f7b-4b64-a5b0-57555536cc3f">
+                <Viewpoint>Viewpoint_53ea08d5-9f7b-4b64-a5b0-57555536cc3f.bcfv</Viewpoint>
+                <Snapshot>Snapshot_53ea08d5-9f7b-4b64-a5b0-57555536cc3f.png</Snapshot>
+            </ViewPoint>
+        </Viewpoints>
+    </Topic>
+</Markup>
