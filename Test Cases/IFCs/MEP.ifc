@@ -1,7 +1,7 @@
 ISO-10303-21;
 HEADER;
 FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
-FILE_NAME('IFC BCF MEP.ifc','2015-06-09T10:34:38',('rv'),('dds'),'DDS-IFC v2.0','DDS-CAD Version 12 Win32 build 3/6-2015','DDS');
+FILE_NAME('MEP.ifc','2015-06-09T10:34:38',('rv'),('dds'),'DDS-IFC v2.0','DDS-CAD Version 12 Win32 build 3/6-2015','DDS');
 FILE_SCHEMA(('IFC2X3'));
 ENDSEC;
 DATA;
