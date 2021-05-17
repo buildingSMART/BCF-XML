@@ -170,7 +170,7 @@ IsExternal | Yes | Is the BimSnippet external or within the bcfzip. <br> (Defaul
  Element | Optional | Description |
 :-----------|:------------|:------------
 Reference | No | URI to BimSnippet. <br> IsExternal=false  “..\snippetExample.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../snippetExample.ifc“
-ReferenceSchema | Yes | URI to BimSnippetSchema (always external)
+ReferenceSchema | No | URI to BimSnippetSchema (always external)
 
 ### DocumentReferences (optional)
 DocumentReferences provides a means to associate documents with topics. The references may point to files within the BCF or to external locations.
