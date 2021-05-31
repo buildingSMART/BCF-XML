@@ -79,7 +79,7 @@ The project file contains reference information about the project the topics bel
 
  Attribute | Optional | Description |
 :-----------|:------------|:------------:
- ProjectId  |        Yes |     ProjectId of the project
+ ProjectId  |        No   |     ProjectId of the project
 
  In addition it has the following nodes:
 
