@@ -10,3 +10,7 @@ Public repo for work on the file-based Building Collaboration Format standard BC
 Read all about the technical documentation on https://github.com/BuildingSMART/BCF-XML/tree/master/Documentation 
 
 For information about API-based BCF communication, please refer to: https://github.com/BuildingSMART/BCF-API
+
+# Contributing
+
+The Open CDE workgroup develops the BCF standard. The group meets every second Monday at 11am CET. To join the fortnightly meeting please email [opencde@buildingsmart.org](mailto:opencde@buildingsmart.org). 
