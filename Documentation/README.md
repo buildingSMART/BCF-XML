@@ -366,7 +366,7 @@ It has the following elements:
 
 Element | Optional | Description |
 :-----------|:------------|:------------
-CameraViewPoint | No | Camera location
+CameraViewPoint | No | Camera location, always in meters
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 ViewToWorldScale | No | Vertical scaling from view to world
@@ -378,7 +378,7 @@ This element describes a viewpoint using perspective camera. It has the followin
 
 Element | Optional | Description |
 :-----------|:------------|:------------
-CameraViewPoint | No | Camera location
+CameraViewPoint | No | Camera location, always in meters
 CameraDirection | No | Camera direction
 CameraUpVector | No | Camera up vector
 FieldOfView | No | The entire vertical field of view angle of the camera, expressed in degrees. Valid range 0 to 180 exclusive.
