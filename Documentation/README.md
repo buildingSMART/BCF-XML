@@ -73,7 +73,7 @@ To void ambiguity, this specification steps away from ISO 8601 on the topic of D
 
 ### Units of numeric values
 
-The numeric values in this specification are all in fixed units - meters for length and degrees for angle.
+Numeric values in this specification are all in fixed units - meters for length and degrees for angle.
 
 ## Project (.bcfp) file
 
