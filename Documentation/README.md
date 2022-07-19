@@ -71,6 +71,10 @@ Please note that the colon in the timezone offset is optional, so `+02:00` is eq
 
 To void ambiguity, this specification steps away from ISO 8601 on the topic of DateTime values with no timezone: The ISO 8601 says that DateTime values with no timezone designator are local times - **In BCF all DateTime values with no timezone designator are assumed to be in UTC**.
 
+### Units of numeric values
+
+The numeric values in this specification are all in fixed units - meters for length and degrees for angle.
+
 ## Project (.bcfp) file
 
 The project file contains reference information about the project the topics belong to.
