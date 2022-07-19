@@ -1,5 +1,5 @@
 # BIM Collaboration Format v3.0 Technical Documentation
-![BCF](https://github.com/BuildingSMART/BCF/blob/master/Icons/BCFicon128.png?raw=true "The BCF logo")
+![BCF](https://raw.githubusercontent.com/buildingSMART/BCF-XML/master/Icons/BCFicon128.png "The BCF logo")
 
 ### Terms and Abbreviations
 
