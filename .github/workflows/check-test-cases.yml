@@ -1,6 +1,10 @@
 name: check-test-cases
 
-on: [push]
+on:
+  push:
+    paths:
+      - "Test Cases/**"
+      - "Schemas/**"
 
 jobs:
   check-test-cases:
