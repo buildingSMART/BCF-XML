@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <PackageReference Include="Nuke.Common" Version="7.0.2" />
-    <PackageDownload Include="bcf-tool.CommandLine" Version="[1.0.7]" />
+    <PackageDownload Include="bcf-tool.CommandLine" Version="[1.0.9]" />
   </ItemGroup>
 
 </Project>
