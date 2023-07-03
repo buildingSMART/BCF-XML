@@ -225,6 +225,7 @@ The visualization information file contains information of components related to
 The `Components` element contains the following properties.
 * `Selection` to list components of interest
 * `Visibility` to describe which component is visible and which isn't
+* `Translucency` to describe which component is translucent and which isn't
 * `Coloring` to convey coloring options for displaying components
 
 #### Selection
@@ -310,6 +311,91 @@ In summary, after applying the following viewpoint:
 </VisualizationInfo>
 ```
 
+#### Translucency
+The `Translucency` element decides which objects are translucent and which are opaque. Visibility has a higher priority than translucency: a translucent element which is also resolved to be invisible should not be rendered. 
+
+Element/Attribute | Optional | Description |
+:-----------|:------------|:------------
+DefaultTranslucency | Yes | Boolean. Defaults to `false`</br><ul><li>When `true`, all components should be translucent unless listed in the exceptions</li><li>When `false` all components should be opaque unless listed in the exceptions</li></ul>
+Exceptions | Yes | A list of components to make opaque when `DefaultTranslucency=true` or to make translucent when `DefaultTranslucency=false`
+TranslucencySetupHints | Yes | Boolean flags to allow fine control over the translucency of [spaces](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcproductextension/lexical/ifcspace.htm), [space boundaries](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcproductextension/lexical/ifcrelspaceboundary.htm) and [openings](https://standards.buildingsmart.org/IFC/RELEASE/IFC4_1/FINAL/HTML/schema/ifcproductextension/lexical/ifcopeningelement.htm). A typical use of these flags is when `DefaultTranslucency=false` but spaces, spaces boundaries and openings should remain translucent. </br>All flags default to `true`</br><ul><li>`SpacesTranslucent` - same as `DefaultTranslucency` but restricted to spaces only</li><li>`SpaceBoundariesTranslucent` - same as `DefaultTranslucency` but restricted to space boundaries only</li><li>`OpeningsTranslucent` - same as `DefaultTranslucency` but restricted to openings only</li></ul>
+
+**Optimization Rules**
+
+BCF is suitable for controlling the translucency of a few components. A huge list of translucent/opaque components will cause poor performance. When encoding a viewpoint follow these rules:
+
+* Apply visibility optimization first and optimize translucency for visible components only.
+* Omit the translucency element altogether if all visible components are opaque.  
+* If the list of translucent components is smaller than the list of opaque components: set `DefaultTranslucency` to false and put the translucent components in exceptions.
+* If the list of opaque components is smaller or equals the list of translucent components: set `DefaultTranslucency` to true and put the opaque components in exceptions.
+* If the size of exceptions is huge (over 1000 components), alert the user and ask them to alter the translucency setting to allow efficient encoding.
+* For spaces, space boundaries and openings follow the these guideline (using spaces as an example): When a viewpoint has no opaque spaces, set the value of `SpacesTranslucent` to true. If there are any opaque spaces in the viewpoint, set the value to be the same as `DefaultTranslucency` and follow the optimization rules above while treating spaces like any other component.
+
+##### Applying Translucency
+Translucency is applied in following order:
+1. Apply the `DefaultTranslucency`
+2. Apply the `TranslucencySetupHints`
+3. Apply the `Exceptions`
+
+###### Example
+
+Consider the viewpoint provided below.
+1. Applying `DefaultVisibility="false"` hides all objects
+2. Applying `SpacesVisible="true"` shows all spaces
+3. Applying Visibility Exceptions inverting the Wall visibility makes it visible
+4. Applying `DefaultTranslucency="false"` makes all objects opaque
+5. Applying `SpacesTranslucent="true"` makes all spaces translucent
+6. Applying Translucency Exceptions:
+> 1. Inverting the Wall translucency makes it translucent
+> 2. Inverting the Space translucency makes it opaque
+> 3. Space boundaries and Openings remain invisible (visibility take priority over translucency)
+
+In summary, after applying the following viewpoint:
+1. All spaces are visible and translucent except one space which is visible and opaque
+2. All the other objects are hidden except for one wall which is visible and translucent
+
+``` xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<VisualizationInfo Guid="9e913da8-860c-4d48-9d94-ccccc2e1d9ca">
+  <Components>
+    <Selection/>
+    <Visibility DefaultVisibility="false">
+      <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
+      <Exceptions>
+        <Component IfcGuid="1XbKhGD91DvhOpYZbhzGTI"/> <!-- Wall -->
+      </Exceptions>
+    </Visibility>
+    <Translucency DefaultTranslucency="false">
+      <TranslucencySetupHints SpacesTranslucent="true" SpaceBoundariesTranslucent="false" OpeningsTranslucent="true"/>
+      <Exceptions>
+        <Component IfcGuid="1XbKhGD91DvhOpYZbhzGTI"/> <!-- Wall -->
+        <Component IfcGuid="1bbI761TbBCOoIa5Kt6PXt"/> <!-- Space -->
+      </Exceptions>
+    </Translucency>
+    <Coloring/>
+  </Components>
+  <OrthogonalCamera>
+    <CameraViewPoint>
+      <X>18.674638207107783</X>
+      <Y>-19.54805982455614</Y>
+      <Z>10.538476791232824</Z>
+    </CameraViewPoint>
+    <CameraDirection>
+      <X>-0.8050867319107056</X>
+      <Y>0.5154458284378052</Y>
+      <Z>-0.29351478815078735</Z>
+    </CameraDirection>
+    <CameraUpVector>
+      <X>-0.24719256162643433</X>
+      <Y>0.15826167166233063</Y>
+      <Z>0.9559545516967773</Z>
+    </CameraUpVector>
+    <ViewToWorldScale>9.673289179801941</ViewToWorldScale>
+    <AspectRatio>1.7777777777777777</AspectRatio>
+  </OrthogonalCamera>
+  <ClippingPlanes/>
+</VisualizationInfo>
+```
 
 #### Coloring
 The `Coloring` element allows specifying the color of components. For each color a list of components to be displayed with the that color should be provided.
