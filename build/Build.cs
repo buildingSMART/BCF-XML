@@ -14,12 +14,12 @@ class Build : NukeBuild
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
 
-    [PackageExecutable("bcf-tool.CommandLine", "tools/net5.0/bcf-tool.dll")] Tool BcfTool;
-    private string BcfToolPath => System.IO.Path.GetDirectoryName(ToolPathResolver.GetPackageExecutable("bcf-tool.CommandLine", "tools/net5.0/bcf-tool.dll"));
+    [NuGetPackage("bcf-tool.CommandLine", "tools/net5.0/bcf-tool.dll")] Tool BcfTool;
 
     Target CheckTestCases => _ => _
         .Executes(() =>
         {
-            BcfTool($"check -q -r v3.0 \"{RootDirectory}\"", workingDirectory: BcfToolPath);
+            var bcfCheckToolPath = NuGetToolPathResolver.GetPackageExecutable("bcf-tool.CommandLine", "tools/net5.0/bcf-tool.dll");
+            BcfTool($"check -q -r v3.0 \"{RootDirectory}\"", workingDirectory: System.IO.Path.GetDirectoryName(bcfCheckToolPath));
         });
 }
