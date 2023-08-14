@@ -7,6 +7,10 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
+                <!-- If one or more TopicFile elements are present, then this means that the
+                viewpoint is only supposed to load the given file references. Otherwise, the files
+                to be loaded in the viewpoint are the same as the Files list in the parent topic.-->
+                <xs:element name="TopicFiles" type="TopicFiles" minOccurs="0"/>
                 <!--
                 Although plural, 'Components' is not a collection
                 -->
@@ -106,6 +110,12 @@
             <xs:maxExclusive value="180"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:complexType name="TopicFiles">
+        <xs:element name="TopicFileId" type="TopicFileId" maxOccurs="unbounded"/>
+    </xs:complexType>
+    <xs:complexType name="TopicFileId">
+        <xs:attribute name="Id" type="NonEmptyOrBlankString" use="required"/>
+    </xs:complexType>
     <xs:complexType name="Components">
         <xs:sequence>
             <!-- Components with relevance to the viewpoint. They should be displayed highlighted or selected in a viewer -->
