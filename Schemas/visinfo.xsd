@@ -10,7 +10,7 @@
                 <!-- If one or more TopicFile elements are present, then this means that the
                 viewpoint is only supposed to load the given file references. Otherwise, the files
                 to be loaded in the viewpoint are the same as the Files list in the parent topic.-->
-                <xs:element name="TopicFiles" type="TopicFiles" minOccurs="0"/>
+                <xs:element name="TopicFiles" type="TopicFiles"/>
                 <!--
                 Although plural, 'Components' is not a collection
                 -->
@@ -111,7 +111,7 @@
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="TopicFiles">
-        <xs:element name="TopicFileId" type="TopicFileId" maxOccurs="unbounded"/>
+        <xs:element name="TopicFileId" type="TopicFileId" minOccurs="0" maxOccurs="unbounded"/>
     </xs:complexType>
     <xs:complexType name="TopicFileId">
         <xs:attribute name="Id" type="NonEmptyOrBlankString" use="required"/>
