@@ -119,6 +119,7 @@ In addition File has the following nodes:
 Filename | Yes | The BIM file related to this topic. For IFC files this is the first item in the FILE_NAME entry in the IFC file's [header](https://standards.buildingsmart.org/documents/Implementation/ImplementationGuide_IFCHeaderData_Version_1.0.2.pdf).
 Date | Yes | Date of the BIM file. For IFC files this is the second entry of the FILE_NAME entry in the IFC file's [header](https://standards.buildingsmart.org/documents/Implementation/ImplementationGuide_IFCHeaderData_Version_1.0.2.pdf). When the timestamp given in the header does not provide timezone, it is interpreted as UTC.
 Reference | Yes | URI to IfcFile. <br> IsExternal=false “..\example.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../example.ifc“
+Id | Yes | The id of the file. This is internal to the topic, and can be used by viewpoints to reference a subset of the files that should be loaded
 
 ### Topic
 Topic node contains reference information of the topic. It has one required attribute, which is the topic GUID (`Guid`).
@@ -219,6 +220,10 @@ Viewpoints are immutable, therefore they should never be changed once created. I
 
 ## Visualization information (.bcfv) file
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
+
+### TopicFiles
+
+Parent topic objects specify a list of model files in their `Header.Files` element. These files contain an `Id` attribute, which can be used to optionally reference a subset of all the topic files for a specific viewpoint. If the viewpoint does contain entries in it's `TopicFiles` element, then only those files referenced there should be loaded when visualizing the viewpoint. Otherwise, all files from the topic should be loaded.
 
 ### Components
 
