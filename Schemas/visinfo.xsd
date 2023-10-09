@@ -7,9 +7,7 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <!-- If one or more TopicFile elements are present, then this means that the
-                viewpoint is only supposed to load the given file references. Otherwise, the files
-                to be loaded in the viewpoint are the same as the Files list in the parent topic.-->
+                <!-- The TopicFiles element lists the model files this viewpoint is supposed to load.-->
                 <xs:element name="TopicFiles" type="TopicFiles"/>
                 <!--
                 Although plural, 'Components' is not a collection
@@ -112,7 +110,8 @@
     </xs:simpleType>
     <xs:complexType name="TopicFiles">
         <xs:sequence>
-            <xs:element name="TopicFileId" type="TopicFileId" minOccurs="0" maxOccurs="unbounded"/>
+            <!-- A viewpoint needs to list it's referenced files, so at least one file must be present. -->
+            <xs:element name="TopicFileId" type="TopicFileId" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
     <xs:complexType name="TopicFileId">
