@@ -270,9 +270,10 @@ The visibility is applied in following order:
 ###### Example
 
 Consider the viewpoint provided below.
-1. Applying `DefaultVisibility="false"` hides all objects
+1. Referencing `TopicFileId Id="4186dcbf-8b7d-4226-b9a8-7bf5b9747eb1"` means to load exactly one model file. The file is defined in the markup file.
+2. Applying `DefaultVisibility="false"` hides all objects
 2. Applying `SpacesVisible="true"` shows all spaces
-3. Applying Exceptions:
+4. Applying Exceptions:
 > 1. Inverting the Wall visibility makes it visible
 > 2. Interting the Space visibility makes it invisible 
 
