@@ -111,7 +111,9 @@
         </xs:restriction>
     </xs:simpleType>
     <xs:complexType name="TopicFiles">
-        <xs:element name="TopicFileId" type="TopicFileId" minOccurs="0" maxOccurs="unbounded"/>
+        <xs:sequence>
+            <xs:element name="TopicFileId" type="TopicFileId" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
     </xs:complexType>
     <xs:complexType name="TopicFileId">
         <xs:attribute name="Id" type="NonEmptyOrBlankString" use="required"/>
