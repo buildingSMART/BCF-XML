@@ -237,7 +237,9 @@ BCF is suitable for selecting a few components. A huge list of selected componen
 * If the size of the selected components is huge (over 1000 components), alert the user and ask them to reduce the number of selected components.
 
 #### Visibility
-The `Visibility` element decides which objects are visible and which are hidden.
+The `Visibility` element decides which objects are visible and which are hidden. 
+
+Spatial structure containment should not be considered when encoding and applying visibility. For example: a hidden `IfcBuildingStorey` does not imply that building elements associated with it via `IfcRelContainedInSpatialStructure` should be hidden as well. 
 
 Element/Attribute | Optional | Description |
 :-----------|:------------|:------------
