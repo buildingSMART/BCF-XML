@@ -7,8 +7,8 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
-                <!-- The TopicFiles element lists the model files this viewpoint is supposed to load.-->
-                <xs:element name="TopicFiles" type="TopicFiles"/>
+                <!-- The TopicFileIds element lists the model files this viewpoint is supposed to load.-->
+                <xs:element name="TopicFileIds" type="TopicFileIds"/>
                 <!--
                 Although plural, 'Components' is not a collection
                 -->
@@ -108,7 +108,7 @@
             <xs:maxExclusive value="180"/>
         </xs:restriction>
     </xs:simpleType>
-    <xs:complexType name="TopicFiles">
+    <xs:complexType name="TopicFileIds">
         <xs:sequence>
             <!-- A viewpoint needs to list it's referenced files, so at least one file must be present. -->
             <xs:element name="TopicFileId" type="TopicFileId" maxOccurs="unbounded"/>
