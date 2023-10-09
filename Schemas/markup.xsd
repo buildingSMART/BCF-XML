@@ -128,8 +128,8 @@
         <xs:attributeGroup ref="FileAttributes"/>
     </xs:complexType>
     <xs:attributeGroup name="FileAttributes">
-        <xs:attribute name="IfcProject" type="IfcGuid" use="optional"/>
-        <xs:attribute name="IfcSpatialStructureElement" type="IfcGuid" use="optional"/>
+        <xs:attribute name="IfcProject" type="IfcGuid"/>
+        <xs:attribute name="IfcSpatialStructureElement" type="IfcGuid"/>
         <xs:attribute name="IsExternal" type="xs:boolean" default="true"/>
     </xs:attributeGroup>
     <!-- Reference to a document inside of the topic folder or a url pointing to the web -->
@@ -165,10 +165,4 @@
         </xs:sequence>
         <xs:attribute name="Guid" type="Guid" use="required"/>
     </xs:complexType>
-    <xs:simpleType name="IfcGuid">
-        <xs:restriction base="xs:string">
-            <xs:length value="22"/>
-            <xs:pattern value="[0-9A-Za-z_$]*"/>
-        </xs:restriction>
-    </xs:simpleType>
 </xs:schema>

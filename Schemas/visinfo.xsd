@@ -163,21 +163,13 @@
             <xs:element name="OriginatingSystem" type="NonEmptyOrBlankString" minOccurs="0"/>
             <xs:element name="AuthoringToolId" type="NonEmptyOrBlankString" minOccurs="0"/>
         </xs:sequence>
-        <xs:attribute ref="IfcGuid"/>
+        <xs:attribute name="IfcGuid" type="IfcGuid"/>
     </xs:complexType>
     <xs:attribute name="Color">
         <xs:simpleType>
             <xs:restriction base="xs:normalizedString">
                 <!-- Should either match 3 or 4 hex bytes , e.g. "FF00FF" or "FF00FF99" -->
                 <xs:pattern value="[0-9A-Fa-f]{6}([0-9A-Fa-f]{2})?"/>
-            </xs:restriction>
-        </xs:simpleType>
-    </xs:attribute>
-    <xs:attribute name="IfcGuid">
-        <xs:simpleType>
-            <xs:restriction base="xs:normalizedString">
-                <xs:length value="22"/>
-                <xs:pattern value="[0-9A-Za-z_$]*"/>
             </xs:restriction>
         </xs:simpleType>
     </xs:attribute>
