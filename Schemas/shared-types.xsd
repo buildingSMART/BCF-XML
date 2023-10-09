@@ -11,4 +11,10 @@
             <xs:whiteSpace value="collapse"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="IfcGuid">
+        <xs:restriction base="xs:normalizedString">
+            <xs:length value="22"/>
+            <xs:pattern value="[0-9A-Za-z_$]*"/>
+        </xs:restriction>
+    </xs:simpleType>
 </xs:schema>
