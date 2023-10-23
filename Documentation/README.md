@@ -223,7 +223,7 @@ The visualization information file contains information of components related to
 
 ### TopicFileIds
 
-Parent topic objects specify a list of model files in their `Header.Files` element. These files contain an `Id` attribute, which are used to reference a subset of all the topic files for a specific viewpoint. To make viewpoints immutable, e.g. in the case of later added topic files, each viewpoint is required to list all their file references. Only those files referenced In a viewpoints `TopicFileIds` should be loaded when visualizing the viewpoint.
+Parent topic objects specify a list of model files in their `Header.Files` element. These files contain an `Id` attribute, which are used to reference a subset of all the topic files for a specific viewpoint. To make viewpoints immutable, e.g. in the case of later added topic files, each viewpoint is required to list all their file references. Only those files referenced in a viewpoints `TopicFileIds` should be loaded when visualizing the viewpoint.
 
 ### Components
 
