@@ -240,7 +240,7 @@ The `Selection` element lists all components that should be selected (highlighte
 BCF is suitable for selecting a few components. A huge list of selected components causes poor performance. All clients should follow this rule:
 
 * If the size of the selected components is huge (over 1000 components), alert the user and ask them to reduce the number of selected components.
-* Provide help to the user to only select those models that are required to understand the topic, limiting the model files that need to be loaded to visualize a single viewpoint by specifying a small list of files in the viewpoints `TopicFileIds` element.
+* Provide help to the user to only select those models that are required to understand the topic, limiting the model files that need to be loaded to visualize a single viewpoint by specifying a small list of files in the viewpoint's `TopicFileIds` element.
 
 #### Visibility
 The `Visibility` element decides which objects are visible and which are hidden.
