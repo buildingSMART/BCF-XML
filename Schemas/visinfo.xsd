@@ -7,6 +7,8 @@
         </xs:annotation>
         <xs:complexType>
             <xs:sequence>
+                <!-- The TopicFileIds element lists the model files this viewpoint is supposed to load.-->
+                <xs:element name="TopicFileIds" type="TopicFileIds" minOccurs="0"/>
                 <!--
                 Although plural, 'Components' is not a collection
                 -->
@@ -106,6 +108,15 @@
             <xs:maxExclusive value="180"/>
         </xs:restriction>
     </xs:simpleType>
+    <xs:complexType name="TopicFileIds">
+        <xs:sequence>
+            <!-- A viewpoint needs to list it's referenced files, so at least one file must be present. -->
+            <xs:element name="TopicFileId" type="TopicFileId" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="TopicFileId">
+        <xs:attribute name="Id" type="NonEmptyOrBlankString" use="required"/>
+    </xs:complexType>
     <xs:complexType name="Components">
         <xs:sequence>
             <!-- Components with relevance to the viewpoint. They should be displayed highlighted or selected in a viewer -->

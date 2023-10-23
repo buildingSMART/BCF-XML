@@ -124,6 +124,7 @@
             <xs:element name="Date" type="xs:dateTime" minOccurs="0"/>
             <!-- Reference (URL) of the file -->
             <xs:element name="Reference" type="NonEmptyOrBlankString" minOccurs="0"/>
+            <xs:element name="Id" type="NonEmptyOrBlankString"/>
         </xs:sequence>
         <xs:attributeGroup ref="FileAttributes"/>
     </xs:complexType>

@@ -119,6 +119,7 @@ In addition File has the following nodes:
 Filename | Yes | The BIM file related to this topic. For IFC files this is the first item in the FILE_NAME entry in the IFC file's [header](https://standards.buildingsmart.org/documents/Implementation/ImplementationGuide_IFCHeaderData_Version_1.0.2.pdf).
 Date | Yes | Date of the BIM file. For IFC files this is the second entry of the FILE_NAME entry in the IFC file's [header](https://standards.buildingsmart.org/documents/Implementation/ImplementationGuide_IFCHeaderData_Version_1.0.2.pdf). When the timestamp given in the header does not provide timezone, it is interpreted as UTC.
 Reference | Yes | URI to IfcFile. <br> IsExternal=false “..\example.ifc“ (within bcfzip) <br> IsExternal=true  “https://.../example.ifc“
+Id | Yes | The id of the file. This is internal to the topic, and can be used by viewpoints to reference a subset of the files that should be loaded
 
 ### Topic
 Topic node contains reference information of the topic. It has one required attribute, which is the topic GUID (`Guid`).
@@ -220,6 +221,10 @@ Viewpoints are immutable, therefore they should never be changed once created. I
 ## Visualization information (.bcfv) file
 The visualization information file contains information of components related to the topic, camera settings, and possible markup and clipping information.
 
+### TopicFileIds
+
+Parent topic objects specify a list of model files in their `Header.Files` element. These files contain an `Id` attribute, which are used to reference a subset of all the topic files for a specific viewpoint. To make viewpoints immutable, e.g. in the case of later added topic files, each viewpoint is required to list all their file references. Only those files referenced in a viewpoint's `TopicFileIds` should be loaded when visualizing the viewpoint.
+
 ### Components
 
 The `Components` element contains the following properties.
@@ -235,6 +240,7 @@ The `Selection` element lists all components that should be selected (highlighte
 BCF is suitable for selecting a few components. A huge list of selected components causes poor performance. All clients should follow this rule:
 
 * If the size of the selected components is huge (over 1000 components), alert the user and ask them to reduce the number of selected components.
+* Provide help to the user to only select those models that are required to understand the topic, limiting the model files that need to be loaded to visualize a single viewpoint by specifying a small list of files in the viewpoint's `TopicFileIds` element.
 
 #### Visibility
 The `Visibility` element decides which objects are visible and which are hidden.
@@ -249,6 +255,7 @@ ViewSetupHints | Yes | Boolean flags to allow fine control over the visibility o
 
 BCF is suitable for hiding/showing a few components. A huge list of hidden/shown components causes poor performance. When encoding a viewpoint follow these rules:
 
+* If no components from a given model file are loaded, then this file should not be referenced in the `TopicFileIds` of the viewpoint
 * If the list of hidden components is smaller than the list of visible components: set `DefaultVisibility` to true and put the hidden components in exceptions.
 * If the list of visible components is smaller or equals the list of hidden components: set default_visibility to false and put the visible components in exceptions.
 * If the size of exceptions is huge (over 1000 components), alert the user and ask them to alter the visibility to allow efficient encoding.
@@ -263,9 +270,10 @@ The visibility is applied in following order:
 ###### Example
 
 Consider the viewpoint provided below.
-1. Applying `DefaultVisibility="false"` hides all objects
-2. Applying `SpacesVisible="true"` shows all spaces
-3. Applying Exceptions:
+1. Referencing `TopicFileId Id="4186dcbf-8b7d-4226-b9a8-7bf5b9747eb1"` means to load exactly one model file. The file is defined in the markup file.
+2. Applying `DefaultVisibility="false"` hides all objects
+3. Applying `SpacesVisible="true"` shows all spaces
+4. Applying Exceptions:
 > 1. Inverting the Wall visibility makes it visible
 > 2. Interting the Space visibility makes it invisible 
 
@@ -277,6 +285,9 @@ In summary, after applying the following viewpoint:
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <VisualizationInfo Guid="9e913da8-860c-4d48-9d94-ccccc2e1d9ca">
   <Components>
+    <TopicFileIds>
+      <TopicFileId Id="4186dcbf-8b7d-4226-b9a8-7bf5b9747eb1" />
+    </TopicFileIds>
     <Selection/>
     <Visibility DefaultVisibility="false">
       <ViewSetupHints SpacesVisible="true" SpaceBoundariesVisible="false" OpeningsVisible="false"/>
