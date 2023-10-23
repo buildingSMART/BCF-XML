@@ -20,6 +20,6 @@ class Build : NukeBuild
         .Executes(() =>
         {
             var bcfCheckToolPath = NuGetToolPathResolver.GetPackageExecutable("bcf-tool.CommandLine", "tools/net5.0/bcf-tool.dll");
-            BcfTool($"check -q -r v3.0 \"{RootDirectory}\"", workingDirectory: System.IO.Path.GetDirectoryName(bcfCheckToolPath));
+            BcfTool($"check -q -r v4.0 \"{RootDirectory}\"", workingDirectory: System.IO.Path.GetDirectoryName(bcfCheckToolPath));
         });
 }
