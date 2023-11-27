@@ -239,6 +239,8 @@ BCF is suitable for selecting a few components. A huge list of selected componen
 #### Visibility
 The `Visibility` element decides which objects are visible and which are hidden.
 
+Spatial structure containment should not be considered when encoding and applying visibility. For example: a hidden `IfcBuildingStorey` does not imply that building elements associated with it via `IfcRelContainedInSpatialStructure` should be hidden as well.
+
 Element/Attribute | Optional | Description |
 :-----------|:------------|:------------
 DefaultVisibility | Yes | Boolean. Defaults to `false`</br><ul><li>When `true`, all components should be visible unless listed in the exceptions</li><li>When `false` all components should be invisible unless listed in the exceptions</li></ul>
