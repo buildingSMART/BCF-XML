@@ -243,7 +243,9 @@ BCF is suitable for selecting a few components. A huge list of selected componen
 * Provide help to the user to only select those models that are required to understand the topic, limiting the model files that need to be loaded to visualize a single viewpoint by specifying a small list of files in the viewpoint's `TopicFileIds` element.
 
 #### Visibility
-The `Visibility` element decides which objects are visible and which are hidden.
+The `Visibility` element decides which objects are visible and which are hidden. 
+
+Spatial structure containment should not be considered when encoding and applying visibility. For example: a hidden `IfcBuildingStorey` does not imply that building elements associated with it via `IfcRelContainedInSpatialStructure` should be hidden as well. 
 
 Element/Attribute | Optional | Description |
 :-----------|:------------|:------------
