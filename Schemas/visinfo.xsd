@@ -122,6 +122,7 @@
             <!-- Components with relevance to the viewpoint. They should be displayed highlighted or selected in a viewer -->
             <xs:element name="Selection" type="ComponentSelection" minOccurs="0"/>
             <xs:element name="Visibility" type="ComponentVisibility" minOccurs="0"/>
+            <xs:element name="Translucency" type="ComponentTranslucency" minOccurs="0"/>
             <xs:element name="Coloring" type="ComponentColoring" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
@@ -149,6 +150,25 @@
         <xs:attribute name="SpacesVisible" type="xs:boolean" default="false"/>
         <xs:attribute name="SpaceBoundariesVisible" type="xs:boolean" default="false"/>
         <xs:attribute name="OpeningsVisible" type="xs:boolean" default="false"/>
+    </xs:complexType>
+    <xs:complexType name="ComponentTranslucency">
+        <xs:sequence>
+            <xs:element name="TranslucencySetupHints" type="TranslucencySetupHints" minOccurs="0"/>
+            <xs:element name="Exceptions" minOccurs="0">
+                <!-- Inverses DefaultTranslucency and TranslucencySetupHints  -->
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Component" type="Component" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="DefaultTranslucency" type="xs:boolean" default="false"/>
+    </xs:complexType>
+    <xs:complexType name="TranslucencySetupHints">
+        <xs:attribute name="SpacesTranslucent" type="xs:boolean" default="true"/>
+        <xs:attribute name="SpaceBoundariesTranslucent" type="xs:boolean" default="true"/>
+        <xs:attribute name="OpeningsTranslucent" type="xs:boolean" default="true"/>
     </xs:complexType>
     <xs:complexType name="ComponentColoring">
         <xs:sequence>
