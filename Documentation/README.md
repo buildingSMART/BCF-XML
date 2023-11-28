@@ -314,6 +314,8 @@ In summary, after applying the following viewpoint:
 #### Translucency
 The `Translucency` element decides which objects are translucent and which are opaque. Visibility has a higher priority than translucency: a translucent element which is also resolved to be invisible should not be rendered. 
 
+Commonly, translucency is specified using a numeric value (alpha) ranging from 0 to 1 where a value of 0 indicates complete transparency and a value of 1 indicates complete opacity. This specification leaves the alpha value for translucent components to the vendor's discretion: when a component is resolved as 'translucent', it should rendered with an alpha greater than 0 but less than 1 in a manner consistent with the visual style of the rendering application. 
+
 Element/Attribute | Optional | Description |
 :-----------|:------------|:------------
 DefaultTranslucency | Yes | Boolean. Defaults to `false`</br><ul><li>When `true`, all components should be translucent unless listed in the exceptions</li><li>When `false` all components should be opaque unless listed in the exceptions</li></ul>
@@ -409,12 +411,12 @@ BCF is suitable for coloring a few components. A huge list of components causes 
 
 * If the size of colored components is huge (over 1000 components), alert the user and ask them to reduce the number of colored components.
 
-#### Encoding composite Components in selection, visibility and coloring
+#### Encoding composite Components in selection, translucency, visibility and coloring
 
 In IFC, it is [specified](https://standards.buildingsmart.org/documents/Implementation/IFC_Implementation_Agreements/CV-2x3-119.html) that "Geometry for decomposed elements shall be either at the element container or at the element part level".
-This allows the encoding of viewpoints to be optimized by the guidelines below. The guidelines apply wherever components are listed e.g. `exceptions` in visibility and `components` in selection and coloring.
+This allows the encoding of viewpoints to be optimized by the guidelines below. The guidelines apply wherever components are listed e.g. `exceptions` in visibility or translucency and `components` in selection and coloring.
 
-When selecting, hiding, showing or coloring decomposed components, such as curtain wall or assemblies the following rules (using coloring as an example) should be applied:
+When selecting, hiding, showing, making translucent or coloring decomposed components, such as curtain wall or assemblies the following rules (using coloring as an example) should be applied:
 
 ##### When creating the viewpoint
 
