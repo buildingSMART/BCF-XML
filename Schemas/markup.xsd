@@ -33,22 +33,6 @@
         <xs:attribute name="Guid" type="Guid" use="required"/>
         <!-- Guid of the viewpoint -->
     </xs:complexType>
-    <!-- BimSnippet -->
-    <xs:complexType name="BimSnippet">
-        <xs:sequence>
-            <!--
-        Name of the file in the topic folder containing the snippet or a URL.
-         E.G.- Expresscode containing p.e Issue, Request
-        // Maybe some header infos ?? // IfcEntites // Geometry 
-         -->
-            <!-- Reference (name) to the snippet file -->
-            <xs:element name="Reference" type="NonEmptyOrBlankString"/>
-            <xs:element name="ReferenceSchema" type="NonEmptyOrBlankString"/>
-        </xs:sequence>
-        <xs:attribute name="SnippetType" type="NonEmptyOrBlankString" use="required"/>
-        <xs:attribute name="IsExternal" type="xs:boolean" default="false"/>
-        <!-- This flag is true when the reference is a URL pointing outside of the BCF file-->
-    </xs:complexType>
     <xs:complexType name="Topic">
         <xs:sequence>
             <xs:element name="ReferenceLinks" minOccurs="0">
@@ -78,7 +62,6 @@
             <xs:element name="AssignedTo" type="NonEmptyOrBlankString" minOccurs="0"/>
             <xs:element name="Stage" type="NonEmptyOrBlankString" minOccurs="0"/>
             <xs:element name="Description" type="NonEmptyOrBlankString" minOccurs="0"/>
-            <xs:element name="BimSnippet" type="BimSnippet" minOccurs="0"/>
             <xs:element name="DocumentReferences" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
