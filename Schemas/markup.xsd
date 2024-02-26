@@ -93,6 +93,7 @@
                     <xs:sequence>
                         <xs:element name="ViewPoint" type="ViewPoint" minOccurs="0" maxOccurs="unbounded"/>
                     </xs:sequence>
+                    <xs:attribute name="MainViewpointGuid" type="Guid" use="optional"/>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
