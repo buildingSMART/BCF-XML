@@ -25,7 +25,7 @@
 					</xs:complexType>
 				</xs:element>
 				<!-- ISG Jira issue BCF-17: Add support for text in the viewpoints -->
-				<xs:element name="Bitmap" minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="Bitmaps" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="Bitmap" type="BitmapFormat"/>
