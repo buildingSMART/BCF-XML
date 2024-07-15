@@ -555,7 +555,7 @@ public bool AdjustToRatio(double availableRatio)
 
 ### Lines (optional)
 
-Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly.
+Lines can be used to add markup in 3D. Each line is defined by three dimensional Start Point and End Point. Lines that have the same start and end points are to be considered points and may be displayed accordingly. Optionally, lines may specify the color in which they should be displayed.
 
 ### ClippingPlanes (optional)
 
