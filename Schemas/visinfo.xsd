@@ -209,6 +209,7 @@
             <xs:element name="StartPoint" type="Point"/>
             <xs:element name="EndPoint" type="Point"/>
         </xs:sequence>
+        <xs:attribute ref="Color"/>
     </xs:complexType>
     <xs:complexType name="ClippingPlane">
         <xs:sequence>
